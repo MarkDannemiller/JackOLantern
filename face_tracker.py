@@ -1,6 +1,6 @@
 import cv2
 
-
+#Jacob
 class Face:
     # empty constructor
     def __init__(self):
