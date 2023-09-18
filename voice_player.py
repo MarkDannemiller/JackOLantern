@@ -21,11 +21,16 @@ class AudioPlayer:
         self.p = pyaudio.PyAudio()
 
     def calculate_volume(self, audio_info):
-        try:
-            vol = int(numpy.sqrt(numpy.mean(numpy.square(audio_info))))
-        except (ValueError, TypeError):
-            # Handle exceptions (NaN values) by setting vol to 0
+        mean_squared = numpy.mean(numpy.square(audio_info[~numpy.isnan(audio_info)]))
+        
+        if numpy.isnan(mean_squared):
+            # Handle NaN values by setting vol to 0
             vol = 0
+        else:
+            # Calculate the square root and ensure it's within the valid integer range
+            vol = int(numpy.sqrt(mean_squared))
+            vol = min(max(vol, 0), 255)  # Ensure vol is between 0 and 255
+        
         return vol
 
     def play_audio_files(self):
