@@ -21,15 +21,11 @@ class AudioPlayer:
         self.p = pyaudio.PyAudio()
 
     def calculate_volume(self, audio_info):
-        # Calculate the mean squared value, excluding NaNs
-        mean_squared = numpy.mean(numpy.square(audio_info[~numpy.isnan(audio_info)]))
-
-        # Check if the mean_squared value is NaN, and set vol to 0 if NaN
-        if numpy.isnan(mean_squared):
+        try:
+            vol = int(numpy.sqrt(numpy.mean(numpy.square(audio_info))))
+        except (ValueError, TypeError):
+            # Handle exceptions (NaN values) by setting vol to 0
             vol = 0
-        else:
-            vol = int(numpy.sqrt(mean_squared))
-
         return vol
 
     def play_audio_files(self):
