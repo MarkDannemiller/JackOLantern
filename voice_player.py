@@ -3,43 +3,52 @@ import pyaudio
 import numpy
 from gpiozero import AngularServo
 import time
-left_pin=17
-right_pin=18
-chunk=1024
-start=0
-end=0
-current=0
-flag=0        
-        
-        
+
+left_pin = 17
+right_pin = 18
+chunk = 1024
+start = 0
+end = 0
+current = 0
+flag = 0
+
 
 class AudioPlayer:
     def __init__(self, audio_files, servo_movement):
-        self.volume_list=[]
-        self.servo_movement=servo_movement
-        self.audio_files=audio_files
-        self.p=pyaudio.PyAudio()
+        self.volume_list = []
+        self.servo_movement = servo_movement
+        self.audio_files = audio_files
+        self.p = pyaudio.PyAudio()
+
     def calculate_volume(self, audio_info):
-        vol=int(numpy.sqrt(numpy.mean(numpy.square(audio_info))))
-        if numpy.isnan(vol):
-            vol=0
+        # Calculate the mean squared value, excluding NaNs
+        mean_squared = numpy.mean(numpy.square(audio_info[~numpy.isnan(audio_info)]))
+
+        # Check if the mean_squared value is NaN, and set vol to 0 if NaN
+        if numpy.isnan(mean_squared):
+            vol = 0
+        else:
+            vol = int(numpy.sqrt(mean_squared))
+
         return vol
+
     def play_audio_files(self):
         for audio_file in self.audio_files:
-            wav=wave.open(audio_file, 'rb')
-            stream = self.p.open(format=self.p.get_format_from_width(wav.getsampwidth()), channels=wav.getnchannels(), rate=wav.getframerate(), output=True)
+            wav = wave.open(audio_file, 'rb')
+            stream = self.p.open(format=self.p.get_format_from_width(wav.getsampwidth()),
+                                channels=wav.getnchannels(), rate=wav.getframerate(), output=True)
             try:
                 iteration = 0
                 while True:
-                    audio_data = wav.readframes(self.chunk)
+                    audio_data = wav.readframes(chunk)
                     if not audio_data:
                         break
 
                     audio_info = numpy.frombuffer(audio_data, dtype=numpy.int16)
                     vol = self.calculate_volume(audio_info)
-                    iteration=iteration+1
+                    iteration = iteration + 1
 
-                    if iteration==10:
+                    if iteration == 10:
                         volume_average = int(numpy.mean(self.volume_list))
                         self.volume_list = []
                         self.servo_movement.movement(volume_average)
@@ -51,6 +60,7 @@ class AudioPlayer:
                 wav.close()
                 stream.stop_stream()
                 stream.close()
+
 
 class Servo_jaw:
     def __init__(self, left_pin, right_pin):
@@ -72,25 +82,15 @@ class Servo_jaw:
             self.right_servo.angle = 180
 
 
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-servo_movement=Servo_jaw(left_pin, right_pin)
-audio_files=["C:\\Users\\user\\Desktop\\test_audio.wav", "C:\\Users\\user\\Desktop\\test1_audio.wav", "C:\\Users\\user\\Desktop\\test2_audio.wav"]
-audio_player=AudioPlayer(audio_files, servo_movement)
+servo_movement = Servo_jaw(left_pin, right_pin)
+audio_files = ["C:\\Users\\user\\Desktop\\test_audio.wav", "C:\\Users\\user\\Desktop\\test1_audio.wav",
+               "C:\\Users\\user\\Desktop\\test2_audio.wav"]
+audio_player = AudioPlayer(audio_files, servo_movement)
 while True:
     audio_player.play_audio_files()
-    while (flag==0):
-        if (start==0):
-            start=time.time()
-            flag=0
-        if (time.time()-start>=10):
-            flag=1
-        
+    while (flag == 0):
+        if (start == 0):
+            start = time.time()
+            flag = 0
+        if (time.time() - start >= 10):
+            flag = 1
