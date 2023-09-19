@@ -24,12 +24,9 @@ class AudioPlayer:
         mean_squared = numpy.mean(numpy.square(audio_info[~numpy.isnan(audio_info)]))
         
         if numpy.isnan(mean_squared):
-            # Handle NaN values by setting vol to 0
             vol = 0
         else:
-            # Calculate the square root and ensure it's within the valid integer range
             vol = int(numpy.sqrt(mean_squared))
-            vol = min(max(vol, 0), 255)  # Ensure vol is between 0 and 255
         
         return vol
 
@@ -84,8 +81,7 @@ class Servo_jaw:
 
 
 servo_movement = Servo_jaw(left_pin, right_pin)
-audio_files = ["C:\\Users\\user\\Desktop\\test_audio.wav", "C:\\Users\\user\\Desktop\\test1_audio.wav",
-               "C:\\Users\\user\\Desktop\\test2_audio.wav"]
+audio_files = ["C:\\Users\\user\\Desktop\\test_audio.wav"]
 audio_player = AudioPlayer(audio_files, servo_movement)
 while True:
     audio_player.play_audio_files()
