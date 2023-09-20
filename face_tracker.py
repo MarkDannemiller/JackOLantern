@@ -58,7 +58,6 @@
 
 
 
-
 import cv2
 import mediapipe
 import random
@@ -95,7 +94,7 @@ class FaceTracker:
 
     def process(self):
         ret, frame=self.video_capture.read()
-        frame=cv2.resize(frame, (640, 480))
+        #frame=cv2.resize(frame, (640, 480))
         if not ret:
             return
 
@@ -103,10 +102,12 @@ class FaceTracker:
             cv2.rectangle(frame, (250, 150), (400, 300), (255, 0, 0), 1)
         self.face_entered_square=0
 
-        with self.mediapipe_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.5) as detector_settings:
-            frame=cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        with self.mediapipe_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.05) as detector_settings:
+            frame=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            #frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
+            frame=cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
             location=detector_settings.process(frame)
-            frame=cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+            #frame=cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
             if location.detections:
                 for detection in location.detections:
                     face_pair=""
@@ -177,9 +178,10 @@ class FaceTracker:
             for final_id in list(self.currently_noted.keys()):
                 if final_id==self.target:
                     self.final_target=self.target
-                    if self.box_state[final_id]:
-                        self.in_box=self.box_state[final_id]
-                        print(self.in_box)
+                    if final_id in self.box_state:
+                        if self.box_state[final_id]:
+                            self.in_box = self.box_state[final_id]
+                            #print(self.in_box)
                     self.x_target_final=self.x_target
                     self.y_target_final=self.y_target
                 else:
@@ -198,3 +200,4 @@ while True:
 
 video_capture.release()
 cv2.destroyAllWindows()
+#frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
