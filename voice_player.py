@@ -4,20 +4,13 @@ import numpy as np
 from gpiozero import Servo
 import time
 from gpiozero.pins.pigpio import PiGPIOFactory
-
-# Initialize GPIO and Servo
 factory = PiGPIOFactory()
 left_pin = 14
 right_pin = 18
 servo = Servo(left_pin, pin_factory=factory)
 
-# Audio parameters
 chunk = 1024
-audio_files = [
-    "/home/pumpkin1/Music/blink_audio.wav",
-    "/home/pumpkin1/Music/second_test.wav",
-    "/home/pumpkin1/Music/third_test.wav"
-]
+audio_files = ["/home/pumpkin1/Music/blink_audio.wav", "/home/pumpkin1/Music/second_test.wav", "/home/pumpkin1/Music/third_test.wav"]
 
 class AudioPlayer:
     def __init__(self, audio_files):
@@ -43,12 +36,12 @@ class AudioPlayer:
 
                 audio_info = np.frombuffer(audio_data, dtype=np.int16)
                 if not np.isnan(audio_info).any():
-                    volume = np.abs(audio_info[10])  # Get the 10th value
+                    volume = np.abs(audio_info[10])
 
                 iteration = (iteration + 1) % 15
 
                 if iteration == 0:
-                    servo.value = volume / 32767.0  # Normalize volume to servo range (-1 to 1)
+                    servo.value = volume/1000
 
                 stream.write(audio_data)
 
@@ -64,4 +57,4 @@ class AudioPlayer:
 audio_player = AudioPlayer(audio_files)
 while True:
     audio_player.play_audio_files()
-    time.sleep(10)  # Wait for 10 seconds before playing the next audio file
+    time.sleep(10)
