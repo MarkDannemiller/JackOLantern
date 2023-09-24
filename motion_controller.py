@@ -1,5 +1,14 @@
 from simple_pid import PID
 
+#SERVO BOARD CONTROL
+import board
+import busio
+import adafruit_pca9685
+i2c = busio.I2C(board.SCL, board.SDA)
+pca = adafruit_pca9685.PCA9685(i2c)
+
+pca.frequency = 100
+
 yaw_lim_right = 1000 #limit in steps to the right
 yaw_lim_left = 0 #limit in steps to left
 pitch_lim_lower = 0 #limit in degrees for lower neck pitch
@@ -30,7 +39,7 @@ class MotionController:
         #code to feed all motors current pid values
         pass
 
- #region NECK       
+#region NECK       
     def home_neck():
         #code to home neck yaw and set pitch on servos to 0
         pass
@@ -45,6 +54,10 @@ class MotionController:
 
         pass
 #endregion
+
+    def set_servo(port, ang, max_ang):
+
+        pass
 
 #region JAW
     def set_jaw(angle):
