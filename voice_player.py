@@ -3,26 +3,20 @@ import pyaudio
 import numpy
 
 from os import system
-system("sudo pigpiod")
-from gpiozero import Servo
 import time
-from gpiozero.pins.pigpio import PiGPIOFactory
-factory=PiGPIOFactory()
 left_pin=14
 right_pin=15
 chunk=1024
 start=0
 end=0
 current=0
-flag=0        
-system("sudo pigpiod")        
+flag=0            
         
     
 
 class AudioPlayer:
-    def __init__(self, audio_files, servo_movement):
+    def __init__(self, audio_files):
         self.volume_list=[]
-        self.servo_movement=servo_movement
         self.audio_files=audio_files
         self.p=pyaudio.PyAudio()
     def calculate_volume(self, audio_info):
@@ -35,6 +29,7 @@ class AudioPlayer:
                 vol=1
             if vol<-1:
                 vol=-1
+        print(vol)
                 
         return vol
     def play_audio_files(self):
@@ -60,7 +55,6 @@ class AudioPlayer:
 
                         #print("Hi")
                         
-                        self.servo_movement.movement(vol)
 
                     stream.write(audio_data)
 
@@ -69,34 +63,12 @@ class AudioPlayer:
                 stream.stop_stream()
                 stream.close()
 
-class Servo_jaw:
-    def __init__(self):
-        self.left_servo=Servo(14, min_pulse_width=.5/1000, max_pulse_width=.633/1000, pin_factory=factory)
-        self.right_servo=Servo(15, min_pulse_width=.633/1000, max_pulse_width=.766/1000, pin_factory=factory)
 
-    def movement(self, volume):
-        volume1=-volume
-        volume2=volume
-
-
-        print (volume)
-        self.left_servo.value = volume1
-        self.right_servo.value = volume2
-            #self.right_servo.angle = 260
-            #print(volume)
-
-#1.167 1.833 1.833 2.5          
             
-            
-servo_movement=Servo_jaw()
 audio_files=["/home/pumpkin1/Music/second_test.wav", "/home/pumpkin1/Music/second_test.wav", "/home/pumpkin1/Music/third_test.wav"]
-audio_player=AudioPlayer(audio_files, servo_movement)
+audio_player=AudioPlayer(audio_files)
 while True:
-    audio_player.play_audio_files()
-    while (flag==0):
-        if (start==0):
-            start=time.time()
-            flag=0
-        if (time.time()-start>=10):
-            flag=1
+    volume=audio_player.play_audio_files()
+    print(volume)
+
         
