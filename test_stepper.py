@@ -3,23 +3,23 @@ from time import sleep
 
  
 
-high_speed = 4
-low_speed = 1
-interm_speed = 1
-accel_steps = 50
-deccel_steps = 50
-s_p_rev = 200
+high_speed = 0.5
+low_speed = 0.1
+interm_speed = 0.5
+accel_steps = 100
+deccel_steps = 100
+s_p_rev = 3200
 min_steps = accel_steps + deccel_steps
 
  
 
-pins = [22, 27, 12, 13]
+pins = [14, 15, 12, 13] #dir, step
 
  
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-for b in pins:
+for b in pins: 
     GPIO.setup(b, GPIO.OUT)
 
  
@@ -71,3 +71,6 @@ def motor2(dir, steps):
         GPIO.output(pins[3], GPIO.HIGH)
         GPIO.output(pins[3], GPIO.LOW)
         sleep(timings[a])
+
+
+motor1(True, 5000)

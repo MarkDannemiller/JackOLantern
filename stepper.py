@@ -26,8 +26,8 @@ class Stepper:
             self.position += 1 if position > self.position else -1
  
 # Define the pins
-step_pin = 27  # GPIO number where step pin is connected
-dir_pin = 22   # GPIO number where dir pin is connected
+step_pin = 15  # GPIO number where step pin is connected
+dir_pin = 14   # GPIO number where dir pin is connected
  
 # Initialize stepper
 stepper = Stepper(step_pin, dir_pin)
