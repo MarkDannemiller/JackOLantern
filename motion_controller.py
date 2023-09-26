@@ -4,8 +4,17 @@ from simple_pid import PID
 import board
 import busio
 import adafruit_pca9685
+from adafruit_servokit import ServoKit
+import adafruit_motor.servo
+servo = adafruit_motor.servo.Servo(servo_channel)
+kit = ServoKit(channels=16)
 i2c = busio.I2C(board.SCL, board.SDA)
 pca = adafruit_pca9685.PCA9685(i2c)
+
+kit.servo[0].set_pulse_width_range(500, 2500)
+kit.servo[1].set_pulse_width_range(500, 2500)
+servokit.servo[0].actuation_range = 270
+servokit.servo[1].actuation_range = 270
 
 pca.frequency = 100
 
@@ -60,8 +69,9 @@ class MotionController:
         pass
 
 #region JAW
-    def set_jaw(angle):
-        #pass angle and this code should sync motors
+    def set_jaw(angle_left, angle_right):
+        kit.servo[0].angle = angle_left
+        kit.servo[1].angle = angle_right
         pass
 #endregion
 
