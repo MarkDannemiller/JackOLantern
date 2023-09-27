@@ -22,6 +22,13 @@ yaw_lim_left = 0 #limit in steps to left
 pitch_lim_lower = 0 #limit in degrees for lower neck pitch
 pitch_lim_upper = 90 #limit in degrees for upper neck pitch
 
+eye_lim_y_upper = 50
+eye_lim_y_lower = 0
+eye_lim_x_right = 90
+eye_lim_x_left = 0
+eyelid_lim_open = 90
+eyelid_lim_close = 0
+
 P_pitch = 1
 I_pitch = 0
 D_pitch = 0
@@ -74,10 +81,14 @@ def set_neck(xdegrees, ydegrees):
 def look_eyes(xdegrees, ydegrees):
 
     pass
+
+def blink_eyes(pos):
+
+    pass
 #endregion
 
-def set_servo(port, ang, max_ang):
-
+def set_servo(port, ang):
+    kit.servo[port].angle = ang
     pass
 
 #region JAW
@@ -102,8 +113,41 @@ kit.servo[port_neck_r].angle = 100
 '''
 
 #set neck servos to neutral head position
-kit.servo[port_neck_l].angle = 75 #goes down for more range
+'''kit.servo[port_neck_l].angle = 75 #goes down for more range
 kit.servo[port_neck_r].angle = 195 #goes up for more range
+'''
+
+#eye test motion
+setpoint = 0
+
+
+set_servo(port_eye_y, setpoint)
+set_servo(port_eye_x, setpoint)
+
+for x in range(0, 10):
+
+    eye_lid_left_top_close = 80
+    eye_lid_left_bot_close = 0
+    set_servo(port_lid_tl, eye_lid_left_top_close)
+    set_servo(port_lid_bl, eye_lid_left_bot_close)
+
+    eye_lid_right_top_close = 0
+    eye_lid_right_bot_close = 80
+    set_servo(port_lid_tr, eye_lid_right_top_close)
+    set_servo(port_lid_br, eye_lid_right_bot_close)
+    time.sleep(0.5)
+
+    eye_lid_left_top_open = 0
+    eye_lid_left_bot_open = 85
+    set_servo(port_lid_tl, eye_lid_left_top_open)
+    set_servo(port_lid_bl, eye_lid_left_bot_open)
+
+    eye_lid_right_top_open = 85
+    eye_lid_right_bot_open = 0
+    set_servo(port_lid_tr, eye_lid_right_top_open)
+    set_servo(port_lid_br, eye_lid_right_bot_open)
+
+    time.sleep(0.5)
 
 #endregion
 
