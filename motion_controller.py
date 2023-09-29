@@ -3,6 +3,8 @@ import time
 
 #SERVO BOARD CONTROL
 from adafruit_servokit import ServoKit #Special library for 16 channel pwm adafruit board controlling servos
+from pid_servo import PIDServo
+from pid_servo import ServoFollower
 
 #region SERVO_PORTS
 port_eye_y = 0
@@ -17,17 +19,20 @@ port_neck_l = 8
 port_neck_r = 9
 #endregion
 
-yaw_lim_right = 1000 #limit in steps to the right
-yaw_lim_left = 0 #limit in steps to left
-pitch_lim_lower = 0 #limit in degrees for lower neck pitch
-pitch_lim_upper = 90 #limit in degrees for upper neck pitch
-
 eye_lim_y_upper = 50
 eye_lim_y_lower = 0
 eye_lim_x_right = 90
 eye_lim_x_left = 0
 eyelid_lim_open = 90
 eyelid_lim_close = 0
+
+
+yaw_lim_right = 1000 #limit in steps to the right
+yaw_lim_left = 0 #limit in steps to left
+pitch_lim_lower = 64 #limit in degrees for lower neck pitch
+pitch_lim_upper = 100 #limit in degrees for upper neck pitch
+servo_neck_r_offset = 4 #offset from the right neck servo
+neck_pitch_mv = 10 #max velocity
 
 P_pitch = 1
 I_pitch = 0
@@ -38,13 +43,12 @@ I_yaw = 0
 D_yaw = 0
 
 #init
-pitch_pid = PID(P_pitch, I_pitch, D_pitch)
-yaw_pid = PID(P_pitch, I_pitch, D_pitch)
 kit = ServoKit(channels=16)
 kit.servo[port_jaw_l].actuation_range = 270
 kit.servo[port_jaw_r].actuation_range = 270
-kit.servo[port_neck_l].actuation_range = 270
 kit.servo[port_neck_r].actuation_range = 270
+'''servo_neck_l = PIDServo(port_neck_l, 270, pitch_lim_lower, pitch_lim_upper, neck_pitch_mv, P_pitch, I_pitch, D_pitch, pitch_lim_lower)
+servo_neck_r = ServoFollower(port_neck_r, servo_neck_l, 270, True, 4)'''
 
 def enable():
     #code to enable power to motors
@@ -70,10 +74,12 @@ def test_servos():
 #region NECK       
 def home_neck():
     #code to home neck yaw and set pitch on servos to 0
+    #need limit switch for this
     pass
 
-def set_neck(xdegrees, ydegrees):
-    yaw_pid.setpoint = xdegrees
+#switches necks current focus
+def look_neck(xdegrees, ydegrees):
+    servo_neck_l.set_setpoint(ydegrees + pitch_lim_lower) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
     pass
 #endregion
 
@@ -84,12 +90,15 @@ def look_eyes(xdegrees, ydegrees):
 
 def blink_eyes(pos):
 
-    pass
+    passzero_point
 #endregion
 
 def set_servo(port, ang):
     kit.servo[port].angle = ang
     pass
+
+def set_servo_range(port, upper_ang):
+    kit.servo[port].actuation_range = upper_ang
 
 #region JAW
 def set_jaw(angle):
@@ -109,7 +118,7 @@ kit.servo[port_neck_l].angle = 64 #goes down for more range
 kit.servo[port_neck_r].angle = 202 #goes up for more range
 time.sleep(1)
 kit.servo[port_neck_l].angle = 170
-kit.servo[port_neck_r].angle = 100m,l 
+kit.servo[port_neck_r].angle = 100
 '''
 
 #set neck servos to neutral head position
@@ -128,6 +137,8 @@ for x in range(0, 10):
 
     eye_lid_left_top_close = 80
     eye_lid_left_bot_close = 0
+
+
     set_servo(port_lid_tl, eye_lid_left_top_close)
     set_servo(port_lid_bl, eye_lid_left_bot_close)
 
@@ -146,6 +157,7 @@ for x in range(0, 10):
     eye_lid_right_bot_open = 0
     set_servo(port_lid_tr, eye_lid_right_top_open)
     set_servo(port_lid_br, eye_lid_right_bot_open)
+
     time.sleep(0.5)
 
 #endregion
