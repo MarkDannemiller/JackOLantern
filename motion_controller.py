@@ -109,7 +109,7 @@ kit.servo[port_neck_l].angle = 64 #goes down for more range
 kit.servo[port_neck_r].angle = 202 #goes up for more range
 time.sleep(1)
 kit.servo[port_neck_l].angle = 170
-kit.servo[port_neck_r].angle = 100
+kit.servo[port_neck_r].angle = 100m,l 
 '''
 
 #set neck servos to neutral head position
@@ -146,7 +146,6 @@ for x in range(0, 10):
     eye_lid_right_bot_open = 0
     set_servo(port_lid_tr, eye_lid_right_top_open)
     set_servo(port_lid_br, eye_lid_right_bot_open)
-
     time.sleep(0.5)
 
 #endregion
