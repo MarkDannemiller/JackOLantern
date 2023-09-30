@@ -3,17 +3,6 @@ import mediapipe
 import random
 import time
 
-fov_horiz = 90 #double check
-fov_vert = 67.5 #double check
-screen_height = 600
-screen_width = 1024
-
-#returns angle of position on screen based on parameters above
-def screen_to_angle(xpixel, ypixel):
-    xdegrees = xpixel/screen_width * fov_horiz
-    ydegrees = ypixel/screen_height * fov_vert
-    return xdegrees, ydegrees
-
 class FaceTracker:
     def __init__(self, video_capture):
         self.video_capture=video_capture
@@ -123,69 +112,64 @@ class FaceTracker:
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)
 
-        if self.start==0:
-            self.start=time.time()
-        current=time.time()
-        self.end=current-self.start
-        if self.end>=5:
-            #print("Hi")
-            self.test=0
-            self.currently_seen=list(self.currently_noted.keys())
-            while self.currently_seen and self.test==0:
-                
-                self.target=random.choice(self.currently_seen)
-                #print(self.target)
-                if self.target!=self.previous1 and self.target!=self.previous2:
-                    self.x_target, self.y_target=self.currently_noted[self.target]
-                    self.width, self.height=self.currently_noted_dimensions[self.target]
-                    #print(f"ID: {self.target}, X: {self.x_target}, Y: {self.y_target}")
-                    #print(f"ID: {self.target}, W: {self.width}, H: {self.height}")
-                    self.test=1
-                    #break
-                elif (self.randomize_target>=10):
-                    self.x_target, self.y_target=self.currently_noted[self.target]
-                    self.width, self.height=self.currently_noted_dimensions[self.target]
-                    self.randomize_target=0
-                    self.test=1
-                    #break
-                else:
-                    self.randomize_target=self.randomize_target+1
-                    
+        cv2.imshow('face', frame)
+    def target_information(self, target):
+        self.update_coordinates=list(self.currently_noted.keys())
+        for face_iteration in range(len(self.update_coordinates)):
+            if self.update_coordinates[face_iteration]==target:
+                self.x_target1, self.y_target1=self.currently_noted[target]
+                self.width_target1, self.height_target1=self.currently_noted_dimensions[target]
+                self.check=1
+        return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.number_of_faces
+    def check_information(self):
+        return self.check
+    def get_new_target(self):
+        self.test=0
+        self.currently_seen=list(self.currently_noted.keys())
+        while self.currently_seen and self.test==0:
+
+            self.target=random.choice(self.currently_seen)
+            #print(self.target)
+            if self.target!=self.previous1:
+                self.x_target, self.y_target=self.currently_noted[self.target]
+                self.width, self.height=self.currently_noted_dimensions[self.target]
+                #print(f"ID: {self.target}, X: {self.x_target}, Y: {self.y_target}")
+                #print(f"ID: {self.target}, W: {self.width}, H: {self.height}")
+                self.test=1
+                #break
+            elif (self.randomize_target>=10):
+                self.x_target, self.y_target=self.currently_noted[self.target]
+                self.width, self.height=self.currently_noted_dimensions[self.target]
+                self.randomize_target=0
+                self.test=1
+                #break
+            else:
+                self.randomize_target=self.randomize_target+1
+
 #                 if (time.time()-self.start1>=5):
 #                     break
 
-            self.previous2=self.previous1
-            self.previous1=self.target
-            self.start=0
-            self.end=0
+        self.previous2=self.previous1
+        self.previous1=self.target
 
-            for final_id in list(self.currently_noted.keys()):
-                if final_id==self.target:
-                    self.target_final=self.target
-                    if final_id in self.box_state:
-                        if self.box_state[final_id]:
-                            self.in_box = self.box_state[final_id]
-                            #print(self.in_box)
-                    self.x_target_final=self.x_target
-                    self.y_target_final=self.y_target
-                    self.width_final=self.width
-                    self.height_final=self.height
-                    self.check=1
-                    #time.sleep(2)
-                else:
-                    break
-        self.update_coordinates=list(self.currently_noted.keys())
-        for face_iteration in range(len(self.update_coordinates)):
-            if self.update_coordinates[face_iteration]==self.target_final:
-                self.x_target1, self.y_target1=self.currently_noted[self.target]
-                self.width_target1, self.height_target1=self.currently_noted_dimensions[self.target]
+        for final_id in list(self.currently_noted.keys()):
+            if final_id==self.target:
+                self.target_final=self.target
+                if final_id in self.box_state:
+                    if self.box_state[final_id]:
+                        self.in_box = self.box_state[final_id]
+                        #print(self.in_box)
+                self.x_target_final=self.x_target
+                self.y_target_final=self.y_target
+                self.width_final=self.width
+                self.height_final=self.height
                 self.check=1
+                #time.sleep(2)
+            else:
+                break
+
                 
-        cv2.imshow('face', frame)
-    def target_info(self):
-        return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.target, self.number_of_faces
-    def check_info(self):
-        return self.check
+        return self.target
 
         
 
@@ -194,25 +178,32 @@ tracker=FaceTracker(video_capture)
 position_x=0
 position_y=0
 s=time.time()
-while True:
-    tracker.process()
-    check=tracker.check_info()
-    #print(check)
-    if check==1 and time.time()-s>=3:
-        x_location, y_location, width, height, target_id, number_of_faces=tracker.target_info()
-        if (width!=0):
-            print("x: ", x_location)
-            print("y: ", y_location)
-            print("width: ", width)
-            print("height: ", height)
-            print("target: ", target_id)
-            print("number: ", number_of_faces)
-            print("/////////////////////////")
-        s=time.time()
+e=time.time()
+final_id=0
+# while True:
+#     tracker.process()
+#     check=tracker.check_information()
+#     #print(check)
+#     if (time.time()-e>=6):
+#         final_id=tracker.get_new_target()
+#         e=time.time()
+        
+    
+#     if time.time()-s>=2:
+#         x_location, y_location, width, height, number_of_faces=tracker.target_information(final_id)
+#         if (width!=0 and number_of_faces!=0):
+#             print("x: ", x_location)
+#             print("y: ", y_location)
+#             print("width: ", width)
+#             print("height: ", height)
+#             print("target: ", final_id)
+#             print("number: ", number_of_faces)
+#             print("/////////////////////////")
+#         s=time.time()
         
 
-    if cv2.waitKey(5) & 0xFF==ord('x'):
-        break
+#     if cv2.waitKey(5) & 0xFF==ord('x'):
+#         break
 
 video_capture.release()
 cv2.destroyAllWindows()
