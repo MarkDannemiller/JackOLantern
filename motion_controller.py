@@ -44,8 +44,6 @@ D_yaw = 0
 
 #init
 kit = ServoKit(channels=16)
-kit.servo[8].set_pulse_width_range(500, 633)
-kit.servo[7].set_pulse_width_range(633, 766)
 kit.servo[port_jaw_l].actuation_range = 270
 kit.servo[port_jaw_r].actuation_range = 270
 kit.servo[port_neck_r].actuation_range = 270
@@ -62,7 +60,6 @@ def disable():
 
 def feed_motors():
     #code to feed all motors current pid values
-    servo_neck_l.update()
     pass
 
 def test_servos():
@@ -104,12 +101,12 @@ def set_servo_range(port, upper_ang):
     kit.servo[port].actuation_range = upper_ang
 
 #region JAW
-def set_jaw(angle_left, angle_right):
-    kit.servo[8].angle = angle_left
-    kit.servo[7].angle = angle_right
+def set_jaw(angle):
     #pass angle and this code should sync motors
     pass
 #endregion
+
+
 
 #region TEST_CODE
 

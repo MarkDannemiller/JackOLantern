@@ -196,10 +196,10 @@ position_y=0
 s=time.time()
 while True:
     tracker.process()
-    check=tracker.check_information()
+    check=tracker.check_info()
     #print(check)
     if check==1 and time.time()-s>=3:
-        x_location, y_location, width, height, target_id, number_of_faces=tracker.target_information()
+        x_location, y_location, width, height, target_id, number_of_faces=tracker.target_info()
         if (width!=0):
             print("x: ", x_location)
             print("y: ", y_location)
