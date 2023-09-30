@@ -184,31 +184,31 @@ position_y=0
 s=time.time()
 e=time.time()
 final_id=0
-while True:
-    tracker.process()
-    check=tracker.check_information()
-    #print(check)
-    if (time.time()-e>=6):
-        final_id=tracker.get_new_target()
-        e=time.time()
+# while True:
+#     tracker.process()
+#     check=tracker.check_information()
+#     #print(check)
+#     if (time.time()-e>=6):
+#         final_id=tracker.get_new_target()
+#         e=time.time()
         
     
-    if time.time()-s>=2:
-        x_location, y_location, width, height, number_of_faces, box=tracker.target_information(final_id)
-        if (width!=0 and number_of_faces!=0):
-            print("x: ", x_location)
-            print("y: ", y_location)
-            print("width: ", width)
-            print("height: ", height)
-            print("target: ", final_id)
-            print("number: ", number_of_faces)
-            print("in box: ", box)
-            print("/////////////////////////")
-        s=time.time()
+#     if time.time()-s>=2:
+#         x_location, y_location, width, height, number_of_faces, box=tracker.target_information(final_id)
+#         if (width!=0 and number_of_faces!=0):
+#             print("x: ", x_location)
+#             print("y: ", y_location)
+#             print("width: ", width)
+#             print("height: ", height)
+#             print("target: ", final_id)
+#             print("number: ", number_of_faces)
+#             print("in box: ", box)
+#             print("/////////////////////////")
+#         s=time.time()
         
 
-    if cv2.waitKey(5) & 0xFF==ord('x'):
-        break
+#     if cv2.waitKey(5) & 0xFF==ord('x'):
+#         break
 
 video_capture.release()
 cv2.destroyAllWindows()
