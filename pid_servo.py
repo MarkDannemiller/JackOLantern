@@ -1,13 +1,12 @@
 from simple_pid import PID
-from motion_controller import set_servo
-from motion_controller import set_servo_range
+import motion_controller
 import robot
 
 class PIDServo:
     #min/max ang in degrees. max_speed should be in degrees/second. initial_set in degrees
     def __init__(self, port, upper_ang, min_limit, max_limit, max_speed, P, I, D, initial_set) -> None:
         self.upper_ang = upper_ang
-        set_servo_range(port, upper_ang)
+        motion_controller.set_servo_range(port, upper_ang)
         self.min_limit = min_limit
         self.max_limit = max_limit
         self.max_speed = max_speed
@@ -16,7 +15,7 @@ class PIDServo:
         self.port = port #port on PWM board (in motion_controller)
         self.theta = initial_set #current position
         self.followers = [] #followers start empty and are added by the followers themselves when initialized
-        set_servo(port, initial_set)
+        motion_controller.set_servo(port, initial_set)
 
     #adds a follower and sets its position to match theta of this servo
     def add_follower(self, servo):
@@ -47,7 +46,7 @@ class PIDServo:
             control = self.max_speed
         #resulting control from pid will be added to current position
         self.theta += self.control
-        set_servo(self.port, self.theta)
+        motion_controller.set_servo(self.port, self.theta)
         #update any servo followers attached to this servo
         for follower in self.followers:
             follower.set(self.theta)
@@ -69,4 +68,4 @@ class ServoFollower:
             ang = self.upper_ang - (ang+self.offset_ang)
         else:
             ang += self.offset_ang
-        set_servo(self.port, ang)
+        motion_controller.set_servo(self.port, ang)
