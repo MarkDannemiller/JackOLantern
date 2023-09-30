@@ -3,6 +3,17 @@ import mediapipe
 import random
 import time
 
+fov_horiz = 90 #double check
+fov_vert = 67.5 #double check
+screen_height = 600
+screen_width = 1024
+
+#returns angle of position on screen based on parameters above
+def screen_to_angle(xpixel, ypixel):
+    xdegrees = xpixel/screen_width * fov_horiz
+    ydegrees = ypixel/screen_height * fov_vert
+    return xdegrees, ydegrees
+
 class FaceTracker:
     def __init__(self, video_capture):
         self.video_capture=video_capture
@@ -171,9 +182,9 @@ class FaceTracker:
                 self.check=1
                 
         cv2.imshow('face', frame)
-    def target_information(self):
+    def target_info(self):
         return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.target, self.number_of_faces
-    def check_information(self):
+    def check_info(self):
         return self.check
 
         
