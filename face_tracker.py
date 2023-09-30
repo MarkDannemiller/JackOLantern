@@ -51,7 +51,7 @@ class FaceTracker:
         self.number_of_faces=0
         self.check=0
         ret, frame=self.video_capture.read()
-        #frame=cv2.resize(frame, (640, 480))
+        frame=cv2.resize(frame, (640, 480))
         if not ret:
             return
 
@@ -114,13 +114,21 @@ class FaceTracker:
 
         cv2.imshow('face', frame)
     def target_information(self, target):
+
         self.update_coordinates=list(self.currently_noted.keys())
         for face_iteration in range(len(self.update_coordinates)):
+
             if self.update_coordinates[face_iteration]==target:
                 self.x_target1, self.y_target1=self.currently_noted[target]
                 self.width_target1, self.height_target1=self.currently_noted_dimensions[target]
                 self.check=1
-        return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.number_of_faces
+                self.x_target1=self.x_target1+.5*self.width_target1
+                self.y_target1=self.y_target1+.5*self.height_target1
+                if (250<self.x_target1<400) and (150<self.y_target1<350):
+                    self.in_box=1
+                else:
+                    self.in_box=0
+        return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.number_of_faces, self.in_box
     def check_information(self):
         return self.check
     def get_new_target(self):
@@ -155,10 +163,6 @@ class FaceTracker:
         for final_id in list(self.currently_noted.keys()):
             if final_id==self.target:
                 self.target_final=self.target
-                if final_id in self.box_state:
-                    if self.box_state[final_id]:
-                        self.in_box = self.box_state[final_id]
-                        #print(self.in_box)
                 self.x_target_final=self.x_target
                 self.y_target_final=self.y_target
                 self.width_final=self.width
@@ -180,30 +184,31 @@ position_y=0
 s=time.time()
 e=time.time()
 final_id=0
-# while True:
-#     tracker.process()
-#     check=tracker.check_information()
-#     #print(check)
-#     if (time.time()-e>=6):
-#         final_id=tracker.get_new_target()
-#         e=time.time()
+while True:
+    tracker.process()
+    check=tracker.check_information()
+    #print(check)
+    if (time.time()-e>=6):
+        final_id=tracker.get_new_target()
+        e=time.time()
         
     
-#     if time.time()-s>=2:
-#         x_location, y_location, width, height, number_of_faces=tracker.target_information(final_id)
-#         if (width!=0 and number_of_faces!=0):
-#             print("x: ", x_location)
-#             print("y: ", y_location)
-#             print("width: ", width)
-#             print("height: ", height)
-#             print("target: ", final_id)
-#             print("number: ", number_of_faces)
-#             print("/////////////////////////")
-#         s=time.time()
+    if time.time()-s>=2:
+        x_location, y_location, width, height, number_of_faces, box=tracker.target_information(final_id)
+        if (width!=0 and number_of_faces!=0):
+            print("x: ", x_location)
+            print("y: ", y_location)
+            print("width: ", width)
+            print("height: ", height)
+            print("target: ", final_id)
+            print("number: ", number_of_faces)
+            print("in box: ", box)
+            print("/////////////////////////")
+        s=time.time()
         
 
-#     if cv2.waitKey(5) & 0xFF==ord('x'):
-#         break
+    if cv2.waitKey(5) & 0xFF==ord('x'):
+        break
 
 video_capture.release()
 cv2.destroyAllWindows()
