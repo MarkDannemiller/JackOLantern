@@ -71,11 +71,11 @@ class FaceTracker:
         self.face_entered_square=0
 
         with self.mediapipe_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.05) as detector_settings:
-            frame=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            frame=cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             #frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
-            frame=cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+            #frame=cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
             location=detector_settings.process(frame)
-            #frame=cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+            frame=cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
             if location.detections:
                 for detection in location.detections:
                     face_pair=""
@@ -175,7 +175,7 @@ class FaceTracker:
                 else:
                     break
         self.update_coordinates=list(self.currently_noted.keys())
-        for face_iteration in self.update_coordinates:
+        for face_iteration in range(len(self.update_coordinates)):
             if self.update_coordinates[face_iteration]==self.target_final:
                 self.x_target1, self.y_target1=self.currently_noted[self.target]
                 self.width_target1, self.height_target1=self.currently_noted_dimensions[self.target]
