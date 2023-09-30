@@ -109,8 +109,7 @@ def set_jaw(angle_left, angle_right):
     kit.servo[7].angle = angle_right
     #pass angle and this code should sync motors
     pass
-
-
+#endregion
 
 #region TEST_CODE
 
@@ -128,6 +127,10 @@ kit.servo[port_neck_r].angle = 100
 #set neck servos to neutral head position
 '''kit.servo[port_neck_l].angle = 75 #goes down for more range
 kit.servo[port_neck_r].angle = 195 #goes up for more range
+'''
+
+'''
+//this is a comment
 '''
 
 #eye test motion

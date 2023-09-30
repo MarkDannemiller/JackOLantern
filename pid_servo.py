@@ -43,7 +43,7 @@ class PIDServo:
         elif(control + self.theta < self.min_limit):
             control = self.min_limit - self.theta
         #add upper limit to speed based on time in this frame
-        elif(control / robot.frame_time > self.max_speed):
+        elif(control / robot.delta_time() > self.max_speed):
             control = self.max_speed
         #resulting control from pid will be added to current position
         self.theta += self.control
