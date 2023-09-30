@@ -1,6 +1,7 @@
 from simple_pid import PID
 from motion_controller import set_servo
 from motion_controller import set_servo_range
+import robot
 
 class PIDServo:
     #min/max ang in degrees. max_speed should be in degrees/second. initial_set in degrees
@@ -36,11 +37,14 @@ class PIDServo:
             self.setpoint = self.max_limit
 
     def update(self):
-        control = self.pid(self.theta) #result shall be angle to turn in this frame
+        control = self.pid(self.theta) #result shall be angle to turn in this frame (every 20 ms)
         if(control + self.theta > self.max_limit):
             control = self.max_limit - self.theta
         elif(control + self.theta < self.min_limit):
             control = self.min_limit - self.theta
+        #add upper limit to speed based on time in this frame
+        elif(control / robot.frame_time > self.max_speed):
+            control = self.max_speed
         #resulting control from pid will be added to current position
         self.theta += self.control
         set_servo(self.port, self.theta)

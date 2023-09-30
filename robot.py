@@ -11,6 +11,8 @@ frame_time = 0.02 #time in seconds per frame (50 fps)
 while True:
     initial_time = time.time
     tracker.process()
+    target_pos_deg = tracker.target_info[0:1]
+    # update target setpoint for motion controller
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

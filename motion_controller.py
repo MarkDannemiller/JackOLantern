@@ -47,8 +47,8 @@ kit = ServoKit(channels=16)
 kit.servo[port_jaw_l].actuation_range = 270
 kit.servo[port_jaw_r].actuation_range = 270
 kit.servo[port_neck_r].actuation_range = 270
-'''servo_neck_l = PIDServo(port_neck_l, 270, pitch_lim_lower, pitch_lim_upper, neck_pitch_mv, P_pitch, I_pitch, D_pitch, pitch_lim_lower)
-servo_neck_r = ServoFollower(port_neck_r, servo_neck_l, 270, True, 4)'''
+servo_neck_l = PIDServo(port_neck_l, 270, pitch_lim_lower, pitch_lim_upper, neck_pitch_mv, P_pitch, I_pitch, D_pitch, pitch_lim_lower)
+servo_neck_r = ServoFollower(port_neck_r, servo_neck_l, 270, True, 4)
 
 def enable():
     #code to enable power to motors
@@ -60,6 +60,7 @@ def disable():
 
 def feed_motors():
     #code to feed all motors current pid values
+    servo_neck_l.update()
     pass
 
 def test_servos():
@@ -90,7 +91,7 @@ def look_eyes(xdegrees, ydegrees):
 
 def blink_eyes(pos):
 
-    passzero_point
+    pass
 #endregion
 
 def set_servo(port, ang):
