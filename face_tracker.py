@@ -12,6 +12,7 @@ screen_width = 1024
 def screen_to_angle(xpixel, ypixel):
     xdegrees = xpixel/screen_width * fov_horiz
     ydegrees = ypixel/screen_height * fov_vert
+    print("converted x:", xpixel, "y:", ypixel, " -> xd:", xdegrees, "yd:", ydegrees)
     return xdegrees, ydegrees
 
 class FaceTracker:
@@ -188,7 +189,7 @@ class FaceTracker:
         return self.check
 
         
-
+'''
 video_capture=cv2.VideoCapture(0)
 tracker=FaceTracker(video_capture)
 position_x=0
@@ -217,3 +218,4 @@ while True:
 video_capture.release()
 cv2.destroyAllWindows()
 #frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
+'''
