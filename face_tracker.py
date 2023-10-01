@@ -172,21 +172,21 @@ class FaceTracker:
         self.previous2=self.previous1
         self.previous1=self.target
 
-            for final_id in list(self.currently_noted.keys()):
-                if final_id==self.target:
-                    self.target_final=self.target
-                    if final_id in self.box_state:
-                        if self.box_state[final_id]:
-                            self.in_box = self.box_state[final_id]
-                            #print(self.in_box)
-                    self.x_target_final=self.x_target
-                    self.y_target_final=self.y_target
-                    self.width_final=self.width
-                    self.height_final=self.height
-                    self.check=1
-                    #time.sleep(2)
-                else:
-                    break
+        for final_id in list(self.currently_noted.keys()):
+            if final_id==self.target:
+                self.target_final=self.target
+                if final_id in self.box_state:
+                    if self.box_state[final_id]:
+                        self.in_box = self.box_state[final_id]
+                        #print(self.in_box)
+                self.x_target_final=self.x_target
+                self.y_target_final=self.y_target
+                self.width_final=self.width
+                self.height_final=self.height
+                self.check=1
+                #time.sleep(2)
+            else:
+                break
         self.update_coordinates=list(self.currently_noted.keys())
         for face_iteration in range(len(self.update_coordinates)):
             if self.update_coordinates[face_iteration]==self.target_final:
@@ -235,7 +235,6 @@ final_id=0
 #     if cv2.waitKey(5) & 0xFF==ord('x'):
 #         break
 
-video_capture.release()
-cv2.destroyAllWindows()
+#video_capture.release()
+#cv2.destroyAllWindows()
 #frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
-'''
