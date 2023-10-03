@@ -22,36 +22,53 @@ class MotionController:
         self.port_neck_r = 9
         #endregion
 
-        self.eye_lim_y_upper = 50
+        self.eye_lim_y_upper = 70
         self.eye_lim_y_lower = 0
-        self.eye_lim_x_right = 90
-        self.eye_lim_x_left = 0
-        self.eyelid_lim_open = 90
-        self.eyelid_lim_close = 0
+        self.eye_lim_x_right = 0
+        self.eye_lim_x_left = 70
+        self.eye_x_neutral = 30
+        self.eye_y_neutral = 35
 
+        self.lid_ltop_close = 80
+        self.lid_lbot_close = 0
+        self.lid_rtop_close = 0
+        self.lid_rbot_close = 80
+        self.lid_ltop_open = 0
+        self.lid_lbot_open = 85
+        self.lid_rtop_open = 85
+        self.lid_rbot_open = 0
 
         self.yaw_lim_right = 1000 #limit in steps to the right
         self.yaw_lim_left = 0 #limit in steps to left
-        self.pitch_lim_lower = 64 #limit in degrees for lower neck pitch
-        self.pitch_lim_upper = 100 #limit in degrees for upper neck pitch
-        self.servo_neck_r_offset = 4 #offset from the right neck servo
-        self.neck_pitch_mv = 10 #max velocity
+        self.pitch_lim_lower = 130 #limit in degrees for lower neck pitch
+        self.pitch_lim_upper = 204 #limit in degrees for upper neck pitch
+        self.pitch_neutral_pos = 194
+        self.servo_neck_offset = 20 #offset from the right neck servo
+        self.neck_pitch_mv = 10 #max velocity deg/sec
 
-        self.P_pitch = 1
+        self.P_pitch = 0.15
         self.I_pitch = 0
-        self.D_pitch = 0
+        self.D_pitch = 0.1
 
-        self.P_yaw = 1
+        self.P_yaw = 0.1
         self.I_yaw = 0
-        self.D_yaw = 0
+        self.D_yaw = 0.05
 
         #init
         self.kit = ServoKit(channels=16)
         self.kit.servo[self.port_jaw_l].actuation_range = 270
         self.kit.servo[self.port_jaw_r].actuation_range = 270
         self.kit.servo[self.port_neck_r].actuation_range = 270
-        self.servo_neck_l = PIDServo(self.port_neck_l, self, 270, self.pitch_lim_lower, self.pitch_lim_upper, self.neck_pitch_mv, self.P_pitch, self.I_pitch, self.D_pitch, self.pitch_lim_lower)
-        self.servo_neck_r = ServoFollower(self.port_neck_r, self.servo_neck_l, 270, True, 4)
+        self.servo_neck_r = PIDServo(self.port_neck_r, self, 270, self.pitch_lim_lower, self.pitch_lim_upper, self.neck_pitch_mv, self.P_pitch, self.I_pitch, self.D_pitch, self.pitch_neutral_pos)
+        self.servo_neck_l = ServoFollower(self.port_neck_l, self.servo_neck_r, 270, True, self.servo_neck_offset)
+
+        #open eyelids and set eyes to neutral
+        self.set_servo(self.port_lid_bl, self.lid_lbot_open)
+        self.set_servo(self.port_lid_br, self.lid_rbot_open)
+        self.set_servo(self.port_lid_tl, self.lid_ltop_open)
+        self.set_servo(self.port_lid_tr, self.lid_rtop_open)
+        self.set_servo(self.port_eye_x, self.eye_x_neutral)
+        self.set_servo(self.port_eye_y, self.eye_y_neutral)
 
     def enable():
         #code to enable power to motors
@@ -63,7 +80,7 @@ class MotionController:
 
     def feed_motors(self, delta_time):
         #code to feed all motors current pid values
-        self.servo_neck_l.update(delta_time)
+        self.servo_neck_r.update(delta_time)
         pass
 
     def test_servos(self):
@@ -83,12 +100,28 @@ class MotionController:
 
     #switches necks current focus
     def look_neck(self, xdegrees, ydegrees):
-        self.servo_neck_l.set_setpoint(ydegrees + self.pitch_lim_lower) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
+        self.servo_neck_r.set_setpoint(ydegrees + self.servo_neck_r.theta) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
     #endregion
 
     #region EYES
-    def look_eyes(xdegrees, ydegrees):
+    def look_eyes(self, xdegrees, ydegrees):
+        xpos = -xdegrees + self.eye_x_neutral
+        ypos = ydegrees + self.eye_y_neutral - 5
 
+        #clamp xpos within bounds
+        if(xpos < self.eye_lim_x_right):
+            xpos = self.eye_lim_x_right
+        elif(xpos > self.eye_lim_x_left):
+            xpos = self.eye_lim_x_left
+
+        #clamp ypos within bounds
+        if(ypos < self.eye_lim_y_lower):
+            ypos = self.eye_lim_y_lower
+        elif(ypos > self.eye_lim_y_upper):
+            ypos = self.eye_lim_y_upper
+
+        self.set_servo(self.port_eye_x, xpos)
+        self.set_servo(self.port_eye_y, ypos)
         pass
 
     def blink_eyes(pos):
@@ -98,7 +131,7 @@ class MotionController:
 
     def set_servo(self, port, ang):
         self.kit.servo[port].angle = ang
-        print("move servo", port, "to:", ang)
+        #print("move servo", port, "to:", ang)
         pass
 
     def set_servo_range(self, port, upper_ang):
@@ -125,11 +158,22 @@ kit.servo[port_neck_l].angle = 170
 kit.servo[port_neck_r].angle = 100
 '''
 
-#set neck servos to neutral head position
-'''kit.servo[port_neck_l].angle = 75 #goes down for more range
-kit.servo[port_neck_r].angle = 195 #goes up for more range
-'''
+#test limits and neutral position
 
+#controller = MotionController()
+'''
+#minimum
+controller.set_servo(controller.port_neck_l, 120)
+controller.set_servo(controller.port_neck_r, 130)
+time.sleep(5)
+#neutral position
+controller.set_servo(controller.port_neck_l, 51)
+controller.set_servo(controller.port_neck_r, 194)
+time.sleep(5)
+#maximum
+controller.set_servo(controller.port_neck_l, 41)
+controller.set_servo(controller.port_neck_r, 204)
+'''
 '''
 //this is a comment
 '''

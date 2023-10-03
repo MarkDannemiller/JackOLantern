@@ -5,13 +5,13 @@ import time
 
 fov_horiz = 90 #double check
 fov_vert = 67.5 #double check
-screen_height = 600
-screen_width = 1024
+screen_width = 640
+screen_height = 480
 
 #returns angle of position on screen based on parameters above
 def screen_to_angle(xpixel, ypixel):
-    xdegrees = xpixel/screen_width * fov_horiz
-    ydegrees = ypixel/screen_height * fov_vert
+    xdegrees = (xpixel-screen_width/2)/screen_width * fov_horiz
+    ydegrees = -(ypixel-screen_height/2)/screen_height * fov_vert
     print("converted x:", xpixel, "y:", ypixel, " -> xd:", xdegrees, "yd:", ydegrees)
     return xdegrees, ydegrees
 
@@ -35,7 +35,6 @@ class FaceTracker:
         self.y_target=0
         self.width=0
         self.height=0
-        self.check=1
         self.timer=0
         self.previous1=None
         self.previous2=None
@@ -56,6 +55,7 @@ class FaceTracker:
         self.y_target1=0
         self.width_target1=0
         self.height_target1=0
+        self.get_new_target()
         
         
 
@@ -124,14 +124,14 @@ class FaceTracker:
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)
 
-        cv2.imshow('face', frame)
-    def target_information(self, target):
+        cv2.imshow('face', frame) #comment out for performance
+    def target_info(self, target):
 
         self.update_coordinates=list(self.currently_noted.keys())
         for face_iteration in range(len(self.update_coordinates)):
 
-            if self.update_coordinates[face_iteration]==target:
-                self.x_target1, self.y_target1=self.currently_noted[target]
+            if self.update_coordinates[face_iteration]==self.target:
+                self.x_target1, self.y_target1=self.currently_noted[self.target]
                 self.width_target1, self.height_target1=self.currently_noted_dimensions[target]
                 self.check=1
                 self.x_target1=self.x_target1+.5*self.width_target1
@@ -141,7 +141,7 @@ class FaceTracker:
                 else:
                     self.in_box=0
         return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.number_of_faces, self.in_box
-    def check_information(self):
+    def check_info(self):
         return self.check
     def get_new_target(self):
         self.test=0
@@ -193,22 +193,15 @@ class FaceTracker:
                 self.x_target1, self.y_target1=self.currently_noted[self.target]
                 self.width_target1, self.height_target1=self.currently_noted_dimensions[self.target]
                 self.check=1
-                
-        cv2.imshow('face', frame)
-    def target_info(self):
-        return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.target, self.number_of_faces
-    def check_info(self):
-        return self.check
-
         
 
-video_capture=cv2.VideoCapture(0)
+'''video_capture=cv2.VideoCapture(0)
 tracker=FaceTracker(video_capture)
 position_x=0
 position_y=0
 s=time.time()
 e=time.time()
-final_id=0
+final_id=0'''
 # while True:
 #     tracker.process()
 #     check=tracker.check_information()
