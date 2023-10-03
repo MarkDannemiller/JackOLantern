@@ -33,24 +33,24 @@ def set_setpoint(theta):
 def motor(setpoint):
     prev_setpoint = 0
     curr_setpoint = 0
-    total_steps = 0
+    steps = 0
     while(1):
         curr_setpoint = setpoint.value
         start = timer()
-        if((prev_setpoint - curr_setpoint) not in [-1, 0, 1]):
-            total_steps = abs(setpoint.value)
-        if(setpoint.value != 0 and total_steps != 0):
-            if(setpoint.value < 0):
+        if(abs(prev_setpoint - curr_setpoint) < 10):
+            steps = setpoint.value
+        if(setpoint.value != 0 and steps != 0):
+            if(steps < 0):
                 GPIO.output(dir_pin, GPIO.LOW)
-                setpoint.value += 1
+                steps += 1
                 GPIO.output(enable_pin, GPIO.LOW)
-            elif(setpoint.value > 0):
+            elif(steps > 0):
                 GPIO.output(dir_pin, GPIO.HIGH)
-                setpoint.value -= 1
+                steps -= 1
                 GPIO.output(enable_pin, GPIO.LOW)
             GPIO.output(step_pin, GPIO.HIGH)
             GPIO.output(step_pin, GPIO.LOW)
-            delay = 1.5*((accel_factor*abs(setpoint.value))*((1/total_steps)*(abs(setpoint.value))-1)) + low_speed_delay
+            delay = 1.5*((accel_factor*steps)*((1/abs(setpoint.value))*(steps)-1)) + low_speed_delay
             if(delay < high_speed_delay):
                 delay = high_speed_delay
             prev_setpoint = curr_setpoint
