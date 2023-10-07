@@ -28,7 +28,8 @@ GPIO.output(enable_pin, GPIO.HIGH)
 
 def set_setpoint(theta):
     global setpoint
-    setpoint.value = ((theta*gear_ratio)/(360*s_p_rev))
+    setpoint.value = int(((theta*gear_ratio*s_p_rev)/(360)))
+    print("converted", theta, "to steps:", setpoint.value)
 
 def motor(setpoint):
     prev_setpoint = 0
@@ -37,17 +38,17 @@ def motor(setpoint):
     while(1):
         curr_setpoint = setpoint.value
         start = timer()
-        if(abs(prev_setpoint - curr_setpoint) < 10):
+        if(abs(prev_setpoint - curr_setpoint) > 10):
             steps = setpoint.value
         if(setpoint.value != 0 and steps != 0):
             if(steps < 0):
                 GPIO.output(dir_pin, GPIO.LOW)
                 steps += 1
-                GPIO.output(enable_pin, GPIO.LOW)
+                #GPIO.output(enable_pin, GPIO.LOW)
             elif(steps > 0):
                 GPIO.output(dir_pin, GPIO.HIGH)
                 steps -= 1
-                GPIO.output(enable_pin, GPIO.LOW)
+                #GPIO.output(enable_pin, GPIO.LOW)
             GPIO.output(step_pin, GPIO.HIGH)
             GPIO.output(step_pin, GPIO.LOW)
             delay = 1.5*((accel_factor*steps)*((1/abs(setpoint.value))*(steps)-1)) + low_speed_delay
@@ -56,7 +57,8 @@ def motor(setpoint):
             prev_setpoint = curr_setpoint
             while(timer()-start < delay): pass
         else:
-            GPIO.output(enable_pin, GPIO.HIGH)
+            pass
+            #GPIO.output(enable_pin, GPIO.HIGH)
    
 if(__name__ == '__main__'):
     process = Process(target=motor, args=(setpoint, ))

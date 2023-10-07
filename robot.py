@@ -33,6 +33,7 @@ while True:
         
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
+        controller.process.terminate()
         break
 
     delta_time = time.time() - initial_time #calc time frame lasted

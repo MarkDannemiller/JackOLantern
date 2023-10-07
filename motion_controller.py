@@ -1,10 +1,14 @@
 from simple_pid import PID
 import time
+from multiprocessing import Process, Value
+import random
 
 #SERVO BOARD CONTROL
 from adafruit_servokit import ServoKit #Special library for 16 channel pwm adafruit board controlling servos
 from pid_servo import PIDServo
 from pid_servo import ServoFollower
+
+import stepper
 
 
 class MotionController:
@@ -62,6 +66,13 @@ class MotionController:
         self.servo_neck_r = PIDServo(self.port_neck_r, self, 270, self.pitch_lim_lower, self.pitch_lim_upper, self.neck_pitch_mv, self.P_pitch, self.I_pitch, self.D_pitch, self.pitch_neutral_pos)
         self.servo_neck_l = ServoFollower(self.port_neck_l, self.servo_neck_r, 270, True, self.servo_neck_offset)
 
+        #start stepper thread
+        self.process = Process(target=stepper.motor, args=(stepper.setpoint, ))
+        self.process.start()
+        self.stepper_timer = 0
+        self.stepper_update_interval = 3
+        self.stepper_ang = 0
+
         #open eyelids and set eyes to neutral
         self.set_servo(self.port_lid_bl, self.lid_lbot_open)
         self.set_servo(self.port_lid_br, self.lid_rbot_open)
@@ -69,6 +80,10 @@ class MotionController:
         self.set_servo(self.port_lid_tr, self.lid_rtop_open)
         self.set_servo(self.port_eye_x, self.eye_x_neutral)
         self.set_servo(self.port_eye_y, self.eye_y_neutral)
+
+        self.blink_timer = 0
+        self.blink_wait = 1
+        self.blink_time = 0.25
 
     def enable():
         #code to enable power to motors
@@ -81,7 +96,18 @@ class MotionController:
     def feed_motors(self, delta_time):
         #code to feed all motors current pid values
         self.servo_neck_r.update(delta_time)
-        pass
+        self.stepper_timer += delta_time
+        self.blink_timer += delta_time
+        if(self.stepper_timer > self.stepper_update_interval):
+            stepper.set_setpoint(self.stepper_ang)
+            self.stepper_timer = 0
+        
+        if(self.blink_timer > self.blink_wait + self.blink_time):
+            self.blink_wait = 0.1*random.randrange(5,31)
+            self.blink_eyes(False)
+            self.blink_timer = 0
+        elif(self.blink_timer > self.blink_wait):
+            self.blink_eyes(True)
 
     def test_servos(self):
         for i in range(0,8):
@@ -101,6 +127,10 @@ class MotionController:
     #switches necks current focus
     def look_neck(self, xdegrees, ydegrees):
         self.servo_neck_r.set_setpoint(ydegrees + self.servo_neck_r.theta) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
+        self.stepper_ang  = xdegrees
+        #stepper.set_setpoint(xdegrees)
+        #stepper.setpoint.value = int(((xdegrees*stepper.gear_ratio)/(360.0*stepper.s_p_rev)))
+        #print("stepper to:", ((xdegrees*stepper.gear_ratio)/(360.0*stepper.s_p_rev))) 
     #endregion
 
     #region EYES
@@ -124,8 +154,17 @@ class MotionController:
         self.set_servo(self.port_eye_y, ypos)
         pass
 
-    def blink_eyes(pos):
-
+    def blink_eyes(self, pos):
+        if(pos):
+            self.set_servo(self.port_lid_tl, self.lid_ltop_close)
+            self.set_servo(self.port_lid_bl, self.lid_lbot_close)
+            self.set_servo(self.port_lid_tr, self.lid_rtop_close)
+            self.set_servo(self.port_lid_br, self.lid_rbot_close)
+        else:
+            self.set_servo(self.port_lid_tl, self.lid_ltop_open)
+            self.set_servo(self.port_lid_bl, self.lid_lbot_open)
+            self.set_servo(self.port_lid_tr, self.lid_rtop_open)
+            self.set_servo(self.port_lid_br, self.lid_rbot_open)
         pass
     #endregion
 
@@ -160,7 +199,10 @@ kit.servo[port_neck_r].angle = 100
 
 #test limits and neutral position
 
-#controller = MotionController()
+'''controller = MotionController()
+stepper.set_setpoint(30)
+time.sleep(3)
+stepper.set_setpoint(-30)'''
 '''
 #minimum
 controller.set_servo(controller.port_neck_l, 120)
