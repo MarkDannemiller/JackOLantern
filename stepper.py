@@ -51,7 +51,7 @@ def motor(setpoint):
                 GPIO.output(enable_pin, GPIO.LOW)
             GPIO.output(step_pin, GPIO.HIGH)
             GPIO.output(step_pin, GPIO.LOW)
-            delay = 1.5*((accel_factor*steps)*((1/abs(setpoint.value))*(steps)-1)) + low_speed_delay
+            delay = ((1.5*accel_factor*abs(setpoint.value))/steps)*(abs(setpoint.value)-steps) + low_speed_delay
             if(delay < high_speed_delay):
                 delay = high_speed_delay
             prev_setpoint = curr_setpoint
