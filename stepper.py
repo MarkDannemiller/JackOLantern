@@ -44,11 +44,11 @@ def motor(setpoint):
             if(steps < 0):
                 GPIO.output(dir_pin, GPIO.LOW)
                 steps += 1
-                #GPIO.output(enable_pin, GPIO.LOW)
+                GPIO.output(enable_pin, GPIO.LOW)
             elif(steps > 0):
                 GPIO.output(dir_pin, GPIO.HIGH)
                 steps -= 1
-                #GPIO.output(enable_pin, GPIO.LOW)
+                GPIO.output(enable_pin, GPIO.LOW)
             GPIO.output(step_pin, GPIO.HIGH)
             GPIO.output(step_pin, GPIO.LOW)
             delay = 1.5*((accel_factor*steps)*((1/abs(setpoint.value))*(steps)-1)) + low_speed_delay
@@ -57,8 +57,7 @@ def motor(setpoint):
             prev_setpoint = curr_setpoint
             while(timer()-start < delay): pass
         else:
-            pass
-            #GPIO.output(enable_pin, GPIO.HIGH)
+            GPIO.output(enable_pin, GPIO.HIGH)
    
 if(__name__ == '__main__'):
     process = Process(target=motor, args=(setpoint, ))
