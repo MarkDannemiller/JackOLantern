@@ -1,3 +1,12 @@
+[0000007f3c001090] mmal_xsplitter vout display: Try drm
+[0000007f3c6a03b0] drm_vout generic: <<< OpenDrmVout: Fmt=DPV0
+[0000007f3c6a03b0] drm_vout generic error: drmu_plane_new_find_type: No plane found for types 0x5
+
+
+
+
+
+
 import mediapipe
 import cv2
 import subprocess
