@@ -1016,3 +1016,35 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
             screen_on()
             break
 
+
+
+
+
+
+
+
+
+
+    try:
+        window = "VLC media player"
+        command = f'xdotool search --name "{window}"'
+        window_id = subprocess.check_output(["/bin/bash", "-c", command]).decode().strip()
+
+        # Click on the VLC window to bring it to the front
+        subprocess.call(["xdotool", "windowactivate", "--sync", window_id])
+        
+        # Wait for a short time to ensure the window is brought to the front
+        time.sleep(1)
+
+        # Send Alt+F11 key press to go full screen
+        subprocess.call(["xdotool", "key", "Alt+F11"])
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Call the function to bring VLC to the front and make it full screen
+refresh_check()
+This code first uses xdotool to find the window ID of the VLC media player window and then uses the windowactivate command to bring it to the front. After a brief delay, it sends the Alt+F11 key press to make it go full screen.
+
+
+
+
