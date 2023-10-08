@@ -3,7 +3,12 @@
 [0000007f3c6a03b0] drm_vout generic error: drmu_plane_new_find_type: No plane found for types 0x5
 
 
+def simulate_click_and_alt_f4(x, y):
+    # Simulate a click at the specified coordinates
+    subprocess.run(["xdotool", "mousemove", str(x), str(y), "click", "1"])
 
+    # Simulate pressing Alt+F4
+    subprocess.run(["xdotool", "keydown", "Alt", "key", "F4", "keyup", "Alt"])
 
 
 
