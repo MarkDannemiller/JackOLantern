@@ -1,6 +1,7 @@
 # import face_recognition
 import cv2
 import time
+from timeit import default_timer as timer
 import random
 from multiprocessing import Process, Value
 
@@ -19,23 +20,29 @@ timer = 0
 x_deg = Value('d', 0)
 y_deg = Value('d', 0)
 
-def update_motion():
+def update_motion(x_deg, y_deg):
     while(True):
-        initial_time = time.time()
+        initial_time = timer()
 
         controller.look_neck(x_deg.value, y_deg.value)
         controller.look_eyes(x_deg.value, y_deg.value)
         controller.feed_motors(delta_time)
 
-        while(time.time() - initial_time < delta_time):
+        while(timer() - initial_time < delta_time):
             pass
 
+motor_process = Process(target=update_motion, args=(x_deg, y_deg))
+motor_process.start()
+time.sleep(0.1)
+
 while True:
-    #initial_time = time.time()
+    initial_time = timer()
     tracker.process()
 
     # update target setpoint for motion controller
     if(tracker.target_info(tracker.target)[4] > 0):
+
+        #update target based on timer AND duration of frame
         if(timer > target_wait):
             tracker.get_new_target()
             timer = 0
@@ -49,8 +56,8 @@ while True:
         controller.process.terminate()
         break
 
-    '''delta_time = time.time() - initial_time #calc time frame lasted
-    timer += delta_time'''
+    diff_time = timer() - initial_time #calc time frame lasted
+    timer += delta_time
 
 # Release handle to the webcam
 video_capture.release()
