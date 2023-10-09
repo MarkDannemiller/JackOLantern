@@ -70,7 +70,7 @@ class MotionController:
         self.process = Process(target=stepper.motor, args=(stepper.setpoint, ))
         self.process.start()
         self.stepper_timer = 0
-        self.stepper_update_interval = 3
+        self.stepper_update_interval = 0.5
         self.stepper_ang = 0
 
         #open eyelids and set eyes to neutral
