@@ -177,8 +177,10 @@ class MotionController:
         self.kit.servo[port].actuation_range = upper_ang
 
     #region JAW
-    def set_jaw(angle):
+    def set_jaw(self, angle):
         #pass angle and this code should sync motors
+        self.set_servo(self.port_jaw_l, 100 + angle)
+        self.set_servo(self.port_jaw_r, 100 - angle)
         pass
     #endregion
 
@@ -198,9 +200,15 @@ kit.servo[port_neck_r].angle = 100
 '''
 
 #test limits and neutral position
-
-'''controller = MotionController()
-stepper.set_setpoint(30)
+'''
+controller = MotionController()
+controller.set_jaw(-3)
+time.sleep(1)
+controller.set_jaw(22)
+time.sleep(1)
+controller.set_jaw(-3)
+'''
+'''stepper.set_setpoint(30)
 time.sleep(3)
 stepper.set_setpoint(-30)'''
 '''
