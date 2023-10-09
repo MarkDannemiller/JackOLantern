@@ -62,7 +62,10 @@ def motor(setpoint):
 if(__name__ == '__main__'):
     process = Process(target=motor, args=(setpoint, ))
     process.start()
-    
-    GPIO.output(enable_pin, GPIO.HIGH)
+    sleep(0.1)
+    angles = [30, 15, 5, 0, 0, -10, -15, -5, 5, 15, -10, -10, -10, -10, 0, 0, 0, 0]
+    for angle in angles:
+        set_setpoint(angle)
+        sleep(0.5)
     process.terminate()
     
