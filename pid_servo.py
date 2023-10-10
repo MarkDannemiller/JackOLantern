@@ -28,6 +28,9 @@ class PIDServo:
     def set_range(self, upper_ang):
         self.upper_ang = upper_ang
 
+    def get_setpoint(self):
+        return self.pid.setpoint
+
     #setpoint shall be angle
     def set_setpoint(self, setpoint):
         if(setpoint < self.min_limit):
