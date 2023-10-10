@@ -119,13 +119,15 @@ class FaceTracker:
         for id_tracker in list(self.currently_noted.keys()):
             self.unfilled[id_tracker]=self.unfilled[id_tracker]+1
             self.number_of_faces=self.number_of_faces+1
-            if self.unfilled[id_tracker]>=45:
+            if self.unfilled[id_tracker]>=45: #max number of frames to wait before deleting face
                 self.box_state[id_tracker]=0
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)
 
         cv2.imshow('face', frame) #comment out for performance
     def target_info(self, target):
+
+        print(self.currently_noted) #display all faces
 
         self.update_coordinates=list(self.currently_noted.keys())
         for face_iteration in range(len(self.update_coordinates)):
