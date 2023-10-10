@@ -50,13 +50,14 @@ class MotionController:
         self.servo_neck_offset = 20 #offset from the right neck servo
         self.neck_pitch_mv = 10 #max velocity deg/sec
 
-        self.P_pitch = 0.15
+        #neck servo pid
+        self.P_pitch = 0.03
         self.I_pitch = 0
-        self.D_pitch = 0.1
+        self.D_pitch = 0.001
 
-        self.P_yaw = 0.1
+        '''self.P_yaw = 0.01
         self.I_yaw = 0
-        self.D_yaw = 0.05
+        self.D_yaw = 0.05'''
 
         #init
         self.kit = ServoKit(channels=16)
@@ -81,6 +82,8 @@ class MotionController:
         self.set_servo(self.port_eye_x, self.eye_x_neutral)
         self.set_servo(self.port_eye_y, self.eye_y_neutral)
 
+        self.set_jaw(-3) #set to 0 position
+
         self.blink_timer = 0
         self.blink_wait = 1
         self.blink_time = 0.25
@@ -103,7 +106,7 @@ class MotionController:
             self.stepper_timer = 0
         
         if(self.blink_timer > self.blink_wait + self.blink_time):
-            self.blink_wait = 0.1*random.randrange(5,31)
+            self.blink_wait = 0.1*random.randrange(20,61)
             self.blink_eyes(False)
             self.blink_timer = 0
         elif(self.blink_timer > self.blink_wait):

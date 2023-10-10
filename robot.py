@@ -15,7 +15,7 @@ controller = MotionController()
 
 delta_time = 0.02 #time in seconds per frame
 target_wait = random.randrange(3,11)
-timer = 0
+target_timer = 0
 
 x_deg = Value('d', 0)
 y_deg = Value('d', 0)
@@ -43,9 +43,9 @@ while True:
     if(tracker.target_info(tracker.target)[4] > 0):
 
         #update target based on timer AND duration of frame
-        if(timer > target_wait):
+        if(target_timer > target_wait):
             tracker.get_new_target()
-            timer = 0
+            target_timer = 0
             target_wait = random.randrange(3,11)
 
         x, y = tracker.target_info(tracker.target)[:2]
@@ -57,7 +57,7 @@ while True:
         break
 
     diff_time = timer() - initial_time #calc time frame lasted
-    timer += delta_time
+    target_timer += diff_time
 
 # Release handle to the webcam
 video_capture.release()
