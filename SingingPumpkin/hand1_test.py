@@ -1,3 +1,58 @@
+
+
+
+
+
+
+
+
+
+    display=cv2.VideoCapture(Path)
+    
+    cv2.namedWindow("Video_frame", cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty("Video_frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    pygame.mixer.music.load(Path_audio)
+    pygame.mixer.music.play()
+    audio_start_time=time.time()
+    time.check=0
+    while(1):
+        ret, frame_video=display.read()
+        if not ret:
+            break
+        audio_elapsed_time=time.time()-audio_start_time
+        frame_rate=display.get(cv2.CAP_PROP_FPS)
+        frame_number=int(audio_elapsed_time*frame_rate)
+        display.set(cv2.CAP_PROP_POS_FRAMES, frame_number)
+        ret, frame_video=display.read()
+        cv2.imshow("Video_frame", frame_video)
+        key_video = cv2.waitKey(1) & 0xFF    
+        if key_video == ord("q"):
+            break
+    pygame.mixer.music.stop()
+    pygame.quit()
+    display.release()
+    cv2.destroyWindow("Video_frame")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 display=cv2.VideoCapture(Path)
 mixer.init()
 cv2.namedWindow("Video_frame", cv2.WND_PROP_FULLSCREEN)
