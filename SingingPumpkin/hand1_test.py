@@ -1,39 +1,24 @@
-import pygame
+display=cv2.VideoCapture(Path)
+mixer.init()
+cv2.namedWindow("Video_frame", cv2.WND_PROP_FULLSCREEN)
+cv2.setWindowProperty("Video_frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+mixer.music.load(Path_audio)
+mixer.music.play()
+while(1):
+    ret, frame_video=display.read()
+    if not ret:
+        break
+    cv2.imshow("Video_frame", frame_video)
+    key_video = cv2.waitKey(1) & 0xFF    
+    if key_video == ord("q"):
+        break
+pygame.mixer.music.stop()
+pygame.quit()
+display.release()
+cv2.destroyWindow("Video_frame")
 
-def play_video_with_audio(video_file):
-    pygame.init()
-    screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-    pygame.mouse.set_visible(False)
 
-    # Initialize the video
-    video = pygame.movie.Movie(video_file)
-    video.play()
     
-    # Initialize the audio
-    pygame.mixer.init()
-    pygame.mixer.music.load(video_file)
-    pygame.mixer.music.play()
-
-    playing = True
-
-    while playing:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                playing = False
-
-        screen.fill((0, 0, 0))
-        screen.blit(video.get_surface(), (0, 0))
-        pygame.display.flip()
-
-    video.stop()
-    pygame.mixer.music.stop()
-    pygame.quit()
-
-# Usage example:
-video_file = "your_video.mp4"  # Replace with your video file path
-play_video_with_audio(video_file)
-
-
 
 
 
