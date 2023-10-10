@@ -47,7 +47,7 @@ class AudioPlayer:
                         vol = self.calculate_volume(audio_info)
                     iteration = iteration + 1
 
-                    if iteration == 10:
+                    if iteration >= 10:
                         iteration = 0
 
                     stream.write(audio_data)
