@@ -182,5 +182,6 @@ class FaceTracker:
                 self.x_target1, self.y_target1=self.currently_noted[self.target]
                 self.width_target1, self.height_target1=self.currently_noted_dimensions[self.target]
                 self.check=1
+        return self.target
         
 
