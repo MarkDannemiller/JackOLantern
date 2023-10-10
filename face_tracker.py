@@ -62,133 +62,120 @@ class FaceTracker:
     def process(self):
         self.number_of_faces=0
         self.check=0
-        ret, frame=self.video_capture.read()
-        frame=cv2.resize(frame, (640, 480))
+        ret, frame=self.video_capture.read()#get the frame
+        frame=cv2.resize(frame, (640, 480))#resizes frame
         if not ret:
             return
 
-        if self.face_entered_square:
+        if self.face_entered_square:#if statement that determines if the face is within the box (sets the region of the box)
             cv2.rectangle(frame, (250, 150), (400, 300), (255, 0, 0), 1)
-        self.face_entered_square=0
+        self.face_entered_square=0 #resets the face_entered square to allow it to check again
 
         with self.mediapipe_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.05) as detector_settings:
+            #////////////Collects data from the model/////////////
             frame=cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            #frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
-            #frame=cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
             location=detector_settings.process(frame)
             frame=cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+            #////////////////////////////////////////////////////
+            #////////////Collects data from the model/////////////
             if location.detections:
                 for detection in location.detections:
                     face_pair=""
                     initial_bounding = detection.location_data.relative_bounding_box
                     boundary_box_detection=(int(initial_bounding.xmin * 640),int(initial_bounding.ymin * 480),int(initial_bounding.width * 640),int(initial_bounding.height * 480),)
-                    x = int(640-initial_bounding.xmin*640)
-                    y = int(480 - initial_bounding.ymin*480)
-                    if (250<x<400) and (150<y<350):
+                    x = int(640-initial_bounding.xmin*640) #scales the bottom left ocrner of the box
+                    y = int(480 - initial_bounding.ymin*480)#scales the bottom left ocrner of the box
+                    if (250<x<400) and (150<y<350): #determines if a face is in the center and allows the blue box to be shown if it is
                         self.face_entered_square=1
 
-                    for id_tracker, (x_comparison, y_comparison) in self.currently_noted.items():
+                    for id_tracker, (x_comparison, y_comparison) in self.currently_noted.items(): #this for loop goes through all current faces and compares them to the previous list of faces and checks to see if the current iterated face is the same face as in the previous data.
                         x=boundary_box_detection[0]
                         y=boundary_box_detection[1]
                         if (abs(x-x_comparison)<100) and (abs(y-y_comparison)<100):
-                            face_pair=id_tracker
+                            face_pair=id_tracker#assigns current face to the previous face id (keeps track)
                             self.unfilled[id_tracker]=0
                             break
-                    if face_pair!="":
+                            
+                            
+                            
+                    if face_pair!="": #this if statement takes the current faces and reduces the distance between the old and new locations for the id to better track
                         self.unfilled[face_pair]=0
                         x_comparison, y_comparison=self.currently_noted[face_pair]
                         jitter_coordinate_x=0.9*abs(boundary_box_detection[0]-x_comparison)+x_comparison
                         jitter_coordinate_y=0.9*abs(boundary_box_detection[1]-y_comparison)+y_comparison
                         self.currently_noted[face_pair]=(jitter_coordinate_x, jitter_coordinate_y)
-#                         if face_pair not in self.box_state:
-#                             self.box_state[face_pair]=0
-                        if (250<boundary_box_detection[0]<400) and (150<boundary_box_detection[1]<350):
-                            self.box_state[face_pair]=1
-                        else:
-                            self.box_state[face_pair]=0
                     else:
-                        if self.id_options:
+                        if self.id_options: #removes the face from options
                             face_pair=self.id_options[0]
                             del self.id_options[0]
-                    self.currently_noted[face_pair]=(boundary_box_detection[0], boundary_box_detection[1])
-                    self.currently_noted_dimensions[face_pair]=(boundary_box_detection[2], boundary_box_detection[3])
+                    self.currently_noted[face_pair]=(boundary_box_detection[0], boundary_box_detection[1]) #collects x and y information for faces
+                    self.currently_noted_dimensions[face_pair]=(boundary_box_detection[2], boundary_box_detection[3])#collects width and height locations
                     self.unfilled[face_pair]=0
                     self.text_offset=20
+                    #following two lines are display
                     cv2.rectangle(frame, (boundary_box_detection[0], boundary_box_detection[1]), (boundary_box_detection[0] + boundary_box_detection[2], boundary_box_detection[1] + boundary_box_detection[3]), (0, 255, 0), 2)
                     cv2.putText(frame,f"ID: {face_pair}",(boundary_box_detection[0], boundary_box_detection[1] + self.text_offset),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-        for id_tracker in list(self.currently_noted.keys()):
+        for id_tracker in list(self.currently_noted.keys()):#this for loop iterates over the current faces seen and adjusts the number of frames that they have been seen (if they are seen above this is reset to 0)
             self.unfilled[id_tracker]=self.unfilled[id_tracker]+1
             self.number_of_faces=self.number_of_faces+1
-            if self.unfilled[id_tracker]>=45: #max number of frames to wait before deleting face
+            if self.unfilled[id_tracker]>=45:#if a face has been absent for 45 frames it is removed from the tracking list and put back into face id options to be selected again in the future
                 self.box_state[id_tracker]=0
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)
 
         cv2.imshow('face', frame) #comment out for performance
-    def target_info(self, target):
+    def target_info(self, target):#updates the information for the target id
 
-        print(self.currently_noted) #display all faces
+        self.update_coordinates=list(self.currently_noted.keys())#gets all face ids currently seen
+        for face_iteration in range(len(self.update_coordinates)): #iterates through faces
 
-        self.update_coordinates=list(self.currently_noted.keys())
-        for face_iteration in range(len(self.update_coordinates)):
-
-            if self.update_coordinates[face_iteration]==self.target:
+            if self.update_coordinates[face_iteration]==self.target:#if this iteration is the target
+                #collects x and y information and converts to the middle of the face as well as collecitng the width and height of the box of the target
                 self.x_target1, self.y_target1=self.currently_noted[self.target]
                 self.width_target1, self.height_target1=self.currently_noted_dimensions[target]
                 self.check=1
                 self.x_target1=self.x_target1+.5*self.width_target1
                 self.y_target1=self.y_target1+.5*self.height_target1
+                #determines if the target is within the box or not
                 if (250<self.x_target1<400) and (150<self.y_target1<350):
                     self.in_box=1
                 else:
                     self.in_box=0
         return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.number_of_faces, self.in_box
+    #I do not use check for anything but looking for errors when testing the code to make sure it is properly going through areas
     def check_info(self):
         return self.check
-    def get_new_target(self):
+    def get_new_target(self):#selects the target id from the ids that are currently seen
         self.test=0
         self.currently_seen=list(self.currently_noted.keys())
         while self.currently_seen and self.test==0:
 
-            self.target=random.choice(self.currently_seen)
-            #print(self.target)
+            self.target=random.choice(self.currently_seen)#randomly picks an id from what is available and will redo the choice if it is a repeat, but if there is only one face, it will eventually choose it
             if self.target!=self.previous1:
                 self.x_target, self.y_target=self.currently_noted[self.target]
                 self.width, self.height=self.currently_noted_dimensions[self.target]
-                #print(f"ID: {self.target}, X: {self.x_target}, Y: {self.y_target}")
-                #print(f"ID: {self.target}, W: {self.width}, H: {self.height}")
+                #gets preliminary target information
                 self.test=1
-                #break
             elif (self.randomize_target>=10):
                 self.x_target, self.y_target=self.currently_noted[self.target]
                 self.width, self.height=self.currently_noted_dimensions[self.target]
+                #gets preliminary target information
                 self.randomize_target=0
                 self.test=1
-                #break
             else:
-                self.randomize_target=self.randomize_target+1
+                self.randomize_target=self.randomize_target+1 #to allow it to eventually pick a target if there is only one
 
-#                 if (time.time()-self.start1>=5):
-#                     break
-
-        self.previous2=self.previous1
+        self.previous2=self.previous1 #these two lines give the option for what it avoids picking on first attempt above for the target
         self.previous1=self.target
 
-        for final_id in list(self.currently_noted.keys()):
+        for final_id in list(self.currently_noted.keys()):#this for loop just ensure that the target_final is a valid id
             if final_id==self.target:
                 self.target_final=self.target
-                if final_id in self.box_state:
-                    if self.box_state[final_id]:
-                        self.in_box = self.box_state[final_id]
-                        #print(self.in_box)
-                self.x_target_final=self.x_target
-                self.y_target_final=self.y_target
-                self.width_final=self.width
-                self.height_final=self.height
-                self.check=1
-                #time.sleep(2)
             else:
                 break
+        
+        
+        #I believe this for loop does not do anything anymore, just got moved into def target_info
         self.update_coordinates=list(self.currently_noted.keys())
         for face_iteration in range(len(self.update_coordinates)):
             if self.update_coordinates[face_iteration]==self.target_final:
@@ -197,39 +184,3 @@ class FaceTracker:
                 self.check=1
         
 
-'''video_capture=cv2.VideoCapture(0)
-tracker=FaceTracker(video_capture)
-position_x=0
-position_y=0
-s=time.time()
-e=time.time()
-final_id=0'''
-# while True:
-#     tracker.process()
-#     check=tracker.check_information()
-#     #print(check)
-#     if (time.time()-e>=6):
-#         final_id=tracker.get_new_target()
-#         e=time.time()
-        
-    
-#     if time.time()-s>=2:
-#         x_location, y_location, width, height, number_of_faces, box=tracker.target_information(final_id)
-#         if (width!=0 and number_of_faces!=0):
-#             print("x: ", x_location)
-#             print("y: ", y_location)
-#             print("width: ", width)
-#             print("height: ", height)
-#             print("target: ", final_id)
-#             print("number: ", number_of_faces)
-#             print("in box: ", box)
-#             print("/////////////////////////")
-#         s=time.time()
-        
-
-#     if cv2.waitKey(5) & 0xFF==ord('x'):
-#         break
-
-#video_capture.release()
-#cv2.destroyAllWindows()
-#frame = cv2.applyColorMap(frame, cv2.COLORMAP_JET)
