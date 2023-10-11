@@ -46,7 +46,7 @@ class MotionController:
         self.yaw_lim_left = 0 #limit in steps to left
         self.pitch_lim_lower = 130 #limit in degrees for lower neck pitch
         self.pitch_lim_upper = 204 #limit in degrees for upper neck pitch
-        self.pitch_neutral_pos = 194
+        self.pitch_neutral_pos = 194 #neutral, looking forward position of neck pitch
         self.servo_neck_offset = 20 #offset from the right neck servo
         self.neck_pitch_mv = 10 #max velocity deg/sec
 
