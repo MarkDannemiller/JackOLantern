@@ -119,7 +119,7 @@ class FaceTracker:
         for id_tracker in list(self.currently_noted.keys()):
             self.unfilled[id_tracker]=self.unfilled[id_tracker]+1
             self.number_of_faces=self.number_of_faces+1
-            if self.unfilled[id_tracker]>=45: #max number of frames to wait before deleting face
+            if self.unfilled[id_tracker]>=8: #max number of frames to wait before deleting face
                 self.box_state[id_tracker]=0
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)

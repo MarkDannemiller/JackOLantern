@@ -203,14 +203,14 @@ kit.servo[port_neck_r].angle = 100
 '''
 
 #test limits and neutral position
-'''
-controller = MotionController()
+
+'''controller = MotionController()
 controller.set_jaw(-3)
 time.sleep(1)
 controller.set_jaw(22)
-time.sleep(1)
-controller.set_jaw(-3)
-'''
+time.sleep(1)'''
+#controller.set_jaw(-3)
+
 '''stepper.set_setpoint(30)
 time.sleep(3)
 stepper.set_setpoint(-30)'''
