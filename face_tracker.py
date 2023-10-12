@@ -12,7 +12,7 @@ screen_height = 480
 def screen_to_angle(xpixel, ypixel):
     xdegrees = (xpixel-screen_width/2)/screen_width * fov_horiz
     ydegrees = -(ypixel-screen_height/2)/screen_height * fov_vert
-    print("converted x:", xpixel, "y:", ypixel, " -> xd:", xdegrees, "yd:", ydegrees)
+    #print("converted x:", xpixel, "y:", ypixel, " -> xd:", xdegrees, "yd:", ydegrees)
     return xdegrees, ydegrees
 
 class FaceTracker:
@@ -123,7 +123,8 @@ class FaceTracker:
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)
 
-        cv2.imshow('face', frame) #comment out for performance
+        return frame
+        #cv2.imshow('face', frame) #comment out for performance
     def target_info(self, target):#updates the information for the target id
 
         self.update_coordinates=list(self.currently_noted.keys())#gets all face ids currently seen
@@ -141,6 +142,7 @@ class FaceTracker:
                     self.in_box=1
                 else:
                     self.in_box=0
+        #print(str(self.currently_noted)) #DISPLAY SEEN FACES
         return self.x_target1, self.y_target1, self.width_target1, self.height_target1, self.number_of_faces, self.in_box
     #I do not use check for anything but looking for errors when testing the code to make sure it is properly going through areas
     def check_info(self):

@@ -37,7 +37,7 @@ class PIDServo:
             setpoint = self.min_limit
         elif(setpoint > self.max_limit):
             setpoint = self.max_limit
-        print("setpoint at servo", self.port, "to", setpoint)
+        #print("setpoint at servo", self.port, "to", setpoint)
         self.pid.setpoint = setpoint
 
     def update(self, delta_time):

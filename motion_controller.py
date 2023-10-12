@@ -53,7 +53,7 @@ class MotionController:
         #neck servo pid
         self.P_pitch = 0.03
         self.I_pitch = 0
-        self.D_pitch = 0.001
+        self.D_pitch = 0#0.001
 
         '''self.P_yaw = 0.01
         self.I_yaw = 0
