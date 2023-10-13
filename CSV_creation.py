@@ -38,7 +38,7 @@ class AudioPlayer:
 
     def play_audio_files(self):
         for audio_file, audio_id in self.audio_file_mapping.items():
-            self.list.append(audio_id)
+            #self.list.append(audio_id)
 
             try:   
                 wav = wave.open(audio_file, 'rb')
@@ -70,9 +70,9 @@ class AudioPlayer:
             except:
                 with open('audio_data.csv', 'w', newline='') as csvfile:
                     writer = csv.writer(csvfile)
-                    transposed = numpy.array(self.final_list).T.tolist()
-                    for column in transposed:
-                        writer.writerow(column)
+                    #transposed = numpy.array(self.final_list).T.tolist()
+                    for row in self.final_list:
+                        writer.writerow(row)
                 sys.exit()
 
 #on jacob's computer
@@ -85,10 +85,10 @@ class AudioPlayer:
 
 #on pi
 file_id_mapping = {
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test.wav": 0,
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test1.wav": 1,
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test2.wav": 2,
-    "C:\\Users\\jwfra\\Desktop\\Lab": 4
+    "/home/pumpkin1/Music/test_audio.wav": 0,
+    "/home/pumpkin1/Music/second_test.wav": 1,
+    "/home/pumpkin1/Music/third_test.wav": 2,
+    "/home/pumpkin1/Music/": 4
 }
 
 audio_player = AudioPlayer(file_id_mapping)

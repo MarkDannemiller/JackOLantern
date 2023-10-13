@@ -55,6 +55,9 @@ class MotionController:
         self.I_pitch = 0
         self.D_pitch = 0#0.001
 
+        self.lim_jaw_upper = -3
+        self.lim_jaw_lower = 22
+
         '''self.P_yaw = 0.01
         self.I_yaw = 0
         self.D_yaw = 0.05'''
@@ -178,6 +181,10 @@ class MotionController:
 
     #region JAW
     def set_jaw(self, angle):
+        if(angle < self.lim_jaw_lower):
+            angle = self.lim_jaw_lower
+        elif(angle > self.lim_jaw_upper):
+            angle = self.lim_jaw_upper
         #pass angle and this code should sync motors
         self.set_servo(self.port_jaw_l, 100 + angle)
         self.set_servo(self.port_jaw_r, 100 - angle)
