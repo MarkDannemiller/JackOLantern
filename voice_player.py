@@ -1,76 +1,47 @@
 import wave
-import pyaudio
+import pygame
 import numpy
 from multiprocessing import Process, Value
 chunk=2000
 
 class AudioPlayer:
     def __init__(self):
-        self.volume_list = []
-        self.p = pyaudio.PyAudio()
-        self.iteration11 = Value('i', 0)
-        self.volume = Value('d', 0)
+        self.frame_timer = 0
+        self.frame_interval = 0.5
+        self.audio_data = []
+        self.selected_row = 0
+        self.running = False
+        
+        csv_file = 'audio_data.csv' #This is the csv for all audio (depending on which audio_id sent to the code, it will select the respective columns data)
+        with open(csv_file, newline='') as csvfile:
+            reader = csv.reader(csvfile, delimiter=',')
+            for row in reader:
+                print(', '.join(row))
+                self.audio_data.append(row)
 
-    def calculate_volume(self, audio_info):
-        if numpy.isnan(audio_info).any():
-            vol=0
-        else:
-            peaks=numpy.where((audio_info[1:-1]>audio_info[:-2])&(audio_info[1:-1]>audio_info[2:]))
+    #updates frame timer and returns current volume at correct time based on time step
+    def update(self, delta_time):
+        self.frame_timer += delta_time
+        frame = int(self.frame_timer / self.frame_interval)
+        vol = self.selected_row[frame]
 
-            if len(peaks)>0:
-                max_peak=numpy.max(audio_info)
-                vol=max_peak/10000
-                vol=abs(vol)
-                if vol>1:
-                    vol=1
-            else:
-                vol=0
-        self.iteration11.value=self.iteration11.value+1
-        if self.iteration11.value>=5:
-            print(vol)
-            self.iteration11.value=0
+        #end pygame when finished
+        if(not pygame.mixer.music.get_busy()):
+            self.running = False
+            pygame.mixer.music.unload #this command unloads the music, I do not know if needed, maybe only if performance is an issue
+            pygame.mixer.quit()
+
         return vol
+    
+    #plays audio and begins frame timer for update
+    def play_audio_file(self, files, audio_id):
+        pygame.mixer.init()
+        pygame.mixer.music.load(files[audio_id])
 
-    #plays audio and periodically updates current volume
-    def play_audio_file(self, audio_file, vol):
-        wav = wave.open(audio_file, 'rb')
-        p = pyaudio.PyAudio()
-        stream = p.open(format=p.get_format_from_width(wav.getsampwidth()), channels=wav.getnchannels(), rate=wav.getframerate(), output=True)
-        try:
-            iteration = 0
-            while True:
-                audio_data = wav.readframes(chunk)
-                if not audio_data:
-                    break
-
-                audio_info = numpy.frombuffer(audio_data, dtype=numpy.int16)
-                if numpy.isnan(audio_info).any():
-                    vol.value = 0
-                else:
-                    vol.value = self.calculate_volume(audio_info)
-                iteration = iteration + 1
-                print(vol.value)
-
-                if iteration >= 10:
-                    iteration = 0
-
-                stream.write(audio_data)
-                #print("Hi")
-
-        finally:
-            wav.close()
-            stream.stop_stream()
-            stream.close()
-'''
-# Set your audio file paths here
-audio_files = [
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\Audio Clips\\test_audio.wav",
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\Audio Clips\\second_test.wav",
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\Audio Clips\\third_test.wav"
-]
-
-audio_player = AudioPlayer(audio_files)
-
-while True:
-    volume = audio_player.play_audio_files()
-'''
+        self.selected_row = self.audio_data[audio_id]
+        print("Voice Player speaking:", self.selected_row) #Just for testing, can be removed
+        pygame.mixer.music.play() #will begin audio
+        
+        #reset timer and set running flag high
+        self.frame_timer = 0
+        self.running = True

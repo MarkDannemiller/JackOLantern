@@ -13,7 +13,7 @@ from face_tracker import screen_to_angle
 
 from voice_player import AudioPlayer
 
-# Set your audio file paths here
+# Set your audio file paths here.  Must correspond to built audio_data.csv!
 audio_files = [
     "/home/pumpkin1/Music/test_audio.wav",
     "/home/pumpkin1/Music/second_test.wav",
@@ -40,10 +40,7 @@ x_deg_neck = Value('d', 0)
 y_deg_neck = Value('d', 0)
 x_deg_eyes = Value('d', 0)
 y_deg_eyes = Value('d', 0)
-jaw_volume = Value('d', 0)
 jaw_scaling = 1.0
-
-audio_process = Process()
 
 def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
     while(True):
@@ -52,18 +49,14 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
         controller.look_neck(x_deg_neck.value, y_deg_neck.value)
         controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value)
         controller.feed_motors(delta_time)
-        controller.set_jaw(jaw_volume.value * jaw_scaling)
+        if(audio_player.running):
+            jaw_volume = audio_player.update(delta_time)
+            controller.set_jaw(jaw_volume * jaw_scaling)
+        else:
+            controller.set_jaw(controller.lim_jaw_closed)
 
         while(timer() - initial_time < delta_time):
             pass
-
-#set up thread here for audio playback
-def say_line(index):
-    audio_file = audio_files[index]
-
-    my_process = Process(target=audio_player.play_audio_file, args=(audio_file, jaw_volume,))
-    my_process.start()
-    return my_process
 
 motor_process = Process(target=update_motion, args=(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,))
 motor_process.start()
@@ -100,14 +93,11 @@ while True:
 
     #speak every random interval of time
     if(voice_line_timer > voice_line_wait):
-        try:
-            audio_process.kill
-        except:
-            pass
         voice_line_timer = 0
         voice_line_wait = random.randrange(10,20)
+        voice_line_id = random.randrange(0, len(audio_files))
         print("SPEAKING")
-        #audio_process = say_line(random.randrange(0,3))
+        audio_player.play_audio_file(voice_line_id)
     
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
