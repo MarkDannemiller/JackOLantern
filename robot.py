@@ -40,7 +40,7 @@ x_deg_neck = Value('d', 0)
 y_deg_neck = Value('d', 0)
 x_deg_eyes = Value('d', 0)
 y_deg_eyes = Value('d', 0)
-jaw_scaling = 1.0
+jaw_scaling = 25
 
 def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
     while(True):
@@ -49,8 +49,10 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
         controller.look_neck(x_deg_neck.value, y_deg_neck.value)
         controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value)
         controller.feed_motors(delta_time)
-        if(audio_player.running):
+        if(audio_player.running.value):
+            print("audio running!")
             jaw_volume = audio_player.update(delta_time)
+            print(jaw_volume)
             controller.set_jaw(jaw_volume * jaw_scaling)
         else:
             controller.set_jaw(controller.lim_jaw_closed)
@@ -94,10 +96,14 @@ while True:
     #speak every random interval of time
     if(voice_line_timer > voice_line_wait):
         voice_line_timer = 0
-        voice_line_wait = random.randrange(10,20)
-        voice_line_id = random.randrange(0, len(audio_files))
-        print("SPEAKING")
-        audio_player.play_audio_file(voice_line_id)
+        if(audio_player.running.value == True):
+            print("voice busy")
+            voice_line_wait = random.randrange(5,10)
+        else:
+            voice_line_wait = random.randrange(10,20)
+            voice_line_id = random.randrange(0, len(audio_files))
+            print("SPEAKING")
+            audio_player.play_audio_file(audio_files, voice_line_id)
     
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
