@@ -155,7 +155,6 @@ class MotionController:
 
         self.set_servo(self.port_eye_x, xpos)
         self.set_servo(self.port_eye_y, ypos)
-        pass
 
     def blink_eyes(self, pos):
         if(pos):
@@ -168,13 +167,11 @@ class MotionController:
             self.set_servo(self.port_lid_bl, self.lid_lbot_open)
             self.set_servo(self.port_lid_tr, self.lid_rtop_open)
             self.set_servo(self.port_lid_br, self.lid_rbot_open)
-        pass
     #endregion
 
     def set_servo(self, port, ang):
         self.kit.servo[port].angle = ang
         #print("move servo", port, "to:", ang)
-        pass
 
     def set_servo_range(self, port, upper_ang):
         self.kit.servo[port].actuation_range = upper_ang
@@ -184,7 +181,6 @@ class MotionController:
         #pass angle and this code should sync motors
         self.set_servo(self.port_jaw_l, 100 + angle)
         self.set_servo(self.port_jaw_r, 100 - angle)
-        pass
     #endregion
 
 

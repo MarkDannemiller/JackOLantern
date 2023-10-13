@@ -24,7 +24,7 @@ class AudioPlayer:
         else:
             peaks = numpy.where((audio_info[1:-1] > audio_info[:-2]) & (audio_info[1:-1] > audio_info[2:]))
 
-            if time.time() - self.volume_check >= 0.5:
+            if time.time() - self.volume_check >= 0.5: #change to modify timings
                 max_peak = numpy.max(audio_info)
                 vol = max_peak / 10000
                 vol = abs(vol)
@@ -74,6 +74,16 @@ class AudioPlayer:
                     for column in transposed:
                         writer.writerow(column)
                 sys.exit()
+
+#on jacob's computer
+'''file_id_mapping = {
+    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test.wav": 0,
+    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test1.wav": 1,
+    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test2.wav": 2,
+    "C:\\Users\\jwfra\\Desktop\\Lab": 4
+}'''
+
+#on pi
 file_id_mapping = {
     "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test.wav": 0,
     "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test1.wav": 1,

@@ -23,5 +23,5 @@ while (1): #I threw it in a while loop just to make sure the quit and unload wor
     
     #The get busy commadsd returns a true or false depending on if the audio is still playing, maybe just a statement that says break from assigning values if it is false
 
-    pygame.mixer.quit()
     pygame.mixer.music.unload #this command unloads the music, I do not know if needed, maybe only if performance is an issue
+    pygame.mixer.quit()
