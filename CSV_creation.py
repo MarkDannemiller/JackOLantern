@@ -24,7 +24,7 @@ class AudioPlayer:
         else:
             peaks = numpy.where((audio_info[1:-1] > audio_info[:-2]) & (audio_info[1:-1] > audio_info[2:]))
 
-            if time.time() - self.volume_check >= 0.5: #change to modify timings
+            if time.time() - self.volume_check >= 0.1: #change to modify timings
                 max_peak = numpy.max(audio_info)
                 vol = max_peak / 10000
                 vol = abs(vol)
