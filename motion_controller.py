@@ -57,6 +57,8 @@ class MotionController:
 
         self.lim_jaw_closed = -3
         self.lim_jaw_open = 22
+        self.jaw_setpoint = -3
+        self.jaw_mv = 100 #max velocity deg/sec
 
         '''self.P_yaw = 0.01
         self.I_yaw = 0
@@ -85,7 +87,7 @@ class MotionController:
         self.set_servo(self.port_eye_x, self.eye_x_neutral)
         self.set_servo(self.port_eye_y, self.eye_y_neutral)
 
-        self.set_jaw(-3) #set to 0 position
+        self.set_jaw(self.jaw_setpoint) #set to closed position
 
         self.blink_timer = 0
         self.blink_wait = 1
@@ -180,14 +182,18 @@ class MotionController:
         self.kit.servo[port].actuation_range = upper_ang
 
     #region JAW
-    def set_jaw(self, angle):
+    def set_jaw(self, angle, delta_time):
         if(angle < self.lim_jaw_closed):
             angle = self.lim_jaw_closed
         elif(angle > self.lim_jaw_open):
             angle = self.lim_jaw_open
+
+        #calculate an updated position based on time elapsed and maximum velocity
+        self.jaw_setpoint += (angle-self.jaw_setpoint) * self.jaw_mv * delta_time
+        
         #pass angle and this code should sync motors
-        self.set_servo(self.port_jaw_l, 100 + angle)
-        self.set_servo(self.port_jaw_r, 100 - angle)
+        self.set_servo(self.port_jaw_l, 100 + self.jaw_setpoint)
+        self.set_servo(self.port_jaw_r, 100 - self.jaw_setpoint)
     #endregion
 
 
