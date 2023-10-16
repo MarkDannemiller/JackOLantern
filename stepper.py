@@ -88,7 +88,7 @@ def motor(setpoint, current_pos):
             GPIO.output(enable_pin, GPIO.HIGH)
    
 if(__name__ == '__main__'):
-    process = Process(target=motor, args=(setpoint, current_pos,))
+    process = Process(target=motor, args=(setpoint, current_pos))
     process.start()
     sleep(0.1)
     angles = [30, 15, 5, 0, 0, -10, -15, -5, 5, 15, -10, -10, -10, -10, 0, 0, 0, 0]

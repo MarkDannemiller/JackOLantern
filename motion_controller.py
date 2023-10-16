@@ -57,7 +57,7 @@ class MotionController:
 
         self.lim_jaw_closed = -3
         self.lim_jaw_open = 22
-        self.jaw_setpoint = -3
+        self.jaw_setpoint = 0 #jaw will take input from 0-25 range
         self.jaw_mv = 100 #max velocity deg/sec
 
         '''self.P_yaw = 0.01
@@ -87,7 +87,7 @@ class MotionController:
         self.set_servo(self.port_eye_x, self.eye_x_neutral)
         self.set_servo(self.port_eye_y, self.eye_y_neutral)
 
-        self.set_jaw(self.jaw_setpoint) #set to closed position
+        self.set_jaw(self.jaw_setpoint, 100) #set to closed position
 
         self.blink_timer = 0
         self.blink_wait = 1
@@ -181,16 +181,25 @@ class MotionController:
     def set_servo_range(self, port, upper_ang):
         self.kit.servo[port].actuation_range = upper_ang
 
-    #region JAW
+    #region JAW, pass large delta_time to set to angle as fast as possible
     def set_jaw(self, angle, delta_time):
-        if(angle < self.lim_jaw_closed):
-            angle = self.lim_jaw_closed
-        elif(angle > self.lim_jaw_open):
-            angle = self.lim_jaw_open
+        #floor at 0 (will be translated to lower limit)
+        if(angle < 0):
+            angle = 0
+        elif(angle > self.lim_jaw_open-self.lim_jaw_closed):
+            angle = self.lim_jaw_open-self.lim_jaw_closed
+        
+        angle += self.lim_jaw_closed
 
         #calculate an updated position based on time elapsed and maximum velocity
-        self.jaw_setpoint += (angle-self.jaw_setpoint) * self.jaw_mv * delta_time
+        updated_pos = self.jaw_setpoint + (angle-self.jaw_setpoint) * self.jaw_mv * delta_time
         
+        #prevent overshoot
+        if((self.jaw_setpoint < angle and updated_pos <= angle) or self.jaw_setpoint > angle and updated_pos >= angle):
+            self.jaw_setpoint = updated_pos
+        else:
+            self.jaw_setpoint = angle
+
         #pass angle and this code should sync motors
         self.set_servo(self.port_jaw_l, 100 + self.jaw_setpoint)
         self.set_servo(self.port_jaw_r, 100 - self.jaw_setpoint)
@@ -212,11 +221,11 @@ kit.servo[port_neck_r].angle = 100
 '''
 
 #test limits and neutral position
-
-'''controller = MotionController()
-controller.set_jaw(-3)
+'''
+controller = MotionController()
+controller.set_jaw(-3, 100)
 time.sleep(1)
-controller.set_jaw(22)
+controller.set_jaw(22, 100)
 time.sleep(1)'''
 #controller.set_jaw(-3)
 

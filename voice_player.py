@@ -6,8 +6,8 @@ from multiprocessing import Process, Value
 class AudioPlayer:
     def __init__(self):
         pygame.mixer.init()
-        self.frame_timer = 0
-        self.frame_interval = 0.5
+        self.frame_timer = Value('d', 0)
+        self.frame_interval = 0.1
         self.audio_data = []
         self.running = Value('b', False)
         
@@ -22,16 +22,28 @@ class AudioPlayer:
 
     #updates frame timer and returns current volume at correct time based on time step
     def update(self, delta_time):
-        self.frame_timer += delta_time
-        frame = int(self.frame_timer / self.frame_interval)
+        
+        #print("busy:", pygame.mixer.music.get_busy())
 
-        #end pygame when finished
-        if(frame > len(self.selected_row)):
-            self.running.value = False
+        if(self.running.value == True):
+            self.frame_timer.value += delta_time
+            #self.frame_timer = pygame.mixer.music.getpos() * 0.001
+            #print("frame timer:", self.frame_timer.value)
+            frame = int(self.frame_timer.value / self.frame_interval)
+
+            #end pygame when finished
+            if(frame >= len(self.selected_row)):
+                print("length of row:", len(self.selected_row))
+                self.running.value = False
+                return 0
+                    
+            vol = self.selected_row[frame]
+            return vol
+        else:
             return 0
-                
-        vol = self.selected_row[frame]
-        return vol
+        
+    def check_pygame():
+        return pygame.mixer.music.get_busy()
     
     #plays audio and begins frame timer for update
     def play_audio_file(self, files, audio_id):
@@ -42,5 +54,5 @@ class AudioPlayer:
         pygame.mixer.music.play() #will begin audio
         
         #reset timer and set running flag high
-        self.frame_timer = 0
+        self.frame_timer.value = 0
         self.running.value = True

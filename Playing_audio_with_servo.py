@@ -22,6 +22,7 @@ while (1): #I threw it in a while loop just to make sure the quit and unload wor
     audio_id = 0 #determined somewhere else (probably make your dictionary with the keys being the ids and their content being the file path, have the audio_id passed in and then used to select the file path)
     selected_row = audio_data[audio_id]
     print(selected_row) #Just for testing, can be removed
+    time.sleep(1)
     pygame.mixer.music.play() #will begin audio
     #print(pygame.mixer.music.get_busy())
     for i in selected_row: #the for loop collects a new value from the list every .5 seconds (same interval the csv collects from)

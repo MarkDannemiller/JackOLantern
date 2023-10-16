@@ -33,7 +33,8 @@ target_timer = 0
 no_face_wait = 3.0 #wait this many seconds before moving back to neutral position
 no_face_timer = 0
 voice_line_timer = 0
-voice_line_wait = 10.0
+voice_line_wait = 3.0
+voice_line_id = 0
 voice_line_index = 0
 
 x_deg_neck = Value('d', 0)
@@ -45,17 +46,14 @@ jaw_scaling = 25
 def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
     while(True):
         initial_time = timer()
-
+        
         controller.look_neck(x_deg_neck.value, y_deg_neck.value)
         controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value)
         controller.feed_motors(delta_time)
-        if(audio_player.running.value):
-            print("audio running!")
-            jaw_volume = audio_player.update(delta_time)
-            print(jaw_volume)
-            controller.set_jaw(jaw_volume * jaw_scaling)
-        else:
-            controller.set_jaw(controller.lim_jaw_closed)
+
+        jaw_volume = audio_player.update(delta_time)
+        #print(jaw_volume * jaw_scaling)
+        controller.set_jaw(jaw_volume * jaw_scaling, delta_time)
 
         while(timer() - initial_time < delta_time):
             pass
@@ -70,6 +68,8 @@ while True:
     cv2.imshow('face', frame) #comment out for performance
 
     face_cnt = tracker.target_info(tracker.target)[4]
+
+    #print("pygame:", audio_player.check_pygame())
 
     # update target setpoint for motion controller
     if(face_cnt > 0):
@@ -93,6 +93,9 @@ while True:
             x_deg_neck.value = stepper.get_forward_ang()
             x_deg_eyes.value = x_deg_neck.value #eyes will look at same point in horizontal
 
+    '''if(audio_player.running.value == True):
+        print("pygame:", audio_player.check_pygame())'''
+
     #speak every random interval of time
     if(voice_line_timer > voice_line_wait):
         voice_line_timer = 0
@@ -101,9 +104,9 @@ while True:
             voice_line_wait = random.randrange(5,10)
         else:
             voice_line_wait = random.randrange(10,20)
-            voice_line_id = random.randrange(0, len(audio_files))
             print("SPEAKING")
             audio_player.play_audio_file(audio_files, voice_line_id)
+            voice_line_id = random.randrange(0, len(audio_files))
     
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -113,7 +116,7 @@ while True:
     diff_time = timer() - init_time #calc time frame lasted
     target_timer += diff_time
     voice_line_timer += diff_time
-    print(voice_line_timer)
+    #print(voice_line_timer)
 
 # Release handle to the webcam
 video_capture.release()
