@@ -28,7 +28,7 @@ class AudioPlayer:
         if(self.running.value == True):
             self.frame_timer.value += delta_time
             #self.frame_timer = pygame.mixer.music.getpos() * 0.001
-            print("frame timer:", self.frame_timer.value)
+            #print("frame timer:", self.frame_timer.value)
             frame = int(self.frame_timer.value / self.frame_interval)
 
             #end pygame when finished

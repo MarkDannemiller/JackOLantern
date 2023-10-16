@@ -46,7 +46,7 @@ jaw_scaling = 25
 def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
     while(True):
         initial_time = timer()
-
+        
         controller.look_neck(x_deg_neck.value, y_deg_neck.value)
         controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value)
         controller.feed_motors(delta_time)

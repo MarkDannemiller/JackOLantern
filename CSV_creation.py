@@ -5,7 +5,7 @@ import time
 import csv
 import sys
 
-chunk = 2000
+chunk = 375
 
 class AudioPlayer:
     def __init__(self, audio_file_mapping):
