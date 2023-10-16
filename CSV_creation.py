@@ -1,98 +1,377 @@
-import wave
-import pyaudio
-import numpy
+import mediapipe
+import cv2
+import subprocess
 import time
-import csv
-import sys
+#import RPi.GPIO as GPIO
+#import vlc
+#import pyautogui
+import pygame
+from pygame import mixer
+import numpy
+#subprocess.Popen("unclutter -idle 0.01", shell=True)
+# from PIL import Image
+#from gpiozero import MotionSensor
+#import pygame
+#pir = MotionSensor(3)
+drawingModule = mediapipe.solutions.drawing_utils
+handsModule = mediapipe.solutions.hands
+cam = cv2.VideoCapture(0)
+pir_pin=17
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setup(pir_pin, GPIO.IN)
+index_top=0
+index_lower=0
+second_top=0
+second_lower=0
+third_top=0
+third_lower=0
+fourth_top=0
+fourth_lower=0
+thumb_top=0
+thumb_lower=0
+first_finger=0
+second_finger=0
+third_finger=0
+fourth_finger=0
+fifth_thumb=0
+first_song=0
+second_song=0
+third_song=0
+fourth_song=0
+fifth_song=0
+counter_tracking1=0
+counter_tracking2=0
+counter_tracking3=0
+counter_tracking4=0
+counter_tracking5=0
+mixer.init()
+pygame.init()
+pygame.mixer.init()
+song=0
+active=0
+# def pumpkin_on(Path):
+#     parameters=['omxplayer', '--orientation=0', '--no-osd', Path]
+#     subprocess.Popen(parameters).wait()
+def pumpkin_on(Path, song):
 
-chunk = 2000
 
-class AudioPlayer:
-    def __init__(self, audio_file_mapping):
-        self.volume_check = time.time()
-        self.volume_list = []
-        self.audio_file_mapping = audio_file_mapping
-        self.p = pyaudio.PyAudio()
-        self.iteration11 = 0
-        self.check = 0
-        self.list=[]
-        self.final_list=[]
 
-    def calculate_volume(self, audio_info, audio_id):
-        if numpy.isnan(audio_info).any():
-            vol = 0
-        else:
-            peaks = numpy.where((audio_info[1:-1] > audio_info[:-2]) & (audio_info[1:-1] > audio_info[2:]))
+    
+    if song==1:
+        Path_audio='C:\\Users\\jwfra\\Desktop\\Lab 2\\Final songs\\thriller_1.wav'
+    elif song==2:
+        Path_audio='C:\\Users\\jwfra\\Desktop\\Lab 2\\Final songs\\Werewolves_111.wav'
+    elif song==3:
+        Path_audio='/home/pumpkin2/Music/final/(Audio) Thriller Final (1).wav'
+    elif song==4:
+        Path_audio='/home/pumpkin2/Music/final/(Audio) Thriller Final (1).wav'
+    elif song==5:
+        Path_audio='/home/pumpkin2/Music/final/(Audio) Thriller Final (1).wav'
+    else:
+        pass
+    print(song)
 
-            if time.time() - self.volume_check >= 0.1: #change to modify timings
-                max_peak = numpy.max(audio_info)
-                vol = max_peak / 10000
-                vol = abs(vol)
-                if vol > 1:
-                    vol = 1
-                self.volume_check = time.time()
-                self.list.append(vol)
-            else:
-                vol = 0
-        return vol, self.list
+    #refresh_check()
+    display=cv2.VideoCapture(Path)
+    fps=display.get(cv2.CAP_PROP_FPS)
+    sleep_ms=int(numpy.round((1/fps)*1000))
+    print(sleep_ms)
+    
+    cv2.namedWindow("Video_frame", cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty("Video_frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    pygame.mixer.music.load(Path_audio)
+    time_check=0
+    time.sleep(1)
+    pygame.mixer.music.play()
+    #time.sleep(.03)
+    start=time.time()
+    while(1):
+        timing=time.time()
+        #sleep_ms=int(numpy.round((1/fps)*1000))
+        
+        if (time_check==0):
+            pygame.mixer.music.play()
+            time_check=1
+            #time.sleep(2)
+        #xx=time.time()
+        ret, frame_video=display.read()
+        if not ret:
+            break
+        cv2.imshow("Video_frame", frame_video)
+        #yy=(1000*(time.time()-xx))
+        #print(yy)
+        #sleep_ms=int(numpy.round(sleep_ms-yy))
+        #print(sleep_ms)
+        timing1=time.time()
+        sleep_ms1=(((timing1-timing)*1000))
+        print(sleep_ms1)
+        key_video = cv2.waitKey(sleep_ms) & 0xFF    
+        if key_video == ord("q"):
+            break
 
-    def play_audio_files(self):
-        for audio_file, audio_id in self.audio_file_mapping.items():
-            #self.list.append(audio_id)
+    pygame.mixer.music.stop()
+    print("Hi")
+    #pygame.quit()
+    display.release()
+    cv2.destroyWindow("Video_frame")
+    #cam = cv2.VideoCapture(0)
 
-            try:   
-                wav = wave.open(audio_file, 'rb')
-                if wav:
-                    stream = self.p.open(format=self.p.get_format_from_width(wav.getsampwidth()), channels=wav.getnchannels(), rate=wav.getframerate(), output=True)
-                    try:
-                        while True:
-                            audio_data = wav.readframes(chunk)
-                            if not audio_data:
-                                break
 
-                            audio_info = numpy.frombuffer(audio_data, dtype=numpy.int16)
-                            if numpy.isnan(audio_info).any():
-                                vol = 0
-                            else:
-                                vol = self.calculate_volume(audio_info, audio_id)
-                            stream.write(audio_data)
+    refresh()
+    #screen_off
+    #image.kill()
+def screen_off():
+    #image_location="/home/pumpkin2/Music/blank.jpg"
+    #image=subprocess.Popen(["feh", "--hide-pointer", "--fullscreen", image_location])
+    pass
+def refresh():
+    try:
+        window="feh"
+        command=f'xdotool search --name "{window}" windowactivate'
+        subprocess.call(["/bin/bash", "-c", command])
+    except:
+        pass
+def refresh_check():
+    try:
+        window="VLC media player"
+        command=f'xdotool search --name "{window}" windowactivate'
+        subprocess.call(["/bin/bash", "-c", command])
+        #time.sleep(1)
+        #pyautogui.hotkey('alt', 'f11')
+        #print("good")
+        
+    except:
+        pass
 
-                    finally:
-                        print(self.list)
-                        self.final_list.append(self.list)
-                        print(self.final_list)
-                        wav.close()
-                        stream.stop_stream()
-                        stream.close()
-                        self.list=[]
-                else:
-                    break
-            except:
-                with open('audio_data.csv', 'w', newline='') as csvfile:
-                    writer = csv.writer(csvfile)
-                    #transposed = numpy.array(self.final_list).T.tolist()
-                    for row in self.final_list:
-                        writer.writerow(row)
-                sys.exit()
 
-#on jacob's computer
-'''file_id_mapping = {
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test.wav": 0,
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test1.wav": 1,
-    "C:\\Users\\jwfra\\Desktop\\Lab 2\\wave_test2.wav": 2,
-    "C:\\Users\\jwfra\\Desktop\\Lab": 4
-}'''
+def screen_off_full():
+    subprocess.run(["vcgencmd", "display_power", "0"])
+def screen_on():
+    subprocess.run(["vcgencmd", "display_power", "1"])
+    
 
-#on pi
-file_id_mapping = {
-    "/home/pumpkin1/Music/test_audio.wav": 0,
-    "/home/pumpkin1/Music/second_test.wav": 1,
-    "/home/pumpkin1/Music/third_test.wav": 2,
-    "/home/pumpkin1/Music/": 4
-}
+screen_off()     
+with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=1) as hands:
+#while True:
+    #pir.wait_for_motion()
+#     if GPIO.input(pir_pin):
+#         cam=cv2.VideoCapture(0)
+#         time_active=time.time()
+#         active=0
+#     if (time.time()-time_active>=10):
+#         active=1
+#         screen_off()
+#         cam.release()
+    #while (active!=1)
+#while (pir_no_count<100):
+#    if (GPIO.input(pir_pin)!=0):
+#        pir_count=0
+#    else:
+#        pir_no_count=pir_count+1
+    while (True):
+        refresh()
+        ret, frame = cam.read()
+        frame1 = cv2.resize(frame, (640, 480))
+        #frame1=cv2.flip(frame, flipCode=-1)
+           
+        location = hands.process(cv2.cvtColor(frame1, cv2.COLOR_BGR2RGB))
+           
+        if location.multi_hand_landmarks==None:
+            first_finger=0
+            second_finger=0
+            third_finger=0
+            fourth_finger=0
+            fifth_thumb=0
+            counter_tracking1=0
+            counter_tracking2=0
+            counter_tracking3=0
+            counter_tracking4=0
+            counter_tracking5=0
+        elif location.multi_hand_landmarks != None:
+            for handLandmarks in location.multi_hand_landmarks:
+                drawingModule.draw_landmarks(frame1, handLandmarks, handsModule.HAND_CONNECTIONS)
 
-audio_player = AudioPlayer(file_id_mapping)
+                for point in handsModule.HandLandmark:
+                      
+                    Coordinate_points = handLandmarks.landmark[point]
+                    if point==8:
+                        index_top=Coordinate_points.y
+                    if point==6:
+                        index_lower=Coordinate_points.y
+                    if point==12:
+                        second_top=Coordinate_points.y
+                    if point==10:
+                        second_lower=Coordinate_points.y
+                    if point==16:
+                        third_top=Coordinate_points.y
+                    if point==14:
+                        third_lower=Coordinate_points.y
+                    if point==20:
 
-while True:
-    volume = audio_player.play_audio_files()
+                        fourth_top=Coordinate_points.y
+                    if point==18:
+                        fourth_lower=Coordinate_points.y
+                    if point==4:
+                        thumb_top=Coordinate_points.y
+                    if point==3:
+                        thumb_lower=Coordinate_points.y
+                        
+                        
+        first_finger=0
+        second_finger=0
+        third_finger=0
+        fourth_finger=0
+        fifth_thumb=0
+        if ((index_top!=0 and index_lower!=0)) and (index_top<index_lower):
+            first_finger=1
+
+
+        if ((second_top!=0 and second_lower!=0)) and (second_top<second_lower):
+            second_finger=1
+
+
+        if ((third_top!=0 and third_lower!=0)) and (third_top<third_lower):
+            third_finger=1
+           
+        
+        if ((fourth_top!=0 and fourth_lower!=0)) and (fourth_top<fourth_lower):
+            fourth_finger=1
+            
+            
+        if ((thumb_top!=0 and thumb_lower!=0)) and (thumb_top<thumb_lower):
+            fifth_thumb=1
+
+
+
+
+
+
+        if (first_finger==1 and second_finger==0 and third_finger==0 and fourth_finger==0):
+            counter_tracking1=counter_tracking1 + 1
+            counter_tracking2=0
+            counter_tracking3=0
+            counter_tracking4=0
+            counter_tracking5=0
+            #print(counter_tracking1)
+            if (counter_tracking1 >10):
+                song=1
+                #time.sleep(2)
+                #screen_on()
+                print("Hi")
+                Path = 'C:\\Users\\jwfra\\Desktop\\Lab 2\\Final songs\\Thriller_final (1).mp4'
+                pumpkin_on(Path, song)
+                first_song=0
+                second_song=0
+                third_song=0
+                fourth_song=0
+                fifth_song=0
+                counter_tracking1=0
+                print( "Song: 1")
+                #screen_off()
+                time.sleep(5)
+                song=0
+        elif (first_finger==1 and second_finger==1 and third_finger==0 and fourth_finger==0):
+            counter_tracking2=counter_tracking2 + 1
+            counter_tracking1=0
+            counter_tracking3=0
+            counter_tracking4=0
+            counter_tracking5=0
+            #print(counter_tracking2)
+            if (counter_tracking2> 10):
+                song=2
+                #screen_on()
+                Path = 'C:\\Users\\jwfra\\Desktop\\Lab 2\\Final songs\\Werewolves_1.mp4'
+                pumpkin_on(Path, song)
+                first_song=0
+                second_song=0
+                third_song=0
+                fourth_song=0
+                fifth_song=0
+                counter_tracking2=0
+                print( "Song: 2")
+                #screen_off()
+                time.sleep(5)
+                song=0
+        elif (first_finger==1 and second_finger==1 and third_finger==1 and fourth_finger==0):
+            counter_tracking3=counter_tracking3 + 1
+            counter_tracking1=0
+            counter_tracking2=0
+            counter_tracking4=0
+            counter_tracking5=0
+            if (counter_tracking3>10):
+                song=3
+                #screen_on()
+                Path = '/home/pumpkin2/Music/AddamsFinal480.mp4'
+                pumpkin_on(Path, song)
+                first_song=0
+                second_song=0
+                third_song=0
+                fourth_song=0
+                fifth_song=0
+                counter_tracking3=0
+                print( "Song: 3")
+                #screen_off()
+                time.sleep(5)
+                song=0
+
+
+
+
+
+        elif (first_finger==1 and second_finger==1 and third_finger==1 and fourth_finger==1):
+            counter_tracking4=counter_tracking4 + 1
+            counter_tracking1=0
+            counter_tracking2=0
+            counter_tracking3=0
+            counter_tracking5=0
+            if (counter_tracking4>10):
+                song=4
+                #screen_on()
+                Path = '/home/pumpkin2/Music/GhostbustersFinal480.mp4'
+                pumpkin_on(Path, song)
+                first_song=0
+                second_song=0
+                third_song=0
+                fourth_song=0
+                fifth_song=0
+                counter_tracking4=0
+                print( "Song: 4")
+                #screen_off()
+                time.sleep(5)
+                song=0
+        elif (first_finger==0 and second_finger==0 and third_finger==0 and fourth_finger==1):
+            counter_tracking5=counter_tracking5 + 1
+            counter_tracking1=0
+            counter_tracking2=0
+            counter_tracking3=0
+            counter_tracking4=0
+            if (counter_tracking5>10):
+                song=5
+                #screen_on()
+                Path = '/home/pumpkin2/Music/MonsterFinal480.mp4'
+                pumpkin_on(Path, song)
+                first_song=0
+                second_song=0
+                third_song=0
+                fourth_song=0
+                fifth_song=0
+                counter_tracking5=0
+                print( "Song: 5")
+                #screen_off()
+                time.sleep(5)
+                song=0
+
+#            print("First: " + str(counter_tracking1))
+#            print("Second: " + str(counter_tracking2))
+#            print("Third: " + str(counter_tracking3))
+#            print("Fourth " + str(counter_tracking4))
+#            print("Fifth " + str(counter_tracking5))
+
+        cv2.imshow("Frame", frame1);
+        #screen_off
+        key = cv2.waitKey(1) & 0xFF
+           
+        if key == ord("x"):
+            screen_on()
+            break
 
