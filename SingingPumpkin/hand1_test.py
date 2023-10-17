@@ -90,12 +90,12 @@ def pumpkin_on(Path, song):
             if (time_check==0):
                 pygame.mixer.music.play()
                 time_check=1
-                time.sleep(2)
+                time.sleep(1.9)
             ret, frame_video=display.read()
             if not ret:
                 break
             cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(30) & 0xFF    
+            key_video = cv2.waitKey(29) & 0xFF    
             if key_video == ord("q"):
                 break
     if song==3:
@@ -107,8 +107,9 @@ def pumpkin_on(Path, song):
             ret, frame_video=display.read()
             if not ret:
                 break
+            
             cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(30) & 0xFF    
+            key_video = cv2.waitKey(29) & 0xFF    
             if key_video == ord("q"):
                 break
     if song==4:
@@ -116,7 +117,7 @@ def pumpkin_on(Path, song):
             if (time_check==0):
                 pygame.mixer.music.play()
                 time_check=1
-                time.sleep(1)
+                time.sleep(1.3)
             ret, frame_video=display.read()
             if not ret:
                 break
