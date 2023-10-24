@@ -31,6 +31,9 @@ class PIDServo:
     def get_setpoint(self):
         return self.pid.setpoint
 
+    def get_pos(self):
+        return self.theta
+
     #setpoint shall be angle
     def set_setpoint(self, setpoint):
         if(setpoint < self.min_limit):
@@ -67,6 +70,7 @@ class ServoFollower:
         self.reversed = reversed
         self.offset_ang = offset_ang
         self.follow_servo.add_follower(self) #port on PWM board to follow.  Add this follower to the PID_Servos followers
+        self.follow_servo.controller.set_servo_range(self.port, upper_ang)
         pass
 
     def set(self, ang):

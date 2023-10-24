@@ -44,14 +44,14 @@ class MotionController:
 
         self.yaw_lim_right = 1000 #limit in steps to the right
         self.yaw_lim_left = 0 #limit in steps to left
-        self.pitch_lim_lower = 130 #limit in degrees for lower neck pitch
-        self.pitch_lim_upper = 204 #limit in degrees for upper neck pitch
-        self.pitch_neutral_pos = 194 #neutral, looking forward position of neck pitch
-        self.servo_neck_offset = 20 #offset from the right neck servo
+        self.pitch_lim_lower = 170 #limit in degrees for lower neck pitch
+        self.pitch_lim_upper = 250 #limit in degrees for upper neck pitch
+        self.pitch_neutral_pos = 240 #neutral, looking forward position of neck pitch
+        self.servo_neck_offset = -15 #offset from the right neck servo
         self.neck_pitch_mv = 10 #max velocity deg/sec
 
         #neck servo pid
-        self.P_pitch = 0.03
+        self.P_pitch = 0.02
         self.I_pitch = 0
         self.D_pitch = 0#0.001
 
@@ -136,9 +136,10 @@ class MotionController:
     def look_neck(self, xdegrees, ydegrees):
         self.servo_neck_r.set_setpoint(ydegrees + self.servo_neck_r.theta) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
         self.stepper_ang  = xdegrees
+        #print(self.servo_neck_r.get_pos())
         #stepper.set_setpoint(xdegrees)
         #stepper.setpoint.value = int(((xdegrees*stepper.gear_ratio)/(360.0*stepper.s_p_rev)))
-        #print("stepper to:", ((xdegrees*stepper.gear_ratio)/(360.0*stepper.s_p_rev))) 
+        #print("stepper to:", ((xdegrees*stepper.gear_ratio*stepper.s_p_rev)/360.0)) 
     #endregion
 
     #region EYES
@@ -226,25 +227,26 @@ controller = MotionController()
 controller.set_jaw(-3, 100)
 time.sleep(1)
 controller.set_jaw(22, 100)
-time.sleep(1)'''
-#controller.set_jaw(-3)
+time.sleep(1)
+controller.set_jaw(-3, 100)'''
 
 '''stepper.set_setpoint(30)
 time.sleep(3)
 stepper.set_setpoint(-30)'''
-'''
+
+#controller = MotionController()
 #minimum
-controller.set_servo(controller.port_neck_l, 120)
-controller.set_servo(controller.port_neck_r, 130)
-time.sleep(5)
+#controller.set_servo(controller.port_neck_l, 100)
+#controller.set_servo(controller.port_neck_r, 173)
+'''time.sleep(5)
 #neutral position
 controller.set_servo(controller.port_neck_l, 51)
 controller.set_servo(controller.port_neck_r, 194)
 time.sleep(5)
 #maximum
 controller.set_servo(controller.port_neck_l, 41)
-controller.set_servo(controller.port_neck_r, 204)
-'''
+controller.set_servo(controller.port_neck_r, 204)'''
+
 '''
 //this is a comment
 '''

@@ -15,9 +15,17 @@ from voice_player import AudioPlayer
 
 # Set your audio file paths here.  Must correspond to built audio_data.csv!
 audio_files = [
-    "/home/pumpkin1/Music/test_audio.wav",
-    "/home/pumpkin1/Music/second_test.wav",
-    "/home/pumpkin1/Music/third_test.wav"
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/introduction.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/afraid-of.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/booberry-joke.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/can-i-have-candy.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/day-i-was-born.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/did-i-surprise.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/enjoy-halloween.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/favorite-candy.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/i-have-scary-story.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/scary-movies.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/simon-says.wav"
 ]
 
 #example of split between personal and group lines
@@ -46,18 +54,29 @@ x_deg_neck = Value('d', 0)
 y_deg_neck = Value('d', 0)
 x_deg_eyes = Value('d', 0)
 y_deg_eyes = Value('d', 0)
+rehome = Value('b', False)
 jaw_scaling = 25
 
 def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
+    
     while(True):
         initial_time = timer()
         
+        if(rehome.value):
+            #print(controller.servo_neck_r.get_pos())
+            y_deg_neck.value = controller.pitch_neutral_pos - controller.servo_neck_r.get_pos()#neutral y
+            y_deg_eyes.value = controller.pitch_neutral_pos - controller.servo_neck_r.get_pos()
+            x_deg_neck.value = stepper.get_forward_ang()
+            x_deg_eyes.value = x_deg_neck.value #eyes will look at same point in horizontal
+            #print("no faces detected. moving neck:", y_deg_neck.value)
+
         controller.look_neck(x_deg_neck.value, y_deg_neck.value)
         controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value)
         controller.feed_motors(delta_time)
 
-        jaw_volume = audio_player.update(delta_time)
+        jaw_volume, frame = audio_player.update(delta_time)
         #print(jaw_volume * jaw_scaling)
+        #print("frame:", frame, "vol:", jaw_volume)
         controller.set_jaw(jaw_volume * jaw_scaling, delta_time)
 
         while(timer() - initial_time < delta_time):
@@ -83,12 +102,13 @@ while True:
     cv2.imshow('face', frame) #comment out for performance
 
     face_cnt = tracker.target_info(tracker.target)[4]
-
+    #print("face count:", face_cnt)
     #print("pygame:", audio_player.check_pygame())
 
     # update target setpoint for motion controller
     if(face_cnt > 0):
         no_face_timer = 0
+        rehome.value = False
         #update target based on timer AND duration of frame
         if(target_timer > target_wait):
             tracker.get_new_target()
@@ -103,10 +123,7 @@ while True:
         no_face_timer += diff_time
         #look back to forward position after not seeing face for long enough
         if(no_face_timer > no_face_wait):
-            y_deg_neck.value = 0 #neutral y
-            y_deg_eyes.value = controller.pitch_neutral_pos - controller.servo_neck_r.get_setpoint()
-            x_deg_neck.value = stepper.get_forward_ang()
-            x_deg_eyes.value = x_deg_neck.value #eyes will look at same point in horizontal
+            rehome.value = True
 
     '''if(audio_player.running.value == True):
         print("pygame:", audio_player.check_pygame())'''
