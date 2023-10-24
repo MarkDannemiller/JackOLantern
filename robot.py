@@ -14,7 +14,7 @@ from face_tracker import screen_to_angle
 from voice_player import AudioPlayer
 
 # Set your audio file paths here.  Must correspond to built audio_data.csv!
-audio_files = [
+'''audio_files = [
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/introduction.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/afraid-of.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/booberry-joke.wav",
@@ -26,6 +26,20 @@ audio_files = [
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/i-have-scary-story.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/scary-movies.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/simon-says.wav"
+]'''
+audio_files = [
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/introduction.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/best-friend-foxy.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/boo-berry-pie.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/day-i-was-born.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/haunting-secret.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/movie-in-theaters.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/my-candy-friend.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/my-singing-friend.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scary-stories.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/spirits-come-out.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/two-knee-fish.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/what-afraid-of.wav",
 ]
 
 #example of split between personal and group lines

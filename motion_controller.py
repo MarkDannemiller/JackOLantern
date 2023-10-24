@@ -30,7 +30,7 @@ class MotionController:
         self.eye_lim_y_lower = 0
         self.eye_lim_x_right = 0
         self.eye_lim_x_left = 70
-        self.eye_x_neutral = 30
+        self.eye_x_neutral = 27
         self.eye_y_neutral = 35
 
         self.lid_ltop_close = 80
@@ -44,16 +44,16 @@ class MotionController:
 
         self.yaw_lim_right = 1000 #limit in steps to the right
         self.yaw_lim_left = 0 #limit in steps to left
-        self.pitch_lim_lower = 170 #limit in degrees for lower neck pitch
-        self.pitch_lim_upper = 250 #limit in degrees for upper neck pitch
-        self.pitch_neutral_pos = 240 #neutral, looking forward position of neck pitch
+        self.pitch_lim_lower = 180 #limit in degrees for lower neck pitch
+        self.pitch_lim_upper = 265 #limit in degrees for upper neck pitch
+        self.pitch_neutral_pos = 250 #neutral, looking forward position of neck pitch
         self.servo_neck_offset = -15 #offset from the right neck servo
-        self.neck_pitch_mv = 10 #max velocity deg/sec
+        self.neck_pitch_mv = 15 #max velocity deg/sec
 
         #neck servo pid
         self.P_pitch = 0.02
         self.I_pitch = 0
-        self.D_pitch = 0#0.001
+        self.D_pitch = 0.001
 
         self.lim_jaw_closed = -3
         self.lim_jaw_open = 22

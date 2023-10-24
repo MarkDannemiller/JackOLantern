@@ -26,7 +26,18 @@ def plot_volume_data(data):
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/simon-says.wav"
 ]'''
 audio_file = [
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/"
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/introduction.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/best-friend-foxy.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/boo-berry-pie.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/day-i-was-born.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/haunting-secret.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/movie-in-theaters.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/my-candy-friend.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines5/cowboy/my-singing-friend.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scary-stories.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/spirits-come-out.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/two-knee-fish.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/what-afraid-of.wav",
 ]
 
 list_1=[]
