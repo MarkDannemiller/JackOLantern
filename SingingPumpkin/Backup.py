@@ -1,3 +1,6 @@
+
+
+
 import mediapipe
 import cv2
 import subprocess
@@ -5,8 +8,6 @@ import time
 import RPi.GPIO as GPIO
 import vlc
 import pyautogui
-import pygame
-from pygame import mixer
 #subprocess.Popen("unclutter -idle 0.01", shell=True)
 # from PIL import Image
 #from gpiozero import MotionSensor
@@ -43,115 +44,91 @@ counter_tracking2=0
 counter_tracking3=0
 counter_tracking4=0
 counter_tracking5=0
-mixer.init()
-pygame.init()
-pygame.mixer.init()
 song=0
 active=0
+# def pumpkin_on(Path):
+#     parameters=['omxplayer', '--orientation=0', '--no-osd', Path]
+#     subprocess.Popen(parameters).wait()
 def pumpkin_on(Path, song):
+    #screen_off()
+    #image_location="/home/pumpkin2/Music/blank.jpg"
+    #image=subprocess.Popen(["feh", "--hide-pointer", "--fullscreen", image_location])
+    #time.sleep(3)
+    
+#     image_process
+
+#     image=Image.open('blank_screen')
+#     image.show()
+#     time.sleep(3)
+#     image.close()
+
+# #     pygame.init()
+#     pygame.mouse.set_visible(False)
+#     screen = pygame.display.set_mode(1024, 600)
+#     screen.fill((0, 0, 0))
+#     pygame.display.update()
+#     time.sleep(2)
+#     pygame.quit()
+    time.sleep(1)
+
+    instance=vlc.Instance('--no-osd', '--no-video-title-show', '--no-stats', '--file-caching=10000', '--network-caching=10000', '--avcodec-hw=any', '--vout=xvideo', '--x11-display=:-0')
+    display=instance.media_player_new()
+    #display.set_fullscreen(True)
+    video=instance.media_new(Path)
+    video.get_mrl()
+    display.set_media(video)
+    #display.video_set_mouse_input(False)
+    #display.video_set_key_input(False)
+    #display.set_fullscreen(True)
+    #display.set_fullscreen(False)
+    #refresh_check()
+
+    
+    #display.toggle_fullscreen()
+    time.sleep(1)
+    
     if song==1:
-        Path_audio='/home/pumpkin2/Music/final/(Audio) Thriller Final (1).wav'
+        song_duration=2
     elif song==2:
-        Path_audio='/home/pumpkin2/Music/final/Werewolves_final1.wav'
+        song_duration=41
     elif song==3:
-        Path_audio='/home/pumpkin2/Music/final/Addams_Final1.wav'
+        song_duration=42
     elif song==4:
-        Path_audio='/home/pumpkin2/Music/final/Ghostbusters_Final1.wav'
+        song_duration=42
     elif song==5:
-        Path_audio='/home/pumpkin2/Music/final/Monsters_Final1.wav'
+        song_duration=41
     else:
-        pass
-    #print(song)
+        song_duration=0
 
     #refresh_check()
-    display=cv2.VideoCapture(Path)
+    display.play()
     
-    cv2.namedWindow("Video_frame", cv2.WND_PROP_FULLSCREEN)
-    cv2.setWindowProperty("Video_frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-    pygame.mixer.music.load(Path_audio)
-    time_check=0
+    refresh()
+    display.set_pause(1)
     time.sleep(1)
-    if song==1:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                #time.sleep(2)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(27) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==2:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(1.9)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(29) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==3:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(1)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(29) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==4:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(1.3)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(30) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==5:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(2)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(29) & 0xFF    
-            if key_video == ord("q"):
-                break
-        
-        
-        
-        
-        
-        
-    pygame.mixer.music.stop()
-    #print("Hi")
-    #pygame.quit()
+    display.set_pause(1)
+    #refresh_check()
+    display.set_fullscreen(True)
+    
+    time.sleep(1.3)
+    #pyautogui.hotkey('alt', 'f11')
+    #display.set_pause(1)
+    #time.sleep(.1)
+    #pyautogui.hotkey('alt', 'f11')
+    display.set_pause(0)
+    refresh()
+    refresh_check()
+    display.set_fullscreen(True)
+    #print("hi")
+    #pyautogui.hotkey('alt', 'f11')
+    #display.set_fullscreen(True)
+    #pyautogui.click(x=100, y=200)
+    #pyautogui.hotkey('alt', 'f11')
+    #refresh_check()
+    
+    time.sleep(song_duration)
+    
     display.release()
-    cv2.destroyWindow("Video_frame")
-    #cam = cv2.VideoCapture(0)
-
-
     refresh()
     #screen_off
     #image.kill()
@@ -173,7 +150,6 @@ def refresh_check():
         #time.sleep(1)
         #pyautogui.hotkey('alt', 'f11')
         #print("good")
-        
     except:
         pass
 
@@ -291,8 +267,8 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
                 song=1
                 #time.sleep(2)
                 #screen_on()
-                #print("Hi")
-                Path = '/home/pumpkin2/Music/final/Thriller_Final.mp4'
+                print("Hi")
+                Path = '/home/pumpkin2/Music/Thriller Final.mp4'
                 pumpkin_on(Path, song)
                 first_song=0
                 second_song=0
@@ -300,7 +276,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
                 fourth_song=0
                 fifth_song=0
                 counter_tracking1=0
-                #print( "Song: 1")
+                print( "Song: 1")
                 #screen_off()
                 time.sleep(5)
                 song=0
@@ -314,7 +290,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
             if (counter_tracking2> 10):
                 song=2
                 #screen_on()
-                Path = '/home/pumpkin2/Music/final/Werewolves_1.mp4'
+                Path = '/home/pumpkin2/Music/WerewolvesFinal480.mp4'
                 pumpkin_on(Path, song)
                 first_song=0
                 second_song=0
@@ -322,7 +298,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
                 fourth_song=0
                 fifth_song=0
                 counter_tracking2=0
-                #print( "Song: 2")
+                print( "Song: 2")
                 #screen_off()
                 time.sleep(5)
                 song=0
@@ -335,7 +311,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
             if (counter_tracking3>10):
                 song=3
                 #screen_on()
-                Path = '/home/pumpkin2/Music/final/Addams_1.mp4'
+                Path = '/home/pumpkin2/Music/AddamsFinal480.mp4'
                 pumpkin_on(Path, song)
                 first_song=0
                 second_song=0
@@ -343,10 +319,15 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
                 fourth_song=0
                 fifth_song=0
                 counter_tracking3=0
-                #print( "Song: 3")
+                print( "Song: 3")
                 #screen_off()
                 time.sleep(5)
                 song=0
+
+
+
+
+
         elif (first_finger==1 and second_finger==1 and third_finger==1 and fourth_finger==1):
             counter_tracking4=counter_tracking4 + 1
             counter_tracking1=0
@@ -356,7 +337,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
             if (counter_tracking4>10):
                 song=4
                 #screen_on()
-                Path = '/home/pumpkin2/Music/final/Ghostbusters_1.mp4'
+                Path = '/home/pumpkin2/Music/GhostbustersFinal480.mp4'
                 pumpkin_on(Path, song)
                 first_song=0
                 second_song=0
@@ -364,7 +345,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
                 fourth_song=0
                 fifth_song=0
                 counter_tracking4=0
-                #print( "Song: 4")
+                print( "Song: 4")
                 #screen_off()
                 time.sleep(5)
                 song=0
@@ -377,7 +358,7 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
             if (counter_tracking5>10):
                 song=5
                 #screen_on()
-                Path = '/home/pumpkin2/Music/final/Monsters_1.mp4'
+                Path = '/home/pumpkin2/Music/MonsterFinal480.mp4'
                 pumpkin_on(Path, song)
                 first_song=0
                 second_song=0
@@ -385,11 +366,16 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
                 fourth_song=0
                 fifth_song=0
                 counter_tracking5=0
-                #print( "Song: 5")
+                print( "Song: 5")
                 #screen_off()
                 time.sleep(5)
                 song=0
 
+#            print("First: " + str(counter_tracking1))
+#            print("Second: " + str(counter_tracking2))
+#            print("Third: " + str(counter_tracking3))
+#            print("Fourth " + str(counter_tracking4))
+#            print("Fifth " + str(counter_tracking5))
 
         cv2.imshow("Frame", frame1);
         #screen_off

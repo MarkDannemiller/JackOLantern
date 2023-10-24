@@ -1,3 +1,6 @@
+
+
+
 import mediapipe
 import cv2
 import subprocess
@@ -5,8 +8,6 @@ import time
 import RPi.GPIO as GPIO
 import vlc
 import pyautogui
-import pygame
-from pygame import mixer
 #subprocess.Popen("unclutter -idle 0.01", shell=True)
 # from PIL import Image
 #from gpiozero import MotionSensor
@@ -43,115 +44,72 @@ counter_tracking2=0
 counter_tracking3=0
 counter_tracking4=0
 counter_tracking5=0
-mixer.init()
-pygame.init()
-pygame.mixer.init()
 song=0
 active=0
+time_off=0
+screen_power=0
+
 def pumpkin_on(Path, song):
+
+    time.sleep(1)
+
+    instance=vlc.Instance('--no-osd', '--no-video-title-show', '--vout=xvideo')
+    display=instance.media_player_new()
+    #display.set_fullscreen(True)
+    video=instance.media_new(Path)
+    display.set_media(video)
+    #display.video_set_mouse_input(False)
+    #display.video_set_key_input(False)
+    #display.set_fullscreen(True)
+    #display.set_fullscreen(False)
+    #refresh_check()
+
+    
+    #display.toggle_fullscreen()
+    time.sleep(1)
+    
     if song==1:
-        Path_audio='/home/pumpkin2/Music/final/(Audio) Thriller Final (1).wav'
+        song_duration=42
     elif song==2:
-        Path_audio='/home/pumpkin2/Music/final/Werewolves_final1.wav'
+        song_duration=40
     elif song==3:
-        Path_audio='/home/pumpkin2/Music/final/Addams_Final1.wav'
+        song_duration=41
     elif song==4:
-        Path_audio='/home/pumpkin2/Music/final/Ghostbusters_Final1.wav'
+        song_duration=42
     elif song==5:
-        Path_audio='/home/pumpkin2/Music/final/Monsters_Final1.wav'
+        song_duration=41
     else:
-        pass
-    #print(song)
+        song_duration=0
 
     #refresh_check()
-    display=cv2.VideoCapture(Path)
+    display.play()
     
-    cv2.namedWindow("Video_frame", cv2.WND_PROP_FULLSCREEN)
-    cv2.setWindowProperty("Video_frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-    pygame.mixer.music.load(Path_audio)
-    time_check=0
+    refresh()
+    display.set_pause(1)
     time.sleep(1)
-    if song==1:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                #time.sleep(2)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(27) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==2:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(1.9)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(29) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==3:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(1)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(29) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==4:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(1.3)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(30) & 0xFF    
-            if key_video == ord("q"):
-                break
-    if song==5:
-        while(1):
-            if (time_check==0):
-                pygame.mixer.music.play()
-                time_check=1
-                time.sleep(2)
-            ret, frame_video=display.read()
-            if not ret:
-                break
-            cv2.imshow("Video_frame", frame_video)
-            key_video = cv2.waitKey(29) & 0xFF    
-            if key_video == ord("q"):
-                break
-        
-        
-        
-        
-        
-        
-    pygame.mixer.music.stop()
-    #print("Hi")
-    #pygame.quit()
+    display.set_pause(1)
+    #refresh_check()
+    display.set_fullscreen(True)
+    
+    time.sleep(1.3)
+    #pyautogui.hotkey('alt', 'f11')
+    #display.set_pause(1)
+    #time.sleep(.1)
+    #pyautogui.hotkey('alt', 'f11')
+    display.set_pause(0)
+    refresh()
+    refresh_check()
+    display.set_fullscreen(True)
+    #print("hi")
+    #pyautogui.hotkey('alt', 'f11')
+    #display.set_fullscreen(True)
+    #pyautogui.click(x=100, y=200)
+    #pyautogui.hotkey('alt', 'f11')
+    #refresh_check()
+    
+    time.sleep(song_duration)
+    
     display.release()
-    cv2.destroyWindow("Video_frame")
-    #cam = cv2.VideoCapture(0)
-
-
     refresh()
     #screen_off
     #image.kill()
@@ -173,7 +131,6 @@ def refresh_check():
         #time.sleep(1)
         #pyautogui.hotkey('alt', 'f11')
         #print("good")
-        
     except:
         pass
 
@@ -183,9 +140,10 @@ def screen_off_full():
 def screen_on():
     subprocess.run(["vcgencmd", "display_power", "1"])
     
+    
 
 screen_off()     
-with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, min_tracking_confidence=0.5, max_num_hands=1) as hands:
+with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.75, min_tracking_confidence=0.5, max_num_hands=1) as hands:
 #while True:
     #pir.wait_for_motion()
 #     if GPIO.input(pir_pin):
@@ -201,12 +159,13 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
 #    if (GPIO.input(pir_pin)!=0):
 #        pir_count=0
 #    else:
-#        pir_no_count=pir_count+1
+#        pir_no_count=pir_count+1 300
     while (True):
         refresh()
         ret, frame = cam.read()
-        frame1 = cv2.resize(frame, (640, 480))
+        #frame1 = cv2.resize(frame, (640, 480))
         frame1=cv2.flip(frame, flipCode=-1)
+        frame1=frame1[:, :]
            
         location = hands.process(cv2.cvtColor(frame1, cv2.COLOR_BGR2RGB))
            
@@ -221,7 +180,17 @@ with handsModule.Hands(static_image_mode=False, min_detection_confidence=0.5, mi
             counter_tracking3=0
             counter_tracking4=0
             counter_tracking5=0
+            if time_off==0:
+                time_off=time.time()
+            if time.time()-time_off>=30 and screen_power==0:
+                screen_off_full()
+                screen_power=1
         elif location.multi_hand_landmarks != None:
+            time_off=0
+            if screen_power==1:
+                screen_on()
+                screen_power=0
+                
             for handLandmarks in location.multi_hand_landmarks:
                 drawingModule.draw_landmarks(frame1, handLandmarks, handsModule.HAND_CONNECTIONS)
 
