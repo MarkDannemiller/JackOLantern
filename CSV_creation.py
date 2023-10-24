@@ -12,13 +12,29 @@ def plot_volume_data(data):
     plt.title('Volume Data Over Time')
     plt.show()
 #audio_file = wave.open('C:\\Users\\jwfra\\Desktop\\Lab 2\\test_audio.wav', 'rb')
-audio_file = ['C:\\Users\\jwfra\\Desktop\\Lab 2\\test_audio.wav', 'C:\\Users\\jwfra\\Desktop\\Lab 2\\second_test.wav', 'C:\\Users\\jwfra\\Desktop\\Lab 2\\untitled.wav']
+'''audio_file = [
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/introduction.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/afraid-of.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/booberry-joke.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/can-i-have-candy.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/day-i-was-born.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/did-i-surprise.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/enjoy-halloween.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/favorite-candy.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/i-have-scary-story.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/scary-movies.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/simon-says.wav"
+]'''
+audio_file = [
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/"
+]
+
 list_1=[]
 list_final=[]
-interval = 0.1
+interval = 0.05
 current=time.time()
 
-pygame.mixer.music.load('C:\\Users\\jwfra\\Desktop\\Lab 2\\test_audio.wav')
+#pygame.mixer.music.load('C:\\Users\\jwfra\\Desktop\\Lab 2\\test_audio.wav')
 #pygame.mixer.music.play()
 for i in audio_file:
     audio_file1=wave.open(i)
@@ -33,7 +49,7 @@ for i in audio_file:
             list_final.append(list_1)
             list_1=[]
             break
-        volume = audioop.rms(audio_data, samplewidth)/3000
+        volume = audioop.rms(audio_data, samplewidth)/8000
         if volume<.05:
             volume=0
         elif volume>.90:
@@ -41,15 +57,15 @@ for i in audio_file:
         elif volume<=.90 and volume>.80:
             volume=.85
         elif volume<=.80 and volume>.60:
-            volume=.75
+            volume=.7
         elif volume<=.60 and volume>.45:
-            volume=.65
-        elif volume<=.45 and volume>.30:
             volume=.55
+        elif volume<=.45 and volume>.30:
+            volume=.4
         elif volume<=.30 and volume>.20:
-            volume=.40
-        elif volume<=.20:
             volume=.25
+        elif volume<=.20:
+            volume=.15
         list_1.append(volume)
         print(volume)
         time.sleep(interval)
