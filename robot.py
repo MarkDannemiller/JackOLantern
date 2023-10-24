@@ -20,6 +20,11 @@ audio_files = [
     "/home/pumpkin1/Music/third_test.wav"
 ]
 
+#example of split between personal and group lines
+personal_lines = [0, 1, 2]
+group_lines = [3, 4, 5]
+creepy_lines = [6, 7, 8]
+
 audio_player = AudioPlayer()
 
 video_capture = cv2.VideoCapture(0)
@@ -57,6 +62,16 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
 
         while(timer() - initial_time < delta_time):
             pass
+
+def get_new_line(faces):
+    line = 0
+    #personal line
+    if(faces < 3):
+        line = personal_lines[random.randrange(0, len(personal_lines))]
+    #add logic for playing a creepy line here
+    else:
+        line = group_lines[random.randrange(0, len(group_lines))]
+    return line
 
 motor_process = Process(target=update_motion, args=(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,))
 motor_process.start()
