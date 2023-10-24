@@ -30,15 +30,15 @@ class MotionController:
         self.eye_lim_y_lower = 0
         self.eye_lim_x_right = 0
         self.eye_lim_x_left = 70
-        self.eye_x_neutral = 27
+        self.eye_x_neutral = 30
         self.eye_y_neutral = 35
 
-        self.lid_ltop_close = 80
+        self.lid_ltop_close = 82
         self.lid_lbot_close = 0
         self.lid_rtop_close = 0
         self.lid_rbot_close = 80
         self.lid_ltop_open = 0
-        self.lid_lbot_open = 85
+        self.lid_lbot_open = 80
         self.lid_rtop_open = 85
         self.lid_rbot_open = 0
 
@@ -48,12 +48,12 @@ class MotionController:
         self.pitch_lim_upper = 265 #limit in degrees for upper neck pitch
         self.pitch_neutral_pos = 250 #neutral, looking forward position of neck pitch
         self.servo_neck_offset = -15 #offset from the right neck servo
-        self.neck_pitch_mv = 15 #max velocity deg/sec
+        self.neck_pitch_mv = 10 #max velocity deg/sec
 
         #neck servo pid
         self.P_pitch = 0.02
         self.I_pitch = 0
-        self.D_pitch = 0.001
+        self.D_pitch = 0#0.001
 
         self.lim_jaw_closed = -3
         self.lim_jaw_open = 22
@@ -80,12 +80,22 @@ class MotionController:
         self.stepper_ang = 0
 
         #open eyelids and set eyes to neutral
+        self.set_servo(self.port_lid_bl, self.lid_lbot_close)
+        self.set_servo(self.port_lid_br, self.lid_rbot_close)
+        self.set_servo(self.port_lid_tl, self.lid_ltop_close)
+        self.set_servo(self.port_lid_tr, self.lid_rtop_close)
+        self.look_eyes(0, 0, 0)
+        '''self.set_servo(self.port_eye_x, self.eye_x_neutral)
+        self.set_servo(self.port_eye_y, self.eye_y_neutral)'''
+
+        self.set_jaw(0, 100) #set to open
+
+        time.sleep(2) #pause
+
         self.set_servo(self.port_lid_bl, self.lid_lbot_open)
         self.set_servo(self.port_lid_br, self.lid_rbot_open)
         self.set_servo(self.port_lid_tl, self.lid_ltop_open)
         self.set_servo(self.port_lid_tr, self.lid_rtop_open)
-        self.set_servo(self.port_eye_x, self.eye_x_neutral)
-        self.set_servo(self.port_eye_y, self.eye_y_neutral)
 
         self.set_jaw(self.jaw_setpoint, 100) #set to closed position
 
@@ -143,9 +153,9 @@ class MotionController:
     #endregion
 
     #region EYES
-    def look_eyes(self, xdegrees, ydegrees):
+    def look_eyes(self, xdegrees, ydegrees, face_size):
         xpos = -xdegrees + self.eye_x_neutral
-        ypos = ydegrees + self.eye_y_neutral - 5
+        ypos = ydegrees + self.eye_y_neutral - face_size*0.05
 
         #clamp xpos within bounds
         if(xpos < self.eye_lim_x_right):

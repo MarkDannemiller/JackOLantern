@@ -47,6 +47,10 @@ personal_lines = [0, 1, 2]
 group_lines = [3, 4, 5]
 creepy_lines = [6, 7, 8]
 
+voice_history = [0]
+history_count = 10 #do not speak the last this many lines
+
+
 audio_player = AudioPlayer()
 
 video_capture = cv2.VideoCapture(0)
@@ -68,6 +72,7 @@ x_deg_neck = Value('d', 0)
 y_deg_neck = Value('d', 0)
 x_deg_eyes = Value('d', 0)
 y_deg_eyes = Value('d', 0)
+face_size = Value('i', 10)
 rehome = Value('b', False)
 jaw_scaling = 25
 
@@ -82,10 +87,11 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
             y_deg_eyes.value = controller.pitch_neutral_pos - controller.servo_neck_r.get_pos()
             x_deg_neck.value = stepper.get_forward_ang()
             x_deg_eyes.value = x_deg_neck.value #eyes will look at same point in horizontal
+            face_size.value = 0
             #print("no faces detected. moving neck:", y_deg_neck.value)
 
         controller.look_neck(x_deg_neck.value, y_deg_neck.value)
-        controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value)
+        controller.look_eyes(x_deg_eyes.value, y_deg_eyes.value, face_size.value)
         controller.feed_motors(delta_time)
 
         jaw_volume, frame = audio_player.update(delta_time)
@@ -94,6 +100,7 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
         controller.set_jaw(jaw_volume * jaw_scaling, delta_time)
 
         while(timer() - initial_time < delta_time):
+            #print(timer() - initial_time)
             pass
 
 def get_new_line(faces):
@@ -115,7 +122,7 @@ while True:
     frame = tracker.process()
     cv2.imshow('face', frame) #comment out for performance
 
-    face_cnt = tracker.target_info(tracker.target)[4]
+    x, y, w, h, face_cnt, box = tracker.target_info(tracker.target)
     #print("face count:", face_cnt)
     #print("pygame:", audio_player.check_pygame())
 
@@ -128,9 +135,11 @@ while True:
             tracker.get_new_target()
             target_timer = 0
             target_wait = random.randrange(3,11)
-        
+
+        face_size.value = int((w + h) / 2) #calc face_size as average of width and height
+
+        print(face_size.value)
         #print(tracker.target)
-        x, y = tracker.target_info(tracker.target)[:2]
         x_deg_neck.value, y_deg_neck.value = screen_to_angle(x, y)
         x_deg_eyes.value, y_deg_eyes.value = x_deg_neck.value, y_deg_neck.value
     else:
@@ -152,7 +161,13 @@ while True:
             voice_line_wait = random.randrange(10,20)
             print("SPEAKING")
             audio_player.play_audio_file(audio_files, voice_line_id)
-            voice_line_id = random.randrange(0, len(audio_files))
+            #get random audio line not within last 10 lines
+            while(voice_line_id in voice_history):
+                voice_line_id = random.randrange(0, len(audio_files))
+            voice_history.append(voice_line_id)
+            #only keep 10 lines in history/memory
+            if(len(voice_history) > history_count):
+                voice_history.remove(voice_history[0])
     
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):
@@ -162,6 +177,8 @@ while True:
     diff_time = timer() - init_time #calc time frame lasted
     target_timer += diff_time
     voice_line_timer += diff_time
+    #print(diff_time)
+    #print(rehome.value)
     #print(voice_line_timer)
 
 # Release handle to the webcam
