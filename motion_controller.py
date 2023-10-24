@@ -2,6 +2,7 @@ from simple_pid import PID
 import time
 from multiprocessing import Process, Value
 import random
+import math
 
 #SERVO BOARD CONTROL
 from adafruit_servokit import ServoKit #Special library for 16 channel pwm adafruit board controlling servos
@@ -25,6 +26,9 @@ class MotionController:
         self.port_neck_l = 8
         self.port_neck_r = 9
         #endregion
+
+        self.eye_offset = 46.8 #height offset in mm of eyes
+        self.size_scalar = 0.05 #relationship of face size to mm away from camera
 
         self.eye_lim_y_upper = 70
         self.eye_lim_y_lower = 0
@@ -73,7 +77,7 @@ class MotionController:
         self.servo_neck_l = ServoFollower(self.port_neck_l, self.servo_neck_r, 270, True, self.servo_neck_offset)
 
         #start stepper thread
-        self.process = Process(target=stepper.motor, args=(stepper.setpoint, ))
+        self.process = Process(target=stepper.motor, args=(stepper.setpoint, stepper.current_pos))
         self.process.start()
         self.stepper_timer = 0
         self.stepper_update_interval = 0.5
@@ -153,9 +157,11 @@ class MotionController:
     #endregion
 
     #region EYES
+
     def look_eyes(self, xdegrees, ydegrees, face_size):
         xpos = -xdegrees + self.eye_x_neutral
-        ypos = ydegrees + self.eye_y_neutral - face_size*0.05
+        #y angle is a function of the vertical offset of the camera and the eyes
+        ypos = math.atan((self.eye_offset / (face_size * self.size_scalar)) - math.tan(ydegrees)) + self.eye_y_neutral
 
         #clamp xpos within bounds
         if(xpos < self.eye_lim_x_right):
@@ -298,5 +304,3 @@ for x in range(0, 10):
     time.sleep(0.5)
 '''
 #endregion
-
-

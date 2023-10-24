@@ -166,7 +166,7 @@ while True:
                 voice_line_id = random.randrange(0, len(audio_files))
             voice_history.append(voice_line_id)
             #only keep 10 lines in history/memory
-            if(len(voice_history) > history_count):
+            while(len(voice_history) > history_count):
                 voice_history.remove(voice_history[0])
     
     # Hit 'q' on the keyboard to quit!
