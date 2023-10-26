@@ -160,7 +160,10 @@ class MotionController:
     def look_eyes(self, xdegrees, ydegrees, face_size):
         xpos = -xdegrees + self.eye_x_neutral
         #y angle is a function of the vertical offset of the camera and the eyes
-        ypos = math.atan((self.eye_offset / (face_size * self.size_scalar)) - math.tan(ydegrees)) + self.eye_y_neutral
+        try:
+            ypos = math.atan((self.eye_offset / (face_size * self.size_scalar)) - math.tan(ydegrees)) + self.eye_y_neutral
+        except:
+            ypos = ydegrees + self.eye_y_neutral
 
         #clamp xpos within bounds
         if(xpos < self.eye_lim_x_right):
