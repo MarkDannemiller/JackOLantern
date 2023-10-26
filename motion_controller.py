@@ -51,6 +51,7 @@ class MotionController:
         self.pitch_lim_lower = 180 #limit in degrees for lower neck pitch
         self.pitch_lim_upper = 265 #limit in degrees for upper neck pitch
         self.pitch_neutral_pos = 250 #neutral, looking forward position of neck pitch
+        self.pitch_sleep_pos = 220
         self.servo_neck_offset = -15 #offset from the right neck servo
         self.neck_pitch_mv = 10 #max velocity deg/sec
 
@@ -61,7 +62,7 @@ class MotionController:
 
         self.lim_jaw_closed = -3
         self.lim_jaw_open = 22
-        self.jaw_setpoint = 0 #jaw will take input from 0-25 range
+        self.jaw_setpoint = self.lim_jaw_open-self.lim_jaw_closed #jaw will take input from 0-25 range
         self.jaw_mv = 100 #max velocity deg/sec
 
         '''self.P_yaw = 0.01
@@ -83,25 +84,16 @@ class MotionController:
         self.stepper_update_interval = 0.5
         self.stepper_ang = 0
 
-        #open eyelids and set eyes to neutral
-        self.set_servo(self.port_lid_bl, self.lid_lbot_close)
-        self.set_servo(self.port_lid_br, self.lid_rbot_close)
-        self.set_servo(self.port_lid_tl, self.lid_ltop_close)
-        self.set_servo(self.port_lid_tr, self.lid_rtop_close)
-        self.look_eyes(0, 0, 0)
-        '''self.set_servo(self.port_eye_x, self.eye_x_neutral)
-        self.set_servo(self.port_eye_y, self.eye_y_neutral)'''
-
-        self.set_jaw(0, 100) #set to open
-
+        self.sleep()
         time.sleep(2) #pause
 
+        #open eyelids and set eyes to neutral
         self.set_servo(self.port_lid_bl, self.lid_lbot_open)
         self.set_servo(self.port_lid_br, self.lid_rbot_open)
         self.set_servo(self.port_lid_tl, self.lid_ltop_open)
         self.set_servo(self.port_lid_tr, self.lid_rtop_open)
 
-        self.set_jaw(self.jaw_setpoint, 100) #set to closed position
+        self.set_jaw(self.jaw_setpoint, 100) #set to open position
 
         self.blink_timer = 0
         self.blink_wait = 1
@@ -111,8 +103,15 @@ class MotionController:
         #code to enable power to motors
         pass
 
-    def disable():
-        #code to disable power to motors
+    #move to sleeping position
+    def sleep(self):
+        self.set_servo(self.port_lid_bl, self.lid_lbot_close)
+        self.set_servo(self.port_lid_br, self.lid_rbot_close)
+        self.set_servo(self.port_lid_tl, self.lid_ltop_close)
+        self.set_servo(self.port_lid_tr, self.lid_rtop_close)
+        self.look_eyes(0, 0, 0)
+        self.servo_neck_r.set_setpoint(self.pitch_sleep_pos)
+        self.set_jaw(0, 100) #set to closed
         pass
 
     def feed_motors(self, delta_time):
