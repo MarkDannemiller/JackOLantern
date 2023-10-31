@@ -71,7 +71,7 @@ class FaceTracker:
             cv2.rectangle(frame, (250, 150), (400, 300), (255, 0, 0), 1)
         self.face_entered_square=0 #resets the face_entered square to allow it to check again
 
-        with self.mediapipe_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.05) as detector_settings:
+        with self.mediapipe_face_detection.FaceDetection(model_selection=1, min_detection_confidence=0.0001) as detector_settings:
             #////////////Collects data from the model/////////////
             frame=cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             location=detector_settings.process(frame)
@@ -118,7 +118,7 @@ class FaceTracker:
         for id_tracker in list(self.currently_noted.keys()):#this for loop iterates over the current faces seen and adjusts the number of frames that they have been seen (if they are seen above this is reset to 0)
             self.unfilled[id_tracker]=self.unfilled[id_tracker]+1
             self.number_of_faces=self.number_of_faces+1
-            if self.unfilled[id_tracker]>=8: #max number of frames to wait before deleting face
+            if self.unfilled[id_tracker]>=16: #max number of frames to wait before deleting face
                 self.box_state[id_tracker]=0
                 del self.currently_noted[id_tracker]
                 self.id_options.append(id_tracker)
