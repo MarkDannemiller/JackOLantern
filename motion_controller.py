@@ -51,7 +51,7 @@ class MotionController:
         self.pitch_lim_lower = 180 #limit in degrees for lower neck pitch
         self.pitch_lim_upper = 265 #limit in degrees for upper neck pitch
         self.pitch_neutral_pos = 250 #neutral, looking forward position of neck pitch
-        self.pitch_sleep_pos = 220
+        self.pitch_sleep_pos = 240
         self.servo_neck_offset = -15 #offset from the right neck servo
         self.neck_pitch_mv = 10 #max velocity deg/sec
 
@@ -160,10 +160,10 @@ class MotionController:
     def look_eyes(self, xdegrees, ydegrees, face_size):
         xpos = -xdegrees + self.eye_x_neutral
         #y angle is a function of the vertical offset of the camera and the eyes
-        try:
+        '''try:
             ypos = math.atan((self.eye_offset / (face_size * self.size_scalar)) - math.tan(ydegrees)) + self.eye_y_neutral
-        except:
-            ypos = ydegrees + self.eye_y_neutral
+        except:'''
+        ypos = ydegrees + self.eye_y_neutral - 5
 
         #clamp xpos within bounds
         if(xpos < self.eye_lim_x_right):

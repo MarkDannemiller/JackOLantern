@@ -14,19 +14,6 @@ from face_tracker import screen_to_angle
 from voice_player import AudioPlayer
 
 # Set your audio file paths here.  Must correspond to built audio_data.csv!
-'''audio_files = [
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/introduction.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/afraid-of.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/booberry-joke.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/can-i-have-candy.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/day-i-was-born.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/did-i-surprise.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/enjoy-halloween.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/favorite-candy.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/i-have-scary-story.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/scary-movies.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/simon-says.wav"
-]'''
 audio_files = [
     #normal lines
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/introduction.wav",
@@ -38,7 +25,7 @@ audio_files = [
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/my-singing-friend.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scary-stories.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/spirits-come-out.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/two-knee-fish.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/two-knee-fish.wav", #9
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/normal/a-good-lawyer.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/normal/any-questions.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/normal/candybot.wav",
@@ -47,7 +34,7 @@ audio_files = [
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/normal/make-engineer-cry.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/normal/our-differences.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/normal/songbot.wav",
-
+    #index 18 ->
     #personal lines
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/personal/what-afraid-of.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/personal/best-friend-foxy.wav",
@@ -58,31 +45,31 @@ audio_files = [
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/personal/lot-of-candy.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/personal/sofishticated.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/personal/what-afraid-of.wav",
-
+    #index 27->
     #group lines
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/group/guess-the-movie.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/group/hard-of-hearing.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/group/quite-the-group.wav",
-
+    #index 30->
     #inviting lines
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/inviting/come-over.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/inviting/dont-bite.wav",
-
+    #index 32->
     #scenario lines
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/colton-greeting.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/enigma.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/eric-greeting.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/exhausted.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/haustein-man.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/eric-greeting.wav", #34
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/exhausted.wav", #35
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/haustein-man.wav", #36
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/jackson-dad.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/jacob-cant-see.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/logan-greeting.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/sahil-greet.wav",
-    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/starburst-starburst.wav",
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/sahil-greet.wav", #40
+    "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/starburst-starburst.wav", #41
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/take-a-break.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/tony-greeting.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/scenario/voice-box-issue.wav",
-
+    #index 45->
     #spooky lines
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/spooky/inner-child.wav",
     "/home/pumpkin1/Desktop/Github/JackOLantern/voice-lines/cowboy/spooky/my-new-home.wav",
@@ -92,10 +79,18 @@ audio_files = [
 ]
 
 #example of split between personal and group lines
-personal_lines = [10, 11]
-group_lines = [3, 4, 5]
-scenario_lines = [] #lines that will be specifically called by user outside of facial recognition
-creepy_lines = []
+personal_lines = [18,19,20,21,22,23,24,25,26]
+group_lines = [27,28,29]
+inviting_lines = [30,31] #implement! currently just acts like normal lines
+scenario_lines = [32,33,34,35,36,37,38,39,40,41,42,43,44] #lines that will be specifically called by user outside of facial recognition
+spooky_lines = [45,46,47,48]
+
+NORMAL = 0
+FORCE_GROUP = 1
+INCLUDE_SPOOKY = 2
+CREEPY_ONLY = 3
+#DRUNK = 4
+voice_mode = NORMAL
 
 #CHARACTER MODE DETERMINES BEHAVIOR
 SLEEP = -1
@@ -120,11 +115,11 @@ diff_time = 0.02
 target_wait = random.randrange(3,11)
 target_timer = 0
 no_face_wait = 3.0 #wait this many seconds before moving back to neutral position
-sleep_wait = 30.0 #time to wait before sleeping
+sleep_wait = 60.0 #time to wait before sleeping
 no_face_timer = 0
 voice_line_timer = 0
 voice_line_wait = 3.0
-voice_line_id = 0
+voice_line_id = 44#0#//34=Haustein//////44=vb issue////////47-simon/////////////////////////////
 voice_line_index = 0
 
 x_deg_neck = Value('d', 0)
@@ -150,7 +145,7 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
                 y_deg_neck.value = controller.pitch_neutral_pos - controller.servo_neck_r.get_pos()#neutral y
                 y_deg_eyes.value = controller.pitch_neutral_pos - controller.servo_neck_r.get_pos()
                 x_deg_neck.value = stepper.get_forward_ang()
-                x_deg_eyes.value = x_deg_neck.value #eyes will look at same point in horizontal
+                x_deg_eyes.value = 0#x_deg_neck.value #eyes will look at same point in horizontal
                 face_size.value = 0
                 #print("no faces detected. moving neck:", y_deg_neck.value)
 
@@ -167,16 +162,26 @@ def update_motion(x_deg_neck, y_deg_neck, x_deg_eyes, y_deg_eyes,):
             #print(timer() - initial_time)
             pass
 
-def get_new_line(faces, face_size):
-    line = 0
+def get_new_line(face_count, face_size):
+    line = -1
     #personal line
-    if(faces < 3 or face_size >= personal_face_size):
+    if(voice_mode != FORCE_GROUP and (face_count < 3 or face_size >= personal_face_size)):
         print("Selecting personal line...")
-        line = personal_lines[random.randrange(0, len(personal_lines))]
+        while(line == -1 or line in voice_history or line in group_lines or line in scenario_lines or (line in spooky_lines and voice_mode != INCLUDE_SPOOKY)):
+            print(line)
+            line = random.randrange(0, len(audio_files))
     #add logic for playing a creepy line here
     else:
         print("Selecting group line...")
-        line = group_lines[random.randrange(0, len(group_lines))]
+        while(line == -1 or line in voice_history or line in personal_lines or line in scenario_lines or (line in spooky_lines and voice_mode != INCLUDE_SPOOKY)):
+            print(line)
+            line = random.randrange(0, len(audio_files))
+    voice_history.append(voice_line_id)
+    #only keep 10 lines in history/memory, otherwise choose random line
+    print("voice history:", voice_history)
+    if(len(voice_history) > history_count):
+        voice_history.remove(voice_history[0])
+    print("line selected:", line)
     return line
 
 def play_line_manual(line):
@@ -201,50 +206,58 @@ while True:
     # update target setpoint for motion controller
     if(face_cnt > 0):
         no_face_timer = 0
-        rehome.value = False
+        
         #leave sleep if sleeping
         if(character_mode.value == SLEEP):
+            print("Awaking from sleep...")
             character_mode.value = IDLE
         #update target based on timer AND duration of frame
-        if(target_timer > target_wait):
+        if(target_timer > target_wait or rehome.value):
             tracker.get_new_target()
             target_timer = 0
-            target_wait = random.randrange(3,11)
+            target_wait = random.randrange(2,5)
 
+        rehome.value = False
         face_size.value = int((w + h) / 2) #calc face_size as average of width and height
 
-        print(face_size.value)
+        #print(face_size.value)
         #print(tracker.target)
         x_deg_neck.value, y_deg_neck.value = screen_to_angle(x, y)
         x_deg_eyes.value, y_deg_eyes.value = x_deg_neck.value, y_deg_neck.value
     else:
+        print("no one seen for", no_face_timer, "seconds")
         no_face_timer += diff_time
         #look back to forward position after not seeing face for long enough
         if(no_face_timer > sleep_wait and audio_player.running.value == False):
+            print("ENTERING SLEEP MODE...")
             character_mode.value = SLEEP
-        elif(no_face_timer > no_face_wait):
+        elif(no_face_timer > no_face_wait and not rehome.value):
+            print("No humans detected.  Rehoming...")
             rehome.value = True
 
     '''if(audio_player.running.value == True):
         print("pygame:", audio_player.check_pygame())'''
 
     #speak every random interval of time
-    if(voice_line_timer > voice_line_wait):
+    if(voice_line_timer > voice_line_wait and character_mode.value != SLEEP):
         voice_line_timer = 0
         if(audio_player.running.value == True):
             print("voice busy")
-            voice_line_wait = random.randrange(5,10)
         else:
-            voice_line_wait = random.randrange(10,20)
+            if(face_cnt>0):
+                voice_line_wait = random.randrange(2, 5)
+            else:
+                voice_line_wait = random.randrange(5,10)
             print("SPEAKING")
             audio_player.play_audio_file(audio_files, voice_line_id)
-            #get random audio line not within last 10 lines
+            voice_line_id = get_new_line(face_cnt, face_size.value)
+            '''#get random audio line not within last 10 lines
             while(voice_line_id in voice_history):
                 voice_line_id = random.randrange(0, len(audio_files))
             voice_history.append(voice_line_id)
             #only keep 10 lines in history/memory
             while(len(voice_history) > history_count):
-                voice_history.remove(voice_history[0])
+                voice_history.remove(voice_history[0])'''
     
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):

@@ -11,7 +11,7 @@ class AudioPlayer:
         self.audio_data = []
         self.running = Value('b', False)
 
-        self.speak_delay = 0.5
+        self.speak_delay = 0.8
         
         csv_file = '/home/pumpkin1/Desktop/Github/JackOLantern/audio_data.csv' #This is the csv for all audio (depending on which audio_id sent to the code, it will select the respective columns data)
         with open(csv_file, newline='') as csvfile:
