@@ -8,6 +8,7 @@ import math
 from adafruit_servokit import ServoKit #Special library for 16 channel pwm adafruit board controlling servos
 from pid_servo import PIDServo
 from pid_servo import ServoFollower
+from pid_stepper import PIDStepper
 
 import stepper
 
@@ -27,6 +28,25 @@ class MotionController:
         self.port_neck_r = 9
         #endregion
 
+        #region NECK_YAW
+        self.port_yaw_en = 13
+        self.port_yaw_dir = 19
+        self.port_yaw_step = 26
+        self.port_yaw_home = -1 #////////TBD
+
+        self.yaw_lim_upper = 120 #upper limit in degrees
+        self.yaw_neutral = 60
+        self.yaw_gear_ratio = 3
+        self.yaw_s_p_rev = 3200
+        self.yaw_max_speed = 5 #deg/sec
+        self.yaw_err_thresh = 5 #within 5 degrees is on target
+
+        self.P_yaw = 0.01
+        self.I_yaw = 0
+        self.D_yaw = 0.05
+        #endregion
+
+        #region EYES
         self.eye_offset = 46.8 #height offset in mm of eyes
         self.size_scalar = 0.05 #relationship of face size to mm away from camera
 
@@ -45,9 +65,9 @@ class MotionController:
         self.lid_lbot_open = 80
         self.lid_rtop_open = 85
         self.lid_rbot_open = 0
+        #endregion
 
-        self.yaw_lim_right = 1000 #limit in steps to the right
-        self.yaw_lim_left = 0 #limit in steps to left
+        #region NECK_PITCH
         self.pitch_lim_lower = 180 #limit in degrees for lower neck pitch
         self.pitch_lim_upper = 265 #limit in degrees for upper neck pitch
         self.pitch_neutral_pos = 250 #neutral, looking forward position of neck pitch
@@ -59,15 +79,12 @@ class MotionController:
         self.P_pitch = 0.02
         self.I_pitch = 0
         self.D_pitch = 0#0.001
+        #endregion
 
         self.lim_jaw_closed = -3
         self.lim_jaw_open = 22
         self.jaw_setpoint = self.lim_jaw_open-self.lim_jaw_closed #jaw will take input from 0-25 range
         self.jaw_mv = 100 #max velocity deg/sec
-
-        '''self.P_yaw = 0.01
-        self.I_yaw = 0
-        self.D_yaw = 0.05'''
 
         #init
         self.kit = ServoKit(channels=16)
@@ -78,11 +95,15 @@ class MotionController:
         self.servo_neck_l = ServoFollower(self.port_neck_l, self.servo_neck_r, 270, True, self.servo_neck_offset)
 
         #start stepper thread
-        self.process = Process(target=stepper.motor, args=(stepper.setpoint, stepper.current_pos))
+        '''self.process = Process(target=stepper.motor, args=(stepper.setpoint, stepper.current_pos))
         self.process.start()
         self.stepper_timer = 0
         self.stepper_update_interval = 0.5
-        self.stepper_ang = 0
+        self.stepper_ang = 0'''
+
+        #PID stepper init
+        self.yaw_stepper = PIDStepper(self.port_yaw_en, self.port_yaw_dir, self.port_yaw_step, self.port_yaw_home, self.yaw_gear_ratio, self.yaw_s_p_rev, 
+                                        self.yaw_lim_upper, self.yaw_max_speed, self.yaw_err_thresh, self.P_yaw, self.I_yaw, self.D_yaw, self.yaw_neutral)
 
         self.sleep()
         time.sleep(2) #pause
@@ -112,16 +133,20 @@ class MotionController:
         self.look_eyes(0, 0, 0)
         self.servo_neck_r.set_setpoint(self.pitch_sleep_pos)
         self.set_jaw(0, 100) #set to closed
+
+        self.yaw_stepper.set_setpoint(self.yaw_stepper.NEUTRAL)
         pass
 
     def feed_motors(self, delta_time):
         #code to feed all motors current pid values
-        self.servo_neck_r.update(delta_time)
-        self.stepper_timer += delta_time
+        self.servo_neck_r.feed(delta_time)
+        self.yaw_stepper.feed(delta_time)
         self.blink_timer += delta_time
+
+        '''self.stepper_timer += delta_time
         if(self.stepper_timer > self.stepper_update_interval):
             stepper.set_setpoint(self.stepper_ang)
-            self.stepper_timer = 0
+            self.stepper_timer = 0'''
         
         if(self.blink_timer > self.blink_wait + self.blink_time):
             self.blink_wait = 0.1*random.randrange(20,61)
@@ -130,7 +155,7 @@ class MotionController:
         elif(self.blink_timer > self.blink_wait):
             self.blink_eyes(True)
 
-    def test_servos(self):
+    def __test_servos(self):
         for i in range(0,8):
             print("servo:", i)
             ang = 270 if i >= self.port_jaw_l else 180
@@ -140,15 +165,18 @@ class MotionController:
             time.sleep(0.5)
 
     #region NECK       
-    def home_neck():
+    def home_neck(self):
         #code to home neck yaw and set pitch on servos to 0
+        self.servo_neck_r.set_setpoint(self.pitch_neutral_pos)
+        self.yaw_stepper.rehome()
         #need limit switch for this
         pass
 
     #switches necks current focus
     def look_neck(self, xdegrees, ydegrees):
-        self.servo_neck_r.set_setpoint(ydegrees + self.servo_neck_r.theta) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
-        self.stepper_ang  = xdegrees
+        self.servo_neck_r.set_setpoint(ydegrees + self.servo_neck_r.get_pos()) #offset by pitch_lim_lower such that 0 degree input corresponds with the lower
+        self.yaw_stepper.set_setpoint_relative(xdegrees)
+        #self.stepper_ang  = xdegrees
         #print(self.servo_neck_r.get_pos())
         #stepper.set_setpoint(xdegrees)
         #stepper.setpoint.value = int(((xdegrees*stepper.gear_ratio)/(360.0*stepper.s_p_rev)))
@@ -227,8 +255,6 @@ class MotionController:
 
 
 #region TEST_CODE
-
-#test_servos()
 
 #neck servo test
 '''
