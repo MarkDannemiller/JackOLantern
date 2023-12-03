@@ -251,13 +251,6 @@ while True:
             print("SPEAKING")
             audio_player.play_audio_file(audio_files, voice_line_id)
             voice_line_id = get_new_line(face_cnt, face_size.value)
-            '''#get random audio line not within last 10 lines
-            while(voice_line_id in voice_history):
-                voice_line_id = random.randrange(0, len(audio_files))
-            voice_history.append(voice_line_id)
-            #only keep 10 lines in history/memory
-            while(len(voice_history) > history_count):
-                voice_history.remove(voice_history[0])'''
     
     # Hit 'q' on the keyboard to quit!
     if cv2.waitKey(1) & 0xFF == ord('q'):

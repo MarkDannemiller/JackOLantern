@@ -43,7 +43,7 @@ class PIDServo:
         #print("setpoint at servo", self.port, "to", setpoint)
         self.pid.setpoint = setpoint
 
-    def update(self, delta_time):
+    def feed(self, delta_time):
         control = self.pid(self.theta) #result shall be angle to turn in this frame (every 20 ms)
         if(control + self.theta > self.max_limit):
             control = self.max_limit - self.theta
