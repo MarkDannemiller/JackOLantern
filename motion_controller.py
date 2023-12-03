@@ -10,6 +10,8 @@ from pid_servo import PIDServo
 from pid_servo import ServoFollower
 from pid_stepper import PIDStepper
 
+import RPI.GPIO as GPIO
+
 import stepper
 
 
@@ -32,7 +34,15 @@ class MotionController:
         self.port_yaw_en = 13
         self.port_yaw_dir = 19
         self.port_yaw_step = 26
-        self.port_yaw_home = -1 #////////TBD
+        self.port_yaw_home = 22 #////////TBD
+
+        GPIO.setmode(GPIO.BCM)
+
+        #set additional ports high for 3.3v power
+        self.port_yaw_vcc = 29
+        self.port_lim_vcc = 31
+        GPIO.setup(self.port_yaw_vcc, GPIO.OUT, initial=GPIO.HIGH)
+        GPIO.setup(self.port_lim_vcc, GPIO.OUT, initial=GPIO.HIGH)
 
         self.yaw_lim_upper = 120 #upper limit in degrees
         self.yaw_neutral = 60
@@ -85,6 +95,7 @@ class MotionController:
         self.lim_jaw_open = 22
         self.jaw_setpoint = self.lim_jaw_open-self.lim_jaw_closed #jaw will take input from 0-25 range
         self.jaw_mv = 100 #max velocity deg/sec
+
 
         #init
         self.kit = ServoKit(channels=16)

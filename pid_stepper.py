@@ -43,7 +43,7 @@ class PIDStepper:
         GPIO.setup(self.enable_pin, GPIO.OUT)
         GPIO.setup(self.dir_pin, GPIO.OUT)
         GPIO.setup(self.step_pin, GPIO.OUT)
-        GPIO.setup(self.home_switch, GPIO.INPUT)
+        GPIO.setup(self.home_switch, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
         GPIO.output(enable_pin, GPIO.HIGH) #disable
 
         self.process = Process(target=self.__run, args=(self.velocity, self.rehome_flag))
