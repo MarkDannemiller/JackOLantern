@@ -9,6 +9,9 @@ from adafruit_servokit import ServoKit #Special library for 16 channel pwm adafr
 from pid_servo import PIDServo
 from pid_servo import ServoFollower
 
+#eye led
+from gpiozero import LED
+
 import stepper
 
 
@@ -26,6 +29,9 @@ class MotionController:
         self.port_neck_l = 8
         self.port_neck_r = 9
         #endregion
+
+        self.led_eye_l = LED(pin=23, initial_value=False)
+        self.led_eye_r = LED(pin=24, initial_value=False)
 
         self.eye_offset = 46.8 #height offset in mm of eyes
         self.size_scalar = 0.05 #relationship of face size to mm away from camera
@@ -85,6 +91,8 @@ class MotionController:
         self.stepper_ang = 0
 
         self.sleep()
+        self.led_eye_l.off()
+        self.led_eye_r.off()
         time.sleep(2) #pause
 
         #open eyelids and set eyes to neutral
@@ -98,6 +106,40 @@ class MotionController:
         self.blink_timer = 0
         self.blink_wait = 1
         self.blink_time = 0.25
+
+        #led flash on sequence
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.2)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.75)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.15)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.3)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.1)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.2)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.1)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.15)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.1)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.1)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
 
     def enable():
         #code to enable power to motors
