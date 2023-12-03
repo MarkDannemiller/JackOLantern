@@ -35,9 +35,6 @@ class MotionController:
         self.led_eye_l = LED(pin=23, initial_value=False)
         self.led_eye_r = LED(pin=24, initial_value=False)
 
-        self.led_eye_l = LED(pin=23, initial_value=False)
-        self.led_eye_r = LED(pin=24, initial_value=False)
-
         #region NECK_YAW
         self.port_yaw_en = 13
         self.port_yaw_dir = 19
