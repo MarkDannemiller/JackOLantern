@@ -11,6 +11,8 @@ from pid_servo import ServoFollower
 from pid_stepper import PIDStepper
 
 import RPI.GPIO as GPIO
+#eye led
+from gpiozero import LED
 
 import stepper
 
@@ -29,6 +31,12 @@ class MotionController:
         self.port_neck_l = 8
         self.port_neck_r = 9
         #endregion
+
+        self.led_eye_l = LED(pin=23, initial_value=False)
+        self.led_eye_r = LED(pin=24, initial_value=False)
+
+        self.led_eye_l = LED(pin=23, initial_value=False)
+        self.led_eye_r = LED(pin=24, initial_value=False)
 
         #region NECK_YAW
         self.port_yaw_en = 13
@@ -117,6 +125,8 @@ class MotionController:
                                         self.yaw_lim_upper, self.yaw_max_speed, self.yaw_err_thresh, self.P_yaw, self.I_yaw, self.D_yaw, self.yaw_neutral)
 
         self.sleep()
+        self.led_eye_l.off()
+        self.led_eye_r.off()
         time.sleep(2) #pause
 
         #open eyelids and set eyes to neutral
@@ -130,6 +140,40 @@ class MotionController:
         self.blink_timer = 0
         self.blink_wait = 1
         self.blink_time = 0.25
+
+        #led flash on sequence
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.2)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.75)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.15)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.3)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.1)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.2)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.1)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.15)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
+        time.sleep(0.1)
+        self.led_eye_l.off()
+        self.led_eye_r.off()
+        time.sleep(0.1)
+        self.led_eye_l.on()
+        self.led_eye_r.on()
 
     def enable():
         #code to enable power to motors
