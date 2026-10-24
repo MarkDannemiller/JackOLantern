@@ -4,10 +4,14 @@
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { hobbyServo } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const DSSERVO_DS3235: ModuleDef = hobbyServo({
+const DSSERVO_DS3235_ELECTRICAL: ModuleDef = hobbyServo({
   id: "dsservo-ds3235", name: "DSSERVO DS3235 35 kg servo", manufacturer: "DSSERVO", part_number: "DS3235",
   description: "Standard-size coreless metal-gear digital servo: 32 kg.cm stall at 6 V, 35 at 7.4 V; 0.12 s/60 deg at 6 V.",
   categories: ["actuator.motor.servo"], tags: ["servo", "pwm"], sources: [{ id: "src_listing", name: "DIYmall DS3235 listing (BOM row)", url: "https://www.amazon.com/s?k=DIYmall+DS3235" }],
   voltage: [5, 7.4], dims: [40, 20, 40.5], mass_g: 66,
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const DSSERVO_DS3235: ModuleDef = withMech(DSSERVO_DS3235_ELECTRICAL as ModuleDef, "servo-ds3235");

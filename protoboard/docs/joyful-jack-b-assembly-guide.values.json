@@ -1,0 +1,969 @@
+{
+ "document": "joyful-jack-b-assembly-guide.html",
+ "system": "joyful-jack-b",
+ "project": "joyful-jack",
+ "docId": "JJ-B-AG",
+ "generated": "2026-10-24",
+ "values": [
+  {
+   "q": "sys:assembly.mates",
+   "text": "229",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD assembly"
+  },
+  {
+   "q": "derived:mech.hardware_count",
+   "text": "588",
+   "status": "derived",
+   "unit": "count",
+   "formula": "assemble().hardware.length",
+   "inputs": [
+    "sys:assembly.hardware"
+   ]
+  },
+  {
+   "q": "sys:system.description",
+   "text": "Pumpkin-head cowboy: the existing head plus two seven-actuator Feetech arms with glove hands, two hot-swappable M18 packs, battery monitoring and a relay E-stop.",
+   "status": "model",
+   "source": "UHD system"
+  },
+  {
+   "q": "sys:checks.diagnostics[id=fastener_torque:summary].details.assumed",
+   "text": "20",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD checks"
+  },
+  {
+   "q": "sys:bom[line=1].quantity",
+   "text": "24",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=2].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=3].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=4].quantity",
+   "text": "8",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=5].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=6].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=7].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=8].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=9].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=10].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=11].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=12].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=13].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=14].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=15].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=16].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=17].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=18].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=19].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=20].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=21].quantity",
+   "text": "6",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=22].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=23].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=24].quantity",
+   "text": "6",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=25].quantity",
+   "text": "20",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=26].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=27].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=28].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=29].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=30].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=31].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=32].quantity",
+   "text": "20",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=33].quantity",
+   "text": "8",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=34].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=35].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=36].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=37].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=38].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=39].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=40].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=41].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=42].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=43].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=44].quantity",
+   "text": "14",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=45].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=46].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=47].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=48].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=49].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=50].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=51].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=52].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=53].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=54].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=55].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=56].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=57].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=58].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=59].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=60].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=61].quantity",
+   "text": "116",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=62].quantity",
+   "text": "72",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=63].quantity",
+   "text": "56",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=64].quantity",
+   "text": "12",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=65].quantity",
+   "text": "16",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=66].quantity",
+   "text": "32",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=67].quantity",
+   "text": "8",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=68].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=69].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=70].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=71].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=72].quantity",
+   "text": "49",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=73].quantity",
+   "text": "41",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=74].quantity",
+   "text": "14",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=75].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=76].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=77].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=78].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=79].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=80].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=81].quantity",
+   "text": "32",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=82].quantity",
+   "text": "80",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=83].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=84].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=85].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=86].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=87].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=88].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=89].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=90].quantity",
+   "text": "6",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=91].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=92].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=93].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=94].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=95].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=96].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=97].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=98].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=99].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=100].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=101].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=102].quantity",
+   "text": "2",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=103].quantity",
+   "text": "4",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "sys:bom[line=104].quantity",
+   "text": "1",
+   "status": "model",
+   "unit": "count",
+   "source": "UHD bom"
+  },
+  {
+   "q": "def:jj-joint-007:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "2.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-023:fastenerStack[2].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "1.2 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-029:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "2.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-001:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "6 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-020:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "8 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-021:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "2.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-006:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "2.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-004:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "2.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-022:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "2.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-009:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-024:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.15 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-025:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-026:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.36 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-015:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.36 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-013:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-014:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.36 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-016:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.36 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-027:fastenerStack[1].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.36 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-028:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.15 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "def:jj-joint-017:fastenerStack[0].torque.torqueNm",
+   "f": "u=N·m",
+   "text": "0.5 N·m",
+   "status": "assumption",
+   "unit": "N·m",
+   "note": "assumption trait"
+  },
+  {
+   "q": "sys:system.links[id=arm_r/arm_r_j1_dowel_in_pulley].mate.gapMm",
+   "f": "u=mm",
+   "text": "—",
+   "status": "gap",
+   "source": "UHD system"
+  },
+  {
+   "q": "sys:system.links[id=arm_r/arm_r_j2_dowel_in_pulley].mate.gapMm",
+   "f": "u=mm",
+   "text": "—",
+   "status": "gap",
+   "source": "UHD system"
+  },
+  {
+   "q": "sys:system.links[id=arm_r/arm_r_j4_dowel_in_pulley].mate.gapMm",
+   "f": "u=mm",
+   "text": "—",
+   "status": "gap",
+   "source": "UHD system"
+  },
+  {
+   "q": "sys:system.links[id=arm_l/arm_l_j1_dowel_in_pulley].mate.gapMm",
+   "f": "u=mm",
+   "text": "—",
+   "status": "gap",
+   "source": "UHD system"
+  },
+  {
+   "q": "sys:system.links[id=arm_l/arm_l_j2_dowel_in_pulley].mate.gapMm",
+   "f": "u=mm",
+   "text": "—",
+   "status": "gap",
+   "source": "UHD system"
+  },
+  {
+   "q": "sys:system.links[id=arm_l/arm_l_j4_dowel_in_pulley].mate.gapMm",
+   "f": "u=mm",
+   "text": "—",
+   "status": "gap",
+   "source": "UHD system"
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "artifact": "hfs5-2020-340-upright-bc--upright_lf",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 64826.3,
+ "mass_g": 170.0,
+ "material": "metal_alu",
+ "category": "bought",
+ "features": {
+  "end_a": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true
+   }
+  },
+  "end_b": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     340.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true
+   }
+  },
+  "bracket_05_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -10.0,
+     0.0,
+     310.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  },
+  "bracket_06_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     10.0,
+     310.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  },
+  "bracket_13_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -10.0,
+     0.0,
+     30.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  },
+  "bracket_14_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     10.0,
+     30.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  },
+  "ebd_1_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     10.0,
+     310.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  },
+  "ebd_3_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     10.0,
+     10.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  }
+ },
+ "source": "Misumi HFS5-2020 (0.5 kg/m, slot 6 mm, centre hole 4.2 mm: research/sourcing/20261025-hardware-sourcing.json)",
+ "meta": {
+  "kind": "extrusion",
+  "length": 340,
+  "part_number": "HFS5-2020-340-TPW"
+ }
+}

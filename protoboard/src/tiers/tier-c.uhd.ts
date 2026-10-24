@@ -8,6 +8,7 @@
  * The custom power board is the next revision (a block here, not wired).
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
+import { MECH } from "../mech/assembly.gen";
 import { dualPackPower, dualPackLinks } from "./tier-b.uhd";
 
 const L = (id: string, a: [string, string], b: [string, string], name = id) => ({ id, name, a: { child: a[0], interfaceId: a[1] }, b: { child: b[0], interfaceId: b[1] } });
@@ -21,8 +22,7 @@ export const JOYFUL_JACK_C: ModuleDef = {
   interfaces: [],
   children: [
     { id: "head", moduleDefId: "jj-head", name: "Head (existing)" },
-    { id: "base", moduleDefId: "jj-ballast-base", name: "Ballast base and mast" },
-    { id: "torso", moduleDefId: "jj-torso-bc", name: "Torso" },
+    { id: "body", moduleDefId: "jj-body-c", name: "Body: base, mast, torso, neck, electronics board" },
     ...dualPackPower([
       { id: "mains", moduleDefId: "meanwell-lrs-350-24", name: "Mains supply 24 V" },
       { id: "or_3", moduleDefId: "ideal-diode-40a", name: "Ideal diode, mains" },
@@ -32,8 +32,9 @@ export const JOYFUL_JACK_C: ModuleDef = {
       { id: "buck_hand_l", moduleDefId: "pololu-d36v50f5", name: "Buck, left hand (5 V)" },
       { id: "power_board", moduleDefId: "jj-power-board-c", name: "Custom power board (next revision)" },
     ]),
-    { id: "arm_r", moduleDefId: "jj-arm-c", name: "Right arm" },
-    { id: "arm_l", moduleDefId: "jj-arm-c", name: "Left arm" },
+    { id: "arm_r", moduleDefId: "jj-arm-c-r", name: "Right arm" },
+    { id: "arm_l", moduleDefId: "jj-arm-c-l", name: "Left arm" },
+    ...((MECH.c.root.children as unknown as NonNullable<ModuleDef["children"]>) ?? []),
   ],
   links: [
     ...dualPackLinks(),
@@ -54,5 +55,6 @@ export const JOYFUL_JACK_C: ModuleDef = {
     L("arm_r_gnd", gnd, ["arm_r", "gnd"]), L("arm_l_gnd", gnd, ["arm_l", "gnd"]),
     L("arm_r_usb", ["pi5", "usb2_0"], ["arm_r", "usb"], "USB, right arm bus"), L("arm_l_usb", ["pi5", "usb2_1"], ["arm_l", "usb"], "USB, left arm bus"),
     L("hand_r_usb", ["pi5", "usb3_0"], ["arm_r", "hand_usb"], "USB, right hand"), L("hand_l_usb", ["pi5", "usb3_1"], ["arm_l", "hand_usb"], "USB, left hand"),
+    ...((MECH.c.root.links as unknown as NonNullable<ModuleDef["links"]>) ?? []),
   ],
 };

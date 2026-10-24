@@ -1,0 +1,49 @@
+{
+ "artifact": "spring-to5220rcs",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 3163.74,
+ "mass_g": 25.2,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "bore_a": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "bore",
+    "diameter": 21.54
+   }
+  }
+ },
+ "source": "Century Spring TO-5220RCS listing (research/sourcing/20261025-hardware-sourcing.json)",
+ "meta": {
+  "od": 26.37,
+  "id": 21.54,
+  "wire": 2.41,
+  "body": 19.3,
+  "legs": 76.2,
+  "rate_nmm_deg": 9.83,
+  "max_nmm": 2078.83,
+  "max_deg": 211,
+  "price_usd": 6.43,
+  "source": "Century Spring TO-5220RCS listing (research/sourcing/20261025-hardware-sourcing.json)",
+  "legs_cut_to_mm": 40.0
+ }
+}

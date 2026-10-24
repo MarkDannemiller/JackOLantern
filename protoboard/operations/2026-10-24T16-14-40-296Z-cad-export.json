@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "tee-nut-m5-hammer-in",
+    "config": "parts/local/mech/hw/tee-nut-m5-hammer-in/cad.config.ts",
+    "configDigest": "sha256:728d7a95f5b50143a04ecb97772f968bd91f7341cdd8a73bb083226a25174c9f",
+    "moduleDigest": "sha256:6180c2f726b3aa6e0525b2acd7f9ee64733e8c5719bfbf9ca2fb64e2b8a2186c"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:ec99bba2628df3911636cde5c60c53af2bb68608c67c32df452996df2315e433",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:14:40.296Z",
+  "status": "succeeded",
+  "summary": "tee-nut-m5-hammer-in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/tee-nut-m5-hammer-in/out (2930.002 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/tee-nut-m5-hammer-in/out/body.step",
+      "digest": "sha256:4d021bddf94895b9e69e7ef6734b8760c7372e28a73ce07e8d7217e256fa94d2",
+      "bytes": 28674,
+      "description": "tee-nut-m5-hammer-in: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/tee-nut-m5-hammer-in/out/body.glb",
+      "digest": "sha256:002afe2e550e27aca29751a6ee01da8dbd5519e63c60901603d3f6c8faed624c",
+      "bytes": 12864,
+      "description": "tee-nut-m5-hammer-in: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/tee-nut-m5-hammer-in/out/body.manifest.json",
+      "digest": "sha256:14235aef3772e6ef6084396e4264a6fc42b7dce35f1760cb9a29be88161f219e",
+      "bytes": 557,
+      "description": "tee-nut-m5-hammer-in: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "tee-nut-m5-hammer-in",
+    "out": "parts/local/mech/hw/tee-nut-m5-hammer-in/out",
+    "volume_mm3": 2930.002,
+    "previousVolume_mm3": 2930.002,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:14:44.896Z"
+}

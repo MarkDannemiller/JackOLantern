@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:generate",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "generate",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "heatset-insert-m4",
+    "config": "parts/local/mech/hw/heatset-insert-m4/cad.config.ts",
+    "configDigest": "sha256:712250fd41b918d312e3135e556db48c2054157d74161535102f005d4e2084ae",
+    "moduleDigest": "sha256:d80fe12bdd089133122d049bbe3ec99c5a516e087ac4c06cfb87b21876ce2534"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:fa0964351c3e8fabf29b9f346413b70b7c692e16d05e1d07172c30729f822798",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:46:25.448Z",
+  "status": "succeeded",
+  "summary": "heatset-insert-m4: spacer parameters in parts/local/mech/hw/heatset-insert-m4/frame-cad; run cad:export for the body",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m4/frame-cad/params.json",
+      "digest": "sha256:3a39c34d102e44b6f3574177346bc5a2893f82c57d24ad9190fbe0ce88526301",
+      "bytes": 280,
+      "description": "heatset-insert-m4: generator parameters from its sizes"
+    }
+  ],
+  "data": {
+    "module": "heatset-insert-m4",
+    "kind": "spacer",
+    "native": "parts/local/mech/hw/heatset-insert-m4/frame-cad",
+    "params": {
+      "schema": "protoboard.hardware-cad.params/v0",
+      "module": "heatset-insert-m4",
+      "name": "heatset-insert-m4",
+      "part": {
+        "kind": "spacer",
+        "diameter": 4,
+        "length": 8.1,
+        "head_diameter": null,
+        "head_height": null,
+        "outer": 6.3,
+        "bore": 3.36
+      }
+    },
+    "generator": "@protoboardai/ext-frame-cad/py/hardware_cad.py"
+  },
+  "finishedAt": "2026-10-24T16:46:27.781Z"
+}

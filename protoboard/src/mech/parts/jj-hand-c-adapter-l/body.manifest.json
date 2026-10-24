@@ -1,0 +1,122 @@
+{
+ "artifact": "jj-hand-c-adapter-l",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 24114.91,
+ "mass_g": 19.44,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "to_fork_in": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     18.7,
+     0.0,
+     1.0
+    ],
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M3",
+    "threaded": true,
+    "insert": "heatset-insert-m3",
+    "shape": "row",
+    "spacing": 24.0,
+    "count": 2
+   }
+  },
+  "to_fork_out": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -18.7,
+     0.0,
+     1.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M3",
+    "threaded": true,
+    "insert": "heatset-insert-m3",
+    "shape": "row",
+    "spacing": 24.0,
+    "count": 2
+   }
+  },
+  "hand_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     -6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 30.0,
+    "count": 4,
+    "spacing_y": 20.0
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [
+   [
+    3,
+    2
+   ],
+   [
+    3,
+    2
+   ]
+  ],
+  "design_origin": [
+   0.0,
+   0.0,
+   -566.0
+  ],
+  "mirror_of": "jj-hand-c-adapter"
+ }
+}

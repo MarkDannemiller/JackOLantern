@@ -1,0 +1,76 @@
+{
+ "artifact": "jj-cap-60t",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 31880.5,
+ "mass_g": 25.7,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "seat": {
+   "kind": "bearing_seat",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     8.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "od": 42.0,
+    "depth": 7.0,
+    "retention": "shoulder"
+   }
+  },
+  "to_drum": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     6.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "shape": "circle",
+    "spacing": 71.23377951308233,
+    "count": 4,
+    "fastener": "M3",
+    "threaded": false
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

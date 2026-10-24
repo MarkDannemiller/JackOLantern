@@ -1,7 +1,28 @@
 {
   "schema": "protoboard.product/v0",
-  "summary": "",
-  "features": [],
-  "functions": [],
-  "requirements": []
+  "summary": "Joyful Jack is a pumpkin-head cowboy animatronic that greets people at events: the existing talking head (eyes, eyelids, jaw, a neck that turns and nods) on a legless torso that stands on a concrete-filled bucket, with two motorised arms and simple hands that can wave, point and hold a light object. It runs from Milwaukee M18 tool packs inside the torso and is built in one of three tiers (A Beginner, B Midrange, C Maxed); this package is the tier named on its cover.",
+  "features": [
+    "Stands on its own: a 5 US gal bucket of concrete on a 24 in plywood skirt, a 1 in steel pipe mast, no legs",
+    "Two arms on hollow-hub joints (two 6806 bearings each), with spring assist at the shoulder so the servos only carry what the springs do not",
+    "Tiers B and C: Feetech serial-bus servos that report position, load and temperature, GT3 belt reductions at the shoulder and elbow",
+    "Hands: a one-servo cartoon mitt (A), a two-servo glove hand (B), or Pollen Robotics' eight-servo AmazingHand (C)",
+    "Milwaukee M18 packs behind a rear hatch: one pack (A), two packs either of which can be swapped while the other runs (B, C), plus wall power (C)",
+    "Protection: low-voltage cutoff, fuses, and an emergency stop that cuts power to every actuator",
+    "Printed parts in PETG-CF and PETG with brass heat-set inserts; aluminium 2020 frame (B, C) or birch plywood box (A)"
+  ],
+  "functions": [
+    { "id": "F1", "text": "Stand upright unattended on a floor and resist being bumped", "by": "Base, mast and torso" },
+    { "id": "F2", "text": "Move each arm through shoulder flex, shoulder out and elbow (plus upper-arm twist and wrist twist in B and C, wrist pitch in C)", "by": "Arms" },
+    { "id": "F3", "text": "Open and close the hand around a light object", "by": "Hands" },
+    { "id": "F4", "text": "Power the head and both arms from M18 packs for an event, and stop every actuator from the E-stop", "by": "Power system in the torso" },
+    { "id": "F5", "text": "Carry the existing head and its electronics on the neck plate", "by": "Neck plate and head" }
+  ],
+  "requirements": [
+    { "id": "R1", "text": "Torso, no legs, standing on a ballasted base on a mast; must not tip when bumped or leaned on (target load TBD: Q4)", "how": "Tip test: push at shoulder height with a force gauge, arms out, until the skirt lifts (simulation: research/sim)" },
+    { "id": "R2", "text": "Battery and power electronics inside the torso on Milwaukee M18 packs, swappable without removing the costume", "how": "Inspection and a pack swap through the rear hatch with the costume on" },
+    { "id": "R3", "text": "Runs for extended periods (hours per pack TBD: Q7)", "how": "Run test: a gesture loop on one pack, logging pack voltage until the low-voltage cutoff" },
+    { "id": "R4", "text": "Two motorised arms with simple character hands that can grasp an object (payload TBD: Q5, assumed 0.25 kg)", "how": "Hold a 0.25 kg object at full reach for 60 s; joint loads logged (simulation: research/sim)" },
+    { "id": "R5", "text": "Keeps and powers the existing head (Raspberry Pi 4B, PCA9685, neck stepper, camera, audio)", "how": "Power-on test of the head from the torso supply" },
+    { "id": "R6", "text": "Safe among children: emergency stop, limited speed and grip force, no exposed pinch points, arms settle to a rest pose on power loss", "how": "E-stop test under motion; grip force measured on a scale; inspection of the costume over the joints" }
+  ]
 }

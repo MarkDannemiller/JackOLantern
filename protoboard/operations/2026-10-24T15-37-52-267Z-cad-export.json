@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "wood-screw-8x1.25in",
+    "config": "parts/local/mech/hw/wood-screw-8x1.25in/cad.config.ts",
+    "configDigest": "sha256:20e5e79842ffe5ede5ffedd2b5524bceedc62639d5f9986d5cd8b8356de91d38",
+    "moduleDigest": "sha256:c99441598e58bfe95dad800d031330266cb1100441c257c39be34251632da64b"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:c82c511bf290a01c1a0724cf45b12f4cad77b9684bd9c63d93fc13be2703a964",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T15:37:52.267Z",
+  "status": "succeeded",
+  "summary": "wood-screw-8x1.25in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/wood-screw-8x1.25in/out (546.538 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/wood-screw-8x1.25in/out/body.step",
+      "digest": "sha256:945e28a41562ec9fc7c0cfb2d2b82ed49f8e668570ae24a81ec52930ad1660f1",
+      "bytes": 32616,
+      "description": "wood-screw-8x1.25in: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/wood-screw-8x1.25in/out/body.glb",
+      "digest": "sha256:394b71d7161fa830ae8d1270f8e73f1c7e579ce48d9e37751fdb04bca425d762",
+      "bytes": 21204,
+      "description": "wood-screw-8x1.25in: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/wood-screw-8x1.25in/out/body.manifest.json",
+      "digest": "sha256:86073a3f593a0b7fe067296a67f1933fce0ef02203759b0d8f4b6d9641c9c34c",
+      "bytes": 556,
+      "description": "wood-screw-8x1.25in: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "wood-screw-8x1.25in",
+    "out": "parts/local/mech/hw/wood-screw-8x1.25in/out",
+    "volume_mm3": 546.538,
+    "previousVolume_mm3": null,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T15:37:56.807Z"
+}

@@ -1,0 +1,40 @@
+{
+ "artifact": "jj-body-monitor",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 1356.36,
+ "mass_g": 2.0,
+ "material": "pcb_blue",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "Adafruit 5832: 1.0 x 0.7 in",
+ "meta": {
+  "envelope": [
+   25.4,
+   17.8,
+   3
+  ]
+ }
+}

@@ -16,6 +16,7 @@
  * ground. The yaw driver's motor supply is a data gap until head power is designed.
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
+import { withMech } from "../mech/lib";
 
 const servoLinks: [number, { child: string; interfaceId: string }][] = [
   [0, { child: "eyes", interfaceId: "eye_y_servo" }],
@@ -30,7 +31,7 @@ const servoLinks: [number, { child: string; interfaceId: string }][] = [
   [9, { child: "neck", interfaceId: "pitch_r_servo" }],
 ];
 
-export const HEAD: ModuleDef = {
+const HEAD_ELECTRICAL: ModuleDef = {
   id: "jj-head",
   name: "Head",
   kind: "module",
@@ -79,3 +80,21 @@ export const HEAD: ModuleDef = {
     { type: "usage_note", params: { note: "Jaw: closed -3 deg, open 22 deg, max 100 deg/s, 270 deg actuation range on channels 6 and 7.", source: "protoboard/software/head/motion_controller.py" } },
   ],
 };
+
+/**
+ * The head as one body on the neck plate: its mesh is the received facade CAD (inbox/20261024-facade.stp,
+ * converted by cad/tools/step2glb.py, decimated to 5 % and moved into the head's frame: neck base at the
+ * origin, face toward -Y). The base screw pattern is not in the received CAD (data gap on the neck plate).
+ */
+export const HEAD: ModuleDef = (() => {
+  const d = withMech(HEAD_ELECTRICAL, "jj-head-assembly");
+  return {
+    ...d,
+    artifacts: [
+      ...(d.artifacts ?? []),
+      { id: "cad_glb", name: "Head facade (decimated mesh)", type: "3d_model", role: "body", format: "glb", units: "m", filePath: "src/head/cad/head-facade-v61-lite.glb",
+        description: "inbox/20261024-facade.stp converted (cad/tools/step2glb.py), decimated to 5 % and placed in the head frame." },
+    ],
+    domains: [...(d.domains ?? []).filter((x) => x.domain !== "mechanical"), { domain: "mechanical", weight_g: 2000, metadata: { mass_note: "assumption (D7): 2 kg until weighed" } }],
+  } as ModuleDef;
+})();

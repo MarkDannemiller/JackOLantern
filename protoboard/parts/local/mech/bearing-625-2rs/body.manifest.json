@@ -1,0 +1,95 @@
+{
+ "artifact": "bearing-625-2rs",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 876.66,
+ "mass_g": 3.9,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "od_face": {
+   "kind": "bearing",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "od": 16,
+    "bore": 5,
+    "width": 5
+   }
+  },
+  "od_face_top": {
+   "kind": "bearing",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     5.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "od": 16,
+    "bore": 5,
+    "width": 5
+   }
+  },
+  "bore": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "gender": "bore",
+    "diameter": 5
+   }
+  }
+ },
+ "source": "ISO 15 boundary dimensions",
+ "meta": {
+  "bore": 5,
+  "od": 16,
+  "width": 5,
+  "code": "625-2rs"
+ }
+}

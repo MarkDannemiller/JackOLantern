@@ -1,0 +1,80 @@
+{
+ "artifact": "jj-arm-fore-fork-in",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 22863.31,
+ "mass_g": 18.43,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "on_hub": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -3.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.707107,
+     0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 22.0,
+    "count": 4
+   }
+  },
+  "to_body": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -3.0,
+     0.0,
+     -60.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "row",
+    "spacing": 24.0,
+    "count": 2
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   19.5,
+   0.0,
+   -255.0
+  ]
+ }
+}

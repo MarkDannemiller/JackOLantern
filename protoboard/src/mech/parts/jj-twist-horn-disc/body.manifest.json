@@ -1,0 +1,86 @@
+{
+ "artifact": "jj-twist-horn-disc",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 5834.1,
+ "mass_g": 4.7,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     8.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4
+   }
+  },
+  "hub": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "symmetryDeg": 120
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M3",
+    "threaded": true,
+    "insert": "heatset-insert-m3",
+    "shape": "circle",
+    "spacing": 22.0,
+    "count": 3
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [
+   [
+    3,
+    3
+   ]
+  ],
+  "design_origin": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

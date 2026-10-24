@@ -1,0 +1,682 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "hardware-cad",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:941a4720e32cbc4cee7e829e4121f01e669b2cd9108c90a8a69637e19883636f",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "runtime"
+    }
+  ],
+  "startedAt": "2026-10-24T15:32:25.414Z",
+  "status": "succeeded",
+  "summary": "21 hardware bodies; volumes unchanged",
+  "outputs": [],
+  "data": {
+    "modules": [
+      {
+        "module": "heatset-insert-m3",
+        "kind": "spacer",
+        "dir": "parts/local/mech/hw/heatset-insert-m3",
+        "out": "parts/local/mech/hw/heatset-insert-m3/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 66.299,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "hex-bolt-1-4-20x1.25in",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in",
+        "out": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 1243.623,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "hex-bolt-1-4-20x1in",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/hex-bolt-1-4-20x1in",
+        "out": "parts/local/mech/hw/hex-bolt-1-4-20x1in/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 1062.131,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso10511-m4",
+        "kind": "nut",
+        "dir": "parts/local/mech/hw/iso10511-m4",
+        "out": "parts/local/mech/hw/iso10511-m4/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 149.344,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso10511-m5",
+        "kind": "nut",
+        "dir": "parts/local/mech/hw/iso10511-m5",
+        "out": "parts/local/mech/hw/iso10511-m5/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 178.953,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m3x12",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m3x12",
+        "out": "parts/local/mech/hw/iso4762-m3x12/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 139.305,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m3x14",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m3x14",
+        "out": "parts/local/mech/hw/iso4762-m3x14/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 152.063,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m3x30",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m3x30",
+        "out": "parts/local/mech/hw/iso4762-m3x30/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 254.134,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m3x6",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m3x6",
+        "out": "parts/local/mech/hw/iso4762-m3x6/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 101.028,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m3x8",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m3x8",
+        "out": "parts/local/mech/hw/iso4762-m3x8/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 113.787,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m4x20",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m4x20",
+        "out": "parts/local/mech/hw/iso4762-m4x20/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 360.558,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m5x10",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m5x10",
+        "out": "parts/local/mech/hw/iso4762-m5x10/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 421.472,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m5x12",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m5x12",
+        "out": "parts/local/mech/hw/iso4762-m5x12/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 456.913,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso4762-m5x20",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/iso4762-m5x20",
+        "out": "parts/local/mech/hw/iso4762-m5x20/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 598.678,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso7089-m4",
+        "kind": "spacer",
+        "dir": "parts/local/mech/hw/iso7089-m4",
+        "out": "parts/local/mech/hw/iso7089-m4/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 38.73,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "iso7089-m5",
+        "kind": "spacer",
+        "dir": "parts/local/mech/hw/iso7089-m5",
+        "out": "parts/local/mech/hw/iso7089-m5/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 55.638,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "nylock-1-4-20",
+        "kind": "nut",
+        "dir": "parts/local/mech/hw/nylock-1-4-20",
+        "out": "parts/local/mech/hw/nylock-1-4-20/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 525.236,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "pa2x6",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/pa2x6",
+        "out": "parts/local/mech/hw/pa2x6/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 33.137,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "pa2x8",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/pa2x8",
+        "out": "parts/local/mech/hw/pa2x8/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 38.808,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "tnut-2020-m5",
+        "kind": "nut",
+        "dir": "parts/local/mech/hw/tnut-2020-m5",
+        "out": "parts/local/mech/hw/tnut-2020-m5/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 267.87,
+        "previousVolume_mm3": null
+      },
+      {
+        "module": "wood-screw-4x0.5in",
+        "kind": "screw",
+        "dir": "parts/local/mech/hw/wood-screw-4x0.5in",
+        "out": "parts/local/mech/hw/wood-screw-4x0.5in/out",
+        "toolVersion": "0.13.0",
+        "volume_mm3": 308.344,
+        "previousVolume_mm3": null
+      }
+    ],
+    "generator": "@protoboardai/ext-frame-cad/py/hardware_cad.py",
+    "steps": [
+      {
+        "module": "heatset-insert-m3",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "heatset-insert-m3: spacer parameters in parts/local/mech/hw/heatset-insert-m3/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-27-770Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/heatset-insert-m3/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "hex-bolt-1-4-20x1.25in",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "hex-bolt-1-4-20x1.25in: screw parameters in parts/local/mech/hw/hex-bolt-1-4-20x1.25in/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-30-021Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "hex-bolt-1-4-20x1in",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "hex-bolt-1-4-20x1in: screw parameters in parts/local/mech/hw/hex-bolt-1-4-20x1in/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-32-301Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/hex-bolt-1-4-20x1in/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso10511-m4",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso10511-m4: nut parameters in parts/local/mech/hw/iso10511-m4/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-34-595Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso10511-m4/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso10511-m5",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso10511-m5: nut parameters in parts/local/mech/hw/iso10511-m5/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-36-911Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso10511-m5/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x12",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m3x12: screw parameters in parts/local/mech/hw/iso4762-m3x12/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-39-198Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x12/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x14",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m3x14: screw parameters in parts/local/mech/hw/iso4762-m3x14/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-41-495Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x14/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x30",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m3x30: screw parameters in parts/local/mech/hw/iso4762-m3x30/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-43-778Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x30/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x6",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m3x6: screw parameters in parts/local/mech/hw/iso4762-m3x6/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-46-044Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x6/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x8",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m3x8: screw parameters in parts/local/mech/hw/iso4762-m3x8/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-48-304Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x8/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m4x20",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m4x20: screw parameters in parts/local/mech/hw/iso4762-m4x20/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-50-578Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m4x20/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m5x10",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m5x10: screw parameters in parts/local/mech/hw/iso4762-m5x10/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-52-861Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m5x10/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m5x12",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m5x12: screw parameters in parts/local/mech/hw/iso4762-m5x12/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-55-147Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m5x12/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso4762-m5x20",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso4762-m5x20: screw parameters in parts/local/mech/hw/iso4762-m5x20/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-57-463Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m5x20/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso7089-m4",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso7089-m4: spacer parameters in parts/local/mech/hw/iso7089-m4/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-32-59-754Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso7089-m4/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "iso7089-m5",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "iso7089-m5: spacer parameters in parts/local/mech/hw/iso7089-m5/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-33-02-054Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/iso7089-m5/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "nylock-1-4-20",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "nylock-1-4-20: nut parameters in parts/local/mech/hw/nylock-1-4-20/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-33-04-339Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/nylock-1-4-20/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "pa2x6",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "pa2x6: screw parameters in parts/local/mech/hw/pa2x6/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-33-06-626Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/pa2x6/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "pa2x8",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "pa2x8: screw parameters in parts/local/mech/hw/pa2x8/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-33-08-903Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/pa2x8/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "tnut-2020-m5",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "tnut-2020-m5: nut parameters in parts/local/mech/hw/tnut-2020-m5/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-33-11-199Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/tnut-2020-m5/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "wood-screw-4x0.5in",
+        "operation": "cad:generate",
+        "status": "succeeded",
+        "summary": "wood-screw-4x0.5in: screw parameters in parts/local/mech/hw/wood-screw-4x0.5in/frame-cad; run cad:export for the body",
+        "record": "operations/2026-10-24T15-33-13-524Z-cad-generate.json",
+        "outputs": [
+          "parts/local/mech/hw/wood-screw-4x0.5in/frame-cad/params.json"
+        ]
+      },
+      {
+        "module": "heatset-insert-m3",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "heatset-insert-m3: body.step, body.glb, body.manifest.json in parts/local/mech/hw/heatset-insert-m3/out (66.299 mm³)",
+        "record": "operations/2026-10-24T15-33-16-341Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/heatset-insert-m3/out/body.step",
+          "parts/local/mech/hw/heatset-insert-m3/out/body.glb",
+          "parts/local/mech/hw/heatset-insert-m3/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "hex-bolt-1-4-20x1.25in",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "hex-bolt-1-4-20x1.25in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out (1243.623 mm³)",
+        "record": "operations/2026-10-24T15-33-21-037Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out/body.step",
+          "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out/body.glb",
+          "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "hex-bolt-1-4-20x1in",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "hex-bolt-1-4-20x1in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/hex-bolt-1-4-20x1in/out (1062.131 mm³)",
+        "record": "operations/2026-10-24T15-33-25-697Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/hex-bolt-1-4-20x1in/out/body.step",
+          "parts/local/mech/hw/hex-bolt-1-4-20x1in/out/body.glb",
+          "parts/local/mech/hw/hex-bolt-1-4-20x1in/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso10511-m4",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso10511-m4: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso10511-m4/out (149.344 mm³)",
+        "record": "operations/2026-10-24T15-33-30-284Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso10511-m4/out/body.step",
+          "parts/local/mech/hw/iso10511-m4/out/body.glb",
+          "parts/local/mech/hw/iso10511-m4/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso10511-m5",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso10511-m5: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso10511-m5/out (178.953 mm³)",
+        "record": "operations/2026-10-24T15-33-34-848Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso10511-m5/out/body.step",
+          "parts/local/mech/hw/iso10511-m5/out/body.glb",
+          "parts/local/mech/hw/iso10511-m5/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x12",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m3x12: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m3x12/out (139.305 mm³)",
+        "record": "operations/2026-10-24T15-33-39-500Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x12/out/body.step",
+          "parts/local/mech/hw/iso4762-m3x12/out/body.glb",
+          "parts/local/mech/hw/iso4762-m3x12/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x14",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m3x14: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m3x14/out (152.063 mm³)",
+        "record": "operations/2026-10-24T15-33-44-088Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x14/out/body.step",
+          "parts/local/mech/hw/iso4762-m3x14/out/body.glb",
+          "parts/local/mech/hw/iso4762-m3x14/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x30",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m3x30: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m3x30/out (254.134 mm³)",
+        "record": "operations/2026-10-24T15-33-48-639Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x30/out/body.step",
+          "parts/local/mech/hw/iso4762-m3x30/out/body.glb",
+          "parts/local/mech/hw/iso4762-m3x30/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x6",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m3x6: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m3x6/out (101.028 mm³)",
+        "record": "operations/2026-10-24T15-33-53-216Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x6/out/body.step",
+          "parts/local/mech/hw/iso4762-m3x6/out/body.glb",
+          "parts/local/mech/hw/iso4762-m3x6/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m3x8",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m3x8: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m3x8/out (113.787 mm³)",
+        "record": "operations/2026-10-24T15-33-57-796Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m3x8/out/body.step",
+          "parts/local/mech/hw/iso4762-m3x8/out/body.glb",
+          "parts/local/mech/hw/iso4762-m3x8/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m4x20",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m4x20: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m4x20/out (360.558 mm³)",
+        "record": "operations/2026-10-24T15-34-02-385Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m4x20/out/body.step",
+          "parts/local/mech/hw/iso4762-m4x20/out/body.glb",
+          "parts/local/mech/hw/iso4762-m4x20/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m5x10",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m5x10: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m5x10/out (421.472 mm³)",
+        "record": "operations/2026-10-24T15-34-06-999Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m5x10/out/body.step",
+          "parts/local/mech/hw/iso4762-m5x10/out/body.glb",
+          "parts/local/mech/hw/iso4762-m5x10/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m5x12",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m5x12: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m5x12/out (456.913 mm³)",
+        "record": "operations/2026-10-24T15-34-11-621Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m5x12/out/body.step",
+          "parts/local/mech/hw/iso4762-m5x12/out/body.glb",
+          "parts/local/mech/hw/iso4762-m5x12/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso4762-m5x20",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso4762-m5x20: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m5x20/out (598.678 mm³)",
+        "record": "operations/2026-10-24T15-34-16-229Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso4762-m5x20/out/body.step",
+          "parts/local/mech/hw/iso4762-m5x20/out/body.glb",
+          "parts/local/mech/hw/iso4762-m5x20/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso7089-m4",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso7089-m4: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso7089-m4/out (38.73 mm³)",
+        "record": "operations/2026-10-24T15-34-20-888Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso7089-m4/out/body.step",
+          "parts/local/mech/hw/iso7089-m4/out/body.glb",
+          "parts/local/mech/hw/iso7089-m4/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "iso7089-m5",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "iso7089-m5: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso7089-m5/out (55.638 mm³)",
+        "record": "operations/2026-10-24T15-34-25-477Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/iso7089-m5/out/body.step",
+          "parts/local/mech/hw/iso7089-m5/out/body.glb",
+          "parts/local/mech/hw/iso7089-m5/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "nylock-1-4-20",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "nylock-1-4-20: body.step, body.glb, body.manifest.json in parts/local/mech/hw/nylock-1-4-20/out (525.236 mm³)",
+        "record": "operations/2026-10-24T15-34-30-073Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/nylock-1-4-20/out/body.step",
+          "parts/local/mech/hw/nylock-1-4-20/out/body.glb",
+          "parts/local/mech/hw/nylock-1-4-20/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "pa2x6",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "pa2x6: body.step, body.glb, body.manifest.json in parts/local/mech/hw/pa2x6/out (33.137 mm³)",
+        "record": "operations/2026-10-24T15-34-34-660Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/pa2x6/out/body.step",
+          "parts/local/mech/hw/pa2x6/out/body.glb",
+          "parts/local/mech/hw/pa2x6/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "pa2x8",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "pa2x8: body.step, body.glb, body.manifest.json in parts/local/mech/hw/pa2x8/out (38.808 mm³)",
+        "record": "operations/2026-10-24T15-34-39-271Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/pa2x8/out/body.step",
+          "parts/local/mech/hw/pa2x8/out/body.glb",
+          "parts/local/mech/hw/pa2x8/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "tnut-2020-m5",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "tnut-2020-m5: body.step, body.glb, body.manifest.json in parts/local/mech/hw/tnut-2020-m5/out (267.87 mm³)",
+        "record": "operations/2026-10-24T15-34-43-872Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/tnut-2020-m5/out/body.step",
+          "parts/local/mech/hw/tnut-2020-m5/out/body.glb",
+          "parts/local/mech/hw/tnut-2020-m5/out/body.manifest.json"
+        ]
+      },
+      {
+        "module": "wood-screw-4x0.5in",
+        "operation": "cad:export",
+        "status": "succeeded",
+        "summary": "wood-screw-4x0.5in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/wood-screw-4x0.5in/out (308.344 mm³)",
+        "record": "operations/2026-10-24T15-34-48-402Z-cad-export.json",
+        "outputs": [
+          "parts/local/mech/hw/wood-screw-4x0.5in/out/body.step",
+          "parts/local/mech/hw/wood-screw-4x0.5in/out/body.glb",
+          "parts/local/mech/hw/wood-screw-4x0.5in/out/body.manifest.json"
+        ]
+      }
+    ]
+  },
+  "finishedAt": "2026-10-24T15:34:52.995Z"
+}

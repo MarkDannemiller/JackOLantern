@@ -1,0 +1,110 @@
+{
+ "artifact": "jj-twist-hub",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 24030.97,
+ "mass_g": 19.37,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "out": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     -18.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M3",
+    "threaded": true,
+    "insert": "heatset-insert-m3",
+    "shape": "circle",
+    "spacing": 40.0,
+    "count": 4
+   }
+  },
+  "journal": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     -8.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "shaft",
+    "diameter": 30.0
+   }
+  },
+  "top": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     8.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "symmetryDeg": 120
+   },
+   "params": {
+    "role": "component",
+    "shape": "circle",
+    "spacing": 22.0,
+    "count": 3,
+    "fastener": "M3",
+    "threaded": false
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [
+   [
+    3,
+    4
+   ]
+  ],
+  "design_origin": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

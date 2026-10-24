@@ -1,0 +1,65 @@
+{
+ "artifact": "pipe-nipple-1x30",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 244177.15,
+ "mass_g": 1905.0,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "end_a": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     17.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "shaft",
+    "diameter": 33.4,
+    "thread": "1 in NPT"
+   }
+  },
+  "end_b": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     744.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "shaft",
+    "diameter": 33.4,
+    "thread": "1 in NPT"
+   }
+  }
+ },
+ "source": "ASME B36.10 1 in Sch 40: 33.4 mm OD, 2.50 kg/m",
+ "meta": {
+  "length": 762.0
+ }
+}

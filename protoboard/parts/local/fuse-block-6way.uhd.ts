@@ -5,8 +5,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerIn, PowerOut, Ground } from "@deltarobotics/uhd";
 import { part } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const FUSE_BLOCK_6WAY: ModuleDef = part({
+const FUSE_BLOCK_6WAY_ELECTRICAL: ModuleDef = part({
   id: "fuse-block-6way", name: "6-way ATC fuse block with negative bus", manufacturer: "Sea-Dog", part_number: "blade fuse block, 6-way",
   description: "One feed, six fused outputs and a common negative bus.",
   categories: ["component.protection"], tags: ["fuse"], sources: [{ id: "src_listing", name: "BOM row (listing)", url: "https://www.amazon.com/s?k=sea-dog+fuse+block+6+way" }],
@@ -17,3 +18,6 @@ export const FUSE_BLOCK_6WAY: ModuleDef = part({
     { type: "data_gap", params: { field: "block current rating", note: "Not found on the listing." } },
   ],
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const FUSE_BLOCK_6WAY: ModuleDef = withMech(FUSE_BLOCK_6WAY_ELECTRICAL as ModuleDef, "jj-body-fuses");

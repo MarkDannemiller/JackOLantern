@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "heatset-insert-m4",
+    "config": "parts/local/mech/hw/heatset-insert-m4/cad.config.ts",
+    "configDigest": "sha256:712250fd41b918d312e3135e556db48c2054157d74161535102f005d4e2084ae",
+    "moduleDigest": "sha256:d80fe12bdd089133122d049bbe3ec99c5a516e087ac4c06cfb87b21876ce2534"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:c82c511bf290a01c1a0724cf45b12f4cad77b9684bd9c63d93fc13be2703a964",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T15:36:06.805Z",
+  "status": "succeeded",
+  "summary": "heatset-insert-m4: body.step, body.glb, body.manifest.json in parts/local/mech/hw/heatset-insert-m4/out (180.676 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m4/out/body.step",
+      "digest": "sha256:aca1d65076e57256858b128abc75def524ad2612ae4c671a564ba9cc6789a129",
+      "bytes": 10827,
+      "description": "heatset-insert-m4: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m4/out/body.glb",
+      "digest": "sha256:a0a3a63018a3b3b14b3b44133461038201ca69ff5e235c70ce6bdba0bc1269c6",
+      "bytes": 15564,
+      "description": "heatset-insert-m4: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m4/out/body.manifest.json",
+      "digest": "sha256:b3b489c8293f9decb40d82f5367c8db5497f5dac6d5fb62e9fdfe97e05b9a120",
+      "bytes": 555,
+      "description": "heatset-insert-m4: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "heatset-insert-m4",
+    "out": "parts/local/mech/hw/heatset-insert-m4/out",
+    "volume_mm3": 180.676,
+    "previousVolume_mm3": null,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T15:36:11.370Z"
+}

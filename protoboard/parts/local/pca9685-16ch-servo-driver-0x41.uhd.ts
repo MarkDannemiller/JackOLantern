@@ -4,5 +4,9 @@
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { pca9685 } from "./lib/pca9685";
+import { withMech } from "../../src/mech/lib";
 
-export const PCA9685_16CH_SERVO_DRIVER_0X41: ModuleDef = pca9685(0x41, "-0x41");
+const PCA9685_16CH_SERVO_DRIVER_0X41_ELECTRICAL: ModuleDef = pca9685(0x41, "-0x41");
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const PCA9685_16CH_SERVO_DRIVER_0X41: ModuleDef = withMech(PCA9685_16CH_SERVO_DRIVER_0X41_ELECTRICAL as ModuleDef, "jj-body-pca");

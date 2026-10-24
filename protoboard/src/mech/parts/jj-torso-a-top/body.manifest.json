@@ -1,0 +1,296 @@
+{
+ "artifact": "jj-torso-a-top",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 374677.83,
+ "mass_g": 243.54,
+ "material": "wood_ply",
+ "category": "cut",
+ "features": {
+  "side_r_joint": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     0.0,
+     -6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "row",
+    "spacing": 100.0,
+    "count": 3,
+    "fastener": "#8 wood screw",
+    "threaded": false
+   }
+  },
+  "side_l_joint": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     0.0,
+     -6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "row",
+    "spacing": 100.0,
+    "count": 3,
+    "fastener": "#8 wood screw",
+    "threaded": false
+   }
+  },
+  "neck_post_f_bracket_0_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -20.0,
+     -60.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     -1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M6",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "neck_post_f_bracket_1_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     20.0,
+     -60.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M6",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "neck_post_b_bracket_0_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -20.0,
+     60.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     -1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M6",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "neck_post_b_bracket_1_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     20.0,
+     60.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M6",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "estop_bracket_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     60.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "#8 wood screw",
+    "threaded": true
+   }
+  },
+  "foot_r": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     0.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 40.0,
+    "count": 2,
+    "fastener": "M5",
+    "threaded": true
+   }
+  },
+  "foot_l": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     -0.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     -0.0,
+     -1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 40.0,
+    "count": 2,
+    "fastener": "M5",
+    "threaded": true
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "wood_ply",
+  "print": "",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   1154.0
+  ]
+ }
+}

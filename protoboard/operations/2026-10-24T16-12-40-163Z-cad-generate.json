@@ -1,0 +1,59 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:generate",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "generate",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "iso4762-m5x12",
+    "config": "parts/local/mech/hw/iso4762-m5x12/cad.config.ts",
+    "configDigest": "sha256:ba91ad5cea65ad1b1a7a0b00b314d03504ff690312d0557ad95b49910e06247f",
+    "moduleDigest": "sha256:ee0dd61c4ed3f3df9b28ee1c82b9a4e8e487ce9c1a7672f1f0ef2ac459c1da7f"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:a170ae9295ac4ee774aa6fcb27da51266d3ca1cf4df05db2262d28de286f5fc7",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:12:40.163Z",
+  "status": "succeeded",
+  "summary": "iso4762-m5x12: screw parameters in parts/local/mech/hw/iso4762-m5x12/frame-cad; run cad:export for the body",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/iso4762-m5x12/frame-cad/params.json",
+      "digest": "sha256:331ee660ebc03536b14a7c280cc14b1f99cc3b3c7ae994b9281649d920afc6eb",
+      "bytes": 249,
+      "description": "iso4762-m5x12: generator parameters from its sizes"
+    }
+  ],
+  "data": {
+    "module": "iso4762-m5x12",
+    "kind": "screw",
+    "native": "parts/local/mech/hw/iso4762-m5x12/frame-cad",
+    "params": {
+      "schema": "protoboard.hardware-cad.params/v0",
+      "module": "iso4762-m5x12",
+      "name": "iso4762-m5x12",
+      "part": {
+        "kind": "screw",
+        "diameter": 5,
+        "length": 12,
+        "head_diameter": 8.5,
+        "head_height": 5,
+        "outer": null
+      }
+    },
+    "generator": "@protoboardai/ext-frame-cad/py/hardware_cad.py"
+  },
+  "finishedAt": "2026-10-24T16:12:42.456Z"
+}

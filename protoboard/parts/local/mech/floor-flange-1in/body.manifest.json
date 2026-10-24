@@ -1,0 +1,69 @@
+{
+ "artifact": "floor-flange-1in",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 76323.11,
+ "mass_g": 560.0,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "face": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "shape": "circle",
+    "spacing": 76.2,
+    "count": 4,
+    "fastener": "1/4-20",
+    "threaded": false
+   }
+  },
+  "socket": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     25.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "bore",
+    "diameter": 33.4,
+    "thread": "1 in NPT"
+   }
+  }
+ },
+ "source": "Anvil FIG 1190: 4 in OD, 4 x 1/4 in holes on a 3 in bolt circle (research/sourcing); mass: assumption",
+ "meta": {
+  "part_number": "Anvil 0319900105 (FIG 1190, 1 in)"
+ }
+}

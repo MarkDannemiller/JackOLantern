@@ -1,0 +1,13 @@
+{
+  "module": "hex-bolt-1-4-20x1in",
+  "name": "hex-bolt-1-4-20x1in",
+  "part": {
+    "diameter": 6.35,
+    "head_diameter": 11.1,
+    "head_height": 4,
+    "kind": "screw",
+    "length": 25.4,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "d509b4ec5fb81ddefdceb177533277e47b4d0283e36c1398701e8bedbaae60d2",
+  "units": "mm",
+  "volume_mm3": 546.538,
+  "bodies": {
+    "screw": 546.538
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/wood-screw-8x1.25in/frame-cad/params.json",
+    "digest": "sha256:b44a60ddfdf2c4f812f27477b8902361622f36a8f38c4dd03959c8e5f752d245"
+  }
+}

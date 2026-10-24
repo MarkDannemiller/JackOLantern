@@ -9,6 +9,7 @@
  * Control: the head's Pi 4 drives the arm PCA9685 at 0x41 on the same I2C bus as the head's board at 0x40.
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
+import { MECH } from "../mech/assembly.gen";
 
 const ARM_CH: [string, string, number][] = [
   ["arm_r", "shoulder_flex_servo", 0], ["arm_r", "shoulder_out_servo", 1], ["arm_r", "elbow_servo", 2], ["arm_r", "grip_servo", 3],
@@ -24,8 +25,7 @@ export const JOYFUL_JACK_A: ModuleDef = {
   interfaces: [],
   children: [
     { id: "head", moduleDefId: "jj-head", name: "Head (existing)" },
-    { id: "base", moduleDefId: "jj-ballast-base", name: "Ballast base and mast" },
-    { id: "torso", moduleDefId: "jj-torso-a", name: "Torso" },
+    { id: "body", moduleDefId: "jj-body-a", name: "Body: base, mast, torso, neck, electronics board" },
     { id: "pack", moduleDefId: "milwaukee-m18-pack", name: "M18 pack (owned)" },
     { id: "dock", moduleDefId: "m18-power-wheel-adapter", name: "M18 dock" },
     { id: "lvc", moduleDefId: "xh-m609-lvc", name: "Low-voltage cutoff" },
@@ -37,8 +37,9 @@ export const JOYFUL_JACK_A: ModuleDef = {
     { id: "buck_head", moduleDefId: "drok-300w-buck", name: "Buck, head servos (5.0 V)" },
     { id: "buck_arm", moduleDefId: "drok-300w-buck", name: "Buck, arm servos (6.8 V)" },
     { id: "arm_driver", moduleDefId: "pca9685-16ch-servo-driver-0x41", name: "Arm servo driver (0x41)" },
-    { id: "arm_r", moduleDefId: "jj-arm-a", name: "Right arm" },
-    { id: "arm_l", moduleDefId: "jj-arm-a", name: "Left arm" },
+    { id: "arm_r", moduleDefId: "jj-arm-a-r", name: "Right arm" },
+    { id: "arm_l", moduleDefId: "jj-arm-a-l", name: "Left arm" },
+    ...((MECH.a.root.children as unknown as NonNullable<ModuleDef["children"]>) ?? []),
   ],
   links: [
     L("pack_dock", ["pack", "pack_plus"], ["dock", "dock_plus"]),
@@ -61,5 +62,6 @@ export const JOYFUL_JACK_A: ModuleDef = {
     L("arm_driver_logic", ["head", "logic_3v3"], ["arm_driver", "vcc"]),
     L("arm_driver_gnd", ["head", "gnd"], ["arm_driver", "gnd"]),
     ...ARM_CH.map(([arm, port, ch]) => L(`ch${ch}`, ["arm_driver", `ch${ch}`], [arm, port], `Arm driver ch${ch} -> ${arm} ${port}`)),
+    ...((MECH.a.root.links as unknown as NonNullable<ModuleDef["links"]>) ?? []),
   ],
 };

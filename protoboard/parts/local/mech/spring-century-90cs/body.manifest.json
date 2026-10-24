@@ -1,0 +1,67 @@
+{
+ "artifact": "spring-century-90cs",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 8141.65,
+ "mass_g": 32.0,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "hook_a_pin": {
+   "kind": "anchor",
+   "frame": {
+    "origin": [
+     0.0,
+     -1.015,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {}
+  },
+  "hook_b": {
+   "kind": "anchor",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     203.8786
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "Century Spring 90CS listing: 0.625 in OD, 0.080 in wire, 5.5 in free length, 6.4 lb/in, 5 lb initial tension, 3.4 in max deflection, 27 lbf max (research/sourcing/20261025-hardware-sourcing.json)",
+ "meta": {
+  "od": 15.9,
+  "wire": 2.03,
+  "free": 139.7,
+  "k": 1.12,
+  "f0": 22.2,
+  "travel": 86.4,
+  "fmax": 120.1,
+  "price": 9.37,
+  "drawn_extension_mm": 64.2,
+  "part_number": "90CS",
+  "price_usd": 9.37
+ }
+}

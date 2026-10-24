@@ -9,26 +9,30 @@ context loss because it lives in this file, not in any one chat.
 
   Every session STARTS by reading `## Current State
 
-**Status:** Design drafted for all three tiers (before the brief is signed, on Mark's instruction 2026-10-24 night). Report ready for Mark. Nothing committed, ordered or pushed.
+**Status:** Full-hardware design, build guides and Isaac Sim proof for all three tiers (session 4, 2026-10-25). Report revision 2 published privately. Brief still unsigned; nothing ordered. Committed and pushed to Mark's public repo `MarkDannemiller/JackOLantern` on his go (session 4).
 
 **What is true now:**
 
-- Head modelled in UHD from the received Fusion/STEP (`protoboard/src/head/`, parts in `protoboard/parts/local/`), with its geometry converted to `protoboard/out/cad/head-*.glb` (`cad/tools/step2glb.py`).
-- Three tiers as stack systems, chosen by `JJ_TIER=a|b|c` (`protoboard/src/tiers/`, arms `src/arms/arms.uhd.ts`). `protoboard check`: A and B 0 errors 0 warnings; C 0 errors, 2 dispositioned warnings (`docs/decisions.md`).
-- Priced BOMs (`research/sourcing/20261024-bom-final.md`): A $498.05 / B $1,174.95 / C $2,139.69, new spend, 2026-10-24 prices.
-- Parametric CAD of base, torso, costume, arms and hands per tier (`protoboard/cad/joyful_jack_cad.py`), sizing checks (`cad/analysis.py`), renders and animations (`cad/render/`), all in `protoboard/out/` (regenerable, not committed).
-- Report: `deliverables/2026-10-25-design-report/` (index.html + media; rebuild with build_report.py and prepare_media.py), published privately at https://claude.ai/artifact/QbR7gZmdQYLXZfdUdeZ3D1
+- Full-hardware mechanical model: every printed part, bought part and fastener placed by mates (`protoboard/cad/mech`, build123d; `build.py --parts`, `gen_uhd.py`); generated into UHD (`src/mech/*.gen*`); `protoboard check` A 0/0, B 0/0, C 0 errors + 2 dispositioned warnings. Decisions D9-D15 in `protoboard/docs/decisions.md`.
+- Joints: GT3 9 mm belts 3:1 on hollow hubs over 6806-2RS; shoulder zero-length-spring balancer (2 x Century 90CS) on every tier; tier A on DS3235/DS3225 belt joints; tier C J1/J2/J4 STS3250.
+- Build guides: `protoboard release` 0.2.0-a/b/c (units body, arm_r, arm_l; gitignored), merged per tier in `deliverables/2026-10-25-build-guides/` (70 / 100 / 106 pages).
+- BOM v2 from model quantities (`research/sourcing/20261025-bom-v2.md`, `build_bom_v2.py`): A $894.06 / B $1,381.40 / C $2,370.13, plus a few TBD rows (14/16/20/26 AWG wire, M5 tap; hardened dowels stand-in). Caps lifted by Mark for this round.
+- Wiring cut lists per tier: `protoboard/docs/wiring/harness-<t>.md` (21 / 35 / 43 cables).
+- Isaac Sim 6.2 (`protoboard/cad/mech/sim`, results `protoboard/docs/sim-results.md`, D15): wave and reach pass on all tiers with the balancer and belt torque limits; arm straight out sideways is outside the envelope; tip 154-164 N (205-215 N with two sandbags).
+- Renders and animations of the detailed model: `protoboard/cad/render/render_mech.py` (outputs in `protoboard/out/renders/mech`, regenerable).
+- Report revision 2: `deliverables/2026-10-25-design-report/` (build_report.py, prepare_media.py), published at https://claude.ai/artifact/QbR7gZmdQYLXZfdUdeZ3D1
 
 **Next actions:**
 
-1. Mark reviews the report, picks a tier (recommended B), answers `research/questions.md`, signs `protoboard/docs/brief.md`.
-2. Mark's go to commit, create `Delta-Robotics-Inc/2026-10-24-joyful-jack`, push and add the hub submodule (commands from `projects.mjs adopt`); then retire `projects/internal/JackOLantern` and the empty `26-1024-Pumpkin`.
-3. Level 4 for the chosen tier: verify the project-researched parts (`uhd-part-research`/`verify`), re-price from vendor pages.
-4. Bench: weigh the head, measure power draw, relay pull-in at 15 V, LVC set point, tip test.
+1. Mark reviews report rev 2 and the build guides; picks a tier (recommended B); answers `research/questions.md`; signs `protoboard/docs/brief.md`.
+2. Mark decides whether to rewrite public history to drop the DSSERVO STEP pushed in 603453e (D14).
+3. Price the TBD rows (browser access to Home Depot, McMaster, SDP-SI); confirm SHCS kit per-size counts.
+4. Bench: set servo torque limits (D15) before first power-up; weigh the head; power draw; relay pull-in at 15 V; LVC set point; tip test.
+5. Optional: J2 balancer if a sideways T-pose gesture is wanted; arm cover shells for the costume.
 
 **Blockers:**
 
-Brief unsigned; tier choice; commit/repo creation wait on Mark.
+Brief unsigned; tier choice; history rewrite decision (Mark).
 
 ---
 
@@ -38,6 +42,14 @@ Brief unsigned; tier choice; commit/repo creation wait on Mark.
 Newest entry at the TOP. Copy the block below for each session.
 Every claim points at a real artifact so it can be checked.
 -->
+
+### 2026-10-25 - session 4 (full hardware, build guides, Isaac Sim)
+
+- **Goal:** Mark: model every bolt, harness and real component instead of simple joints; make each tier constructable with a stack build guide; price beyond the caps; prove feasibility in Isaac Sim; commit to his public repo and continue.
+- **Done:** full-hardware build123d model and UHD generation; GT3 belt joints, shoulder cable balancer (torsion-spring concept found wrong, D11); tier A moved to belt joints after the sim showed direct drive failing (D12); harness cut lists; BOM v2 from model quantities with a pricing agent's research; releases 0.2.0-a/b/c and merged guides; fixed a build123d glTF export bug that misplaced parts in the guide figures; Isaac Sim batches with belt torque limits and a kinematically correct wave (D15); new Blender pipeline for the detailed model (stills, explode and walkthrough videos, sim video); report rev 2.
+- **Decisions and why:** D9-D15.
+- **Friction logged:** pkill self-match (repeat), build123d glTF location bug, tech-docs standalone failure, guide figure framing, wave definition drift, sourcing sites unreadable, Blender join.
+- **Left to do:** see Next actions.
 
 ### 2026-10-24/25 - session 3 (head model, three tiers, renders, report)
 

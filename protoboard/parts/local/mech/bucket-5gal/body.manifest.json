@@ -1,0 +1,63 @@
+{
+ "artifact": "bucket-5gal",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 1021974.69,
+ "mass_g": 900.0,
+ "material": "bucket",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "shape": "circle",
+    "spacing": 180.0,
+    "count": 4,
+    "fastener": "1/4-20",
+    "threaded": false
+   }
+  },
+  "floor": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     2.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "typical 5 US gal bucket: 14.5 in tall, 11.9 in top, 10.3 in bottom (assumption: measure yours)",
+ "meta": {}
+}

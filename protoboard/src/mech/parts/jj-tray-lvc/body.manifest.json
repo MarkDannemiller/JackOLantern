@@ -1,0 +1,65 @@
+{
+ "artifact": "jj-tray-lvc",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 18597.37,
+ "mass_g": 12.99,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "floor": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  },
+  "back": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "row",
+    "spacing": 70,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": false
+   }
+  }
+ },
+ "source": "design",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.2 mm layers, 3 walls, 20 % infill"
+ }
+}

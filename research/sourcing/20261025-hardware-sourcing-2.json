@@ -1,0 +1,1417 @@
+[
+  {
+    "item": "6806-2RS bearing 30x42x7, 10-pack (XIKE)",
+    "category": "bearings",
+    "vendor": "Amazon (XIKE)",
+    "part_number": "ASIN B09D33QXFL",
+    "description": "XIKE 10 pcs 6806-2RS, double rubber seals",
+    "pack_qty": 10,
+    "price_usd": 13.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B09D33QXFL",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "42 mm",
+      "width_B": "7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 1. In stock. Need 10 per arm (tiers B and C) or 6 per arm (tier A). Unbranded import; load ratings not stated on the page. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "6806-2RS bearing 30x42x7, 10-pack (DEEG)",
+    "category": "bearings",
+    "vendor": "Amazon (DEEG)",
+    "part_number": "ASIN B0CJ6YY81X",
+    "description": "DEEG 10 pcs 6806-2RS deep-groove ball bearing",
+    "pack_qty": 10,
+    "price_usd": 13.59,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0CJ6YY81X",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "42 mm",
+      "width_B": "7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 1. In stock. Lowest 10-pack seen. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "6806-2RS bearing 30x42x7, 10-pack (chrome steel Z2)",
+    "category": "bearings",
+    "vendor": "Amazon (unbranded)",
+    "part_number": "ASIN B0C74X1XH7",
+    "description": "6806-2RS chrome steel Z2, 10 pcs",
+    "pack_qty": 10,
+    "price_usd": 15.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0C74X1XH7",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "42 mm",
+      "width_B": "7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 1. Page showed 'Only 9 left in stock'. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "6806-2RS bearing 30x42x7, 2-pack (uxcell ABEC-3)",
+    "category": "bearings",
+    "vendor": "Amazon (uxcell)",
+    "part_number": "ASIN B07TV2HVZ3",
+    "description": "uxcell 6806-2RS ABEC-3, 2-pack",
+    "pack_qty": 2,
+    "price_usd": 8.79,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B07TV2HVZ3",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "42 mm",
+      "width_B": "7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 1 (small-quantity option). Page showed 'Only 11 left'. A uxcell Z2 2-pack (ASIN B082PYMKLG) was $6.49 on its page. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "6806-2RS bearing 30x42x7, single (VXB)",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "6806RS (also Kit7439 and 6806-2RSBearing listings, same price)",
+    "description": "6806-2RS Bearing 30x42x7mm Premium Sealed Ball Bearing",
+    "pack_qty": 1,
+    "price_usd": 9.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/6806-2rs-bearing-30x42x7-sealed",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "42 mm",
+      "width_B": "7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 1. Price is the Shopify variant price from vxb.com/products/<handle>.js, available=true. VXB has no 10-pack of 6806-2RS: its store search shows singles ($9.99), a 2-pack at $39.99 (vendor field 'Amazon', handle deep-groove-sealed-ball-bearing-6806-2rs-30-mm-id) and a 1000-pack. 10 x singles = $99.90 (computed)."
+  },
+  {
+    "item": "6806-2RS bearing 30x42x7 (McMaster)",
+    "category": "bearings",
+    "vendor": "McMaster-Carr",
+    "part_number": "TBD: McMaster part number",
+    "description": "Sealed ball bearing, 30 mm shaft, 42 mm OD, 7 mm wide",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/products/ball-bearings/",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "42 mm",
+      "width_B": "7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 1. TBD: McMaster renders prices with JavaScript and web search returned no McMaster listing; resolve by searching mcmaster.com for 30 mm x 42 mm x 7 mm sealed bearings in a browser."
+  },
+  {
+    "item": "624-2RS bearing 4x13x5, 10-pack (XiKe)",
+    "category": "bearings",
+    "vendor": "Amazon (XiKe)",
+    "part_number": "ASIN B071L5FKBL",
+    "description": "XiKe 624-2RS deep-groove ball bearing, 10-pack",
+    "pack_qty": 10,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B071L5FKBL",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "4 mm",
+      "OD_D": "13 mm",
+      "width_B": "5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 2. Page says In Stock but showed no buy-box price to an anonymous visitor. TBD: open the page in a browser to read the price."
+  },
+  {
+    "item": "624-2RS bearing 4x13x5, 16-pack (uxcell)",
+    "category": "bearings",
+    "vendor": "Amazon (uxcell)",
+    "part_number": "ASIN B0CLY84GJX",
+    "description": "uxcell 16 pcs 624-2RS chrome steel Z2",
+    "pack_qty": 16,
+    "price_usd": 8.49,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0CLY84GJX",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "4 mm",
+      "OD_D": "13 mm",
+      "width_B": "5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 2. Nearest pack to 10 with a visible price. 'Only 14 left'. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "624-2RS bearing 4x13x5, 20-pack",
+    "category": "bearings",
+    "vendor": "Amazon (unbranded)",
+    "part_number": "ASIN B0CH2V58SW",
+    "description": "624-2RS chrome steel Z2, 20 pcs",
+    "pack_qty": 20,
+    "price_usd": 9.89,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0CH2V58SW",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "4 mm",
+      "OD_D": "13 mm",
+      "width_B": "5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 2. 'Only 6 left'. The search result did not show the pack size; the product title says 20 pcs. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "624-2RS bearing 4x13x5, single (VXB)",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit7464",
+    "description": "Sealed deep-groove ball bearing 4x13x5 mm 624-2RS",
+    "pack_qty": 1,
+    "price_usd": 7.77,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/624-2rs-bearing-4x13x5-sealed-miniature",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "4 mm",
+      "OD_D": "13 mm",
+      "width_B": "5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 2. Shopify variant price, available. VXB lists no 624-2RS 10-pack, only a 624ZZ (shielded) 10-pack at $29.99 and 1000-packs."
+  },
+  {
+    "item": "625-2RS bearing 5x16x5, 10-pack (C3)",
+    "category": "bearings",
+    "vendor": "Amazon",
+    "part_number": "ASIN B07X8PK5HW",
+    "description": "625-2RS bearing 5x16x5 mm, C3, rubber sealed steel, 10-pack",
+    "pack_qty": 10,
+    "price_usd": 7.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B07X8PK5HW",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "5 mm",
+      "OD_D": "16 mm",
+      "width_B": "5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 3. In stock. VXB resells this same listing at $39.99 (vxb.com/products/625-2rs-ball-bearings-c3-high-speed-5x16x5mm-minia). Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "625-2RS bearing 5x16x5, 10-pack (XiKe)",
+    "category": "bearings",
+    "vendor": "Amazon (XiKe)",
+    "part_number": "ASIN B071RXC7FV",
+    "description": "XiKe 625-2RS deep-groove ball bearing, 10-pack",
+    "pack_qty": 10,
+    "price_usd": 9.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B071RXC7FV",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "5 mm",
+      "OD_D": "16 mm",
+      "width_B": "5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 3. In stock. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "3GT (GT2-3M) closed belt 240 mm / 80T, 9 mm, 5 pcs",
+    "category": "belts",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0FFZ968GT (variant 3GT-240mm-80teeth, 9mm)",
+    "description": "5 pcs 3GT closed-loop rubber timing belt, G3M profile, 240 mm, 80 teeth, 9 mm wide",
+    "pack_qty": 5,
+    "price_usd": 20.67,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FFZ968GT",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "3 mm",
+      "length": "240 mm",
+      "teeth": 80,
+      "width": "9 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4. 'In stock, usually ships within 4 to 5 days'. Profile stated as 3GT/G3M, 'circular arc'; tension member and working tension NOT stated on the listing. Variation ASINs on the same page (not priced individually): 6 mm B0FFZBFJ89, 15 mm B0FFZ92T3D, 20 mm B0FFZD7WR7. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "3GT (GT2-3M) closed belt 210 mm / 70T, 9 mm, 5 pcs",
+    "category": "belts",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0FFZC2YJB (variant 3GT-210mm-70teeth, 9mm)",
+    "description": "5 pcs 3GT closed-loop rubber timing belt, G3M profile, 210 mm, 70 teeth, 9 mm wide",
+    "pack_qty": 5,
+    "price_usd": 20.67,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FFZC2YJB",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "3 mm",
+      "length": "210 mm",
+      "teeth": 70,
+      "width": "9 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4. Same seller and listing family as B0FFZ968GT. Working tension not stated. Other 210 mm widths: 6 mm B0FFZ9519R, 10 mm B0FFZ9L5RY, 15 mm B0FFZ8QSTJ, 20 mm B0FFZC8Q55. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "HTD3M closed belt 240 mm / 80T, 9 mm, 4 pcs (NOT GT3 profile)",
+    "category": "belts",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0GS9D7K2Z",
+    "description": "4pcs 240-3M-9 HTD timing belt, 3 mm pitch, 80 teeth",
+    "pack_qty": 4,
+    "price_usd": 5.0,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0GS9D7K2Z",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "3 mm",
+      "length": "240 mm",
+      "teeth": 80,
+      "width": "9 mm",
+      "profile": "HTD 3M"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4, for reference only: HTD 3M tooth profile does not mesh correctly with GT3 (GT2-3M) pulleys. Use only with HTD 3M pulleys."
+  },
+  {
+    "item": "3GT closed belts (RobotDigg)",
+    "category": "belts",
+    "vendor": "RobotDigg",
+    "part_number": "TBD",
+    "description": "3GT 9 mm closed belts 210/240 mm",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.robotdigg.com/",
+    "observed": "2026-10-24",
+    "dims": {},
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4. TBD: no RobotDigg 3GT/GT2-3M closed belt found; its 3 mm closed belts are HTD3M (e.g. product/295, /305). Site search ignores the keyword when fetched. Resolve by asking RobotDigg (sales@robotdigg.com) whether they stock 3GT-210-9 / 3GT-240-9."
+  },
+  {
+    "item": "GT2 3 mm (3GT) closed belts (SDP-SI)",
+    "category": "belts",
+    "vendor": "SDP-SI",
+    "part_number": "TBD: probably A 6R53M070090 (70T) and A 6R53M080090 (80T), inferred from the series pattern, not confirmed",
+    "description": "Neoprene 3 mm GT2 pitch single-sided belt, 9 mm",
+    "pack_qty": "1",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://shop.sdp-si.com/a-6r53m090090.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "3 mm",
+      "width": "9 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4. SDP-SI's 3 mm GT2 series is A 6R53M<teeth><width>; search showed A 6R53M090090 (90 grooves, 270 mm, 9 mm). shop.sdp-si.com returned HTTP 403 to fetch and curl, so neither the 70T/80T part numbers nor prices could be confirmed. TBD: open the 70T and 80T pages in a browser."
+  },
+  {
+    "item": "GT3 closed belts (Misumi)",
+    "category": "belts",
+    "vendor": "Misumi",
+    "part_number": "TBD",
+    "description": "GT3 / 3GT closed timing belt 9 mm",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://us.misumi-ec.com/",
+    "observed": "2026-10-24",
+    "dims": {},
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4. TBD: not checked; Misumi US pages need the configurator. Resolve by configuring a 3GT belt for 70 and 80 teeth, 9 mm on us.misumi-ec.com."
+  },
+  {
+    "item": "3GT 9 mm closed belt 210 mm (OpenBuilds Part Store)",
+    "category": "belts",
+    "vendor": "OpenBuilds Part Store",
+    "part_number": "3GT (GT2-3M) 9mm closed loop",
+    "description": "Formerly listed 70 T, 210 mm, 9 mm, fibreglass cord",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://openbuildspartstore.com/3gt-gt2-3m-9mm-timing-belt-closed-loop/",
+    "observed": "2026-10-24",
+    "dims": {},
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 4. The product URL now 301-redirects to openbuilds.com; the part store appears closed. Not a current source. Working tension for 3 mm GT2: see the Gates 3M GT2 reference entry in 20261025-hardware-sourcing.json; none of the current listings states one."
+  },
+  {
+    "item": "Dowel pin 5x16 mm, hardened steel ISO 8734 / DIN 6325 m6",
+    "category": "fasteners",
+    "vendor": "TBD (McMaster / Misumi)",
+    "part_number": "TBD",
+    "description": "Hardened alloy-steel dowel pin 5 mm x 16 mm",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/products/dowel-pins/",
+    "observed": "2026-10-24",
+    "dims": {
+      "d": "5 mm m6",
+      "l": "16 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 5. TBD: no small pack of hardened 5x16 pins with a visible US price found. McMaster prices load by JavaScript; Misumi needs the configurator; Kimball Midwest (20-pack) hides price behind login; Olander out of stock; Aspen Fasteners lists Unbrako UB006-5X16-000400 only as a box of 400 at $437.89, out of stock. Resolve on mcmaster.com (metric alloy-steel dowel pins, 5 mm x 16 mm) in a browser."
+  },
+  {
+    "item": "Dowel pin 5x16 mm, 304 stainless, 30 pcs (uxcell) - not hardened",
+    "category": "fasteners",
+    "vendor": "Amazon (uxcell)",
+    "part_number": "ASIN B0FJG64PC1",
+    "description": "uxcell 30 pcs 5 x 16 mm dowel pins, 304 stainless steel",
+    "pack_qty": 30,
+    "price_usd": 9.69,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FJG64PC1",
+    "observed": "2026-10-24",
+    "dims": {
+      "d": "5 mm",
+      "l": "16 mm",
+      "material": "304 stainless (soft)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 5 fallback. NOT hardened and no ISO 8734 tolerance stated: shelf-peg grade. 'Only 5 left'. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "Dowel pin 5x16 mm, 304 stainless, 15 pcs (HARFINGTON) - not hardened",
+    "category": "fasteners",
+    "vendor": "Amazon (HARFINGTON)",
+    "part_number": "ASIN B0F6CZZTK6",
+    "description": "HARFINGTON 15 pcs dowel pins M5 x 16 mm 304 stainless",
+    "pack_qty": 15,
+    "price_usd": 6.29,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0F6CZZTK6",
+    "observed": "2026-10-24",
+    "dims": {
+      "d": "5 mm",
+      "l": "16 mm",
+      "material": "304 stainless (soft)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 5 fallback. Not hardened. 'Only 2 left'. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "2 mm Dyneema cord, 20 m, 200 kg",
+    "category": "cord",
+    "vendor": "Amazon",
+    "part_number": "ASIN B00Q9IHLBS",
+    "description": "Ultra Light 2 mm Dyneema reflective guy rope, 20 m",
+    "pack_qty": 1,
+    "price_usd": 9.0,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B00Q9IHLBS",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "2 mm",
+      "length": "20 m",
+      "breaking_strength": "200 kg (seller claim)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 6. 16-strand Dyneema with a polyester (reflective) outer per listing, so not 100% UHMWPE; stated breaking strain 200 kg. Length variations are listed in metres. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "2 mm UHMWPE cord, 65 ft (~19.8 m), 400 kg",
+    "category": "cord",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DM5FCPX1 (green; red B0DM5G55BC, yellow B0DM5GSDGX)",
+    "description": "Dyneema reflective rope 2 mm, 65 ft",
+    "pack_qty": 1,
+    "price_usd": 16.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DM5FCPX1",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "2 mm",
+      "length": "65 ft (19.8 m, computed)",
+      "breaking_strength": "400 kg in title (seller claim)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 6. Bullets say 100% UHMWPE braided, 16-strand, 2.6 g/m, and quote '520~1000Lb' across 2 mm and 4 mm, so the 400 kg figure is a seller claim; treat with caution. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "Hollow UHMWPE braided cord 2 mm (spliceable)",
+    "category": "cord",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0B17S7WLM",
+    "description": "Hollow UHMWPE braided cord 1.3/1.6/2 mm",
+    "pack_qty": 1,
+    "price_usd": 21.95,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0B17S7WLM",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "1.3 / 1.6 / 2 mm variants"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 6. $21.95 is the default variant shown; TBD: which diameter/length that price is for and the 2 mm breaking strength (bullets give only '520~1000Lb' across sizes). Resolve by selecting the 2 mm variant on the page."
+  },
+  {
+    "item": "Shoulder screw 5 mm x 8 mm shoulder, M4, 10 pcs (uxcell)",
+    "category": "fasteners",
+    "vendor": "Amazon (uxcell)",
+    "part_number": "ASIN B077GYGB45",
+    "description": "uxcell 10 pcs 304 stainless hex socket shoulder bolt, 5 mm dia x 8 mm shoulder, M4",
+    "pack_qty": 10,
+    "price_usd": 12.79,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B077GYGB45",
+    "observed": "2026-10-24",
+    "dims": {
+      "shoulder_d": "5 mm",
+      "shoulder_l": "8 mm",
+      "thread": "M4"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 7. 304 stainless, ISO 7379 not stated (alloy-steel ISO 7379 has an h8 shoulder; check before using as a pivot). 'Only 11 left'. $1.28 per piece (computed). Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "Shoulder screw 5 mm x 8 mm shoulder, M4, 16 pcs (MECCANIXITY)",
+    "category": "fasteners",
+    "vendor": "Amazon (MECCANIXITY)",
+    "part_number": "ASIN B0FDQVBNB9",
+    "description": "MECCANIXITY 16 pcs 304 stainless shoulder bolt 5 mm dia 8 mm L M4x0.7",
+    "pack_qty": 16,
+    "price_usd": 7.79,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FDQVBNB9",
+    "observed": "2026-10-24",
+    "dims": {
+      "shoulder_d": "5 mm",
+      "shoulder_l": "8 mm",
+      "thread": "M4x0.7"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 7. 304 stainless; tolerance not stated. 'Only 17 left'. $0.49 per piece (computed). Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "Shoulder screw ISO 7379 5 x 8 M4 (McMaster 91259A series)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "TBD: 91259A-series dash number",
+    "description": "Alloy steel shoulder screw, 5 mm shoulder, 8 mm long, M4",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/products/shoulder-bolts/",
+    "observed": "2026-10-24",
+    "dims": {
+      "shoulder_d": "5 mm",
+      "shoulder_l": "8 mm",
+      "thread": "M4"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 7. TBD: McMaster page not readable without a browser and search gave no part or price. A TME snippet put an ELESA+GANTER ISO 7379 M4 at about $7.31 each (snippet, different vendor, length not confirmed). Resolve on mcmaster.com."
+  },
+  {
+    "item": "Heat-set insert M3 x 5.7, 100 pcs (Prusa, CNC Kitchen design) - recheck",
+    "category": "fasteners",
+    "vendor": "Prusa Research",
+    "part_number": "Heat Set Inserts - M3 standard 100 pcs",
+    "description": "CNC Kitchen-designed M3 standard heat-set inserts",
+    "pack_qty": 100,
+    "price_usd": 10.99,
+    "price_status": "listing",
+    "url": "https://www.prusa3d.com/product/heat-set-inserts/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "5.7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 8. Confirms the earlier $10.99: page in USD for US shipping, M3 standard selected, In stock, 4-7 business days preparation. Other variant prices not shown without selecting them."
+  },
+  {
+    "item": "Heat-set insert M4 x 8.1, 50 pcs (CNC Kitchen via 3DJake) - recheck",
+    "category": "fasteners",
+    "vendor": "3DJake (CNC Kitchen reseller, US site)",
+    "part_number": "CNC Kitchen M4 Standard M4x8.1",
+    "description": "CNC Kitchen threaded inserts M4 standard, 50 pieces",
+    "pack_qty": 50,
+    "price_usd": 11.18,
+    "price_status": "listing",
+    "url": "https://www.3djake.com/cnc-kitchen/threaded-inserts-m4-standard",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7",
+      "length": "8.1 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 8. Confirms the earlier $11.18 ($0.22/pc). Excl. VAT and delivery; US standard shipping from $32.01. In stock (93 left)."
+  },
+  {
+    "item": "Heat-set insert M3 x 5.7, 100 pcs (ruthex RX-M3x5.7)",
+    "category": "fasteners",
+    "vendor": "Amazon (ruthex)",
+    "part_number": "ASIN B08BCRZZS3",
+    "description": "ruthex M3 threaded inserts 100 pcs RX-M3x5.7",
+    "pack_qty": 100,
+    "price_usd": 9.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B08BCRZZS3",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "5.7 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 8. Prices the entry left TBD in the earlier file. In stock. Note: the earlier file's ASIN B07YSV66Y5 for ruthex RX-M4x8.1 now shows 'ruthex 1/4 in short threaded inserts, 20 pcs, RX-1/4-20x6.4' ($9.99), so that ASIN is wrong for M4 x 8.1. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "SHCS M3 kit 6/8/10/12/16/20/25/30 mm, black oxide 12.9, 600 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DZT7HVTM",
+    "description": "600 pcs M3 socket head cap screw kit, 12.9 alloy steel, black oxide, with nuts and washers",
+    "pack_qty": 600,
+    "price_usd": 7.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DZT7HVTM",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "M3 x 6/8/10/12/16/20/25/30"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 9. Covers M3 x 6, 8, 12 and 30 (so no separate M3 x 30 pack needed); NOT M3 x 14. Total 600 includes nuts and washers; screw count per length not stated. Alternative Hapric 600 pcs M3 6-30 mm (ASIN B0D3X5CT2J) $6.99 on its page, finish black zinc per search listing. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "SHCS M4 kit 6/8/10/12/16/20/25 mm, black oxide 12.9, 520 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0GG8SZC1W",
+    "description": "520 pcs M4 socket head cap screw kit, 12.9 alloy steel, black oxide, with nuts and washers",
+    "pack_qty": 520,
+    "price_usd": 8.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0GG8SZC1W",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "M4 x 6/8/10/12/16/20/25"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 9. Covers all of M4 x 10/12/16/20/25. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "SHCS M5 kit 8/10/12/16/20/25/30 mm, black oxide 12.9, 290 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0GG8RHBP7",
+    "description": "290 pcs M5 socket head cap screw kit, 12.9 alloy steel, black oxide, with nuts and washers",
+    "pack_qty": 290,
+    "price_usd": 8.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0GG8RHBP7",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "M5 x 8/10/12/16/20/25/30"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 9. Covers all of M5 x 10/12/16/20. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "SHCS M3 x 14, black oxide 12.9, 120 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0F31SWDP3",
+    "description": "120 pcs M3x14 mm socket head cap screws, 12.9 alloy steel, black oxide",
+    "pack_qty": 120,
+    "price_usd": 5.49,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0F31SWDP3",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "M3 x 14"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 9. Fills the M3 x 14 gap in the kits. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "SHCS M3 x 30, black oxide 12.9, 50 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0FLKC8Q84",
+    "description": "50 pcs M3 x 30 mm 12.9 alloy steel socket head cap screws",
+    "pack_qty": 50,
+    "price_usd": 5.98,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FLKC8Q84",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "M3 x 30"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 9. Only needed if a mixed M3-M5 kit is chosen instead of the M3 kit above. A 180 pcs black-oxide pack (ASIN B0DJQFXW9R) was $8.54 on its page. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "SHCS assortment M3/M4/M5 black oxide, 460 pcs (Hilitchi) - partial coverage",
+    "category": "fasteners",
+    "vendor": "Amazon (Hilitchi)",
+    "part_number": "ASIN B071XNBGRQ",
+    "description": "Hilitchi 460-piece alloy steel socket cap screws and nuts, M3 M4 M5, black oxide",
+    "pack_qty": 460,
+    "price_usd": 14.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B071XNBGRQ",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "M3/M4/M5 x 8/12/16/20 (from page text)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 9, for comparison: misses M3 x 6/14/30, M4 x 10/25, M5 x 10. Bullets contradict themselves (say 'flat head' and 'M4 M5 M6'). Mixed kits seen (Glarks 510 pcs B0761PKYR6 $15.98, WZHUIDA 1080 pcs B0F8HNT3D6 $12.99 with M3/M4/M5 x 8/12/16/20) have the same gaps; the three single-size kits above are the better fit. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M2 x 6 self-tapping pan head, 50 pcs (METALLIXITY)",
+    "category": "fasteners",
+    "vendor": "Amazon (METALLIXITY)",
+    "part_number": "ASIN B0FJDMLVFY",
+    "description": "Phillips pan head self-tapping screw M2x6, 50 pcs",
+    "pack_qty": 50,
+    "price_usd": 5.69,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FJDMLVFY",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "M2 x 6"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 10. Listing says self-tapping but does not say PA (plastite / 30-degree plastic-forming) thread; for printed parts that is usually acceptable but check. 'Only 5 left'. 100 pcs version ASIN B0FJDKDFL6 $5.89 in search. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M2 x 8 self-tapping pan head, 50 pcs (METALLIXITY)",
+    "category": "fasteners",
+    "vendor": "Amazon (METALLIXITY)",
+    "part_number": "ASIN B0FJDJ9H5V",
+    "description": "Phillips pan head self-tapping screw M2x8, 50 pcs",
+    "pack_qty": 50,
+    "price_usd": 5.69,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0FJDJ9H5V",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "M2 x 8"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 10. Same caveat on thread form. 100 pcs version ASIN B0FJCYKCST $5.89 in search. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M4 nylon-insert lock nut, 304 SS, 80 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DHLHY34R",
+    "description": "Nylon insert locknuts M4 x 0.7, 304 SS A2-70, 80 pcs",
+    "pack_qty": 80,
+    "price_usd": 4.86,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DHLHY34R",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 11. 'Only 9 left'. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M5 nylon-insert lock nut, 304 SS, 50 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0D8THJQNM",
+    "description": "304 SS lock nuts M5-0.8 nylon insert, 50 pcs",
+    "pack_qty": 50,
+    "price_usd": 4.79,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0D8THJQNM",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5x0.8"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 11. In stock. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M4 flat washer 9 mm OD, 304 SS, 100 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0BGH6YLB7",
+    "description": "M4 x 9 mm OD flat washer, 18-8 stainless, 100 pcs",
+    "pack_qty": 100,
+    "price_usd": 4.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0BGH6YLB7",
+    "observed": "2026-10-24",
+    "dims": {
+      "id": "M4",
+      "od": "9 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 11. DIN 125A-marked alternative 4x9x0.8 (ASIN B0FQCFH4J9) $7.69. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M5 flat washer 10 mm OD, 304 SS, 100 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0BGHBH8RM",
+    "description": "M5 x 10 mm OD flat washer, 18-8 stainless, 100 pcs",
+    "pack_qty": 100,
+    "price_usd": 4.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0BGHBH8RM",
+    "observed": "2026-10-24",
+    "dims": {
+      "id": "M5",
+      "od": "10 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 11. DIN 125A-marked alternative 5x10x1 (ASIN B0FQCDRV98) $6.89. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "1/4-20 x 1 in hex bolt kit with nylock nuts and washers, 18 sets",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DM1ZJJYB",
+    "description": "(18 sets) 1/4-20 x 1 hex head bolt, lock nuts, flat and lock washers, 304 SS",
+    "pack_qty": 18,
+    "price_usd": 8.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DM1ZJJYB",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "1/4-20",
+      "length": "1 in"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 12. Hardware-store fallback: Home Depot pages return a bot-protection page (not bypassed) and snippets showed no 1 in Everbilt price. Title says lock nuts; check they are nylon-insert. A grade 8 zinc kit with nylon lock nuts, 10 sets (ASIN B0H7CKH5D4), was $16.95. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "1/4-20 x 1-1/4 in hex bolt kit with nylock nuts and washers, 18 sets",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DM1WDZRL",
+    "description": "(18 sets) 1/4-20 x 1-1/4 hex head bolt, lock nuts, flat and lock washers, 304 SS",
+    "pack_qty": 18,
+    "price_usd": 8.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DM1WDZRL",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "1/4-20",
+      "length": "1-1/4 in"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 12. Same caveats. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "1/4-20 hex bolts, Everbilt zinc (Home Depot)",
+    "category": "fasteners",
+    "vendor": "Home Depot (Everbilt)",
+    "part_number": "TBD: 1 in and 1-1/4 in model numbers",
+    "description": "Everbilt 1/4-20 zinc hex bolt packs",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.homedepot.com/p/Everbilt-1-4-in-20-x-2-in-Zinc-Plated-Hex-Bolt-100-Pack-800610/204273587",
+    "observed": "2026-10-24",
+    "dims": {},
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 12. TBD: homedepot.com served a bot-protection page; snippets gave only other lengths (100-packs: 1-1/2 in $22.32, 2 in $28.31). Resolve in a store or a normal browser."
+  },
+  {
+    "item": "#8 x 1-1/4 in flat head wood screw, 100 pcs (Hillman 35054)",
+    "category": "fasteners",
+    "vendor": "Amazon (Hillman)",
+    "part_number": "Hillman 35054 / ASIN B00OTWQSIS",
+    "description": "Hillman flat head Phillips wood screw 8 x 1-1/4, 100-pack",
+    "pack_qty": 100,
+    "price_usd": 6.98,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B00OTWQSIS",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "#8 x 1-1/4 in"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 13. In stock. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "#4 x 1/2 in flat head wood screw, zinc, 100 pcs",
+    "category": "fasteners",
+    "vendor": "Amazon",
+    "part_number": "ASIN B07C52W8WL",
+    "description": "#4 x 1/2 zinc-plated flat head wood screws, 100 pack",
+    "pack_qty": 100,
+    "price_usd": 7.35,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B07C52W8WL",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "#4 x 1/2 in"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 13. Stainless version ASIN B07C7LGPWR $7.75. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "M5 hammer-in tee nut, 4-prong, zinc, 60 pcs (Hitefu)",
+    "category": "fasteners",
+    "vendor": "Amazon (Hitefu)",
+    "part_number": "ASIN B0CLJBLYSC",
+    "description": "Hitefu M5 x 8 mm T-nut, 4 pronged, zinc plated, 60 pcs",
+    "pack_qty": 60,
+    "price_usd": 5.49,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0CLJBLYSC",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5",
+      "barrel": "8 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 13. 'Only 14 left'. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "6061 plate 6 mm, 220x140 + 150x150 cut to shape (SendCutSend)",
+    "category": "stock",
+    "vendor": "SendCutSend",
+    "part_number": "TBD",
+    "description": "Laser/waterjet-cut 6061 parts",
+    "pack_qty": "2",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://sendcutsend.com/",
+    "observed": "2026-10-24",
+    "dims": {
+      "parts": "220 x 140 mm and 150 x 150 mm",
+      "thickness": "0.250 in 6061 (nearest SendCutSend gauge, TBD)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 14. TBD: SendCutSend only prices from an uploaded DXF/STEP in its quoting tool; not done (would mean uploading a design to a third party). Resolve by uploading the two outlines at sendcutsend.com and reading the instant quote."
+  },
+  {
+    "item": "6061-T651 plate 1/4 in, cut to size (OnlineMetals)",
+    "category": "stock",
+    "vendor": "OnlineMetals",
+    "part_number": "pid 24271",
+    "description": "1/4 in aluminium plate 6061-T651, custom cut",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.onlinemetals.com/en/buy/aluminum/0-25-aluminum-plate-6061-t651-domestic/pid/24271",
+    "observed": "2026-10-24",
+    "dims": {
+      "thickness": "0.25 in (6.35 mm)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 14. TBD: price loads dynamically by size; resolve by entering 9 x 6 in and 6 x 6 in (or one 12 x 12 in) on the page."
+  },
+  {
+    "item": "6061 aluminium plate 6 mm, 6 x 6 in (152 x 152 mm), 1 pc",
+    "category": "stock",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0H87TP596",
+    "description": "6061 aluminum sheet 6 x 6 in (152 x 152 mm), 6 mm thick",
+    "pack_qty": 1,
+    "price_usd": 12.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0H87TP596",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "152 x 152 x 6 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 14 / 21. Covers the 150 x 150 piece with 1 mm per side to trim (computed). Temper not stated. 'Only 9 left'. A 2 pcs 6x6x1/4 in 6061-T651 (ASIN B0C4Z12SQY) was $18.99 in search. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "6061 aluminium plate 1/4 in, 6 x 12 in (152 x 305 mm)",
+    "category": "stock",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0BF18PQJG",
+    "description": "1/4 in thick aluminum sheet plate 6 x 12 in",
+    "pack_qty": 1,
+    "price_usd": 18.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0BF18PQJG",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "152 x 305 x 6.35 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 14 / 21. Offcut for the 220 x 140 piece (fits with 12 mm and 85 mm spare, computed). Alloy not in the title; TBD: confirm 6061 on the page. 1/4 in = 6.35 mm, not 6.0. 'Only 5 left'. This plus B0H87TP596 = $31.98 for both pieces before cutting (computed). Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "1/4 in birch plywood 24 x 48 in",
+    "category": "stock",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DYF51499",
+    "description": "American birch plywood 1/4 x 24 x 48 in",
+    "pack_qty": 1,
+    "price_usd": 43.98,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DYF51499",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "1/4 x 24 x 48 in nominal"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 15. In stock. Home Depot 1/4 in birch 2x4 (Internet 202088745 / 206120891) remains TBD: site served a bot-protection page and snippets showed no price. Baltic birch 2-pack 24x48x1/4 (ASIN B0CLBGWVPB) was $82.78 in search. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "1/2 in birch plywood project panel 2 x 4 ft, A2 (Home Depot)",
+    "category": "stock",
+    "vendor": "Home Depot (Falken Design)",
+    "part_number": "FALKENDESIGN-PW-Birch-A2-1/2-2448, Internet 319137400",
+    "description": "1/2 in x 2 ft x 4 ft birch plywood project panel, A2",
+    "pack_qty": 1,
+    "price_usd": 40.22,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.homedepot.com/p/Falken-Design-1-2-in-x-2-ft-x-4-ft-Birch-Plywood-Project-Panel-FALKENDESIGN-PW-Birch-A2-1-2-2448/319137400",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "1/2 x 24 x 48 in nominal"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 19. Search snippet only, capture date unknown; homedepot.com product pages blocked by bot protection. D4 grade (Internet 319137344) snippet $35.04. Handprint 1/2 in 2x4 (Internet 206120896, actual 0.476 x 23.75 x 47.75 in) price not shown."
+  },
+  {
+    "item": "1/2 in birch plywood 24 x 48 in",
+    "category": "stock",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0DYF58VK8",
+    "description": "American birch plywood 1/2 x 24 x 48 in",
+    "pack_qty": 1,
+    "price_usd": 62.98,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0DYF58VK8",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "1/2 x 24 x 48 in nominal"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 19. In stock. Confirmed alternative to the Home Depot snippet. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "PETG-CF 1 kg (Bambu Lab), with spool",
+    "category": "filament",
+    "vendor": "Bambu Lab US store",
+    "part_number": "Bambu PETG-CF 1 kg filament with spool",
+    "description": "Bambu Lab PETG-CF 1.75 mm 1 kg",
+    "pack_qty": 1,
+    "price_usd": 34.99,
+    "price_status": "listing",
+    "url": "https://us.store.bambulab.com/products/petg-cf",
+    "observed": "2026-10-24",
+    "dims": {
+      "weight": "1 kg"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 16. Read from the product page's structured offer data; refill (no spool) 1 kg $31.99 ('From $31.99'). Matches the earlier unconfirmed 3D Universe $34.99."
+  },
+  {
+    "item": "PETG-CF 1 kg (Elegoo), black",
+    "category": "filament",
+    "vendor": "Amazon (ELEGOO)",
+    "part_number": "ASIN B0F37YCK6K",
+    "description": "ELEGOO PETG-CF 1.75 mm black 1 kg",
+    "pack_qty": 1,
+    "price_usd": 18.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0F37YCK6K",
+    "observed": "2026-10-24",
+    "dims": {
+      "weight": "1 kg"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 16. In stock. Grey B0F37ZK127, red B0FZVFN8F6 also $18.99 in search. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "PETG-CF (Polymaker Fiberon PETG-rCF08) - no 1 kg size",
+    "category": "filament",
+    "vendor": "Polymaker (maker store)",
+    "part_number": "Fiberon PETG-rCF08",
+    "description": "Fiberon PETG-rCF08 1.75 mm, black",
+    "pack_qty": 1,
+    "price_usd": 19.99,
+    "price_status": "listing",
+    "url": "https://shop.polymaker.com/products/fiberon-petg-rcf08",
+    "observed": "2026-10-24",
+    "dims": {
+      "weight": "0.5 kg (also 3 kg at $89.99)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 16. Variants are only 0.5 kg ($19.99) and 3 kg ($89.99), both available; no 1 kg. Same 0.5 kg price as the earlier file. Shopify variant prices."
+  },
+  {
+    "item": "PETG 1 kg (Polymaker), black",
+    "category": "filament",
+    "vendor": "Polymaker (maker store)",
+    "part_number": "Polymaker PETG (New Formula) Black 1 kg",
+    "description": "Polymaker PETG 1.75 mm black 1 kg",
+    "pack_qty": 1,
+    "price_usd": 18.99,
+    "price_status": "listing",
+    "url": "https://shop.polymaker.com/products/petg",
+    "observed": "2026-10-24",
+    "dims": {
+      "weight": "1 kg"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 16. Shopify variant price; Dark Grey 1 kg $19.99; Galaxy colours $24.99. 4-pack black bundle $62.97 in store search."
+  },
+  {
+    "item": "PETG 1 kg (Elegoo Rapid PETG), black",
+    "category": "filament",
+    "vendor": "Amazon (ELEGOO)",
+    "part_number": "ASIN B0CPF7FDTG",
+    "description": "ELEGOO Rapid PETG 1.75 mm black 1 kg",
+    "pack_qty": 1,
+    "price_usd": 12.59,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B0CPF7FDTG",
+    "observed": "2026-10-24",
+    "dims": {
+      "weight": "1 kg"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 16. In stock. Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "E-stop enclosure, 1-hole yellow (Schneider XALK01H7) - recheck",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Schneider Electric XALK01H7 (Mouser 996-XALK01H7)",
+    "description": "Pushbutton enclosure XALK, 1 hole 22 mm, yellow",
+    "pack_qty": 1,
+    "price_usd": 26.02,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Schneider-Electric/XALK01H7?qs=4R4UwjOJpC3Qi7CgpTrn7w%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {},
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 17. Confirms $26.02 at qty 1 via the Mouser API (pcbparts tool); 130 in stock; Active; standard pack 1."
+  },
+  {
+    "item": "1 in x 30 in Sch 40 black steel nipple, threaded both ends",
+    "category": "base",
+    "vendor": "Global Industrial (MSI)",
+    "part_number": "WBB3783189 / MPN A277001630.0",
+    "description": "MSI Products 1 in x 30 in Schedule 40 black carbon steel nipple, 700-3000 psi",
+    "pack_qty": 1,
+    "price_usd": 17.75,
+    "price_status": "listing",
+    "url": "https://www.globalindustrial.com/p/1-x-30-schedule-40-black-carbon-steel-nipple-700-3000-psi",
+    "observed": "2026-10-24",
+    "dims": {
+      "nominal": "1 in NPT",
+      "length": "30 in"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 18. Ships in 3 business days; shipping cost not shown. Home Depot / Lowe's: TBD (Home Depot bot-protection page; no Lowe's 1x30 listing in search). Grainger not checked. SupplyHouse Bluefin BLN100-3000C 1x30 snippet $17.99 each / $13.89 each in a box of 3 (snippet, unconfirmed; site blocked fetch)."
+  },
+  {
+    "item": "1 in x 30 in black pipe, decor grade, 4-pack (GeilSpace)",
+    "category": "base",
+    "vendor": "Amazon (GeilSpace)",
+    "part_number": "ASIN B08BNHGYQT",
+    "description": "1 in x 30 in pre-cut black metal pipe, set of 4",
+    "pack_qty": 4,
+    "price_usd": 44.99,
+    "price_status": "listing",
+    "url": "https://www.amazon.com/dp/B08BNHGYQT",
+    "observed": "2026-10-24",
+    "dims": {
+      "od": "32 mm per listing (smaller than NPT 1 in pipe)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 18, not recommended: listing says OD is smaller than NPT 1 in pipe and it does not fit pipe clamps. A 10-pack 1x30 malleable nipple listing (ASIN B08DJB1D29) is $51.99, also decor grade ('not for gas or water'). Price read from the Amazon product page (core price block), US delivery; seller and price can change."
+  },
+  {
+    "item": "Feetech 5264 3P servo cable 900 mm, 6 pcs (Waveshare) - recheck",
+    "category": "wiring",
+    "vendor": "Waveshare",
+    "part_number": "SR-Cable-5264-3PIN-900mm-6PCS (SKU 34172)",
+    "description": "Servo cable for Feetech ST/SC bus servos, 5264 3-pin, 900 mm",
+    "pack_qty": 6,
+    "price_usd": 3.99,
+    "price_status": "listing",
+    "url": "https://www.waveshare.com/sr-cable-5264-3pin.htm?sku=34172",
+    "observed": "2026-10-24",
+    "dims": {
+      "length": "900 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Req 20. Upgrades the earlier snippet to a listing. Page also shows tiers $3.89 (1-9), $3.84 (10-49), $3.82 (50-99), which conflict with the $3.99 headline; read as $3.99 until checked at cart. 300 mm 6 pcs (SKU 34171) is already in 20261025-hardware-sourcing.json at $1.99 (listing); mixed 3+3 pack is SKU 34322, price not shown."
+  }
+]

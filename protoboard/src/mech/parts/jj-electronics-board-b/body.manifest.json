@@ -1,0 +1,486 @@
+{
+ "artifact": "jj-electronics-board-b",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 330794.12,
+ "mass_g": 215.02,
+ "material": "wood_ply",
+ "category": "cut",
+ "features": {
+  "tab_0": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     -3.0,
+     145.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "tab_1": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     -3.0,
+     145.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "tab_2": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     -3.0,
+     -155.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "tab_3": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     -3.0,
+     -155.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "tray_or_1": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -55.0,
+     3.0,
+     120.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 48,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_or_2": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     5.0,
+     3.0,
+     120.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 48,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_monitor": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     60.0,
+     3.0,
+     125.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 13.399999999999999,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_lvc": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -45.0,
+     3.0,
+     65.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 70,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_fuses": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     35.0,
+     3.0,
+     55.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 98,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_relay": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     65.0,
+     3.0,
+     105.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 16,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_buck_head": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -50.0,
+     3.0,
+     5.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 53,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_buck_pi": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     20.0,
+     3.0,
+     -5.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 21,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_buck_arm_r": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -45.0,
+     3.0,
+     -55.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 80,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_buck_arm_l": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     45.0,
+     3.0,
+     -55.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 80,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_arm_r__bus_adapter": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -55.0,
+     3.0,
+     -110.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 30,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  },
+  "tray_arm_l__bus_adapter": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     55.0,
+     3.0,
+     -110.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 30,
+    "count": 2,
+    "fastener": "#4 wood screw",
+    "threaded": true
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "wood_ply",
+  "print": "",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   -47.0,
+   985.0
+  ]
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "artifact": "dowel-5x16",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 314.16,
+ "mass_g": 2.4,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "end": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "shaft",
+    "diameter": 5.0
+   }
+  }
+ },
+ "source": "ISO 8734 m6 dowel pin",
+ "meta": {
+  "kind": "pin",
+  "diameter": 5.0,
+  "length": 16.0
+ }
+}

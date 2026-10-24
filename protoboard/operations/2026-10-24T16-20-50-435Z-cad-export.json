@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "pa2x6",
+    "config": "parts/local/mech/hw/pa2x6/cad.config.ts",
+    "configDigest": "sha256:07c6278be1fdc30471651021ca687f3082c91347bfe6e3e9f1bb7a7581832b00",
+    "moduleDigest": "sha256:20c812e98dcfddc5ada09e8c62b5c3b1d797d7bb0fd8d18006a6e43487c54492"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:3034e2d09daca83942b04eff0087c0cd42a8f5b662bd2e7ab1a95375f8afdce5",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:20:50.435Z",
+  "status": "succeeded",
+  "summary": "pa2x6: body.step, body.glb, body.manifest.json in parts/local/mech/hw/pa2x6/out (33.137 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/pa2x6/out/body.step",
+      "digest": "sha256:9ec68d0d122c77ad182025f0fd811392a36be4cfcda3a2e0b1929304ed2ac903",
+      "bytes": 32539,
+      "description": "pa2x6: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/pa2x6/out/body.glb",
+      "digest": "sha256:1cb367e99dc644b8b4f6d96d83097ff9e14f3de0cf3933bdf67792edd59603d4",
+      "bytes": 21116,
+      "description": "pa2x6: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/pa2x6/out/body.manifest.json",
+      "digest": "sha256:5358a5b3a3b5f6ac2f4dd585a4e8a7778eaf2d013915425d03493182fe2333a2",
+      "bytes": 540,
+      "description": "pa2x6: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "pa2x6",
+    "out": "parts/local/mech/hw/pa2x6/out",
+    "volume_mm3": 33.137,
+    "previousVolume_mm3": 33.137,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:20:55.029Z"
+}

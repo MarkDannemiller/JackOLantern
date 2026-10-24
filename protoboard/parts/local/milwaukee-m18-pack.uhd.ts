@@ -8,8 +8,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerOut, Ground } from "@deltarobotics/uhd";
 import { part } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const MILWAUKEE_M18_PACK: ModuleDef = part({
+const MILWAUKEE_M18_PACK_ELECTRICAL: ModuleDef = part({
   id: "milwaukee-m18-pack", name: "Milwaukee M18 REDLITHIUM pack (owned)", manufacturer: "Milwaukee Tool", part_number: "48-11-1812 (HD12.0) / 48-11-1880 (XC8.0)",
   description: "18 V nominal Li-ion power-tool pack: 12.0 Ah (216 Wh) or 8.0 Ah (144 Wh). Owned; not on the BOM.",
   categories: ["power.battery"], tags: ["m18", "li-ion", "owned"],
@@ -22,3 +23,6 @@ export const MILWAUKEE_M18_PACK: ModuleDef = part({
   ],
   mass_g: 1542, dims: [152, 86, 99],
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const MILWAUKEE_M18_PACK: ModuleDef = withMech(MILWAUKEE_M18_PACK_ELECTRICAL as ModuleDef, "jj-body-pack");

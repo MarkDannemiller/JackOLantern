@@ -1,0 +1,129 @@
+{
+ "artifact": "jj-arm-j1-bal-anchor-a",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 43927.78,
+ "mass_g": 35.41,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "on_column": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     15.0,
+     -26.0,
+     -23.1214
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "pin_0": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -12.0,
+     4.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": true,
+    "insert": "heatset-insert-m4",
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "pin_1": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     12.0,
+     4.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": true,
+    "insert": "heatset-insert-m4",
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [
+   [
+    4,
+    1
+   ],
+   [
+    4,
+    1
+   ]
+  ],
+  "design_origin": [
+   90.51688975654116,
+   -54.0,
+   -191.87857142857143
+  ]
+ }
+}

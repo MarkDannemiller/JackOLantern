@@ -18,3 +18,8 @@ src/boards/*/tscircuit/kicad/
 # Joyful Jack regenerable output: cad/joyful_jack_cad.py, cad/tools/step2glb.py, cad/render/*
 out/cad/
 out/renders/
+# cad/mech/build.py previews and scene, model dumps, Isaac Sim URDF/USD/meshes/logs (cad/mech/sim)
+out/mech/
+
+# vendor CAD the catalog marks "not redistributed" (DSSERVO download page states no licence): local only
+parts/catalog/dsservo-ds3225mg-180/artifacts/cad/vendor/DS3218*

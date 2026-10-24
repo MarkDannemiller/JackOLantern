@@ -1,0 +1,80 @@
+{
+ "artifact": "jj-hand-b-thumb",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 55887.21,
+ "mass_g": 39.04,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "on_horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     18.2,
+     25.0,
+     30.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.707107,
+     -0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4
+   }
+  },
+  "on_rear_horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -18.2,
+     25.0,
+     30.0
+    ],
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.707107,
+     -0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.4 mm nozzle, 0.2 mm layers, 4 walls, 30 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   -70.0,
+   -560.0
+  ]
+ }
+}

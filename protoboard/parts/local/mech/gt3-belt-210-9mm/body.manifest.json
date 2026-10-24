@@ -1,0 +1,41 @@
+{
+ "artifact": "gt3-belt-210-9mm",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 2649.08,
+ "mass_g": 5.7,
+ "material": "rubber",
+ "category": "bought",
+ "features": {
+  "driver": {
+   "kind": "belt",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     4.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "",
+ "meta": {
+  "length": 210,
+  "width": 9.0,
+  "teeth": 70,
+  "profile": "GT3 (2MGT3)",
+  "working_tension_N": 179.6,
+  "rating_source": "Gates 17611-T, 507 N per 25.4 mm, computed for 9 mm"
+ }
+}

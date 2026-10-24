@@ -1,0 +1,34 @@
+{
+ "artifact": "jj-body-estop",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 439280.0,
+ "mass_g": 260.0,
+ "material": "plastic_yellow",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "box: Schneider XALK01H7 (research/sourcing); button 22 mm (parts/local/estop-22mm-nc)",
+ "meta": {}
+}

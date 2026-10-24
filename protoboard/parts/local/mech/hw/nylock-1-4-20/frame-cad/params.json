@@ -1,0 +1,13 @@
+{
+  "module": "nylock-1-4-20",
+  "name": "nylock-1-4-20",
+  "part": {
+    "diameter": 6.35,
+    "head_diameter": null,
+    "head_height": null,
+    "kind": "nut",
+    "length": 7,
+    "outer": 11.1
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

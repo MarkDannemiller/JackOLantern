@@ -1,0 +1,13 @@
+{
+  "module": "pa2x8",
+  "name": "pa2x8",
+  "part": {
+    "diameter": 2,
+    "head_diameter": 3.8,
+    "head_height": 1.6,
+    "kind": "screw",
+    "length": 8,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

@@ -1,0 +1,83 @@
+{
+ "artifact": "jj-mitt-a-paddle",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 140013.77,
+ "mass_g": 97.8,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "on_horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -20.0,
+     50.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.0,
+     -0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4
+   }
+  },
+  "on_pivot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     32.0,
+     50.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.4 mm nozzle, 0.2 mm layers, 4 walls, 30 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   -602.0
+  ]
+ }
+}

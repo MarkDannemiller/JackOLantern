@@ -8,6 +8,7 @@
  *         upper-arm twist, wrist twist and wrist pitch) and a Pollen AmazingHand with its own 5 V supply and USB.
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
+import { MECH } from "../mech/assembly.gen";
 
 const A_JOINTS = [
   ["shoulder_flex", "dsservo-ds3235", "Shoulder flex (DS3235)"],
@@ -16,7 +17,7 @@ const A_JOINTS = [
   ["grip", "towerpro-mg996r", "Mitt grip (MG996R)"],
 ] as const;
 
-export const ARM_A: ModuleDef = {
+const ARM_A: ModuleDef = {
   id: "jj-arm-a",
   name: "Arm, tier A (4 hobby servos, mitt hand)",
   kind: "module",
@@ -63,7 +64,7 @@ function busArm(id: string, name: string, description: string, joints: [string, 
   };
 }
 
-export const ARM_B: ModuleDef = busArm(
+const ARM_B: ModuleDef = busArm(
   "jj-arm-b",
   "Arm, tier B (7 Feetech STS3215, glove hand)",
   "Six-joint arm plus a two-actuator glove hand on Feetech STS3215 serial servos (position, load and temperature feedback). Shoulder flex, shoulder out and elbow through 2.73:1 GT2 belt stages; shoulder spring counterbalance.",
@@ -79,7 +80,7 @@ export const ARM_B: ModuleDef = busArm(
   false,
 );
 
-export const ARM_C: ModuleDef = busArm(
+const ARM_C: ModuleDef = busArm(
   "jj-arm-c",
   "Arm, tier C (6 Feetech joints, AmazingHand)",
   "Six-joint arm (STS3250 through 2.73:1 belts at shoulder flex, shoulder out and elbow; STS3215 at upper-arm twist, wrist twist and wrist pitch) with a Pollen AmazingHand: four two-jointed fingers.",
@@ -93,3 +94,28 @@ export const ARM_C: ModuleDef = busArm(
   ],
   true,
 );
+
+/**
+ * Each arm as built: the electrical definition above plus its mechanical parts, fastener stacks and mates
+ * (cad/mech: printed structure, bearings, belts, springs, hardware), one definition per side because the
+ * hands are mirror images. The torso mount, the bus adapter's tray and the head-side joints are exported.
+ */
+function withArmMech(base: ModuleDef, tier: "a" | "b" | "c", side: "r" | "l"): ModuleDef {
+  const m = MECH[tier].arm[side] as unknown as { children: ModuleDef["children"]; links: ModuleDef["links"]; exports: ModuleDef["exports"] };
+  const children = (base.children ?? []).map((c) => (side === "l" && c.moduleDefId === "pollen-amazinghand-kit" ? { ...c, moduleDefId: "pollen-amazinghand-kit-l" } : c));
+  return {
+    ...base,
+    id: `${base.id}-${side}`,
+    name: `${base.name}, ${side === "r" ? "right" : "left"}`,
+    children: [...children, ...(m.children ?? [])],
+    links: [...(base.links ?? []), ...(m.links ?? [])],
+    exports: [...(base.exports ?? []), ...(m.exports ?? [])],
+  };
+}
+
+export const ARM_A_R: ModuleDef = withArmMech(ARM_A, "a", "r");
+export const ARM_A_L: ModuleDef = withArmMech(ARM_A, "a", "l");
+export const ARM_B_R: ModuleDef = withArmMech(ARM_B, "b", "r");
+export const ARM_B_L: ModuleDef = withArmMech(ARM_B, "b", "l");
+export const ARM_C_R: ModuleDef = withArmMech(ARM_C, "c", "r");
+export const ARM_C_L: ModuleDef = withArmMech(ARM_C, "c", "l");

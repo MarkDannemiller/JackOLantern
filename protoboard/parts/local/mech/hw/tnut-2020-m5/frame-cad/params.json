@@ -1,0 +1,13 @@
+{
+  "module": "tnut-2020-m5",
+  "name": "tnut-2020-m5",
+  "part": {
+    "diameter": 5,
+    "head_diameter": null,
+    "head_height": null,
+    "kind": "nut",
+    "length": 4,
+    "outer": 10
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

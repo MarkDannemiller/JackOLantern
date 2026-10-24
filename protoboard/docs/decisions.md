@@ -75,3 +75,64 @@ Arm straight out, 0.25 kg payload (assumption), worst static case:
 | A | 0 errors, 0 warnings | |
 | B | 0 errors, 0 warnings | |
 | C | 0 errors, 2 warnings | `UHD_UNPOWERED pi5:5v_1/5v_2`: the Pi 5's header 5 V pins are fed internally from USB-C and not used here. |
+
+## D9 2026-10-25: full-hardware model (cad/mech, build123d) replaces the block arms
+
+Every printed part, bought part and fastener is modelled and placed by mates that reproduce UHD `assemble()`
+(checked: all 198 tier B instances match the stack's placements, worst 3.5e-5 mm). Fastener stacks are checked for
+length (thread past each nut, engagement in each insert); the check caught the tier A neck tee-nut screws 4 mm short
+(now tee nut from below plus M5 x 16). Parts and stacks are generated into UHD (`src/mech/*.gen*`), so
+`protoboard check`, hardware-cad and the release build guides read the same model.
+
+## D10 2026-10-25: belt joints on GT3 9 mm, not GT2 6 mm
+
+The joints are hollow hubs on two 6806-2RS with a printed GT3 pulley, driven 3:1 (J1/J2 60:20, 240 mm belt; J4 48:16,
+210 mm). GT2 6 mm was under-rated for the shoulder hold torque; GT3 9 mm is rated 179.6 N at the design tension
+(belt maker's table, research/sourcing). The servo horn drives the small pulley through a 5 mm dowel carried in an
+outboard 625, so the servo's output bearing takes no belt load.
+
+## D11 2026-10-25: shoulder gravity balancer is a zero-length-spring cable, not a coaxial torsion spring
+
+The earlier coaxial torsion spring was physically wrong: its torque rises with twist, while the arm's gravity torque goes
+with the sine of the angle from hanging. Replaced by two Century 90CS springs pulling a Dyneema cord over sheaves, a
+zero-length-spring layout whose torque is k a b sin(theta): k = 2.24 N/mm (two springs), a = b = 42 mm, 3.95 N.m peak.
+The J1 servo moved behind the axis so the lever clears it; J1 limits are now -35..120 deg. Every tier has it.
+
+## D12 2026-10-25: tier A on belt joints; tier C elbow STS3250
+
+The sim showed the tier A DS3235 direct drive saturating ~14 deg above hanging (it cannot lift the loaded arm), so
+tier A uses the same belt joints with DS3235 (shoulder) and DS3225 (elbow), no upper-arm twist, and an MG996R mitt.
+Tier C's elbow (J4) is now STS3250 as specified for tier C (it had been built with an STS3215); J3 and J5 stay STS3215. This raises tier A's new spend
+to about $894 against the old $500 cap; the user lifted the caps for this round (BOM v2, research/sourcing).
+
+## D13 2026-10-25: build guides per unit
+
+`protoboard.config.ts` release units are `body`, `arm_r`, `arm_l`: each unit's guide shows only its own bodies, which
+keeps the figures framed and the pages within size. Steps come from `docs/assembly-steps.gen.json` (at most 8 mates
+per step).
+
+## D14 2026-10-25: vendor CAD licences
+
+The DSSERVO DS3218 STEP (no redistribution licence) was pushed in commit 603453e to the public repo and has since been
+untracked and gitignored; it remains in history, and rewriting public history is the owner's call. Kept CAD: the
+SO-ARM100 STS3215 STEP (Apache-2.0) and the AmazingHand parts (CC BY 4.0), with their licence files in inbox/vendor-cad.
+
+## D15 2026-10-25: simulation results and the operating envelope (Isaac Sim 6.2; docs/sim-results.md)
+
+Whole robot per tier from the model's masses (URDF from cad/mech/sim/make_urdf.py), 0.25 kg in the right hand, servo
+torque-speed lines from the makers' stall and no-load figures, PD servo loops, balancer torque k a b sin(theta).
+- **Belt torque limit is a build requirement.** At stall the shoulder servos can pull a 9 mm GT3 belt far past its
+  179.6 N rating (STS3250: ~460 N). Each belt joint's servo torque limit is set so the belt never exceeds its
+  rating (Feetech torque-limit register; hobby servos via the current limit). All results below are with it.
+- **Wave** (forearm vertical: J1 90, J2 45, J3 0, J4 90; tier A J1 90, J4 90): passes on all tiers with the
+  balancer (worst joint 35-65 % of stall, within 2 deg; tier B's J1 touches the belt limit ~1 % of the time).
+  Without the balancer B and C fall 38-43 deg short: the balancer is required.
+- **Reach and grip** (J1 70, elbow 40): passes on all tiers (J1 31-40 % of stall).
+- **Arm straight out sideways (J2 90) is outside the envelope:** J2 has no balancer; A stops 19 deg short, C 59 deg,
+  B cannot lift it under the belt limit. Gestures keep the arm raised forward (J2's axis turns vertical as J1 rises);
+  a J2 balancer is the fix if a T-pose is wanted.
+- **E-stop:** servos cut at full reach; the arms fall to their rest stops, nothing leaves the robot.
+- **Tip:** a push ramped at shoulder height tips the figure at 154 / 162 / 164 N (A / B / C), with two 25 lb sandbags
+  205 / 213 / 215 N.
+- The first wave definition (abduct 95 with no twist, and a later twisted variant) put the forearm horizontal or
+  backward and saturated J1; the wave is now one definition shared by run_sim.py (WAVE_BC) and render_mech.py (WAVE).

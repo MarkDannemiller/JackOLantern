@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "heatset-insert-m3",
+    "config": "parts/local/mech/hw/heatset-insert-m3/cad.config.ts",
+    "configDigest": "sha256:52dfe25608e14e30a0b9354852a3b5763de0ede13afcc5b621613c0b721d0a2d",
+    "moduleDigest": "sha256:93130faec350a9830372eea1d303c78b259a51b89825250c077831a15812fc01"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:3034e2d09daca83942b04eff0087c0cd42a8f5b662bd2e7ab1a95375f8afdce5",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:19:09.382Z",
+  "status": "succeeded",
+  "summary": "heatset-insert-m3: body.step, body.glb, body.manifest.json in parts/local/mech/hw/heatset-insert-m3/out (66.299 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m3/out/body.step",
+      "digest": "sha256:ad8f3eb2f4650e91a660df75edaea30fc61e844978386c4dc6ae62702b1317fb",
+      "bytes": 10819,
+      "description": "heatset-insert-m3: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m3/out/body.glb",
+      "digest": "sha256:c5809a782b7972ebb96a67d7b242c50a9c920a8fcf237b830b6cbc323efaa22f",
+      "bytes": 15552,
+      "description": "heatset-insert-m3: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m3/out/body.manifest.json",
+      "digest": "sha256:69a1cd5a5876bdc3ba53b5fc0ee39aecc2f3322295cfa5b00102205e5a8ccd11",
+      "bytes": 553,
+      "description": "heatset-insert-m3: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "heatset-insert-m3",
+    "out": "parts/local/mech/hw/heatset-insert-m3/out",
+    "volume_mm3": 66.299,
+    "previousVolume_mm3": 66.299,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:19:14.023Z"
+}

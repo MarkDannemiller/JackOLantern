@@ -1,0 +1,237 @@
+{
+ "artifact": "jj-torso-base-plate",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 179968.17,
+ "mass_g": 485.91,
+ "material": "metal_alu",
+ "category": "cut",
+ "features": {
+  "flange_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     50.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.707107,
+     -0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M6",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 76.2,
+    "count": 4
+   }
+  },
+  "upright_rf_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     -60.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "upright_rb_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     60.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "upright_lf_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     -60.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "upright_lb_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     60.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "dock_1_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -45.0,
+     -10.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": false,
+    "shape": "row",
+    "spacing": 60.0,
+    "count": 2
+   }
+  },
+  "dock_2_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     45.0,
+     -10.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": false,
+    "shape": "row",
+    "spacing": 60.0,
+    "count": 2
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "metal_alu",
+  "print": "",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   817.0
+  ]
+ }
+}

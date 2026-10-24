@@ -1,0 +1,81 @@
+{
+ "artifact": "jj-wrist-c-fork-in-l",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 11727.32,
+ "mass_g": 9.45,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "on_horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -3.5,
+     0.0,
+     18.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.707107,
+     -0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4
+   }
+  },
+  "to_adapter": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -3.0,
+     0.0,
+     -25.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "row",
+    "spacing": 24.0,
+    "count": 2
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   21.7,
+   0.0,
+   -540.0
+  ],
+  "mirror_of": "jj-wrist-c-fork-in"
+ }
+}

@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "2bfe215d42ca50943778c8d4e57936173bf8253eaf3eaa61722802b2be1e053e",
+  "units": "mm",
+  "volume_mm3": 267.87,
+  "bodies": {
+    "nut": 267.87
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/tnut-2020-m5/frame-cad/params.json",
+    "digest": "sha256:3ddef3ab2e75839db465b85a1111c06b8fe1d76e8b1d20f527dd3a09f79f81b4"
+  }
+}

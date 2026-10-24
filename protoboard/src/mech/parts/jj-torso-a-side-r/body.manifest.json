@@ -1,0 +1,142 @@
+{
+ "artifact": "jj-torso-a-side-r",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 551040.0,
+ "mass_g": 358.18,
+ "material": "wood_ply",
+ "category": "cut",
+ "features": {
+  "bottom_joint": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     -164.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 100.0,
+    "count": 3,
+    "fastener": "#8 wood screw",
+    "threaded": true
+   }
+  },
+  "top_joint": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     164.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "row",
+    "spacing": 100.0,
+    "count": 3,
+    "fastener": "#8 wood screw",
+    "threaded": true
+   }
+  },
+  "ebd_0": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     6.0,
+     -40.0,
+     136.0
+    ],
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "#8 wood screw",
+    "threaded": true
+   }
+  },
+  "ebd_2": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     6.0,
+     -40.0,
+     -124.0
+    ],
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "#8 wood screw",
+    "threaded": true
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "wood_ply",
+  "print": "",
+  "inserts": [],
+  "design_origin": [
+   -100.0,
+   0.0,
+   984.0
+  ]
+ }
+}

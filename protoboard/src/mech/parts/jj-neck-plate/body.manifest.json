@@ -1,0 +1,116 @@
+{
+ "artifact": "jj-neck-plate",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 127259.04,
+ "mass_g": 343.6,
+ "material": "metal_alu",
+ "category": "cut",
+ "features": {
+  "neck_post_f_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -60.0,
+     -3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "neck_post_b_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     60.0,
+     -3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M5",
+    "threaded": false,
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "head_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     3.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M5",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 60.0,
+    "count": 4,
+    "spacing_y": 60.0
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "metal_alu",
+  "print": "",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   1265.0
+  ]
+ }
+}

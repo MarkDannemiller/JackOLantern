@@ -1,0 +1,13 @@
+{
+  "module": "tee-nut-m5-hammer-in",
+  "name": "tee-nut-m5-hammer-in",
+  "part": {
+    "diameter": 5,
+    "head_diameter": null,
+    "head_height": null,
+    "kind": "nut",
+    "length": 10,
+    "outer": 19
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

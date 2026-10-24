@@ -1,0 +1,75 @@
+{
+ "artifact": "jj-estop-bracket-a",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 21315.34,
+ "mass_g": 14.89,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "estop_seat": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     1.0,
+     -5.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  },
+  "on_board": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -11.0,
+     45.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "#8 wood screw",
+    "threaded": false
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.4 mm nozzle, 0.2 mm layers, 4 walls, 30 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   71.0,
+   1115.0
+  ]
+ }
+}

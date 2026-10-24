@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "tnut-2020-m5",
+    "config": "parts/local/mech/hw/tnut-2020-m5/cad.config.ts",
+    "configDigest": "sha256:a7c35e7a12c9e342adde87cf2361b4145cceb86532b5713bfdaca6b4f6fe2199",
+    "moduleDigest": "sha256:aa7e830cc8cc582201ce65070d2ce863046cfa4540526d767a10a759482593f6"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:777fa9e1aa72225529b88f8e7f0aa7334010afc6f7b4b93c23af5512f1898730",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T15:34:43.872Z",
+  "status": "succeeded",
+  "summary": "tnut-2020-m5: body.step, body.glb, body.manifest.json in parts/local/mech/hw/tnut-2020-m5/out (267.87 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/tnut-2020-m5/out/body.step",
+      "digest": "sha256:8c154f4695dcc267f9ccafbefa35eb16a953732d952f5b238c41d2333720c36d",
+      "bytes": 28600,
+      "description": "tnut-2020-m5: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/tnut-2020-m5/out/body.glb",
+      "digest": "sha256:d87d1c2a47e0990e34724d561629231fb7f17b789aeb13346998d532d90bdcfe",
+      "bytes": 12872,
+      "description": "tnut-2020-m5: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/tnut-2020-m5/out/body.manifest.json",
+      "digest": "sha256:cc5a9427a52445715043a2da10d1b95a0f71094f6bb90886b8f79b3aa98073c2",
+      "bytes": 545,
+      "description": "tnut-2020-m5: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "tnut-2020-m5",
+    "out": "parts/local/mech/hw/tnut-2020-m5/out",
+    "volume_mm3": 267.87,
+    "previousVolume_mm3": null,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T15:34:48.401Z"
+}

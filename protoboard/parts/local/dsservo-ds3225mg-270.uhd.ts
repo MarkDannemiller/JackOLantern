@@ -16,10 +16,11 @@
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
 import BASE from "../catalog/dsservo-ds3225mg-180.json" with { type: "json" };
+import { withMech } from "../../src/mech/lib";
 
 const base = BASE as unknown as ModuleDef;
 
-export const DSSERVO_DS3225MG_270: ModuleDef = {
+const DSSERVO_DS3225MG_270_ELECTRICAL: ModuleDef = {
   ...base,
   id: "dsservo-ds3225mg-270",
   name: "DSSERVO DS3225MG 25 kg digital servo (270°)",
@@ -52,3 +53,6 @@ export const DSSERVO_DS3225MG_270: ModuleDef = {
     },
   ],
 };
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const DSSERVO_DS3225MG_270: ModuleDef = withMech(DSSERVO_DS3225MG_270_ELECTRICAL as ModuleDef, "servo-ds3225");

@@ -1,0 +1,1579 @@
+{
+ "a": [
+  {
+   "id": "body-base",
+   "title": "Build the base: skirt, bucket, flanges and mast",
+   "mates": [
+    "body/bucket_on_skirt",
+    "body/concrete_in_bucket",
+    "body/flange_in_concrete",
+    "body/mast_in_flange",
+    "body/flange_on_mast"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "Concrete is heavy and sets fast: pour it in the bucket where it will stand, set the bottom flange on the first pour with the mast plumb, pour the rest round it and let it cure before loading the mast."
+    }
+   ]
+  },
+  {
+   "id": "body-torso",
+   "title": "Build the plywood torso on the top flange",
+   "mates": [
+    "body/board_on_flange",
+    "body/side_r_bottom_joint",
+    "body/side_r_top_joint",
+    "body/side_l_bottom_joint",
+    "body/side_l_top_joint"
+   ],
+   "notes": [
+    {
+     "kind": "tip",
+     "text": "Roll each T-nut into its slot before closing the rail; fit brackets loosely, square the box, then tighten."
+    }
+   ]
+  },
+  {
+   "id": "body-neck-1",
+   "title": "Fit the neck posts and the neck plate (1 of 2)",
+   "mates": [
+    "body/neck_plate_on_neck_post_f",
+    "body/neck_post_f_bracket_0_on_board",
+    "body/neck_post_f_bracket_0_on_post",
+    "body/neck_post_f_bracket_1_on_board",
+    "body/neck_post_f_bracket_1_on_post"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-neck-2",
+   "title": "Fit the neck posts and the neck plate (2 of 2)",
+   "mates": [
+    "body/neck_plate_on_neck_post_b",
+    "body/neck_post_b_bracket_0_on_board",
+    "body/neck_post_b_bracket_0_on_post",
+    "body/neck_post_b_bracket_1_on_board",
+    "body/neck_post_b_bracket_1_on_post"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-1",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (1 of 2)",
+   "mates": [
+    "body/ebd_cleat_0",
+    "body/ebd_cleat_1",
+    "body/ebd_cleat_2",
+    "body/ebd_cleat_3",
+    "body/tray_lvc_on_board",
+    "body/tray_buck_pi_on_board",
+    "body/tray_buck_head_on_board"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-2",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (2 of 2)",
+   "mates": [
+    "body/tray_buck_arm_on_board",
+    "body/tray_arm_driver_on_board",
+    "body/tray_fuse_pi_on_board",
+    "body/tray_fuse_head_on_board",
+    "body/tray_fuse_arm_on_board",
+    "body/estop_bracket_on_board"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-1",
+   "title": "Put the power parts in their trays and bolt down the battery docks (1 of 2)",
+   "mates": [
+    "body_lvc_in_tray",
+    "body_buck_pi_in_tray",
+    "body_buck_head_in_tray",
+    "body_buck_arm_in_tray",
+    "body_arm_driver_in_tray"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-2",
+   "title": "Put the power parts in their trays and bolt down the battery docks (2 of 2)",
+   "mates": [
+    "body_fuse_pi_in_tray",
+    "body_fuse_head_in_tray",
+    "body_fuse_arm_in_tray",
+    "dock_on_base",
+    "estop_on_bracket"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-shoulder-1",
+   "title": "Right arm: shoulder housing, J1 servo, belt and springs (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_servo_flange",
+    "arm_r/arm_r_j1_driver_on_horn",
+    "arm_r/arm_r_j1_dowel_in_pulley",
+    "arm_r/arm_r_j1_driver_bearing_seat",
+    "arm_r/arm_r_j1_belt_on_pulley",
+    "arm_r/arm_r_j1_bearing_1_seat"
+   ],
+   "notes": [
+    {
+     "kind": "tip",
+     "text": "Press every heat-set insert into the printed parts first (soldering iron with an insert tip)."
+    },
+    {
+     "kind": "tip",
+     "text": "Loop the belt on both pulleys before the cap goes on; the centre distance is fixed, so check it skips no tooth when you turn the joint by hand under load."
+    }
+   ]
+  },
+  {
+   "id": "arm-r-shoulder-2",
+   "title": "Right arm: shoulder housing, J1 servo, belt and springs (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_hub_in_bearing_1",
+    "arm_r/arm_r_j1_cap_on_drum",
+    "arm_r/arm_r_j1_bearing_2_in_cap",
+    "arm_r/arm_r_j1_hub_in_bearing_2",
+    "arm_r/arm_r_yoke_on_j1_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-balancer-1",
+   "title": "Right arm: shoulder balancer (lever, sheaves, springs and cord) (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_lever_on_hub",
+    "arm_r/arm_r_j1_spool_on_lever",
+    "arm_r/arm_r_j1_post_on_foot",
+    "arm_r/arm_r_j1_sheave_a_bearing",
+    "arm_r/arm_r_j1_sheave_a_axle",
+    "arm_r/arm_r_j1_sheave_b_bearing",
+    "arm_r/arm_r_j1_sheave_b_axle"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "The springs are under load whenever the cord is tied: tie it with the arm hanging, and keep fingers clear of the sheaves when the arm swings."
+    },
+    {
+     "kind": "tip",
+     "text": "Cut the cord so each spring is stretched by the amount in the equaliser's note with the arm hanging; the shoulder servo then needs little torque to hold the arm at any forward angle."
+    }
+   ]
+  },
+  {
+   "id": "arm-r-balancer-2",
+   "title": "Right arm: shoulder balancer (lever, sheaves, springs and cord) (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_column_on_foot",
+    "arm_r/arm_r_j1_anchor_on_column",
+    "arm_r/arm_r_j1_spring_0_on_pin",
+    "arm_r/arm_r_j1_spring_0_in_equalizer",
+    "arm_r/arm_r_j1_spring_1_on_pin",
+    "arm_r/arm_r_j1_spring_1_in_equalizer",
+    "arm_r/arm_r_j1_cord_on_equalizer"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-1",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j2_servo_flange",
+    "arm_r/arm_r_j2_driver_on_horn",
+    "arm_r/arm_r_j2_dowel_in_pulley",
+    "arm_r/arm_r_j2_driver_bearing_seat",
+    "arm_r/arm_r_j2_belt_on_pulley",
+    "arm_r/arm_r_j2_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-2",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j2_hub_in_bearing_1",
+    "arm_r/arm_r_j2_cap_on_drum",
+    "arm_r/arm_r_j2_bearing_2_in_cap",
+    "arm_r/arm_r_j2_hub_in_bearing_2",
+    "arm_r/arm_r_yoke_fork_face_a",
+    "arm_r/arm_r_yoke_fork_face_b"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-elbow-1",
+   "title": "Right arm: elbow housing and elbow drive (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j4_servo_flange",
+    "arm_r/arm_r_j4_driver_on_horn",
+    "arm_r/arm_r_j4_dowel_in_pulley",
+    "arm_r/arm_r_j4_driver_bearing_seat",
+    "arm_r/arm_r_j4_belt_on_pulley",
+    "arm_r/arm_r_j4_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-elbow-2",
+   "title": "Right arm: elbow housing and elbow drive (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j4_hub_in_bearing_1",
+    "arm_r/arm_r_j4_cap_on_drum",
+    "arm_r/arm_r_j4_bearing_2_in_cap",
+    "arm_r/arm_r_j4_hub_in_bearing_2",
+    "arm_r/arm_r_elbow_on_upper"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-forearm",
+   "title": "Right arm: forearm and wrist-twist joint",
+   "mates": [
+    "arm_r/arm_r_fork_in_on_j4",
+    "arm_r/arm_r_fork_out_on_j4",
+    "arm_r/arm_r_fork_in_to_body",
+    "arm_r/arm_r_fork_out_to_body"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-hand",
+   "title": "Right arm: hand",
+   "mates": [
+    "arm_r/arm_r_hand_grip_servo_flange",
+    "arm_r/arm_r_hand_palm_on_wrist",
+    "arm_r/arm_r_hand_paddle_on_horn",
+    "arm_r/arm_r_hand_paddle_pivot"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-shoulder-1",
+   "title": "Left arm: shoulder housing, J1 servo, belt and springs (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_servo_flange",
+    "arm_l/arm_l_j1_driver_on_horn",
+    "arm_l/arm_l_j1_dowel_in_pulley",
+    "arm_l/arm_l_j1_driver_bearing_seat",
+    "arm_l/arm_l_j1_belt_on_pulley",
+    "arm_l/arm_l_j1_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-shoulder-2",
+   "title": "Left arm: shoulder housing, J1 servo, belt and springs (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_hub_in_bearing_1",
+    "arm_l/arm_l_j1_cap_on_drum",
+    "arm_l/arm_l_j1_bearing_2_in_cap",
+    "arm_l/arm_l_j1_hub_in_bearing_2",
+    "arm_l/arm_l_yoke_on_j1_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-balancer-1",
+   "title": "Left arm: shoulder balancer (lever, sheaves, springs and cord) (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_lever_on_hub",
+    "arm_l/arm_l_j1_spool_on_lever",
+    "arm_l/arm_l_j1_post_on_foot",
+    "arm_l/arm_l_j1_sheave_a_bearing",
+    "arm_l/arm_l_j1_sheave_a_axle",
+    "arm_l/arm_l_j1_sheave_b_bearing",
+    "arm_l/arm_l_j1_sheave_b_axle"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-balancer-2",
+   "title": "Left arm: shoulder balancer (lever, sheaves, springs and cord) (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_column_on_foot",
+    "arm_l/arm_l_j1_anchor_on_column",
+    "arm_l/arm_l_j1_spring_0_on_pin",
+    "arm_l/arm_l_j1_spring_0_in_equalizer",
+    "arm_l/arm_l_j1_spring_1_on_pin",
+    "arm_l/arm_l_j1_spring_1_in_equalizer",
+    "arm_l/arm_l_j1_cord_on_equalizer"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-1",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j2_servo_flange",
+    "arm_l/arm_l_j2_driver_on_horn",
+    "arm_l/arm_l_j2_dowel_in_pulley",
+    "arm_l/arm_l_j2_driver_bearing_seat",
+    "arm_l/arm_l_j2_belt_on_pulley",
+    "arm_l/arm_l_j2_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-2",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j2_hub_in_bearing_1",
+    "arm_l/arm_l_j2_cap_on_drum",
+    "arm_l/arm_l_j2_bearing_2_in_cap",
+    "arm_l/arm_l_j2_hub_in_bearing_2",
+    "arm_l/arm_l_yoke_fork_face_a",
+    "arm_l/arm_l_yoke_fork_face_b"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-elbow-1",
+   "title": "Left arm: elbow housing and elbow drive (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j4_servo_flange",
+    "arm_l/arm_l_j4_driver_on_horn",
+    "arm_l/arm_l_j4_dowel_in_pulley",
+    "arm_l/arm_l_j4_driver_bearing_seat",
+    "arm_l/arm_l_j4_belt_on_pulley",
+    "arm_l/arm_l_j4_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-elbow-2",
+   "title": "Left arm: elbow housing and elbow drive (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j4_hub_in_bearing_1",
+    "arm_l/arm_l_j4_cap_on_drum",
+    "arm_l/arm_l_j4_bearing_2_in_cap",
+    "arm_l/arm_l_j4_hub_in_bearing_2",
+    "arm_l/arm_l_elbow_on_upper"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-forearm",
+   "title": "Left arm: forearm and wrist-twist joint",
+   "mates": [
+    "arm_l/arm_l_fork_in_on_j4",
+    "arm_l/arm_l_fork_out_on_j4",
+    "arm_l/arm_l_fork_in_to_body",
+    "arm_l/arm_l_fork_out_to_body"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-hand",
+   "title": "Left arm: hand",
+   "mates": [
+    "arm_l/arm_l_hand_grip_servo_flange",
+    "arm_l/arm_l_hand_palm_on_wrist",
+    "arm_l/arm_l_hand_paddle_on_horn",
+    "arm_l/arm_l_hand_paddle_pivot"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-arms",
+   "title": "Mount the arms on the torso",
+   "mates": [
+    "arm_r_foot",
+    "arm_l_foot"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-head",
+   "title": "Fit the head on the neck plate",
+   "mates": [
+    "head_on_neck_plate"
+   ],
+   "notes": [
+    {
+     "kind": "warning",
+     "text": "The head's base screw pattern is not in the received CAD: mark and drill the neck plate from the head itself before this step."
+    }
+   ]
+  },
+  {
+   "id": "root-battery",
+   "title": "Slide the battery packs onto the docks",
+   "mates": [
+    "pack_on_dock"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "Fit the packs last, with the E-stop pressed in, after the wiring has been checked."
+    }
+   ],
+   "after": "test"
+  }
+ ],
+ "b": [
+  {
+   "id": "body-base",
+   "title": "Build the base: skirt, bucket, flanges and mast",
+   "mates": [
+    "body/bucket_on_skirt",
+    "body/concrete_in_bucket",
+    "body/flange_in_concrete",
+    "body/mast_in_flange",
+    "body/flange_on_mast"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "Concrete is heavy and sets fast: pour it in the bucket where it will stand, set the bottom flange on the first pour with the mast plumb, pour the rest round it and let it cure before loading the mast."
+    }
+   ]
+  },
+  {
+   "id": "body-torso-1",
+   "title": "Build the torso frame on the top flange (1 of 5)",
+   "mates": [
+    "body/plate_on_flange",
+    "body/upright_rf_on_plate",
+    "body/upright_rb_on_plate",
+    "body/upright_lf_on_plate",
+    "body/upright_lb_on_plate",
+    "body/bracket_01_on_rail",
+    "body/bracket_01_on_upright",
+    "body/bracket_02_on_rail"
+   ],
+   "notes": [
+    {
+     "kind": "tip",
+     "text": "Roll each T-nut into its slot before closing the rail; fit brackets loosely, square the box, then tighten."
+    }
+   ]
+  },
+  {
+   "id": "body-torso-2",
+   "title": "Build the torso frame on the top flange (2 of 5)",
+   "mates": [
+    "body/bracket_02_on_upright",
+    "body/bracket_03_on_rail",
+    "body/bracket_03_on_upright",
+    "body/bracket_04_on_rail",
+    "body/bracket_04_on_upright",
+    "body/bracket_05_on_rail",
+    "body/bracket_05_on_upright",
+    "body/bracket_06_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-torso-3",
+   "title": "Build the torso frame on the top flange (3 of 5)",
+   "mates": [
+    "body/bracket_06_on_upright",
+    "body/bracket_07_on_rail",
+    "body/bracket_07_on_upright",
+    "body/bracket_08_on_rail",
+    "body/bracket_08_on_upright",
+    "body/bracket_09_on_rail",
+    "body/bracket_09_on_upright",
+    "body/bracket_10_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-torso-4",
+   "title": "Build the torso frame on the top flange (4 of 5)",
+   "mates": [
+    "body/bracket_10_on_upright",
+    "body/bracket_11_on_rail",
+    "body/bracket_11_on_upright",
+    "body/bracket_12_on_rail",
+    "body/bracket_12_on_upright",
+    "body/bracket_13_on_rail",
+    "body/bracket_13_on_upright",
+    "body/bracket_14_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-torso-5",
+   "title": "Build the torso frame on the top flange (5 of 5)",
+   "mates": [
+    "body/bracket_14_on_upright",
+    "body/bracket_15_on_rail",
+    "body/bracket_15_on_upright",
+    "body/bracket_16_on_rail",
+    "body/bracket_16_on_upright"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-neck-1",
+   "title": "Fit the neck posts and the neck plate (1 of 2)",
+   "mates": [
+    "body/neck_plate_on_neck_post_f",
+    "body/neck_post_f_bracket_0_on_rail",
+    "body/neck_post_f_bracket_0_on_post",
+    "body/neck_post_f_bracket_1_on_rail",
+    "body/neck_post_f_bracket_1_on_post"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-neck-2",
+   "title": "Fit the neck posts and the neck plate (2 of 2)",
+   "mates": [
+    "body/neck_plate_on_neck_post_b",
+    "body/neck_post_b_bracket_0_on_rail",
+    "body/neck_post_b_bracket_0_on_post",
+    "body/neck_post_b_bracket_1_on_rail",
+    "body/neck_post_b_bracket_1_on_post"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-1",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (1 of 3)",
+   "mates": [
+    "body/ebd_tab_0",
+    "body/ebd_tab_1",
+    "body/ebd_tab_2",
+    "body/ebd_tab_3",
+    "body/tray_or_1_on_board",
+    "body/tray_or_2_on_board"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-2",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (2 of 3)",
+   "mates": [
+    "body/tray_monitor_on_board",
+    "body/tray_lvc_on_board",
+    "body/tray_fuses_on_board",
+    "body/tray_relay_on_board",
+    "body/tray_buck_head_on_board",
+    "body/tray_buck_pi_on_board"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-3",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (3 of 3)",
+   "mates": [
+    "body/tray_buck_arm_r_on_board",
+    "body/tray_buck_arm_l_on_board",
+    "body/tray_arm_r__bus_adapter_on_board",
+    "body/tray_arm_l__bus_adapter_on_board",
+    "body/estop_bracket_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-1",
+   "title": "Put the power parts in their trays and bolt down the battery docks (1 of 2)",
+   "mates": [
+    "body_or_1_in_tray",
+    "body_or_2_in_tray",
+    "body_monitor_in_tray",
+    "body_lvc_in_tray",
+    "body_fuses_in_tray",
+    "body_relay_in_tray",
+    "body_buck_head_in_tray",
+    "body_buck_pi_in_tray"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-2",
+   "title": "Put the power parts in their trays and bolt down the battery docks (2 of 2)",
+   "mates": [
+    "body_buck_arm_r_in_tray",
+    "body_buck_arm_l_in_tray",
+    "body_arm_r__bus_adapter_in_tray",
+    "body_arm_l__bus_adapter_in_tray",
+    "dock_1_on_base",
+    "dock_2_on_base",
+    "estop_on_bracket"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-shoulder-1",
+   "title": "Right arm: shoulder housing, J1 servo, belt and springs (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_servo_case_top",
+    "arm_r/arm_r_j1_servo_case_bottom",
+    "arm_r/arm_r_j1_driver_on_horn",
+    "arm_r/arm_r_j1_dowel_in_pulley",
+    "arm_r/arm_r_j1_driver_bearing_seat",
+    "arm_r/arm_r_j1_belt_on_pulley"
+   ],
+   "notes": [
+    {
+     "kind": "tip",
+     "text": "Press every heat-set insert into the printed parts first (soldering iron with an insert tip)."
+    },
+    {
+     "kind": "tip",
+     "text": "Loop the belt on both pulleys before the cap goes on; the centre distance is fixed, so check it skips no tooth when you turn the joint by hand under load."
+    }
+   ]
+  },
+  {
+   "id": "arm-r-shoulder-2",
+   "title": "Right arm: shoulder housing, J1 servo, belt and springs (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_bearing_1_seat",
+    "arm_r/arm_r_j1_hub_in_bearing_1",
+    "arm_r/arm_r_j1_cap_on_drum",
+    "arm_r/arm_r_j1_bearing_2_in_cap",
+    "arm_r/arm_r_j1_hub_in_bearing_2",
+    "arm_r/arm_r_yoke_on_j1_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-balancer-1",
+   "title": "Right arm: shoulder balancer (lever, sheaves, springs and cord) (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_lever_on_hub",
+    "arm_r/arm_r_j1_spool_on_lever",
+    "arm_r/arm_r_j1_post_on_foot",
+    "arm_r/arm_r_j1_sheave_a_bearing",
+    "arm_r/arm_r_j1_sheave_a_axle",
+    "arm_r/arm_r_j1_sheave_b_bearing",
+    "arm_r/arm_r_j1_sheave_b_axle"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "The springs are under load whenever the cord is tied: tie it with the arm hanging, and keep fingers clear of the sheaves when the arm swings."
+    },
+    {
+     "kind": "tip",
+     "text": "Cut the cord so each spring is stretched by the amount in the equaliser's note with the arm hanging; the shoulder servo then needs little torque to hold the arm at any forward angle."
+    }
+   ]
+  },
+  {
+   "id": "arm-r-balancer-2",
+   "title": "Right arm: shoulder balancer (lever, sheaves, springs and cord) (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_column_on_foot",
+    "arm_r/arm_r_j1_anchor_on_column",
+    "arm_r/arm_r_j1_spring_0_on_pin",
+    "arm_r/arm_r_j1_spring_0_in_equalizer",
+    "arm_r/arm_r_j1_spring_1_on_pin",
+    "arm_r/arm_r_j1_spring_1_in_equalizer",
+    "arm_r/arm_r_j1_cord_on_equalizer"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-1",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (1 of 3)",
+   "mates": [
+    "arm_r/arm_r_j2_servo_case_top",
+    "arm_r/arm_r_j2_servo_case_bottom",
+    "arm_r/arm_r_j2_driver_on_horn",
+    "arm_r/arm_r_j2_dowel_in_pulley",
+    "arm_r/arm_r_j2_driver_bearing_seat",
+    "arm_r/arm_r_j2_belt_on_pulley",
+    "arm_r/arm_r_j2_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-2",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (2 of 3)",
+   "mates": [
+    "arm_r/arm_r_j2_hub_in_bearing_1",
+    "arm_r/arm_r_j2_cap_on_drum",
+    "arm_r/arm_r_j2_bearing_2_in_cap",
+    "arm_r/arm_r_j2_hub_in_bearing_2",
+    "arm_r/arm_r_yoke_fork_face_a",
+    "arm_r/arm_r_yoke_fork_face_b",
+    "arm_r/arm_r_j3_servo_case_top"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-3",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (3 of 3)",
+   "mates": [
+    "arm_r/arm_r_j3_servo_case_bottom",
+    "arm_r/arm_r_j3_bearing_up_seat",
+    "arm_r/arm_r_j3_bearing_lo_seat",
+    "arm_r/arm_r_j3_disc_on_horn",
+    "arm_r/arm_r_j3_hub_in_bearing",
+    "arm_r/arm_r_j3_hub_to_disc"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-elbow-1",
+   "title": "Right arm: elbow housing and elbow drive (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j4_servo_case_top",
+    "arm_r/arm_r_j4_servo_case_bottom",
+    "arm_r/arm_r_j4_driver_on_horn",
+    "arm_r/arm_r_j4_dowel_in_pulley",
+    "arm_r/arm_r_j4_driver_bearing_seat",
+    "arm_r/arm_r_j4_belt_on_pulley"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-elbow-2",
+   "title": "Right arm: elbow housing and elbow drive (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j4_bearing_1_seat",
+    "arm_r/arm_r_j4_hub_in_bearing_1",
+    "arm_r/arm_r_j4_cap_on_drum",
+    "arm_r/arm_r_j4_bearing_2_in_cap",
+    "arm_r/arm_r_j4_hub_in_bearing_2",
+    "arm_r/arm_r_elbow_on_j3_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-forearm-1",
+   "title": "Right arm: forearm and wrist-twist joint (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_fork_in_on_j4",
+    "arm_r/arm_r_fork_out_on_j4",
+    "arm_r/arm_r_j5_servo_case_top",
+    "arm_r/arm_r_j5_servo_case_bottom",
+    "arm_r/arm_r_j5_bearing_up_seat",
+    "arm_r/arm_r_j5_bearing_lo_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-forearm-2",
+   "title": "Right arm: forearm and wrist-twist joint (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j5_disc_on_horn",
+    "arm_r/arm_r_j5_hub_in_bearing",
+    "arm_r/arm_r_j5_hub_to_disc",
+    "arm_r/arm_r_fork_in_to_body",
+    "arm_r/arm_r_fork_out_to_body"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-hand-1",
+   "title": "Right arm: hand (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_hand_palm_on_wrist",
+    "arm_r/arm_r_hand_fingers_servo_case_top",
+    "arm_r/arm_r_hand_fingers_servo_case_bottom",
+    "arm_r/arm_r_hand_thumb_servo_case_top",
+    "arm_r/arm_r_hand_thumb_servo_case_bottom"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-hand-2",
+   "title": "Right arm: hand (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_hand_fingers_on_horn",
+    "arm_r/arm_r_hand_fingers_on_rear_horn",
+    "arm_r/arm_r_hand_thumb_on_horn",
+    "arm_r/arm_r_hand_thumb_on_rear_horn"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-shoulder-1",
+   "title": "Left arm: shoulder housing, J1 servo, belt and springs (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_servo_case_top",
+    "arm_l/arm_l_j1_servo_case_bottom",
+    "arm_l/arm_l_j1_driver_on_horn",
+    "arm_l/arm_l_j1_dowel_in_pulley",
+    "arm_l/arm_l_j1_driver_bearing_seat",
+    "arm_l/arm_l_j1_belt_on_pulley"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-shoulder-2",
+   "title": "Left arm: shoulder housing, J1 servo, belt and springs (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_bearing_1_seat",
+    "arm_l/arm_l_j1_hub_in_bearing_1",
+    "arm_l/arm_l_j1_cap_on_drum",
+    "arm_l/arm_l_j1_bearing_2_in_cap",
+    "arm_l/arm_l_j1_hub_in_bearing_2",
+    "arm_l/arm_l_yoke_on_j1_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-balancer-1",
+   "title": "Left arm: shoulder balancer (lever, sheaves, springs and cord) (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_lever_on_hub",
+    "arm_l/arm_l_j1_spool_on_lever",
+    "arm_l/arm_l_j1_post_on_foot",
+    "arm_l/arm_l_j1_sheave_a_bearing",
+    "arm_l/arm_l_j1_sheave_a_axle",
+    "arm_l/arm_l_j1_sheave_b_bearing",
+    "arm_l/arm_l_j1_sheave_b_axle"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-balancer-2",
+   "title": "Left arm: shoulder balancer (lever, sheaves, springs and cord) (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_column_on_foot",
+    "arm_l/arm_l_j1_anchor_on_column",
+    "arm_l/arm_l_j1_spring_0_on_pin",
+    "arm_l/arm_l_j1_spring_0_in_equalizer",
+    "arm_l/arm_l_j1_spring_1_on_pin",
+    "arm_l/arm_l_j1_spring_1_in_equalizer",
+    "arm_l/arm_l_j1_cord_on_equalizer"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-1",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (1 of 3)",
+   "mates": [
+    "arm_l/arm_l_j2_servo_case_top",
+    "arm_l/arm_l_j2_servo_case_bottom",
+    "arm_l/arm_l_j2_driver_on_horn",
+    "arm_l/arm_l_j2_dowel_in_pulley",
+    "arm_l/arm_l_j2_driver_bearing_seat",
+    "arm_l/arm_l_j2_belt_on_pulley",
+    "arm_l/arm_l_j2_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-2",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (2 of 3)",
+   "mates": [
+    "arm_l/arm_l_j2_hub_in_bearing_1",
+    "arm_l/arm_l_j2_cap_on_drum",
+    "arm_l/arm_l_j2_bearing_2_in_cap",
+    "arm_l/arm_l_j2_hub_in_bearing_2",
+    "arm_l/arm_l_yoke_fork_face_a",
+    "arm_l/arm_l_yoke_fork_face_b",
+    "arm_l/arm_l_j3_servo_case_top"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-3",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (3 of 3)",
+   "mates": [
+    "arm_l/arm_l_j3_servo_case_bottom",
+    "arm_l/arm_l_j3_bearing_up_seat",
+    "arm_l/arm_l_j3_bearing_lo_seat",
+    "arm_l/arm_l_j3_disc_on_horn",
+    "arm_l/arm_l_j3_hub_in_bearing",
+    "arm_l/arm_l_j3_hub_to_disc"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-elbow-1",
+   "title": "Left arm: elbow housing and elbow drive (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j4_servo_case_top",
+    "arm_l/arm_l_j4_servo_case_bottom",
+    "arm_l/arm_l_j4_driver_on_horn",
+    "arm_l/arm_l_j4_dowel_in_pulley",
+    "arm_l/arm_l_j4_driver_bearing_seat",
+    "arm_l/arm_l_j4_belt_on_pulley"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-elbow-2",
+   "title": "Left arm: elbow housing and elbow drive (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j4_bearing_1_seat",
+    "arm_l/arm_l_j4_hub_in_bearing_1",
+    "arm_l/arm_l_j4_cap_on_drum",
+    "arm_l/arm_l_j4_bearing_2_in_cap",
+    "arm_l/arm_l_j4_hub_in_bearing_2",
+    "arm_l/arm_l_elbow_on_j3_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-forearm-1",
+   "title": "Left arm: forearm and wrist-twist joint (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_fork_in_on_j4",
+    "arm_l/arm_l_fork_out_on_j4",
+    "arm_l/arm_l_j5_servo_case_top",
+    "arm_l/arm_l_j5_servo_case_bottom",
+    "arm_l/arm_l_j5_bearing_up_seat",
+    "arm_l/arm_l_j5_bearing_lo_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-forearm-2",
+   "title": "Left arm: forearm and wrist-twist joint (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j5_disc_on_horn",
+    "arm_l/arm_l_j5_hub_in_bearing",
+    "arm_l/arm_l_j5_hub_to_disc",
+    "arm_l/arm_l_fork_in_to_body",
+    "arm_l/arm_l_fork_out_to_body"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-hand-1",
+   "title": "Left arm: hand (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_hand_palm_on_wrist",
+    "arm_l/arm_l_hand_fingers_servo_case_top",
+    "arm_l/arm_l_hand_fingers_servo_case_bottom",
+    "arm_l/arm_l_hand_thumb_servo_case_top",
+    "arm_l/arm_l_hand_thumb_servo_case_bottom"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-hand-2",
+   "title": "Left arm: hand (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_hand_fingers_on_horn",
+    "arm_l/arm_l_hand_fingers_on_rear_horn",
+    "arm_l/arm_l_hand_thumb_on_horn",
+    "arm_l/arm_l_hand_thumb_on_rear_horn"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-arms",
+   "title": "Mount the arms on the torso",
+   "mates": [
+    "arm_r_foot",
+    "arm_l_foot"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-head",
+   "title": "Fit the head on the neck plate",
+   "mates": [
+    "head_on_neck_plate"
+   ],
+   "notes": [
+    {
+     "kind": "warning",
+     "text": "The head's base screw pattern is not in the received CAD: mark and drill the neck plate from the head itself before this step."
+    }
+   ]
+  },
+  {
+   "id": "root-battery",
+   "title": "Slide the battery packs onto the docks",
+   "mates": [
+    "pack_1_on_dock_1",
+    "pack_2_on_dock_2"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "Fit the packs last, with the E-stop pressed in, after the wiring has been checked."
+    }
+   ],
+   "after": "test"
+  }
+ ],
+ "c": [
+  {
+   "id": "body-base",
+   "title": "Build the base: skirt, bucket, flanges and mast",
+   "mates": [
+    "body/bucket_on_skirt",
+    "body/concrete_in_bucket",
+    "body/flange_in_concrete",
+    "body/mast_in_flange",
+    "body/flange_on_mast"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "Concrete is heavy and sets fast: pour it in the bucket where it will stand, set the bottom flange on the first pour with the mast plumb, pour the rest round it and let it cure before loading the mast."
+    }
+   ]
+  },
+  {
+   "id": "body-torso-1",
+   "title": "Build the torso frame on the top flange (1 of 5)",
+   "mates": [
+    "body/plate_on_flange",
+    "body/upright_rf_on_plate",
+    "body/upright_rb_on_plate",
+    "body/upright_lf_on_plate",
+    "body/upright_lb_on_plate",
+    "body/bracket_01_on_rail",
+    "body/bracket_01_on_upright",
+    "body/bracket_02_on_rail"
+   ],
+   "notes": [
+    {
+     "kind": "tip",
+     "text": "Roll each T-nut into its slot before closing the rail; fit brackets loosely, square the box, then tighten."
+    }
+   ]
+  },
+  {
+   "id": "body-torso-2",
+   "title": "Build the torso frame on the top flange (2 of 5)",
+   "mates": [
+    "body/bracket_02_on_upright",
+    "body/bracket_03_on_rail",
+    "body/bracket_03_on_upright",
+    "body/bracket_04_on_rail",
+    "body/bracket_04_on_upright",
+    "body/bracket_05_on_rail",
+    "body/bracket_05_on_upright",
+    "body/bracket_06_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-torso-3",
+   "title": "Build the torso frame on the top flange (3 of 5)",
+   "mates": [
+    "body/bracket_06_on_upright",
+    "body/bracket_07_on_rail",
+    "body/bracket_07_on_upright",
+    "body/bracket_08_on_rail",
+    "body/bracket_08_on_upright",
+    "body/bracket_09_on_rail",
+    "body/bracket_09_on_upright",
+    "body/bracket_10_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-torso-4",
+   "title": "Build the torso frame on the top flange (4 of 5)",
+   "mates": [
+    "body/bracket_10_on_upright",
+    "body/bracket_11_on_rail",
+    "body/bracket_11_on_upright",
+    "body/bracket_12_on_rail",
+    "body/bracket_12_on_upright",
+    "body/bracket_13_on_rail",
+    "body/bracket_13_on_upright",
+    "body/bracket_14_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-torso-5",
+   "title": "Build the torso frame on the top flange (5 of 5)",
+   "mates": [
+    "body/bracket_14_on_upright",
+    "body/bracket_15_on_rail",
+    "body/bracket_15_on_upright",
+    "body/bracket_16_on_rail",
+    "body/bracket_16_on_upright"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-neck-1",
+   "title": "Fit the neck posts and the neck plate (1 of 2)",
+   "mates": [
+    "body/neck_plate_on_neck_post_f",
+    "body/neck_post_f_bracket_0_on_rail",
+    "body/neck_post_f_bracket_0_on_post",
+    "body/neck_post_f_bracket_1_on_rail",
+    "body/neck_post_f_bracket_1_on_post"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-neck-2",
+   "title": "Fit the neck posts and the neck plate (2 of 2)",
+   "mates": [
+    "body/neck_plate_on_neck_post_b",
+    "body/neck_post_b_bracket_0_on_rail",
+    "body/neck_post_b_bracket_0_on_post",
+    "body/neck_post_b_bracket_1_on_rail",
+    "body/neck_post_b_bracket_1_on_post"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-1",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (1 of 3)",
+   "mates": [
+    "body/ebd_tab_0",
+    "body/ebd_tab_1",
+    "body/ebd_tab_2",
+    "body/ebd_tab_3",
+    "body/tray_or_1_on_board",
+    "body/tray_or_2_on_board",
+    "body/tray_monitor_on_board",
+    "body/tray_lvc_on_board"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-2",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (2 of 3)",
+   "mates": [
+    "body/tray_fuses_on_board",
+    "body/tray_relay_on_board",
+    "body/tray_buck_head_on_board",
+    "body/tray_buck_pi_on_board",
+    "body/tray_buck_arm_r_on_board",
+    "body/tray_buck_arm_l_on_board",
+    "body/tray_arm_r__bus_adapter_on_board",
+    "body/tray_arm_l__bus_adapter_on_board"
+   ],
+   "notes": []
+  },
+  {
+   "id": "body-electronics-3",
+   "title": "Fit the electronics board, its trays and the E-stop bracket (3 of 3)",
+   "mates": [
+    "body/tray_pi5_on_board",
+    "body/tray_buck_pi5_on_board",
+    "body/tray_buck_hand_r_on_board",
+    "body/tray_buck_hand_l_on_board",
+    "body/tray_or_3_on_board",
+    "body/estop_bracket_on_rail"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-1",
+   "title": "Put the power parts in their trays and bolt down the battery docks (1 of 3)",
+   "mates": [
+    "body_or_1_in_tray",
+    "body_or_2_in_tray",
+    "body_monitor_in_tray",
+    "body_lvc_in_tray",
+    "body_fuses_in_tray",
+    "body_relay_in_tray",
+    "body_buck_head_in_tray"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-2",
+   "title": "Put the power parts in their trays and bolt down the battery docks (2 of 3)",
+   "mates": [
+    "body_buck_pi_in_tray",
+    "body_buck_arm_r_in_tray",
+    "body_buck_arm_l_in_tray",
+    "body_arm_r__bus_adapter_in_tray",
+    "body_arm_l__bus_adapter_in_tray",
+    "body_buck_pi5_in_tray",
+    "body_buck_hand_r_in_tray"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-electronics-root-3",
+   "title": "Put the power parts in their trays and bolt down the battery docks (3 of 3)",
+   "mates": [
+    "body_buck_hand_l_in_tray",
+    "body_or_3_in_tray",
+    "dock_1_on_base",
+    "dock_2_on_base",
+    "estop_on_bracket"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-shoulder-1",
+   "title": "Right arm: shoulder housing, J1 servo, belt and springs (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_servo_case_top",
+    "arm_r/arm_r_j1_servo_case_bottom",
+    "arm_r/arm_r_j1_driver_on_horn",
+    "arm_r/arm_r_j1_dowel_in_pulley",
+    "arm_r/arm_r_j1_driver_bearing_seat",
+    "arm_r/arm_r_j1_belt_on_pulley"
+   ],
+   "notes": [
+    {
+     "kind": "tip",
+     "text": "Press every heat-set insert into the printed parts first (soldering iron with an insert tip)."
+    },
+    {
+     "kind": "tip",
+     "text": "Loop the belt on both pulleys before the cap goes on; the centre distance is fixed, so check it skips no tooth when you turn the joint by hand under load."
+    }
+   ]
+  },
+  {
+   "id": "arm-r-shoulder-2",
+   "title": "Right arm: shoulder housing, J1 servo, belt and springs (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_bearing_1_seat",
+    "arm_r/arm_r_j1_hub_in_bearing_1",
+    "arm_r/arm_r_j1_cap_on_drum",
+    "arm_r/arm_r_j1_bearing_2_in_cap",
+    "arm_r/arm_r_j1_hub_in_bearing_2",
+    "arm_r/arm_r_yoke_on_j1_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-balancer-1",
+   "title": "Right arm: shoulder balancer (lever, sheaves, springs and cord) (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_lever_on_hub",
+    "arm_r/arm_r_j1_spool_on_lever",
+    "arm_r/arm_r_j1_post_on_foot",
+    "arm_r/arm_r_j1_sheave_a_bearing",
+    "arm_r/arm_r_j1_sheave_a_axle",
+    "arm_r/arm_r_j1_sheave_b_bearing",
+    "arm_r/arm_r_j1_sheave_b_axle"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "The springs are under load whenever the cord is tied: tie it with the arm hanging, and keep fingers clear of the sheaves when the arm swings."
+    },
+    {
+     "kind": "tip",
+     "text": "Cut the cord so each spring is stretched by the amount in the equaliser's note with the arm hanging; the shoulder servo then needs little torque to hold the arm at any forward angle."
+    }
+   ]
+  },
+  {
+   "id": "arm-r-balancer-2",
+   "title": "Right arm: shoulder balancer (lever, sheaves, springs and cord) (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j1_column_on_foot",
+    "arm_r/arm_r_j1_anchor_on_column",
+    "arm_r/arm_r_j1_spring_0_on_pin",
+    "arm_r/arm_r_j1_spring_0_in_equalizer",
+    "arm_r/arm_r_j1_spring_1_on_pin",
+    "arm_r/arm_r_j1_spring_1_in_equalizer",
+    "arm_r/arm_r_j1_cord_on_equalizer"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-1",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (1 of 3)",
+   "mates": [
+    "arm_r/arm_r_j2_servo_case_top",
+    "arm_r/arm_r_j2_servo_case_bottom",
+    "arm_r/arm_r_j2_driver_on_horn",
+    "arm_r/arm_r_j2_dowel_in_pulley",
+    "arm_r/arm_r_j2_driver_bearing_seat",
+    "arm_r/arm_r_j2_belt_on_pulley",
+    "arm_r/arm_r_j2_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-2",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (2 of 3)",
+   "mates": [
+    "arm_r/arm_r_j2_hub_in_bearing_1",
+    "arm_r/arm_r_j2_cap_on_drum",
+    "arm_r/arm_r_j2_bearing_2_in_cap",
+    "arm_r/arm_r_j2_hub_in_bearing_2",
+    "arm_r/arm_r_yoke_fork_face_a",
+    "arm_r/arm_r_yoke_fork_face_b",
+    "arm_r/arm_r_j3_servo_case_top"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-upper-3",
+   "title": "Right arm: yoke and upper arm (shoulder-out and twist joints) (3 of 3)",
+   "mates": [
+    "arm_r/arm_r_j3_servo_case_bottom",
+    "arm_r/arm_r_j3_bearing_up_seat",
+    "arm_r/arm_r_j3_bearing_lo_seat",
+    "arm_r/arm_r_j3_disc_on_horn",
+    "arm_r/arm_r_j3_hub_in_bearing",
+    "arm_r/arm_r_j3_hub_to_disc"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-elbow-1",
+   "title": "Right arm: elbow housing and elbow drive (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_j4_servo_case_top",
+    "arm_r/arm_r_j4_servo_case_bottom",
+    "arm_r/arm_r_j4_driver_on_horn",
+    "arm_r/arm_r_j4_dowel_in_pulley",
+    "arm_r/arm_r_j4_driver_bearing_seat",
+    "arm_r/arm_r_j4_belt_on_pulley"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-elbow-2",
+   "title": "Right arm: elbow housing and elbow drive (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j4_bearing_1_seat",
+    "arm_r/arm_r_j4_hub_in_bearing_1",
+    "arm_r/arm_r_j4_cap_on_drum",
+    "arm_r/arm_r_j4_bearing_2_in_cap",
+    "arm_r/arm_r_j4_hub_in_bearing_2",
+    "arm_r/arm_r_elbow_on_j3_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-forearm-1",
+   "title": "Right arm: forearm and wrist-twist joint (1 of 2)",
+   "mates": [
+    "arm_r/arm_r_fork_in_on_j4",
+    "arm_r/arm_r_fork_out_on_j4",
+    "arm_r/arm_r_j5_servo_case_top",
+    "arm_r/arm_r_j5_servo_case_bottom",
+    "arm_r/arm_r_j5_bearing_up_seat",
+    "arm_r/arm_r_j5_bearing_lo_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-forearm-2",
+   "title": "Right arm: forearm and wrist-twist joint (2 of 2)",
+   "mates": [
+    "arm_r/arm_r_j5_disc_on_horn",
+    "arm_r/arm_r_j5_hub_in_bearing",
+    "arm_r/arm_r_j5_hub_to_disc",
+    "arm_r/arm_r_fork_in_to_body",
+    "arm_r/arm_r_fork_out_to_body"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-r-wrist",
+   "title": "Right arm: wrist pitch and hand",
+   "mates": [
+    "arm_r/arm_r_hand_block_on_wrist",
+    "arm_r/arm_r_hand_j6_servo_case_top",
+    "arm_r/arm_r_hand_j6_servo_case_bottom",
+    "arm_r/arm_r_hand_fork_in_on_horn",
+    "arm_r/arm_r_hand_fork_out_on_horn",
+    "arm_r/arm_r_hand_adapter_to_fork_in",
+    "arm_r/arm_r_hand_adapter_to_fork_out",
+    "arm_r/arm_r_hand_hand_on_adapter"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-shoulder-1",
+   "title": "Left arm: shoulder housing, J1 servo, belt and springs (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_servo_case_top",
+    "arm_l/arm_l_j1_servo_case_bottom",
+    "arm_l/arm_l_j1_driver_on_horn",
+    "arm_l/arm_l_j1_dowel_in_pulley",
+    "arm_l/arm_l_j1_driver_bearing_seat",
+    "arm_l/arm_l_j1_belt_on_pulley"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-shoulder-2",
+   "title": "Left arm: shoulder housing, J1 servo, belt and springs (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_bearing_1_seat",
+    "arm_l/arm_l_j1_hub_in_bearing_1",
+    "arm_l/arm_l_j1_cap_on_drum",
+    "arm_l/arm_l_j1_bearing_2_in_cap",
+    "arm_l/arm_l_j1_hub_in_bearing_2",
+    "arm_l/arm_l_yoke_on_j1_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-balancer-1",
+   "title": "Left arm: shoulder balancer (lever, sheaves, springs and cord) (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_lever_on_hub",
+    "arm_l/arm_l_j1_spool_on_lever",
+    "arm_l/arm_l_j1_post_on_foot",
+    "arm_l/arm_l_j1_sheave_a_bearing",
+    "arm_l/arm_l_j1_sheave_a_axle",
+    "arm_l/arm_l_j1_sheave_b_bearing",
+    "arm_l/arm_l_j1_sheave_b_axle"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-balancer-2",
+   "title": "Left arm: shoulder balancer (lever, sheaves, springs and cord) (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j1_column_on_foot",
+    "arm_l/arm_l_j1_anchor_on_column",
+    "arm_l/arm_l_j1_spring_0_on_pin",
+    "arm_l/arm_l_j1_spring_0_in_equalizer",
+    "arm_l/arm_l_j1_spring_1_on_pin",
+    "arm_l/arm_l_j1_spring_1_in_equalizer",
+    "arm_l/arm_l_j1_cord_on_equalizer"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-1",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (1 of 3)",
+   "mates": [
+    "arm_l/arm_l_j2_servo_case_top",
+    "arm_l/arm_l_j2_servo_case_bottom",
+    "arm_l/arm_l_j2_driver_on_horn",
+    "arm_l/arm_l_j2_dowel_in_pulley",
+    "arm_l/arm_l_j2_driver_bearing_seat",
+    "arm_l/arm_l_j2_belt_on_pulley",
+    "arm_l/arm_l_j2_bearing_1_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-2",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (2 of 3)",
+   "mates": [
+    "arm_l/arm_l_j2_hub_in_bearing_1",
+    "arm_l/arm_l_j2_cap_on_drum",
+    "arm_l/arm_l_j2_bearing_2_in_cap",
+    "arm_l/arm_l_j2_hub_in_bearing_2",
+    "arm_l/arm_l_yoke_fork_face_a",
+    "arm_l/arm_l_yoke_fork_face_b",
+    "arm_l/arm_l_j3_servo_case_top"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-upper-3",
+   "title": "Left arm: yoke and upper arm (shoulder-out and twist joints) (3 of 3)",
+   "mates": [
+    "arm_l/arm_l_j3_servo_case_bottom",
+    "arm_l/arm_l_j3_bearing_up_seat",
+    "arm_l/arm_l_j3_bearing_lo_seat",
+    "arm_l/arm_l_j3_disc_on_horn",
+    "arm_l/arm_l_j3_hub_in_bearing",
+    "arm_l/arm_l_j3_hub_to_disc"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-elbow-1",
+   "title": "Left arm: elbow housing and elbow drive (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_j4_servo_case_top",
+    "arm_l/arm_l_j4_servo_case_bottom",
+    "arm_l/arm_l_j4_driver_on_horn",
+    "arm_l/arm_l_j4_dowel_in_pulley",
+    "arm_l/arm_l_j4_driver_bearing_seat",
+    "arm_l/arm_l_j4_belt_on_pulley"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-elbow-2",
+   "title": "Left arm: elbow housing and elbow drive (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j4_bearing_1_seat",
+    "arm_l/arm_l_j4_hub_in_bearing_1",
+    "arm_l/arm_l_j4_cap_on_drum",
+    "arm_l/arm_l_j4_bearing_2_in_cap",
+    "arm_l/arm_l_j4_hub_in_bearing_2",
+    "arm_l/arm_l_elbow_on_j3_hub"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-forearm-1",
+   "title": "Left arm: forearm and wrist-twist joint (1 of 2)",
+   "mates": [
+    "arm_l/arm_l_fork_in_on_j4",
+    "arm_l/arm_l_fork_out_on_j4",
+    "arm_l/arm_l_j5_servo_case_top",
+    "arm_l/arm_l_j5_servo_case_bottom",
+    "arm_l/arm_l_j5_bearing_up_seat",
+    "arm_l/arm_l_j5_bearing_lo_seat"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-forearm-2",
+   "title": "Left arm: forearm and wrist-twist joint (2 of 2)",
+   "mates": [
+    "arm_l/arm_l_j5_disc_on_horn",
+    "arm_l/arm_l_j5_hub_in_bearing",
+    "arm_l/arm_l_j5_hub_to_disc",
+    "arm_l/arm_l_fork_in_to_body",
+    "arm_l/arm_l_fork_out_to_body"
+   ],
+   "notes": []
+  },
+  {
+   "id": "arm-l-wrist",
+   "title": "Left arm: wrist pitch and hand",
+   "mates": [
+    "arm_l/arm_l_hand_block_on_wrist",
+    "arm_l/arm_l_hand_j6_servo_case_top",
+    "arm_l/arm_l_hand_j6_servo_case_bottom",
+    "arm_l/arm_l_hand_fork_in_on_horn",
+    "arm_l/arm_l_hand_fork_out_on_horn",
+    "arm_l/arm_l_hand_adapter_to_fork_in",
+    "arm_l/arm_l_hand_adapter_to_fork_out",
+    "arm_l/arm_l_hand_hand_on_adapter"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-arms",
+   "title": "Mount the arms on the torso",
+   "mates": [
+    "arm_r_foot",
+    "arm_l_foot"
+   ],
+   "notes": []
+  },
+  {
+   "id": "root-head",
+   "title": "Fit the head on the neck plate",
+   "mates": [
+    "head_on_neck_plate"
+   ],
+   "notes": [
+    {
+     "kind": "warning",
+     "text": "The head's base screw pattern is not in the received CAD: mark and drill the neck plate from the head itself before this step."
+    }
+   ]
+  },
+  {
+   "id": "root-battery",
+   "title": "Slide the battery packs onto the docks",
+   "mates": [
+    "pack_1_on_dock_1",
+    "pack_2_on_dock_2"
+   ],
+   "notes": [
+    {
+     "kind": "caution",
+     "text": "Fit the packs last, with the E-stop pressed in, after the wiring has been checked."
+    }
+   ],
+   "after": "test"
+  }
+ ]
+}

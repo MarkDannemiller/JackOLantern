@@ -1,0 +1,13 @@
+{
+  "module": "iso10511-m4",
+  "name": "iso10511-m4",
+  "part": {
+    "diameter": 4,
+    "head_diameter": null,
+    "head_height": null,
+    "kind": "nut",
+    "length": 5,
+    "outer": 7
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "0588de3faeddb74b541386920208894842a2fc17a2005245c9d1342b21331e42",
+  "units": "mm",
+  "volume_mm3": 525.236,
+  "bodies": {
+    "nut": 525.236
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/nylock-1-4-20/frame-cad/params.json",
+    "digest": "sha256:f8f7da771f9e611b9f19fea2cb0694b60904ad1eff7679c2c7dca98518703853"
+  }
+}

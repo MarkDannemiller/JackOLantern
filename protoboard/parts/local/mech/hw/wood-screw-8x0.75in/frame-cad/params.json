@@ -1,0 +1,13 @@
+{
+  "module": "wood-screw-8x0.75in",
+  "name": "wood-screw-8x0.75in",
+  "part": {
+    "diameter": 4.2,
+    "head_diameter": 8.4,
+    "head_height": 3,
+    "kind": "screw",
+    "length": 19.049999999999997,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

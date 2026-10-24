@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "iso4762-m5x20",
+    "config": "parts/local/mech/hw/iso4762-m5x20/cad.config.ts",
+    "configDigest": "sha256:dff2a4006b117ecf58da62663ab55251635b6305759910e8b1e4662bc7686a7c",
+    "moduleDigest": "sha256:0ba9fc952962ea02bbe1d6f71764ffe4946c743c926d46b83d90202e455285e2"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:c82c511bf290a01c1a0724cf45b12f4cad77b9684bd9c63d93fc13be2703a964",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T15:37:10.978Z",
+  "status": "succeeded",
+  "summary": "iso4762-m5x20: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso4762-m5x20/out (598.678 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/iso4762-m5x20/out/body.step",
+      "digest": "sha256:09dbccb6825b2cec79e55b76f1a969b2588a42742c95cec7e6a31fcae60d10e7",
+      "bytes": 32562,
+      "description": "iso4762-m5x20: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/iso4762-m5x20/out/body.glb",
+      "digest": "sha256:3fa787612e63b615fd7337181535b8a84c3658e1862a1ee123e044d9dd177b23",
+      "bytes": 21036,
+      "description": "iso4762-m5x20: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/iso4762-m5x20/out/body.manifest.json",
+      "digest": "sha256:873758d02b4e7df1aa10d08b1810b4b0c199f91d74a54e26bdf7c2d55826659e",
+      "bytes": 550,
+      "description": "iso4762-m5x20: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "iso4762-m5x20",
+    "out": "parts/local/mech/hw/iso4762-m5x20/out",
+    "volume_mm3": 598.678,
+    "previousVolume_mm3": 598.678,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T15:37:15.605Z"
+}

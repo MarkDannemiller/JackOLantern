@@ -1,0 +1,4651 @@
+[
+  {
+    "item": "Heat-set insert M3 standard (CNC Kitchen)",
+    "category": "fasteners",
+    "vendor": "3DJake (CNC Kitchen reseller, US site)",
+    "part_number": "CNC Kitchen M3 Standard M3x5.7",
+    "description": "Brass knurled heat-set insert M3, 5.7 mm long",
+    "pack_qty": 100,
+    "price_usd": 11.18,
+    "price_status": "listing",
+    "url": "https://www.3djake.com/cnc-kitchen/threaded-inserts-m3-standard",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "5.7 mm",
+      "insert_od_D1": "4.6 mm",
+      "centre_tip_D2": "3.9 mm",
+      "hole_dia_D3": "4.0 mm",
+      "min_wall": "1.6 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Price shown as $ excl. VAT/delivery. CNC Kitchen own store (cnckitchen.store) returned HTTP 429; its USD price TBD. Install 10-20 C above print temp."
+  },
+  {
+    "item": "Heat-set insert M3 standard (Prusa, CNC Kitchen design)",
+    "category": "fasteners",
+    "vendor": "Prusa Research",
+    "part_number": "Heat Set Inserts - M3 standard 100 pcs",
+    "description": "CNC Kitchen-designed M3 heat-set inserts sold by Prusa",
+    "pack_qty": 100,
+    "price_usd": 10.99,
+    "price_status": "listing",
+    "url": "https://www.prusa3d.com/product/heat-set-inserts/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "5.7 mm",
+      "insert_od": "TBD: sizes chart image on page (CNC Kitchen table gives 4.6 mm)",
+      "hole_dia": "TBD: chart image (CNC Kitchen table gives 4.0 mm)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Only the M3 variant price was in page text; other variant prices load dynamically."
+  },
+  {
+    "item": "Heat-set insert M4 standard (CNC Kitchen)",
+    "category": "fasteners",
+    "vendor": "3DJake (CNC Kitchen reseller, US site)",
+    "part_number": "CNC Kitchen M4 Standard M4x8.1",
+    "description": "Brass knurled heat-set insert M4, 8.1 mm long",
+    "pack_qty": 50,
+    "price_usd": 11.18,
+    "price_status": "listing",
+    "url": "https://www.3djake.com/cnc-kitchen/threaded-inserts-m4-standard",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7",
+      "length": "8.1 mm",
+      "insert_od_D1": "6.3 mm",
+      "centre_tip_D2": "5.5 mm",
+      "hole_dia_D3": "5.6 mm",
+      "min_wall": "2.1 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Page said 93 left in warehouse. M4 short (4.0 mm) has same diameters."
+  },
+  {
+    "item": "Heat-set insert M3 (ruthex RX-M3x5.7)",
+    "category": "fasteners",
+    "vendor": "Amazon (ruthex)",
+    "part_number": "RX-M3x5.7 / ASIN B08BCRZZS3",
+    "description": "ruthex brass heat-set inserts M3 x 5.7 mm",
+    "pack_qty": 100,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B08BCRZZS3",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "5.7 mm",
+      "insert_od": "TBD: ruthex datasheet (search snippet cut off at '4.'; ruthex M3S row is 4.6 mm OD / 4.0 mm hole)",
+      "hole_dia": "TBD: ruthex datasheet"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "TBD price: Amazon page did not expose price to fetcher. ruthex.de returned HTTP 429. 4.8/5 from ~1,544 ratings per search snippet."
+  },
+  {
+    "item": "Heat-set insert M4 (ruthex RX-M4x8.1)",
+    "category": "fasteners",
+    "vendor": "Amazon (ruthex)",
+    "part_number": "RX-M4x8.1 / ASIN B07YSV66Y5",
+    "description": "ruthex brass heat-set inserts M4 x 8.1 mm",
+    "pack_qty": 50,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B07YSV66Y5",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7",
+      "length": "8.1 mm",
+      "insert_od": "TBD: ruthex datasheet",
+      "hole_dia": "TBD: ruthex datasheet"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "TBD price: confirm on Amazon. Same nominal size as CNC Kitchen M4 (6.3 OD / 5.6 hole) but not verified for ruthex."
+  },
+  {
+    "item": "Heat-set insert assortment M2-M5 + tips (ruthex bundle)",
+    "category": "fasteners",
+    "vendor": "Amazon (ruthex)",
+    "part_number": "ASIN B0FCXXW62N",
+    "description": "ruthex assortment box (70 RX-M2x4, 100 RX-M3x5.7, 50 RX-M4x8.1, 50 RX-M5x9.5) plus 7 soldering/insert tips",
+    "pack_qty": 270,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B0FCXXW62N",
+    "observed": "2026-10-24",
+    "dims": {
+      "contents": "70x M2x4, 100x M3x5.7, 50x M4x8.1, 50x M5x9.5 (+7 tips)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "TBD price: confirm on Amazon. Box alone (RUT-GE-KASTEN-001) seen at $28.46 on 3djake.com (snippet, unconfirmed)."
+  },
+  {
+    "item": "Tapered heat-set insert M3 (McMaster 94180A331)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "94180A331",
+    "description": "Brass tapered heat-set insert for plastic, M3x0.5",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/94180A331/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "max_hole_dia": "0.199 in (No. 8 drill) per UW-Madison drawing",
+      "min_material_thickness": "4.57 mm",
+      "installed_length": "TBD: McMaster page"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.mcmaster.com/94180A331/",
+      "licence": "McMaster CAD terms (TBD)"
+    },
+    "notes": "Dims from a UW-Madison ME design lab drawing (third-party), not the McMaster page. McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "Heat-set insert M3 5.7 mm (McMaster 94459A140)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "94459A140",
+    "description": "Brass tapered heat-set insert M3x0.5, 5.7 mm installed length, open end",
+    "pack_qty": 50,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/94459A140/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "installed_length": "5.7 mm",
+      "max_hole_dia": "4 mm",
+      "min_material_thickness": "6.5 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.mcmaster.com/94459A140/",
+      "licence": "McMaster CAD terms (TBD)"
+    },
+    "notes": "Specs and pack 50 from McMaster search snippet; price field blank. TBD: price on mcmaster.com."
+  },
+  {
+    "item": "Tapered heat-set insert M4 (McMaster 94180A351)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "94180A351",
+    "description": "Brass tapered heat-set insert for plastic, M4x0.7",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/94180A351/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7",
+      "hole_dia": "TBD: McMaster page",
+      "installed_length": "TBD: McMaster page"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "M4 counterpart in the 94459A line not identified (search found no M4 94459A number). McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "SHCS assortment M2-M5 stainless (NINDEJIN)",
+    "category": "fasteners",
+    "vendor": "Amazon (NINDEJIN)",
+    "part_number": "ASIN B09B1QFS7K",
+    "description": "304 stainless hex socket head cap screws M2/M3/M4/M5 with nuts and flat washers (socket head + round head)",
+    "pack_qty": "TBD: ~880 pcs per related listing; confirm",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B09B1QFS7K",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "8/12/16/20 mm for each of M2, M3, M4, M5 (per search summary; confirm)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "No M2.5 and no 10 mm length in this kit. A sibling NINDEJIN listing (B099ZVKGHQ) mixes 880 stainless + 1060 carbon steel; check which you buy. Price TBD: Amazon page not readable by fetcher."
+  },
+  {
+    "item": "SHCS assortment M2.5-M8 stainless (HVAZI 135 pc)",
+    "category": "fasteners",
+    "vendor": "Amazon (HVAZI)",
+    "part_number": "ASIN B01N6ARAV5",
+    "description": "304 stainless hex socket head cap screws M2.5/M3/M4/M5/M6/M8",
+    "pack_qty": 135,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B01N6ARAV5",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "8-25 mm under head (per listing summary)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Covers M2.5 but not M2. Price TBD."
+  },
+  {
+    "item": "SHCS M3x8 18-8 SS (McMaster 91292A112)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A112",
+    "description": "18-8 stainless socket head screw M3x0.5, 8 mm, 2.5 mm hex, ISO 4762",
+    "pack_qty": 100,
+    "price_usd": 5.45,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.mcmaster.com/91292A112/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "8 mm",
+      "drive": "2.5 mm hex"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.mcmaster.com/91292A112/",
+      "licence": "McMaster CAD terms (TBD)"
+    },
+    "notes": "$5.45/100 is from an archived McMaster page captured 2023-12-07 (UCAR/HAO RoHS cert PDF); likely changed. TBD: current price on mcmaster.com."
+  },
+  {
+    "item": "SHCS M3x10 18-8 SS (McMaster 91292A113)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A113",
+    "description": "18-8 stainless socket head screw M3x0.5, 10 mm",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/91292A113/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "10 mm (per Serendipity Electronics / Blue Robotics cross-ref)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "SHCS M3x12 18-8 SS (McMaster 91292A114)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A114",
+    "description": "18-8 stainless socket head screw M3x0.5, 12 mm",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/91292A114/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "12 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Only price seen: $4.53 in a 2018 BNL order email (too old to use). McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "SHCS M3x16 18-8 SS (McMaster 91292A115)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A115",
+    "description": "18-8 stainless socket head screw M3x0.5, 16 mm",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/91292A115/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "16 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "SHCS M3x20 18-8 SS (McMaster 91292A123)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A123",
+    "description": "18-8 stainless socket head screw M3x0.5, 20 mm",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/91292A123/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5",
+      "length": "20 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "SHCS M4x16 18-8 SS (McMaster 91292A118)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A118",
+    "description": "18-8 stainless socket head screw M4x0.7, 16 mm",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/91292A118/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7",
+      "length": "16 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "SHCS M4x20 18-8 SS (McMaster 91292A121)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "91292A121",
+    "description": "18-8 stainless socket head screw M4x0.7, 20 mm",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/91292A121/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7",
+      "length": "20 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "M4x10 McMaster number not found (TBD: McMaster 91292A M4 table); the cross-ref lists only 6/8/12/16/20/25+ mm. Kit above has no 10 mm either. McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "M5 low-profile screws (Maker Store)",
+    "category": "fasteners",
+    "vendor": "Maker Store USA",
+    "part_number": "SCREWS-M5-LP",
+    "description": "Alloy steel black-oxide low-profile M5 screws for V-slot/2020, lengths 6-65 mm",
+    "pack_qty": "25 (6-25 mm lengths); 10 (27-65 mm)",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://makerstore.cc/product/m5-low-profile-screws/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5x0.8",
+      "head_height": "1.5 mm",
+      "drive": "3 mm hex",
+      "lengths": "6-65 mm (8 mm and 10 mm used with brackets)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Variant range $3.05-$6.20; per-length price not in page text, so price_usd TBD: select 10 mm on the page. Use 8 mm for flush bracket side, 10 mm for cast bracket standoff-teeth side (Maker Store guidance)."
+  },
+  {
+    "item": "M5 cap head bolts 10 pc (Maker Store)",
+    "category": "fasteners",
+    "vendor": "Maker Store USA",
+    "part_number": "M5 Cap Head Bolts - 10pc",
+    "description": "M5 socket cap head bolts, various lengths, 10-pack",
+    "pack_qty": 10,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://makerstore.cc/product/m5-cap-head-bolts/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5x0.8",
+      "lengths": "TBD: variant list on page"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Category page shows range $0.80-$4.45 across lengths; TBD exact M5x10 price."
+  },
+  {
+    "item": "M3 nylon-insert lock nut (McMaster 93625A100)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "93625A100",
+    "description": "M3 nylon-insert locknut",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/93625A100/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M3x0.5"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Material TBD (cross-ref did not state). McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "M4 nylon-insert lock nut (McMaster 93625A150)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "93625A150",
+    "description": "M4 nylon-insert locknut",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/93625A150/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "Nylon-insert lock nut assortment M3-M12 304 SS (Vifmy)",
+    "category": "fasteners",
+    "vendor": "Amazon (Vifmy)",
+    "part_number": "ASIN B0F7JTY4QM",
+    "description": "304 stainless nylon-insert lock nuts M3/M4/M5/M6/M8/M10/M12",
+    "pack_qty": 140,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B0F7JTY4QM",
+    "observed": "2026-10-24",
+    "dims": {
+      "sizes": "M3-M12"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "ASIN from camelcamelcamel tracker, which showed it out of stock; per-size counts TBD. Confirm availability."
+  },
+  {
+    "item": "M3 flat washer (McMaster 98689A112)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "98689A112",
+    "description": "M3 flat washer",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/98689A112/",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "M3"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Material/OD TBD. McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "M4 flat washer (McMaster 93475A230)",
+    "category": "fasteners",
+    "vendor": "McMaster-Carr",
+    "part_number": "93475A230",
+    "description": "M4 flat washer",
+    "pack_qty": "TBD: McMaster page",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/93475A230/",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "M4"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Material/OD TBD. M5 washer McMaster number not found (TBD). McMaster page did not render for fetcher; part number from third-party cross-reference (Stanford SSI wiki Metric_Fasteners table / reseller). TBD: confirm price and pack on mcmaster.com."
+  },
+  {
+    "item": "Flat washer assortment M1.6-M12 304 SS (MCMASKE)",
+    "category": "fasteners",
+    "vendor": "Amazon (MCMASKE)",
+    "part_number": "ASIN B0BG28SWLK",
+    "description": "304 stainless flat washers for M1.6, M2, M2.5, M3, M4, M5, M6, M8, M10, M12",
+    "pack_qty": "TBD: listing",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B0BG28SWLK",
+    "observed": "2026-10-24",
+    "dims": {
+      "sizes": "M1.6-M12 incl. M3/M4/M5"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Covers the M5 washer gap. Price and counts TBD."
+  },
+  {
+    "item": "Drop-in tee nut M5, 10-pack (Maker Store)",
+    "category": "extrusion",
+    "vendor": "Maker Store USA",
+    "part_number": "HARD-TNUT-DROP10",
+    "description": "Drop-in (post-assembly) tee nut for 20-series V-slot, fits M5 screw",
+    "pack_qty": 10,
+    "price_usd": 11.93,
+    "price_status": "listing",
+    "url": "https://makerstore.cc/product/drop-in-tee-nuts-pack-of-10/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5",
+      "size": "6 x 10.3 x 4.4 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "In stock. M5 only on US store (M3/M4 drop-ins only seen on makerstore.com.au). Twists into the slot when the screw is tightened."
+  },
+  {
+    "item": "M5 drop-in T-nut 2020, 100 pcs (Amazon)",
+    "category": "extrusion",
+    "vendor": "Amazon",
+    "part_number": "ASIN B0CG4VNT51",
+    "description": "Hammer-head drop-in T-slot nut M5 for 2020 series, nickel-plated carbon steel",
+    "pack_qty": 100,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B0CG4VNT51",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5",
+      "slot": "6 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Bulk option; dims and price TBD (Amazon page text truncated)."
+  },
+  {
+    "item": "Post-assembly spring nut M5 (Misumi HNTP5-5)",
+    "category": "extrusion",
+    "vendor": "Misumi",
+    "part_number": "HNTP5-5 (PACK-HNTP5 = 100)",
+    "description": "Post-assembly insertion spring nut for 5 series (6 mm slot) frames",
+    "pack_qty": "1 (or 100 as PACK-HNTP5)",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://us.misumi-ec.com/vona2/detail/110302608410/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M5",
+      "slot": "6 mm (5 series)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Misumi pages returned HTTP 403 to the fetcher; price TBD via Misumi configurator. HNTAJ5-5 not looked up (TBD)."
+  },
+  {
+    "item": "Slim T-nut M4 for 20x20, 50 pcs (Adafruit 1157)",
+    "category": "extrusion",
+    "vendor": "Adafruit",
+    "part_number": "1157",
+    "description": "Slim T-nut M4 for Adafruit 20x20 extrusion",
+    "pack_qty": 50,
+    "price_usd": 11.95,
+    "price_status": "listing",
+    "url": "https://www.adafruit.com/product/1157",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "M4x0.7"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Page says NO LONGER STOCKED. Adafruit oval M4 T-nut (1158) seen at $9.95 (snippet, unconfirmed)."
+  },
+  {
+    "item": "2020 extrusion cut length (Misumi HFS5-2020)",
+    "category": "extrusion",
+    "vendor": "Misumi",
+    "part_number": "HFS5-2020-[L] (black: HFSB5-2020-[L]); end tap option e.g. -TPW",
+    "description": "5 series 20x20 aluminium frame, 6 mm slot, cut to length 50-4000 mm in 0.5 mm steps, free cutting",
+    "pack_qty": "1 per length",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://us.misumi-ec.com/vona2/detail/110302683830/",
+    "observed": "2026-10-24",
+    "dims": {
+      "profile": "20 x 20 mm",
+      "slot_width_nominal": "6 mm (Misumi 'slot width 6')",
+      "centre_hole": "4.2 mm (HFS5 series drawing, per search snippet; unconfirmed)",
+      "weight": "0.5 kg/m",
+      "section_area": "183 mm^2",
+      "Ix_Iy": "0.742e4 mm^4",
+      "length_range": "50-4000 mm, 0.5 mm steps"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://us.misumi-ec.com/vona2/detail/110302683830/",
+      "licence": "Misumi CAD terms (TBD)"
+    },
+    "notes": "Misumi pages blocked (403). Price TBD: Misumi configurator with full PN, e.g. HFS5-2020-380-TPW. Exact slot opening (6.2 mm?) TBD: Misumi outline drawing."
+  },
+  {
+    "item": "2020 extrusion Misumi-compatible cut, tapped both ends (Digmach)",
+    "category": "extrusion",
+    "vendor": "Digmach",
+    "part_number": "Misumi HFSB5-2020-xxx-TPW compatible",
+    "description": "Black anodised 2020 cut to length, tapped both ends",
+    "pack_qty": "1",
+    "price_usd": 7.95,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.digmach.com/products/misumi-2020-extrusion-tapped-both-ends",
+    "observed": "2026-10-24",
+    "dims": {
+      "length": "370 mm at $7.95; 420 mm $8.95; 440 mm $9.15; 470 mm $9.95 (snippet)",
+      "tap": "TBD (likely M5)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Only fixed variants 370-470 mm seen; page returned HTTP 429."
+  },
+  {
+    "item": "V-Slot 20x20 (Maker Store, silver)",
+    "category": "extrusion",
+    "vendor": "Maker Store USA",
+    "part_number": "LR-2020-S",
+    "description": "V-Slot 20x20 linear rail, clear anodised, 500/1000/1500/2400 mm",
+    "pack_qty": "1",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://makerstore.cc/product/v-slot-20-x-20mm/",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "500/1000/1500/2400 mm",
+      "slot": "6 mm V-slot (centre bore 4.2 mm for M5 per Systeal V-slot sheet; Maker Store page lists no profile dims)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Range $6.75-$32.00 across lengths; per-length price TBD on page. Custom cutting AND tapping temporarily unavailable (machine serviced). 2400 mm needs a shipping quote."
+  },
+  {
+    "item": "V-Slot 20x20 (Maker Store, black)",
+    "category": "extrusion",
+    "vendor": "Maker Store USA",
+    "part_number": "LR-2020-B",
+    "description": "Black V-Slot 20x20, 500/1000/1500 mm",
+    "pack_qty": "1",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://makerstore.cc/product/black-v-slot-20-x-20mm/",
+    "observed": "2026-10-24",
+    "dims": {
+      "lengths": "500/1000/1500 mm"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Range $7.40-$21.50; per-length TBD. Same cut/tap outage."
+  },
+  {
+    "item": "Slotted extrusion 20x20 610 mm (Adafruit 1221)",
+    "category": "extrusion",
+    "vendor": "Adafruit",
+    "part_number": "1221",
+    "description": "20x20 slotted aluminium extrusion, 610 mm",
+    "pack_qty": 1,
+    "price_usd": 7.5,
+    "price_status": "listing",
+    "url": "https://www.adafruit.com/product/1221",
+    "observed": "2026-10-24",
+    "dims": {
+      "profile": "20 x 20 mm",
+      "length": "610 mm",
+      "centre_hole": "approx 4.45 mm (0.17 in)",
+      "slot": "TBD: dimension image on page"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "50 in stock. No end tap; centre hole ~4.45 mm is larger than 4.2 mm M5 tap drill (check thread engagement)."
+  },
+  {
+    "item": "80/20 20-2020 metric stock bar",
+    "category": "extrusion",
+    "vendor": "Global Industrial (80/20 reseller)",
+    "part_number": "20-2020-6.05M",
+    "description": "80/20 20 series 20x20 four open T-slot, 6063-T6 clear anodised, 6.05 m stock bar",
+    "pack_qty": 1,
+    "price_usd": 81.95,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.globalindustrial.com/p/8020-20-series-1316-x-1316-four-t-slotted-extrusion-profile-238-316l-stock-bar",
+    "observed": "2026-10-24",
+    "dims": {
+      "length": "6.05 m (238-3/16 in)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "80/20 '20-2020' is the metric 20 series (not the inch 10 series). 8020.net blocked (403). Stock bar too long to ship cheaply; cut price TBD from 8020.net."
+  },
+  {
+    "item": "Cast 90 deg corner bracket 20 series (Maker Store)",
+    "category": "extrusion",
+    "vendor": "Maker Store USA",
+    "part_number": "BRAC-90CAST",
+    "description": "Cast 20x20x17 mm L corner bracket with slot tab / standoff teeth",
+    "pack_qty": 1,
+    "price_usd": 1.8,
+    "price_status": "listing",
+    "url": "https://makerstore.cc/product/cast-90-degree-corner-bracket/",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "20 x 20 x 17 mm",
+      "tab": "4 mm wide",
+      "hole": "TBD"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Screws: M5x10 low profile on teeth side, M5x8 on flush side, with M5 tee nuts."
+  },
+  {
+    "item": "Inside hidden corner bracket (Maker Store)",
+    "category": "extrusion",
+    "vendor": "Maker Store USA",
+    "part_number": "BRAC-INSIDE",
+    "description": "Hidden inside 90 deg corner connector for V-slot/2020, set screws included",
+    "pack_qty": 1,
+    "price_usd": 2.93,
+    "price_status": "listing",
+    "url": "https://makerstore.cc/product/inside-hidden-corner-bracket/",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "approx 25 x 25 x 10 mm (shipping dims)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Set screw size/count TBD."
+  },
+  {
+    "item": "Universal L bracket double (Maker Store)",
+    "category": "extrusion",
+    "vendor": "Maker Store USA",
+    "part_number": "BRAC-L2",
+    "description": "Flat L joining plate, 2 holes per leg",
+    "pack_qty": 1,
+    "price_usd": 1.53,
+    "price_status": "listing",
+    "url": "https://makerstore.cc/product/universal-l-brackets-double/",
+    "observed": "2026-10-24",
+    "dims": {
+      "size": "approx 40 x 10 x 20 mm (shipping dims)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Mount with M5x8 + M5 tee nuts."
+  },
+  {
+    "item": "Corner brace 20x20 (Adafruit 1155)",
+    "category": "extrusion",
+    "vendor": "Adafruit",
+    "part_number": "1155",
+    "description": "Aluminium corner brace for 20x20 extrusion",
+    "pack_qty": 1,
+    "price_usd": 0.95,
+    "price_status": "listing",
+    "url": "https://www.adafruit.com/product/1155",
+    "observed": "2026-10-24",
+    "dims": {
+      "screw_length": "8 mm (10 mm too long, per Adafruit)"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "In stock; $0.86 at 10-99."
+  },
+  {
+    "item": "1 in x 36 in black steel pipe nipple (Plumbing Supply and More)",
+    "category": "base",
+    "vendor": "Plumbing Supply and More",
+    "part_number": "MPN 585-360HC / SKU 11239",
+    "description": "1 in NPS black steel nipple, 36 in, threaded both ends",
+    "pack_qty": 1,
+    "price_usd": 10.97,
+    "price_status": "listing",
+    "url": "https://www.plumbingsupplyandmore.com/1-x-36-black-steel-nipple-threaded-11239.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "nominal": "1 in NPS",
+      "od": "1.315 in / 33.4 mm (NPS 1 standard; not stated on listing)",
+      "length": "36 in"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Schedule not stated on listing. Bulk 3+ $10.70."
+  },
+  {
+    "item": "1 in x 36 in Sch 40 black nipple (Global Industrial)",
+    "category": "base",
+    "vendor": "Global Industrial (MSI)",
+    "part_number": "WBB3783128 / A277001636.0",
+    "description": "1 in x 36 in Schedule 40 black carbon steel nipple, NPT (ASME B1.20.1)",
+    "pack_qty": 1,
+    "price_usd": 20.25,
+    "price_status": "listing",
+    "url": "https://www.globalindustrial.com/p/1-x-36-schedule-40-black-carbon-steel-nipple-700-3000-psi",
+    "observed": "2026-10-24",
+    "dims": {
+      "nominal": "1 in NPS Sch 40",
+      "od": "1.315 in (NPS 1 standard)",
+      "length": "36 in",
+      "thread": "NPT"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Ships in 3 business days."
+  },
+  {
+    "item": "1 in black malleable floor flange (Anvil FIG 1190)",
+    "category": "base",
+    "vendor": "Dillon Supply",
+    "part_number": "Anvil FIG 1190 1 in black (Dillon 29111000)",
+    "description": "1 in 150 lb black malleable iron floor flange, domestic",
+    "pack_qty": 1,
+    "price_usd": 32.87,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.dillonsupply.com/Product/29111000",
+    "observed": "2026-10-24",
+    "dims": {
+      "flange_od": "4 in",
+      "bolt_holes": "4 x 1/4 in",
+      "bolt_circle": "3 in",
+      "thread": "1 in NPT"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Price and dims from search snippet."
+  },
+  {
+    "item": "1 in black floor flange (Pannext B-FLF10)",
+    "category": "base",
+    "vendor": "Walmart (Pannext)",
+    "part_number": "B-FLF10",
+    "description": "1 in black floor flange",
+    "pack_qty": 1,
+    "price_usd": 16.94,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.walmart.com/search?q=Pannext+B-FLF10",
+    "observed": "2026-10-24",
+    "dims": {
+      "flange_od": "TBD: listing",
+      "bolt_holes": "TBD: listing"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Walmart item URL not captured; search URL given. Reference dims for a Ward 1 in class 150 flange (Granite Group): OD 3.87 in, height 0.77 in, 4 x 0.27 in holes on 3.00 in BC. SPF/Anvil FIG 3190 import: OD 3.78 in, 0.28 in holes on 2.8 in BC."
+  },
+  {
+    "item": "Kee Klamp 61-6 slip-on flange, 1 in pipe",
+    "category": "base",
+    "vendor": "Simplified Building",
+    "part_number": "61-6",
+    "description": "Kee Klamp size 6 flange for 1 in NPS (1.315 in OD) pipe, set-screw clamp, bolts to flat surface",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.simplifiedbuilding.com/61-flange",
+    "observed": "2026-10-24",
+    "dims": {
+      "pipe_od": "1.315 in",
+      "raw_table_values": "0.26 in (hole?), A 1.32, D 0.25, E 3.54, F 1.89, G 2.52 in (columns unlabeled)",
+      "weight": "1.10 lb"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.simplifiedbuilding.com/61-flange",
+      "licence": "TBD (SketchUp component download)"
+    },
+    "notes": "Page shows $17.13 and $20.85 without saying which is current. Wagner lists KK61-6 at $15.41 (snippet). Slip-on, not rated structural. Lets the pipe top clamp to a plate bolted to the 2020 frame without threading."
+  },
+  {
+    "item": "U-bolt for 1 in pipe, 1/4-20 extended thread (McMaster 8875T853)",
+    "category": "base",
+    "vendor": "McMaster-Carr",
+    "part_number": "8875T853 (5-pack possibly 8875T87)",
+    "description": "Zinc-plated steel extended-thread U-bolt, pipe size 1, 1/4-20, 4 nuts",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/8875T853/",
+    "observed": "2026-10-24",
+    "dims": {
+      "inside_dia": "1.375 in",
+      "thread": "1/4-20",
+      "rating": "425 lb",
+      "other": "3 7/16 in, 2 1/2 in, 1 5/8 in columns unlabeled in snippet"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "",
+      "licence": "TBD"
+    },
+    "notes": "Part number parsed from a garbled McMaster table snippet: verify. 1/4-20 legs do not suit M5 T-nuts; needs a through-plate or drilled 2020. Clamps pipe to a flat face."
+  },
+  {
+    "item": "Flange bearing unit for 8 mm shaft (current BOM)",
+    "category": "bearings",
+    "vendor": "Phidgets",
+    "part_number": "TRM4500_0",
+    "description": "Flanged Rotary Bearing for 8mm Shaft (2pcs). A KFL08 two-bolt pressed-steel flange unit with set-screw insert, not a plain flanged ball bearing.",
+    "pack_qty": 2,
+    "price_usd": 4.0,
+    "price_status": "listing",
+    "url": "https://www.phidgets.com/?prodid=874",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "8 mm",
+      "H_overall_length": "48 mm",
+      "J_bolt_hole_spacing": "37 mm",
+      "L_width": "27 mm",
+      "N_bolt_hole_dia": "4.8 mm",
+      "bolt": "M4",
+      "A": "8.5 mm",
+      "A1": "4.5 mm",
+      "A2": "4 mm",
+      "A0": "16 mm",
+      "D1": "15 mm",
+      "S": "3.5 mm",
+      "static_load": "1.3 kN",
+      "dynamic_load": "3.3 kN"
+    },
+    "cad": {
+      "available": false,
+      "url": "https://www.phidgets.com/productfiles/TRM4500/TRM4500_0/Documentation/TRM4500_0Mechanical.pdf",
+      "licence": "PDF drawing only (generic KFL table), no STEP"
+    },
+    "notes": "Confirmed on the BOM. Dimensions come from the KFL08 row of the supplier table in Phidgets' mechanical PDF; letter labels follow that drawing. Volume pricing: $3.84 at 5+, $3.68 at 10+. 284 in stock. The 27 x 48 mm footprint and 8.5 mm height are large for a printed arm joint; a plain F688 or 608 pressed into PETG is much smaller."
+  },
+  {
+    "item": "Pillow-block bearing for 8 mm shaft",
+    "category": "bearings",
+    "vendor": "Phidgets",
+    "part_number": "TRM4501_0",
+    "description": "Pillow Block Rotary Bearing for 8mm Shaft (2pcs)",
+    "pack_qty": 2,
+    "price_usd": 4.25,
+    "price_status": "listing",
+    "url": "https://www.phidgets.com/?prodid=874",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "8 mm",
+      "static_load": "1.3 kN",
+      "dynamic_load": "3.3 kN",
+      "envelope": "TBD: Phidgets TRM4501_0 mechanical PDF"
+    },
+    "cad": {
+      "available": "TBD: check vendor page",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from the related-products table on the TRM4500_0 page. It mounts parallel to the shaft."
+  },
+  {
+    "item": "6802-2RS thin-section bearing 15x24x5",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit6993",
+    "description": "10-Pack Premium Bearings 6802-2RS 15x24x5mm, sealed, chrome steel",
+    "pack_qty": 10,
+    "price_usd": 29.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/10-pack-premium-bearings-6802-2rs-15x24x5mm-6802r5",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "15 mm",
+      "OD_D": "24 mm",
+      "width_B": "5 mm",
+      "dynamic_load_Cr": "2080 N",
+      "static_load_Cor": "1260 N",
+      "max_speed_grease": "17000 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Search snippets show eBay 10-packs around $13-15 (unconfirmed)."
+  },
+  {
+    "item": "6803-2RS thin-section bearing 17x26x5",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "6803-2RS (10-pack)",
+    "description": "10-Pack 6803-2RS Bearings 17x26x5mm Sealed Ball Bearings",
+    "pack_qty": 10,
+    "price_usd": 29.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/6803-2rs-17x26x5-sealed-bearing-pack-of-10",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "17 mm",
+      "OD_D": "26 mm",
+      "width_B": "5 mm",
+      "dynamic_load_Cr": "2630 N",
+      "static_load_Cor": "1570 N",
+      "max_speed_grease": "15000 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. VXB also sells a single 6803-2RS at $7.77 (https://vxb.com/products/6803-2rs-bearing, search listing)."
+  },
+  {
+    "item": "6804-2RS thin-section bearing 20x32x7",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit1090",
+    "description": "10-Pack 6804-2RS Ball Bearings 20x32x7mm - Sealed",
+    "pack_qty": 10,
+    "price_usd": 29.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/10-pack-6804-2rs-ball-bearings-20x32x7mm-sealed",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "20 mm",
+      "OD_D": "32 mm",
+      "width_B": "7 mm",
+      "dynamic_load_Cr": "4000 N",
+      "static_load_Cor": "2640 N",
+      "max_speed_grease": "13000 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Ratings differ from an FBJ listing (2.7 kN dyn / 1.5 kN static, qualitybearingsonline.ca); treat the VXB figures as vendor claims."
+  },
+  {
+    "item": "6704-2RS extra-thin bearing 20x27x4",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit18219",
+    "description": "6704-2RS Bearing 20x27x4mm Sealed Ball Bearing, 52100 chrome steel",
+    "pack_qty": 1,
+    "price_usd": 9.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/6704-2rs-bearing-20x27x4-sealed",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "20 mm",
+      "OD_D": "27 mm",
+      "width_B": "4 mm",
+      "dynamic_load": "TBD: not on listing",
+      "static_load": "TBD: not on listing"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Sold singly. VXB's 10-piece 6704 'RC' set is $99.99, so buying singles is far cheaper. Henderson Bearings (UK) has open 61704 from GBP 0.96 at 10+."
+  },
+  {
+    "item": "608-2RS bearing 8x22x7",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "1ASB",
+    "description": "10-Pack Skateboard Bearing 608-2RS Sealed 8x22x7mm (carbon steel, oil-lubricated)",
+    "pack_qty": 10,
+    "price_usd": 14.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/10-pack-skateboard-bearing-608-2rs-sealed-8x22x7mm",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "8 mm",
+      "OD_D": "22 mm",
+      "width_B": "7 mm",
+      "dynamic_load": "TBD: not on listing (a Kramp INA 6082RS lists 3300 N dynamic)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Skate grade, carbon steel. For chrome-steel, grease-filled parts VXB lists other 10-packs from $29.99."
+  },
+  {
+    "item": "F688-2RS flanged bearing 8x16x5",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "kit970",
+    "description": "10 Pack Flanged Ball Bearings F688-2RS 8x16x5mm, rubber sealed",
+    "pack_qty": 10,
+    "price_usd": 49.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/10-flanged-bearing-f688-2rs-8x16x5-sealed-min",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "8 mm",
+      "OD_D": "16 mm",
+      "width_B": "5 mm",
+      "flange_dia": "18 mm (Simply Bearings F688-2RS listing, not VXB)",
+      "flange_thickness": "1.1 mm (Simply Bearings, not VXB)",
+      "dynamic_load_Cr": "1600 N",
+      "static_load_Cor": "710 N",
+      "max_speed": "28000 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. The flange dimensions are from https://www.simplybearings.co.uk/products/f-688-2rs, which matches the expected 18 x 1.1 mm. Measure a VXB part before finalising the pocket."
+  },
+  {
+    "item": "F695 flanged bearing 5x13x4",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "VXB0CRPG8XHS",
+    "description": "F695-2RS Flanged Ball Bearing 5x13x4mm, double rubber sealed, GCr15 chrome steel",
+    "pack_qty": 10,
+    "price_usd": 39.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/f695-2rs-flanged-ball-bearing-abec-9-5x13x4mm-doub",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "5 mm",
+      "OD_D": "13 mm",
+      "width_B": "4 mm",
+      "flange_dia": "15 mm (miniaturebearings.com.au F695-ZZ-MC3, not VXB)",
+      "flange_thickness": "1.0 mm (miniaturebearings.com.au, not VXB)",
+      "load_ratings": "TBD: not on listing"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. The shielded F695ZZ 10-pack (Kit2046, https://vxb.com/products/10-flanged-shielded-bearing-f695zz-5x13x4-min) is also $39.99. The listing title says ABEC-9, which is implausible at this price."
+  },
+  {
+    "item": "51105 thrust ball bearing 25x42x11",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit7856",
+    "description": "51105 Thrust Ball Bearing 25x42x11mm, 52100 chrome steel, single direction",
+    "pack_qty": 1,
+    "price_usd": 9.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/51105-thrust-ball-bearing-25x42x11mm",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "25 mm",
+      "OD_D": "42 mm",
+      "height_T": "11 mm",
+      "dynamic_load_Ca": "19500 N",
+      "static_load_C0a": "37000 N",
+      "max_speed_grease": "4600 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Axial load only. It needs a separate radial bearing, plus a preload or minimum axial load. At 11 mm tall it is bulky for a shoulder; AXK2035 is 2 mm (4 mm with washers)."
+  },
+  {
+    "item": "51106 thrust ball bearing 30x47x11",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit7857",
+    "description": "51106 Thrust Ball Bearing 30x47x11mm, 52100 chrome steel",
+    "pack_qty": 1,
+    "price_usd": 9.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/51106-thrust-ball-bearing-30x47x11mm",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "30 mm",
+      "OD_D": "47 mm",
+      "height_T": "11 mm",
+      "dynamic_load_Ca": "20400 N",
+      "static_load_C0a": "42000 N",
+      "max_speed_grease": "4300 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price."
+  },
+  {
+    "item": "AXK2035 needle thrust bearing with AS2035 washers",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "VXB08FHTLDNZ",
+    "description": "Thrust Needle Roller Bearing Set AXK2035 with washers, 5 bearings + 10 AS2035 washers",
+    "pack_qty": 5,
+    "price_usd": 39.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/thrust-needle-roller-bearing-set-axk2035-with-wash",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "20 mm",
+      "OD_D": "35 mm",
+      "cage_thickness": "2 mm",
+      "washer_thickness": "~1 mm each (65Mn), so ~4 mm stack (computed: 2 + 2x1)",
+      "dynamic_load": "12.9 kN",
+      "static_load": "45.6 kN",
+      "max_speed": "8500 rpm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. The best fit for a compact printed shoulder: a 4 mm stack. The washers must be backed by flat, stiff faces; on printed PETG, use a metal or thick printed backing plate. McMaster thrust needle bearings and washers were not reachable (JS-only pages): TBD."
+  },
+  {
+    "item": "F8-16M miniature thrust ball bearing 8x16x5",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "VXB07W4PW6S1",
+    "description": "10 Pack F8-16M Miniature Thrust Axial Ball Bearing 8x16x5mm",
+    "pack_qty": 10,
+    "price_usd": 39.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/10-pack-f8-16m-miniature-thrust-axial-metal-ball-b",
+    "observed": "2026-10-24",
+    "dims": {
+      "bore_d": "8 mm",
+      "OD_D": "16 mm",
+      "height_T": "5 mm",
+      "load_ratings": "TBD: not on listing"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Suits an 8 mm elbow or pulley axle carrying axial load."
+  },
+  {
+    "item": "Lazy-susan turntable bearing 140 mm",
+    "category": "bearings",
+    "vendor": "VXB",
+    "part_number": "Kit12877",
+    "description": "140mm Lazy Susan Bearing - aluminium turntable",
+    "pack_qty": 1,
+    "price_usd": 19.99,
+    "price_status": "listing",
+    "url": "https://vxb.com/products/140mm-lazy-susan-aluminum-bearing-turntable-bearin",
+    "observed": "2026-10-24",
+    "dims": {
+      "ID": "89 mm",
+      "OD": "140 mm",
+      "thickness": "10 mm",
+      "load_capacity": "220 lb (vendor)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "VXB price is the Shopify variant price read from the product JSON (vxb.com/products/<handle>.js); the higher 'compare at' figure on the page is not the selling price. Far larger than a 25-35 mm shoulder. Listed only as a torso or waist turntable option. VXB's 150 mm version is also $19.99."
+  },
+  {
+    "item": "8 mm precision ground rotary shaft (round, no flat)",
+    "category": "bearings",
+    "vendor": "Phidgets",
+    "part_number": "TRM4000_0",
+    "description": "8mm Precision Ground Rotary Shaft, 1045 carbon steel, cut to length",
+    "pack_qty": null,
+    "price_usd": 6.5,
+    "price_status": "listing",
+    "url": "https://phidgets.com/?prodid=730",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "8 mm",
+      "material": "1045 carbon steel",
+      "cut_range": "50-2000 mm",
+      "length_tolerance": "2 mm (as listed)",
+      "D_flat": "none"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Confirmed on the BOM. Price is per metre ($6.24/m at 5 m, $5.98/m at 10 m), plus a $1.00 cut fee and $10.00 handling per order. Stock 37 m. Round only: the 22T and 60T pulleys clamp with 2x M4 set screws, so file or grind a flat for the screw to seat on."
+  },
+  {
+    "item": "8 mm REX shaft 120 mm (round + 7 mm hex drive)",
+    "category": "bearings",
+    "vendor": "goBILDA",
+    "part_number": "2106-4008-1200",
+    "description": "8mm REX Shaft with E-Clip (Stainless Steel, 120mm Length)",
+    "pack_qty": 1,
+    "price_usd": 5.99,
+    "price_status": "listing",
+    "url": "https://www.gobilda.com/2106-series-stainless-steel-rex-shaft-8mm-diameter-120mm-length/",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "8 mm round sections / 7 mm hex sections",
+      "length": "120 mm",
+      "mass": "38 g",
+      "material": "stainless steel",
+      "ends": "threaded, E-clip groove"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.gobilda.com/content/step_files/2106-4008-1200.zip",
+      "licence": "TBD: goBILDA terms not checked"
+    },
+    "notes": "Not a D-cut, but a positive-drive alternative that still runs in 8 mm round-bore bearings. Other lengths include 24, 56, 192 ($7.69, SKU 2106-4008-1920, 62 g), 216, 264, 312 and 624 mm. The Phidgets pulleys have an 8 mm round bore, so they would only clamp on the round lobes."
+  },
+  {
+    "item": "8 mm or 10 mm D-profile shaft, McMaster",
+    "category": "bearings",
+    "vendor": "McMaster-Carr",
+    "part_number": "TBD: metric 8/10 mm D-profile part number",
+    "description": "McMaster D-profile rotary shafts. Only inch sizes were readable: 5/16 in D-profile 316 stainless (3473K11 9 in, 3473K12 12 in, 3473K16 15 in, 3473K17 18 in, 3473K18 20 in, 3473K19 24 in) and 3/8 in D-profile x threaded (1123N1-N6).",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/products/single-flat-shafts/",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "5/16 in (7.94 mm) inch alternative; metric 8 and 10 mm TBD",
+      "flat_depth": "TBD: McMaster product detail"
+    },
+    "cad": {
+      "available": "TBD: check vendor page",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Degraded: McMaster pages are JavaScript-rendered, so prices and the metric D-profile rows could not be read. Search snippets mention metric D-profile shafts in 1045 steel. To resolve, open mcmaster.com/shafts/end-type~d-profile with the metric 8 mm filter. A 5/16 in shaft is 0.06 mm under 8 mm, a loose fit in 8H8 pulley bores."
+  },
+  {
+    "item": "8 mm or 10 mm D-cut shaft, Misumi",
+    "category": "bearings",
+    "vendor": "Misumi",
+    "part_number": "TBD: SFJ/PSFJ/SSFJ 8 or 10 with D-cut alteration",
+    "description": "Misumi straight shafts SFJ (g6), SSFJ (stainless), PSFJ (precision) with a configurable D-cut or wrench-flat end alteration, length selectable in 1 mm steps.",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://us.misumi-ec.com/",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter": "8 or 10 mm, g6",
+      "length_range": "20-1000 mm for 8 mm (Misumi JP catalogue snippet)",
+      "D_cut": "TBD: configure on misumi-ec.com"
+    },
+    "cad": {
+      "available": "TBD: check vendor page",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Degraded: us.misumi-ec.com returned HTTP 403 to automated fetch. The family and length range come from catalogue PDF search snippets (jp.misumi-ec.com). Misumi provides free CAD once a part is configured. A logged-in configurator quote would resolve the price."
+  },
+  {
+    "item": "Set screw holding power, metric (Unbrako)",
+    "category": "fasteners",
+    "vendor": "Unbrako (reference)",
+    "part_number": "Socket Set Screws - Metric spec sheet",
+    "description": "Unbrako metric socket set screws, high-grade alloy steel: seating torque, axial holding power, torsional holding power by shaft diameter",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.unbrakousa.com/images/pdf/Socket_Set_Screws_Metric_Spec_Sheet.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "M3_seating_torque": "0.87 N*m",
+      "M3_axial_holding": "0.71 kN",
+      "M3_torsional_8mm_shaft": "2.8 N*m",
+      "M3_torsional_10mm_shaft": "3.6 N*m",
+      "M4_seating_torque": "2.20 N*m",
+      "M4_axial_holding": "1.70 kN",
+      "M4_torsional_8mm_shaft": "6.8 N*m",
+      "M4_torsional_10mm_shaft": "8.5 N*m",
+      "M5_seating_torque": "4.60 N*m",
+      "M5_axial_holding": "2.50 kN",
+      "shaft_hardness_basis": "Rc 15 to Rc 35"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Reference, not a purchase. Per screw. The sheet says the values are 'typical strengths' to be used 'with specific safety factors'. It covers knurled/plain cup, flat and cone points; the table does not split by point type. Torsional values equal axial x shaft radius (checked: 1.70 kN x 4 mm = 6.8 N*m). An aluminium hub and the Phidgets pulleys' 2x M4 into 2024 aluminium will not reach full seating torque without stripping, so derate. Unbrako's guide says full holding needs about a 10 Rc point difference between screw and shaft. Practicalmaintenance.wordpress.com quotes Unbrako at M3 0.92 / M4 2.2 / M5 4.0 N*m seating torque (older edition)."
+  },
+  {
+    "item": "Clamp-collar axial holding (Stafford), for comparison",
+    "category": "fasteners",
+    "vendor": "Stafford Manufacturing (reference)",
+    "part_number": "Axial Holding Power table",
+    "description": "Clamp-type shaft collar axial holding by screw size (collar clamp screws, not set screws)",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.staffordmfg.com/axial-holding-power/",
+    "observed": "2026-10-24",
+    "dims": {
+      "M3_alloy_screw_steel_collar": "1.05 N*m seat, 1100 N axial",
+      "M4_alloy_screw_steel_collar": "2.46 N*m seat, 1925 N axial",
+      "M3_stainless": "0.43 N*m, 465 N",
+      "M4_stainless": "0.98 N*m, 775 N",
+      "aluminium_collar_rule": "50% of torque and 50% of holding"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Reference, not a purchase. Static loads only, not guaranteed values (Stafford's wording). Useful when deciding between a set-screw hub and a clamp hub on printed links."
+  },
+  {
+    "item": "GT2 22T pulley, 8 mm bore (current BOM)",
+    "category": "belt-drive",
+    "vendor": "Phidgets",
+    "part_number": "TRM4102_0",
+    "description": "GT2 Pulley with 8mm Bore and 22 Teeth, machined aluminium (2024-T6 / LY12 per drawing)",
+    "pack_qty": 1,
+    "price_usd": 2.75,
+    "price_status": "listing",
+    "url": "https://www.phidgets.com/?prodid=751",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 22,
+      "pitch_diameter": "14.006 mm (computed; vendor does not publish one)",
+      "OD": "13.51 mm (+0.05/0, drawing)",
+      "flange_dia": "17.5 mm (pressed flange, 0.5 mm thick)",
+      "hub_dia": "17.5 mm (+/-0.1)",
+      "overall_length": "14.3 mm",
+      "tooth_section_width": "9 mm (+0.2/0)",
+      "bore": "8 mm H8 (+0.022/0)",
+      "set_screws": "2x M4 (2 mm hex key)"
+    },
+    "cad": {
+      "available": false,
+      "url": "https://www.phidgets.com/productfiles/TRM4101/TRM4101_0/Documentation/TRM4101_0Mechanical.pdf",
+      "licence": "PDF drawing only, shared with TRM4101_0"
+    },
+    "notes": "Confirmed on the BOM. $2.64 at 5+, $2.53 at 10+. Dimensions come from drawing TRM4101_0~4102_0 by Chengdu Leno Machinery, which covers both bores (TRM4101 = 6.35 mm bore with 6-40UNF screws, TRM4102 = 8 mm with M4). OD 13.51 = PD - 0.50, consistent with GT2 2 mm. A 9 mm tooth width suits 6 mm belt."
+  },
+  {
+    "item": "GT2 60T pulley, 8 mm bore (current BOM)",
+    "category": "belt-drive",
+    "vendor": "Phidgets",
+    "part_number": "TRM4105_0",
+    "description": "GT2 Pulley with 8mm Bore and 60 Teeth, machined aluminium (2024-T6 / LY12 per drawing)",
+    "pack_qty": 1,
+    "price_usd": 3.0,
+    "price_status": "listing",
+    "url": "https://www.phidgets.com/?prodid=754",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 60,
+      "pitch_diameter": "38.197 mm (computed; vendor does not publish one)",
+      "OD": "37.69 mm (+0.05/0, drawing)",
+      "flanges": "none shown on drawing",
+      "hub_dia": "24 mm",
+      "overall_length": "16 mm",
+      "tooth_section_width": "11 mm (+0.2/0)",
+      "hub_length": "5 mm (computed: 16 - 11)",
+      "bore": "8 mm H8 (+0.022/0)",
+      "set_screws": "2x M4 (2 mm hex key)"
+    },
+    "cad": {
+      "available": false,
+      "url": "https://www.phidgets.com/productfiles/TRM4105/TRM4105_0/Documentation/TRM4105_0Mechanical.pdf",
+      "licence": "PDF drawing only"
+    },
+    "notes": "Confirmed on the BOM. $2.88 at 5+, $2.76 at 10+. 40 in stock. The drawing shows no flanges, so the belt can walk off; plan a printed flange or washer, or rely on the 22T's flanges and good alignment."
+  },
+  {
+    "item": "GT2 6 mm closed belt 220 mm (current BOM)",
+    "category": "belt-drive",
+    "vendor": "Phidgets",
+    "part_number": "TRM4203_0",
+    "description": "220mm GT2x6mm Timing Belt (closed loop)",
+    "pack_qty": 1,
+    "price_usd": 1.5,
+    "price_status": "listing",
+    "url": "https://www.phidgets.com/?prodid=818",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "2 mm",
+      "width": "6 mm",
+      "length": "220 mm",
+      "teeth": "110 (computed: 220/2)",
+      "working_tensile_strength": "27 N (Phidgets table)",
+      "phidgets_lengths_in_158_280_range": "184 mm (TRM4202_0, $1.50), 220 mm (TRM4203_0, $1.50), 276 mm (TRM4204_0, $1.50)",
+      "other_phidgets_lengths": "120, 156, 330, 392, 560 mm; open belt TRM4218_0 $2.25/m"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Confirmed on the BOM. Phidgets' 27 N working tension for 6 mm agrees with Gates 2MGT scaled to 6 mm (26.2 N computed). Prodid 818 is from the GT2 table on prodid 750; the belt page itself was not opened."
+  },
+  {
+    "item": "GT2 idler 44T, 8 mm bore",
+    "category": "belt-drive",
+    "vendor": "Phidgets",
+    "part_number": "TRM4158_0",
+    "description": "GT2 Idler Pulley, 8mm Bore, 44 Teeth",
+    "pack_qty": 1,
+    "price_usd": 1.75,
+    "price_status": "listing",
+    "url": "https://www.phidgets.com/?prodid=807",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 44,
+      "pitch_diameter": "28.011 mm (computed)",
+      "bore": "8 mm",
+      "OD": "TBD: Phidgets drawing"
+    },
+    "cad": {
+      "available": "TBD: check vendor page",
+      "url": null,
+      "licence": null
+    },
+    "notes": "From the GT2 table on prodid 750. TRM4158_1 (with spacers) is $5.50. Too large for a compact arm tensioner; see the RobotDigg 16T/20T idlers."
+  },
+  {
+    "item": "GT2 closed belts 6 mm wide, 180-296 mm",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "<L>-2GT-6",
+    "description": "RobotDigg 2GT endless belt, 6 mm wide, neoprene with glass-fibre cord, 1 piece",
+    "pack_qty": 1,
+    "price_usd": 0.45,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/807/220mm-6mm-or-9mm-wide-2GT-endless-belt",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "2 mm",
+      "width": "6 mm",
+      "cord": "fibreglass",
+      "price_220mm": "$0.45",
+      "lengths_and_prices_6mm": "180 $0.35, 184 $0.35, 186 $0.35, 188 $0.35, 190 $0.35, 192 $0.35, 194 $0.35, 196 $0.35, 200 $0.40, 202 $0.40, 204 $0.40, 218 $0.45, 220 $0.45, 240 $0.45, 242 $0.45, 244 $0.45, 248 $0.50, 250 $0.50, 252 $0.50, 260 $0.50, 264 $0.50, 266 $0.50, 268 $0.50, 270 $0.50, 272 $0.50, 274 $0.50, 276 $0.50, 278 $0.50, 280 $0.50, 282 $0.50, 284 $0.50, 286 $0.50, 288 $0.50, 290 $0.50, 294 $0.50, 296 $0.50",
+      "also_listed_without_confirmed_price": "158, 160, 172, 208, 228, 232 mm (length table on product 233; prices on those product pages not opened)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Prices come from the page's embedded spec JSON (fdPrice in cents; the site's App.Price divides by 100), product pages 280, 356, 233, 143, 807, 808, 809, 283. Shipping from China is extra (TBD). A WebFetch summary of page 233 showed $0.50-0.65 per length, which disagrees with the JSON; confirm in the cart. Not in the range: 160, 210 and 232 6 mm were not confirmed with a price."
+  },
+  {
+    "item": "GT2 closed belts 9 mm wide, 180-294 mm",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "<L>-2GT-9",
+    "description": "RobotDigg 2GT endless belt, 9 mm wide, neoprene with glass-fibre cord",
+    "pack_qty": 1,
+    "price_usd": 0.6,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/807/220mm-6mm-or-9mm-wide-2GT-endless-belt",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch": "2 mm",
+      "width": "9 mm",
+      "cord": "fibreglass",
+      "price_220mm": "$0.60",
+      "lengths_and_prices_9mm": "180 $0.45, 186 $0.45, 188 $0.40, 190 $0.50, 192 $0.50, 194 $0.50, 200 $0.50, 202 $0.50, 204 $0.50, 220 $0.60, 240 $0.60, 244 $0.60, 250 $0.65, 252 $0.65, 260 $0.70, 264 $0.70, 268 $0.70, 280 $0.70, 284 $0.70, 288 $0.70, 294 $0.70",
+      "10mm_width": "200 mm only: $0.55 (200-2GT-10)",
+      "8mm_width": "186 mm only: $0.40 (186-2GT-8)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Same source method as the 6 mm entry. 9 mm gives about 50% more working tension than 6 mm (Gates scaling), but the Phidgets 22T has a 9 mm tooth section between flanges, so it needs a 9 mm-belt pulley."
+  },
+  {
+    "item": "GT2 20T pulley, 5 mm bore",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "GT2-20T-5B-6",
+    "description": "GT2 Pulley 20 Tooth 5mm Bore, for 6 mm belt, aluminium",
+    "pack_qty": 1,
+    "price_usd": 1.1,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/9",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 20,
+      "pitch_diameter": "12.732 mm (computed)",
+      "bore": "5 mm",
+      "belt_width": "6 / 6.35 mm",
+      "OD": "TBD: not on page",
+      "hub": "TBD",
+      "set_screw": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from embedded spec JSON. 4 mm bore variant GT2-20T-4B-6 is $1.40."
+  },
+  {
+    "item": "GT2 20T pulley, 8 mm bore",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "GT2-20T-8B-6",
+    "description": "GT2 Pulley 20 Tooth 8mm Bore, aluminium, for 6 / 6.35 mm belt",
+    "pack_qty": 1,
+    "price_usd": 1.5,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/23/GT2-Pulley-20-Tooth-8mm-Bore",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 20,
+      "pitch_diameter": "12.732 mm (computed)",
+      "bore": "8 mm",
+      "OD": "TBD: not on page",
+      "hub": "wider than 5 mm-bore version (dims TBD)",
+      "set_screw": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "RobotDigg has no stock 22T. Its stock list is 12, 16, 18, 20, 24, 32, 36, 40, 48, 50, 60, with custom machining on request. 20:60 gives 3.0:1 against 2.727:1 for 22:60. RobotDigg says 8 mm is the largest bore for 20T, so no 10 mm bore."
+  },
+  {
+    "item": "GT2 60T pulley, 8 or 10 mm bore, 6 mm belt",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "GT2-60T-8B-6 / GT2-60T-10B-6",
+    "description": "GT2 60 Tooth Timing Pulley for 6 mm wide belt; bores 5, 6.35, 8, 10, 12 mm",
+    "pack_qty": 1,
+    "price_usd": 3.2,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/526/GT2-60-or-64-Tooth-Timing-Pulley",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 60,
+      "pitch_diameter": "38.197 mm (computed)",
+      "bore_options": "5, 6.35, 8, 10, 12 mm (all $3.20)",
+      "belt_width": "6 / 6.35 mm",
+      "mass": "45 g (spec JSON)",
+      "OD": "TBD",
+      "hub": "TBD",
+      "set_screw": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from embedded spec JSON. 64T 8 mm is $3.60; 80T 8 mm is $6.90."
+  },
+  {
+    "item": "GT2 60T low-profile pulley, 8 or 10 mm bore, 9 mm belt",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "LP2GT60-8B-9 / LP2GT60-10B-9",
+    "description": "Low profile 2GT pulley 60 tooth for 9 mm belt, aluminium with zinc-plated steel flange",
+    "pack_qty": 1,
+    "price_usd": 3.4,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/1129",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 60,
+      "pitch_diameter": "38.197 mm (computed)",
+      "bore_options": "5, 6.35, 8, 10 mm (all $3.40)",
+      "belt_width": "9 mm",
+      "OD": "TBD",
+      "hub": "TBD: 'low profile' implies short or no hub, not dimensioned",
+      "set_screw": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "This answers the 60T, 8/10 mm bore, 9 mm belt request. The 72T is $3.80. 120T (10 mm bore) is $12.00."
+  },
+  {
+    "item": "GT2 60T pulley, 10 mm bore, 9 mm belt (standard hub)",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "GT2-60T-10B-9",
+    "description": "GT2 pulley 60 tooth, 10 mm bore, for 9 mm belt, aluminium (listed on the 48/60/72/80T 9 mm page)",
+    "pack_qty": 1,
+    "price_usd": 6.4,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/322",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 60,
+      "pitch_diameter": "38.197 mm (computed)",
+      "bore": "10 mm",
+      "belt_width": "9 mm (gear width 9.5 mm per page)",
+      "OD": "TBD",
+      "hub": "TBD",
+      "set_screw": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from embedded spec JSON. No 8 mm-bore 60T on this page; use LP2GT60-8B-9. 72T 8 mm is $6.80; 80T 8 or 10 mm is $7.20 or $7.30."
+  },
+  {
+    "item": "GT2 idlers with bearings, 16T or 20T, toothed or smooth",
+    "category": "belt-drive",
+    "vendor": "RobotDigg",
+    "part_number": "IP2GT-16T3B-7-T/-NO, IP2GT-20T5B-7-T/-NO",
+    "description": "2GT idler pulley with 2 pressed bearings, for 6 mm belt. Toothed (-T) or smooth (-NO, same pitch circle as toothed).",
+    "pack_qty": 1,
+    "price_usd": 1.6,
+    "price_status": "listing",
+    "url": "https://www.robotdigg.com/product/637/2GT-Idler-Pulley-w",
+    "observed": "2026-10-24",
+    "dims": {
+      "variants": "16T 3 mm bore toothed or smooth; 20T 3 mm toothed; 20T 4 mm toothed or smooth; 20T 5 mm toothed or smooth (all $1.60)",
+      "pitch_diameter_16T": "10.186 mm (computed)",
+      "pitch_diameter_20T": "12.732 mm (computed)",
+      "OD": "TBD",
+      "width": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Larger 25T or 30T idlers in 3, 4, 5 and 6 mm bores are $2.90 or $3.20 (product 1639); a 40T 8 mm is $3.60."
+  },
+  {
+    "item": "GT2 20T pulley, 8 mm bore (Adafruit)",
+    "category": "belt-drive",
+    "vendor": "Adafruit",
+    "part_number": "1252",
+    "description": "Aluminum GT2 Timing Pulley - 6mm Belt - 20 Tooth - 8mm Bore",
+    "pack_qty": 1,
+    "price_usd": 7.95,
+    "price_status": "listing",
+    "url": "https://www.adafruit.com/product/1252",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 20,
+      "pitch_diameter": "12.732 mm (computed)",
+      "OD": "16 mm (Adafruit, likely flange OD)",
+      "bore": "8 mm",
+      "set_screws": "2 (size not listed)",
+      "mass": "4.6 g"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Listed as no longer stocked; Adafruit points to the 36T (1254). Kept only as a cross-check."
+  },
+  {
+    "item": "GT2 22T pulley, SDP-SI",
+    "category": "belt-drive",
+    "vendor": "SDP-SI",
+    "part_number": "A 6D51M022DF0605",
+    "description": "Aluminum alloy 2 mm (GT2) pitch 22-groove metric timing pulley, 2 flanges, Fairloc hub, 5 mm bore",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://shop.sdp-si.com/a-6d51m022df0605.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 22,
+      "pitch_diameter": "14 mm (vendor, search snippet); 14.006 mm computed",
+      "OD": "13.5 mm (vendor, search snippet)",
+      "bore": "5 mm",
+      "hub": "Fairloc clamp hub, dims TBD"
+    },
+    "cad": {
+      "available": "TBD: SDP-SI normally offers CAD downloads",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Degraded: shop.sdp-si.com is behind a Cloudflare challenge (403), so the price is TBD and the dims come from snippets. The Fairloc clamp hub avoids set-screw marking. Polycarbonate A 6T51M022SF6005 (5 mm bore) is also 14 mm PD."
+  },
+  {
+    "item": "GT2 60T pulley, SDP-SI (6 mm and 9 mm belt)",
+    "category": "belt-drive",
+    "vendor": "SDP-SI",
+    "part_number": "A 6A51M060DF0606 / A 6A51M060DF0906",
+    "description": "Aluminum alloy 2 mm (GT2) pitch 60-groove metric timing pulley, double flange, for 6 mm (0606) or 9 mm (0906) belt",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://shop.sdp-si.com/a-6a51m060df0906.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": 60,
+      "pitch_diameter": "38.2 mm (vendor, search snippet); 38.197 mm computed",
+      "OD": "37.7 mm (vendor, search snippet)",
+      "bore": "TBD: the DF06xx suffix suggests 6 mm, unconfirmed",
+      "set_screw": "TBD"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price and bore TBD (Cloudflare block). A search snippet of the SDP-SI catalogue PDF cites 6Z51M060DF0608 (60T, 8 mm bore, M4 set screw and spot drill, 6 mm belt), not opened."
+  },
+  {
+    "item": "Misumi GT2 timing pulleys",
+    "category": "belt-drive",
+    "vendor": "Misumi",
+    "part_number": "TBD: GPA-series GT2 (2GT) code",
+    "description": "Misumi timing pulleys, GT2 profile, configurable teeth, bore and flange",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://us.misumi-ec.com/",
+    "observed": "2026-10-24",
+    "dims": {
+      "teeth": "22 and 60 wanted",
+      "pitch_diameter_22T": "14.006 mm (computed)",
+      "pitch_diameter_60T": "38.197 mm (computed)"
+    },
+    "cad": {
+      "available": "TBD: check vendor page",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Degraded: us.misumi-ec.com returned 403 to automated fetch, and no Misumi GT2 listing surfaced in search. Needs a manual lookup on the Misumi configurator."
+  },
+  {
+    "item": "McMaster GT2 (2MGT) pulleys and belts",
+    "category": "belt-drive",
+    "vendor": "McMaster-Carr",
+    "part_number": "TBD",
+    "description": "McMaster lists Gates PowerGrip GT2 equivalent 2MGT pulleys (6 mm and 9 mm max belt width) and belts",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/products/pulleys/manufacturer-equivalent-series~gates-powergrip-gt2/",
+    "observed": "2026-10-24",
+    "dims": {
+      "filter_ranges_seen": "2MGT, 10-27 teeth, PD 0.255-0.764 in, bores including 1/8 in and 3/16 in"
+    },
+    "cad": {
+      "available": "TBD: check vendor page",
+      "url": null,
+      "licence": null
+    },
+    "notes": "Degraded: JavaScript catalogue, no part numbers or prices readable. Snippets show corrosion-resistant 2MGT pulleys with 1/8 in and 3/16 in bores only; no 8 mm bore and no 60T were confirmed."
+  },
+  {
+    "item": "Gates 2M PowerGrip GT2 belt ratings (reference)",
+    "category": "belt-drive",
+    "vendor": "Gates (reference)",
+    "part_number": "Synchronous Belt Data Summary 17611-T 3/07",
+    "description": "Gates belt tensile properties table: 2M PowerGrip GT2, neoprene / fibreglass",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://fab.cba.mit.edu/classes/865.21/topics/mechanical_design/reference/BeltTensileProperties.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "rec_working_tension_per_25.4mm": "111 N (25 lb)",
+      "min_total_ultimate_per_25.4mm": "5338 N (1200 lb), 2 spans",
+      "tensile_modulus": "18000 lb/in/in",
+      "working_6mm": "26.2 N (computed, proportional)",
+      "working_9mm": "39.3 N (computed)",
+      "working_10mm": "43.7 N (computed)",
+      "working_15mm": "65.6 N (computed)",
+      "ultimate_6mm": "1034 N (computed: proportional x0.82, <1/4 in rule)",
+      "ultimate_9mm": "1702 N (computed: x0.90)",
+      "ultimate_10mm": "1891 N (computed: x0.90)",
+      "ultimate_15mm": "3152 N (computed: proportional)",
+      "2M_GT_TruMotion_working": "89 N per 25.4 mm"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Reference, not a purchase. Gates doc 17611-T (Mar 2007, hosted by MIT). Notes: all data is for the standard neoprene/fibreglass construction; working tensions assume near-minimum pulleys and <300 rpm; ultimate strength is 'not appropriate for use in belt drive design'. Steel-cord GT2 is a non-Gates variant (generic sellers), and this table has no data for it. With the 22T PD 14.006 mm, 26.2 N working tension is about 0.18 N*m (computed: 26.2 N x 7.003 mm) of belt-limited torque at the 22T, or about 0.50 N*m at the 60T output (computed: 26.2 N x 19.10 mm), compare with the STS3215/STS3250 rated torque (TBD: from the Feetech datasheet, part 1 of the research). If the servo torque is higher, the 6 mm belt, not the servo, sets the joint limit."
+  },
+  {
+    "item": "Gates 3M HTD and 3M GT2 belt ratings (reference)",
+    "category": "belt-drive",
+    "vendor": "Gates (reference)",
+    "part_number": "Synchronous Belt Data Summary 17611-T 3/07",
+    "description": "Gates belt tensile properties: 3M PowerGrip HTD and 3M PowerGrip GT2",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://fab.cba.mit.edu/classes/865.21/topics/mechanical_design/reference/BeltTensileProperties.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "HTD3M_working_per_25.4mm": "285 N (64 lb)",
+      "HTD3M_ultimate_per_25.4mm": "9786 N (2200 lb)",
+      "HTD3M_working_9mm": "101.0 N (computed)",
+      "HTD3M_working_15mm": "168.3 N (computed)",
+      "HTD3M_ultimate_9mm": "3121 N (computed, x0.90)",
+      "HTD3M_ultimate_15mm": "5779 N (computed)",
+      "GT2_3M_working_per_25.4mm": "507 N (114 lb)",
+      "GT2_3M_working_9mm": "179.6 N (computed)",
+      "GT2_3M_working_15mm": "299.4 N (computed)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Reference, not a purchase. Same Gates table and caveats as the 2M entry. 3M GT2 at 9 mm is about 6.9x the working tension of 2M GT2 at 6 mm (computed: 179.6/26.2). That is the strongest upgrade path if the shoulder needs more torque than a 6 mm 2GT carries; pulleys grow (3 mm pitch: 22T PD = 21.01 mm, computed)."
+  },
+  {
+    "item": "22:60 GT2 centre distances by belt length (computed reference)",
+    "category": "belt-drive",
+    "vendor": "computed",
+    "part_number": "n/a",
+    "description": "Exact open-belt pitch-line solution for 22T:60T GT2 (2 mm), L = 2C cos(phi) + pi(D+d)/2 + phi(D-d), sin(phi) = (D-d)/2C",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": null,
+    "observed": "2026-10-24",
+    "dims": {
+      "C_158mm_belt": "35.94 mm (computed)",
+      "C_180mm_belt": "47.45 mm (computed)",
+      "C_184mm_belt": "49.52 mm (computed)",
+      "C_188mm_belt": "51.57 mm (computed)",
+      "C_200mm_belt": "57.73 mm (computed)",
+      "C_202mm_belt": "58.75 mm (computed)",
+      "C_210mm_belt": "62.83 mm (computed)",
+      "C_220mm_belt": "67.92 mm (computed)",
+      "C_232mm_belt": "74.01 mm (computed)",
+      "C_240mm_belt": "78.06 mm (computed)",
+      "C_250mm_belt": "83.12 mm (computed)",
+      "C_260mm_belt": "88.17 mm (computed)",
+      "C_276mm_belt": "96.24 mm (computed)",
+      "C_280mm_belt": "98.25 mm (computed)",
+      "wrap_on_22T_at_220mm": "159.5 deg, about 9.7 teeth in mesh (computed)",
+      "pitch_dia_22T": "14.006 mm (computed)",
+      "pitch_dia_60T": "38.197 mm (computed)",
+      "ratio": "60/22 = 2.727:1 (computed)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Reference, not a purchase. Nominal pitch-line values with no tension allowance. Leave about +/-1 mm of adjustment, or an idler, for belt tolerance and pretension. The Phidgets pulley ODs (13.51 and 37.69 mm) clear each other at every length listed."
+  },
+  {
+    "item": "Feetech ST3215-C047 (STS3215 12 V 30 kg.cm) body and output",
+    "category": "servo-mounting",
+    "vendor": "Feetech (datasheet via Seeed)",
+    "part_number": "ST-3215-C047",
+    "description": "Official Feetech product spec A/0 2023-07-20: size, case screws, output spline, horn screw, rear idler.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://files.seeedstudio.com/products/Feetech/108090003_FEETECH_ST-3215-C047-Datasheet.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_LxWxH_mm": "45.2 x 24.7 x 35 (table); drawing 45.23 x 24.73 x 35, 36.5 incl. output spline",
+      "weight_g": "55 +/-1",
+      "output_spline": "25T / OD 5.9 mm",
+      "horn_centre_screw": "M3x6 machine screw",
+      "output_axis_from_end_mm": 12.5,
+      "spline_protrusion_mm": 3.4,
+      "case_screws": "8 x PA2.0 self-tapping (4 per face, corners); no mounting ears",
+      "rear_idler": "dia 6 mm boss, PA3.0x5 self-tapping screw",
+      "case": "PA+GF",
+      "bearing": "ball bearings",
+      "gear_ratio": "1/345"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "reference, not a purchase. Datasheet section 10 says 'No Accessories': the C047 ships WITHOUT a horn, so a horn must be bought or printed. Horn bolt circle not given in the Feetech sheet; see Waveshare drawing and SO-ARM100 STEP entries."
+  },
+  {
+    "item": "ST3215 2D outline drawing (Waveshare) incl. horn pattern",
+    "category": "servo-mounting",
+    "vendor": "Waveshare",
+    "part_number": "ST3215 (drawing title SCS215, 2022-06-08)",
+    "description": "Waveshare ST3215 outline drawing PDF/DXF in ST3215-2D.zip: horn disc and hole pattern, case-screw pattern.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://files.waveshare.com/upload/0/08/ST3215-2D.zip",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_LxWxH_mm": "45.22 x 24.72 x 35",
+      "height_with_both_horns_mm": 37.25,
+      "horn_disc_dia_mm": 19.2,
+      "horn_holes": "4 holes at 14 mm across centre (bolt circle 14 mm), hole size not dimensioned",
+      "horn_axis_to_end_mm": 10.11,
+      "front_face_case_holes_mm": "20.5 (across width) x 24.45 (along length)",
+      "rear_face_case_holes_mm": "20.7 along length, 6.11 from end",
+      "note": "front and rear faces both carry a horn disc (dual-shaft)"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://files.waveshare.com/upload/5/59/ST3215-3D.zip",
+      "licence": "none stated on Waveshare wiki (TBD: ask Waveshare); ST3215.step 3.0 MB inside zip"
+    },
+    "notes": "reference, not a purchase. Waveshare's ST3215 is the 12 V 30 kg.cm / 7.4 V 19.5 kg.cm STS3215 family; it ships with aluminium 'servo wheels' per Waveshare product page (https://www.waveshare.com/st3215-servo.htm, $16.99-21.99 range, not per-option). Horn hole thread not stated in drawing (TBD: measure or read DXF hole diameter)."
+  },
+  {
+    "item": "STS3215 STEP model (TheRobotStudio SO-ARM100)",
+    "category": "cad",
+    "vendor": "TheRobotStudio (GitHub)",
+    "part_number": "STEP/SO100/STS3215_03a.step",
+    "description": "Single-body STEP of STS3215 with horns, AP242, exported 2025-01-27 from Autodesk Fusion. Also STL/Onshape .part in Simulation/SO101/assets/sts3215_03a_v1.* and sts3215_03a_no_horn_v1.*.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://github.com/TheRobotStudio/SO-ARM100/blob/main/STEP/SO100/STS3215_03a.step",
+    "observed": "2026-10-24",
+    "dims": {
+      "file_size_bytes": 247082,
+      "horn_disc_dia_mm": "20.0 (computed from STEP cylinder r=10)",
+      "horn_holes": "4 x dia 2.5 mm modelled at (+/-4.95, +/-4.95) mm -> bolt circle 14.0 mm (computed), square 9.9 mm",
+      "horn_centre_bore_dia_mm": "4.8 (computed, r=2.4)",
+      "rear_idler_disc": "same dia 20 disc with 4 holes on 14.0 mm BC (computed), centre hole dia 2.5",
+      "output_axis_offset_from_body_centre_mm": "12.5 (computed)",
+      "case_screw_holes": "dia 1.5 (r 0.75) pilots at 20.5 mm spacing across width (computed)"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/main/STEP/SO100/STS3215_03a.step",
+      "licence": "Apache License 2.0 (repo root LICENSE file read: full Apache-2.0 text; GitHub reports Apache-2.0). No separate hardware licence in README."
+    },
+    "notes": "reference, not a purchase. Raw URL: https://raw.githubusercontent.com/TheRobotStudio/SO-ARM100/main/STEP/SO100/STS3215_03a.step . Hole dia 2.5 mm in the model is consistent with M3 tap drill but thread is not modelled (TBD: confirm on real horn)."
+  },
+  {
+    "item": "Feetech STS3250 12 V 50 kg.cm body and output",
+    "category": "servo-mounting",
+    "vendor": "Feetech (datasheet via Evelta)",
+    "part_number": "STS3250",
+    "description": "Official Feetech product spec A/0 2024-01-16.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://evelta.com/content/datasheets/501-STS3250.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_LxWxH_mm": "45.22 x 24.72 x 35; 36.5 incl. spline",
+      "weight_g": "74.5 +/-1",
+      "output_spline": "25T / OD 5.9 mm",
+      "horn_centre_screw": "M3x6 machine screw",
+      "output_axis_from_end_mm": 12.5,
+      "spline_protrusion_mm": 3.4,
+      "case_mount_holes": "4-M2.0 threaded on front face, 4-M2.0 on rear face (aluminium case); rear pattern 20.5 mm across width",
+      "rear_idler": "dia 6 mm boss, M3.0 machine screw",
+      "case": "Aluminium",
+      "gears": "steel",
+      "motor": "coreless",
+      "stall_current_A": 4.2
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "reference, not a purchase. 'No Accessories': no horn included. Horn bolt circle not in datasheet: TBD (same 25T/OD5.9 spline and envelope as STS3215, so STS3215 horns with 14 mm BC are expected to fit; confirm with Feetech). Some listings call it ST-3250-C001 or STS3250-C002."
+  },
+  {
+    "item": "STS3250 CAD",
+    "category": "cad",
+    "vendor": "none found",
+    "part_number": "STS3250",
+    "description": "Searched Feetech, GrabCAD, Onshape, Printables, LeRobot: no published STS3250 STEP found.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": null,
+    "observed": "2026-10-24",
+    "dims": {
+      "envelope": "use STS3215 STEP (same 45.22 x 24.72 x 35 envelope and output geometry) as proxy; M2 threaded case holes differ"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": "TBD: no file found"
+    },
+    "notes": "reference, not a purchase. feetechrc.com did not resolve from this machine (DNS failure) so the Feetech download area could not be checked. TBD: Feetech download page or sales contact."
+  },
+  {
+    "item": "DS3235 coreless 35 kg servo body (DSSERVO)",
+    "category": "servo-mounting",
+    "vendor": "DSSERVO (datasheet copy hosted by Univ. Rochester)",
+    "part_number": "DS3235 / -180 / -270",
+    "description": "DSSERVO datasheet: dimensions drawing, 25T spline, aluminium 25T clamp arm.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://hajim.rochester.edu/me/sites/kelley/me240/DS3235-270_datasheet.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_LxWxH_mm": "40 x 20 x 40.4 (drawing); table says 40*20*38.5",
+      "mount_hole_spacing_mm": "49.5 along length x 10 across",
+      "ear_overall_length_mm": 54.5,
+      "spline": "25T",
+      "ear_top_to_base_mm": 27.7,
+      "weight_g": 60,
+      "included_arm": "aluminium 25T clamp arm, holes at 19.5 and 23.5 mm from centre"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://grabcad.com/library/servo-ds3235-sg-35kg-1",
+      "licence": "GrabCAD community model, GrabCAD Terms of Use, no open licence stated (unverified: page not opened; recommended in DFRobot forum)"
+    },
+    "notes": "reference, not a purchase. Mount screw size not stated (standard-servo ears normally take M3/#4; TBD: measure ear hole). DS3225MG uses the same DSSERVO 40x20 case family; retailer listings give 40 x 20 x 40.5 mm."
+  },
+  {
+    "item": "DS3225MG 25 kg servo body",
+    "category": "servo-mounting",
+    "vendor": "DSSERVO (retailer listings)",
+    "part_number": "DS3225MG",
+    "description": "Retailer listings only; no official drawing retrieved.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://proto-pic.co.uk/product/25kg-waterproof-digital-servo-motor-with-metal-gears",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_LxWxH_mm": "40 x 20 x 40.5 (listings)",
+      "spline": "25T",
+      "weight_g": "60 to 75 (sources disagree)",
+      "mount_hole_spacing_mm": "TBD: expected same as DS3235 (49.5 x 10) but not confirmed"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "reference, not a purchase. Weight disagreement across sellers."
+  },
+  {
+    "item": "TowerPro MG996R body",
+    "category": "servo-mounting",
+    "vendor": "TowerPro (datasheet copy hosted by Cornell)",
+    "part_number": "MG996R",
+    "description": "TowerPro datasheet copy.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://courses.ece.cornell.edu/ece5990/ECE5725_Spring2020_Projects/May_15_Demo/Smart%20Lock/W_pp445_yl656/datasheet/MG996R_Tower-Pro.pdf",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_LxWxH_mm": "40.7 x 19.7 x 42.9",
+      "weight_g": 55,
+      "spline": "25T",
+      "mount_hole_spacing_mm": "TBD: not in datasheet; measure (standard-size ears)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "reference, not a purchase. Digital variants listed as 40.7 x 19.8 x 45 mm by some sellers."
+  },
+  {
+    "item": "25T aluminium round disc horn, 20 mm",
+    "category": "servo-mounting",
+    "vendor": "generic (Probots listing used for specs)",
+    "part_number": "25T circular metal servo horn",
+    "description": "Generic CNC aluminium 25T disc for MG996R/MG995/DS3218-class servos.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://probots.co.in/25t-circular-metal-servo-horn-mg996r-mg995.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "disc_dia_mm": 20,
+      "spline": "25T",
+      "holes": "4 x M3 tapped",
+      "hole_spacing_mm": "14 (bolt circle 14)",
+      "total_thickness_mm": "4.5 (another seller says 5.5)",
+      "disc_thickness_mm": 2
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Specs from Indian/AU retailers; no US listing with ASIN found (Amazon search returned 503, not indexed). TBD: Amazon ASIN and US price. Same 14 mm BC as the STS3215 disc, so one horn interface can serve tiers A and B (fit of generic 25T on Feetech 25T/OD5.9 spline unconfirmed)."
+  },
+  {
+    "item": "Feetech FK-RP-001 round aluminium horn 20 mm",
+    "category": "servo-mounting",
+    "vendor": "Botland (EU)",
+    "part_number": "FK-RP-001",
+    "description": "Feetech-branded 25T round aluminium horn, includes caps and mounting screws.",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://botland.store/servo-horns/9198-round-aluminum-servo-horn-feetech-fk-rp-001-20mm-6mm.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "disc_dia_mm": 20,
+      "spline": "25T",
+      "centre_hole_mm": 6,
+      "thickness_mm": "2 (table depth, unconfirmed)",
+      "bolt_circle_mm": "TBD: not stated"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price EUR 2.50 in page structured data (visible price failed to load), not USD; EU shop."
+  },
+  {
+    "item": "ServoCity 1908 Series Servo Hub, 25T, 32 mm",
+    "category": "servo-mounting",
+    "vendor": "ServoCity",
+    "part_number": "1908-0025-0032",
+    "description": "Clamping-free aluminium hub, 25T spline, 16 mm hole pattern (goBILDA), counterbored centre screw.",
+    "pack_qty": 1,
+    "price_usd": 8.99,
+    "price_status": "listing",
+    "url": "https://www.servocity.com/1908-series-servo-hub-25-tooth-spline-32mm-diameter/",
+    "observed": "2026-10-24",
+    "dims": {
+      "dia_mm": 32,
+      "thickness_mm": 6,
+      "pattern_mm": "16 mm pattern, threaded + thru holes (thread not stated on page; goBILDA standard is M4, unconfirmed)",
+      "weight_g": 8.2,
+      "spline": "25T"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.servocity.com/1908-series-servo-hub-25-tooth-spline-32mm-diameter/",
+      "licence": "ServoCity site download (1908-0025-0032.zip STEP), no open licence stated"
+    },
+    "notes": "US source with STEP. ServoCity 25T is the Hitec/goBILDA 25T; fit on Feetech/DSSERVO 25T not confirmed."
+  },
+  {
+    "item": "Multi-function servo bracket + short U bracket kit (40x20x36 servos)",
+    "category": "servo-mounting",
+    "vendor": "VXB",
+    "part_number": "two sets pan tilt servo mount bracket for 40x20x36",
+    "description": "2 x aluminium multi-function brackets, 2 x short U brackets, 2 bearings, 2 screw sets, 4 metal horns; for MG996R-size servos.",
+    "pack_qty": 2,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://vxb.com/products/two-sets-pan-tilt-servo-mount-bracket-for-40x20x36",
+    "observed": "2026-10-24",
+    "dims": {
+      "servo_envelope_mm": "40 x 20 x 36",
+      "plate_thickness_mm": "TBD (Probots equivalent: 2 mm aluminium, 14 g)",
+      "hole_pattern": "TBD: not stated"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "No Amazon ASIN found (Amazon not indexed). DS3235 is 40 x 20 x 40.4 so check the multi-function bracket height. Price not captured."
+  },
+  {
+    "item": "AmazingHand CAD (Pollen Robotics)",
+    "category": "cad",
+    "vendor": "Pollen Robotics (GitHub)",
+    "part_number": "pollen-robotics/AmazingHand cad/",
+    "description": "STEP and STL per part in cad/step and cad/stl (20 parts each, incl. hand plates, finger frames, SO-ARM_Interface.step), plus public Onshape document.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://github.com/pollen-robotics/AmazingHand/tree/main/cad",
+    "observed": "2026-10-24",
+    "dims": {
+      "actuators": "8 x Feetech SCS0009 (2 per finger), not STS3215",
+      "formats": "STEP, STL, Onshape"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://github.com/pollen-robotics/AmazingHand/tree/main/cad",
+      "licence": "Mechanical design: CC BY 4.0 (README). Software: Apache-2.0 (root LICENSE and Demo/LICENSE files read, both full Apache 2.0 text)."
+    },
+    "notes": "reference, not a purchase. Onshape: https://cad.onshape.com/documents/430ff184cf3dd9557aaff2be/w/e3658b7152c139971d22c688/e/bd399bf1860732c6c6a2ee45 . Repo also has docs/AmazingHand_Assembly.pdf."
+  },
+  {
+    "item": "Extension spring 0.625 OD, 27 lbf",
+    "category": "springs",
+    "vendor": "Century Spring",
+    "part_number": "90CS",
+    "description": "Stock extension spring, machine hook ends, zinc.",
+    "pack_qty": 1,
+    "price_usd": 9.37,
+    "price_status": "listing",
+    "url": "https://www.centuryspring.com/shop/90cs",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": 0.625,
+      "wire_in": 0.08,
+      "free_length_in": 5.5,
+      "rate": "6.4 lb/in (1.12 N/mm)",
+      "initial_tension_lb": 5,
+      "max_deflection_in": 3.4,
+      "max_load": "27 lbf (120.1 N)",
+      "material": "high carbon steel"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from page schema.org Offer, assumed per spring (TBD: confirm unit and qty breaks in cart). computed: 120 N x 0.04 m = 4.8 N.m; 0.05 m = 6.0 N.m; 86 mm travel."
+  },
+  {
+    "item": "Extension spring 0.75 OD, 22 lbf, long low-rate",
+    "category": "springs",
+    "vendor": "Century Spring",
+    "part_number": "132CS",
+    "description": "Stock extension spring, machine hook ends, zinc.",
+    "pack_qty": 1,
+    "price_usd": 11.84,
+    "price_status": "listing",
+    "url": "https://www.centuryspring.com/shop/132cs",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": 0.75,
+      "wire_in": 0.08,
+      "free_length_in": 8.5,
+      "rate": "2.1 lb/in (0.37 N/mm)",
+      "initial_tension_lb": 4,
+      "max_deflection_in": 8.6,
+      "max_load": "22 lbf (97.9 N)",
+      "material": "high carbon steel"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Flattest force curve of the set; 216 mm free length needs room. computed: 97.9 N x 0.05 m = 4.9 N.m."
+  },
+  {
+    "item": "Extension spring 0.5 OD, 17 lbf",
+    "category": "springs",
+    "vendor": "Century Spring",
+    "part_number": "5357CS",
+    "description": "Stock extension spring, machine hook ends, zinc.",
+    "pack_qty": 1,
+    "price_usd": 7.79,
+    "price_status": "listing",
+    "url": "https://www.centuryspring.com/shop/5357cs",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": 0.5,
+      "wire_in": 0.0625,
+      "free_length_in": 6.88,
+      "rate": "2.8 lb/in (0.49 N/mm)",
+      "initial_tension_lb": 3,
+      "max_deflection_in": 4.9,
+      "max_load": "17 lbf (75.6 N)",
+      "material": "spring steel"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Same 0.5 in OD as existing Grainger 1NAE3 line. computed: 75.6 N x 0.05 m = 3.8 N.m; x 0.06 m = 4.5 N.m."
+  },
+  {
+    "item": "Extension spring 0.812 OD, 45 lbf, stiff",
+    "category": "springs",
+    "vendor": "Century Spring",
+    "part_number": "5552CS",
+    "description": "Stock extension spring, machine hook ends, zinc.",
+    "pack_qty": 1,
+    "price_usd": 9.05,
+    "price_status": "listing",
+    "url": "https://www.centuryspring.com/shop/5552cs",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": 0.812,
+      "wire_in": 0.105,
+      "free_length_in": 4,
+      "rate": "20 lb/in (3.5 N/mm)",
+      "initial_tension_lb": 10,
+      "max_deflection_in": 1.8,
+      "max_load": "45 lbf (200.2 N)",
+      "material": "spring steel"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Short travel (46 mm) and high rate: torque varies strongly with angle; use only with a short lever. computed: 200 N x 0.025 m = 5.0 N.m."
+  },
+  {
+    "item": "Lee Spring stainless extension spring 0.5 OD",
+    "category": "springs",
+    "vendor": "Lee Spring",
+    "part_number": "MS24586-C207",
+    "description": "Stainless, machine loops, MS-spec.",
+    "pack_qty": 1,
+    "price_usd": 22.83,
+    "price_status": "listing",
+    "url": "https://www.leespring.com/product/extension-spring-ms24586c207-stainless-steel",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": 0.5,
+      "wire_in": 0.063,
+      "free_length_in": 2.75,
+      "rate": "7.68 lb/in",
+      "initial_tension_lb": 1.416,
+      "max_load": "15.66 lb (69.7 N)",
+      "max_extended_length_in": 4.6
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price breaks: 1-19 $22.83, 20-49 $15.32. computed: 69.7 N x 0.05 m = 3.5 N.m; travel 1.85 in (47 mm)."
+  },
+  {
+    "item": "McMaster-Carr extension spring 0.563 OD",
+    "category": "springs",
+    "vendor": "McMaster-Carr",
+    "part_number": "9654K332",
+    "description": "Steel extension spring.",
+    "pack_qty": 6,
+    "price_usd": 16.16,
+    "price_status": "listing",
+    "url": "https://www.mcmaster.com/9654K332/",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": 0.563,
+      "wire_in": 0.063,
+      "length_in": 5.625,
+      "extended_length_at_max_load_in": 11.991,
+      "min_load_lb": 3.18,
+      "max_load_lb": 19.5,
+      "rate": "2.56 lbf/in"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "computed: 19.5 lbf = 86.7 N; x 0.05 m = 4.3 N.m. Price per pack of 6 ($2.69 each) from McMaster filtered catalog page."
+  },
+  {
+    "item": "Existing BOM spring Grainger 1NAE3",
+    "category": "springs",
+    "vendor": "Grainger",
+    "part_number": "1NAE3",
+    "description": "0.5 in OD extension spring per existing BOM.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.grainger.com/product/1NAE3",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_in": "0.5 (per BOM, unconfirmed)",
+      "wire_in": "TBD",
+      "free_length_in": "TBD",
+      "rate": "TBD",
+      "max_load": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Could not confirm: Grainger page returned an error/bot wall to WebFetch and curl; no search hits for 1NAE3. TBD: open the Grainger page in a browser. BOM price $9.08 not re-verified. Existing BOM price $9.08 kept here as text only (not re-observed today)."
+  },
+  {
+    "item": "Torsion spring 180 deg TO-5220RCS",
+    "category": "springs",
+    "vendor": "Century Spring",
+    "part_number": "TO-5220RCS",
+    "description": "Stock torsion spring, 180 deg legs.",
+    "pack_qty": 1,
+    "price_usd": 6.43,
+    "price_status": "listing",
+    "url": "https://www.centuryspring.com/shop/to-5220rcs",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_mm": 26.37,
+      "ID_mm": 21.54,
+      "wire_mm": 2.41,
+      "body_length_mm": 19.3,
+      "leg_length_mm": 76.2,
+      "rate": "9.83 N.mm/deg",
+      "max_torque": "2078.83 N.mm (suggested)",
+      "max_deflection_deg": 211,
+      "material": "music wire",
+      "wind": "right",
+      "mandrel_mm": 17.27
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "One spring gives about 2.1 N.m max; computed: two in parallel (one RH + a LH equivalent) about 4.2 N.m. Price from page schema.org Offer, unit assumed each."
+  },
+  {
+    "item": "Torsion spring 180 deg TO-1123CS",
+    "category": "springs",
+    "vendor": "Century Spring",
+    "part_number": "TO-1123CS",
+    "description": "Stock torsion spring, 180 deg legs.",
+    "pack_qty": 1,
+    "price_usd": 7.1,
+    "price_status": "listing",
+    "url": "https://www.centuryspring.com/shop/to-1123cs",
+    "observed": "2026-10-24",
+    "dims": {
+      "OD_mm": 19.61,
+      "ID_mm": 14.27,
+      "wire_mm": 2.67,
+      "body_length_mm": 24,
+      "leg_length_mm": 88.9,
+      "rate": "16.27 N.mm/deg",
+      "max_torque": "1751.19 N.mm (suggested)",
+      "max_deflection_deg": 107,
+      "material": "302/304 stainless",
+      "wind": "left"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Left-hand wind, pairs with a right-hand spring. Only 107 deg travel."
+  },
+  {
+    "item": "McMaster gas spring 20 lbf, 7.48 in extended",
+    "category": "springs",
+    "vendor": "McMaster-Carr (specs via third-party copy)",
+    "part_number": "4138T101",
+    "description": "Gas spring, ball-socket ends on 5/16-18 ball studs, removable end fittings.",
+    "pack_qty": null,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/4138T101/",
+    "observed": "2026-10-24",
+    "dims": {
+      "extended_length_in": 7.48,
+      "compressed_length_in": 5.51,
+      "stroke_in": 1.97,
+      "extension_force_lbf": "20 (89 N)",
+      "compression_force_lbf": 26,
+      "ball_stud_thread": "5/16-18"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Specs from tygasspring.com copy of McMaster table, not McMaster itself: TBD confirm on mcmaster.com. Price TBD (McMaster pages render no data to fetch). 4138T102 same size is 30 lbf; 4138T511 7.01 in / 1.97 in stroke is 15 lbf. Gas springs push, so geometry must be laid out for compression; force is nearly constant over stroke."
+  },
+  {
+    "item": "Gas strut 10 in, 100 N, 2-pack",
+    "category": "springs",
+    "vendor": "NIDAYE (seen on desertcart/Walmart)",
+    "part_number": "NIDAYE 10in 100N",
+    "description": "Lift support, 2-pack.",
+    "pack_qty": 2,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.desertcart.sn/products/187000388",
+    "observed": "2026-10-24",
+    "dims": {
+      "extended_length_in": 10,
+      "compressed_length_in": 6.13,
+      "force": "100 N (22 lb)",
+      "end_fittings": "TBD",
+      "stroke_in": "3.87 (computed: 10 - 6.13)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "No Amazon ASIN found (Amazon not indexed / 503). A similar 100 N 10 in strut from another brand is $27.49 at Newegg (snippet, unconfirmed): https://www.newegg.com/p/2Z6-00WP-016T5 ."
+  },
+  {
+    "item": "Silicone wire 12 AWG red+black",
+    "category": "wiring",
+    "vendor": "Amazon (BNTECHGO)",
+    "part_number": "B01ABOPMEI",
+    "description": "12 AWG silicone, tinned copper, 600 V, -60..200 C; 10 ft red + 10 ft black",
+    "pack_qty": "2 x 10 ft",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B01ABOPMEI",
+    "observed": "2026-10-24",
+    "dims": {
+      "strands": "680 x 0.08 mm",
+      "od_mm": 4.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Title confirmed by fetching the Amazon page; price not in fetched text. Strand count/OD from reseller copies of the listing. TBD: price from Amazon page."
+  },
+  {
+    "item": "Silicone wire 14 AWG red+black",
+    "category": "wiring",
+    "vendor": "Amazon (BNTECHGO)",
+    "part_number": "B017TFR6SM",
+    "description": "14 AWG silicone, tinned copper, 600 V, 200 C; red/black kit",
+    "pack_qty": "TBD: length per colour on listing",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B017TFR6SM",
+    "observed": "2026-10-24",
+    "dims": {
+      "strands": "400 x 0.08 mm",
+      "od_mm": 3.5,
+      "od_tol_mm": 0.1
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "ASIN from reseller page; 5-colour 25 ft kit is B08FCKG5FH. TBD: price, length."
+  },
+  {
+    "item": "Silicone wire 16 AWG red+black",
+    "category": "wiring",
+    "vendor": "Amazon (BNTECHGO)",
+    "part_number": "B017TFR664",
+    "description": "16 AWG silicone, tinned copper, 600 V, 200 C; 10 ft red + 10 ft black",
+    "pack_qty": "2 x 10 ft",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B017TFR664",
+    "observed": "2026-10-24",
+    "dims": {
+      "strands": "252 x 0.08 mm",
+      "od_mm": 3.0,
+      "od_tol_mm": 0.1
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "ASIN from reseller copy (desertcart); 100 ft red/black spool reported as B01F8XHFXS. TBD: price."
+  },
+  {
+    "item": "Silicone wire 18 AWG red+black",
+    "category": "wiring",
+    "vendor": "Newegg (BNTECHGO)",
+    "part_number": "TBD: Amazon ASIN not found",
+    "description": "18 AWG silicone, tinned copper, 600 V, 200 C; red/black",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.neweggbusiness.com/p/9B-23J-005R-001N4",
+    "observed": "2026-10-24",
+    "dims": {
+      "strands": "150 x 0.08 mm",
+      "od_mm": 2.3,
+      "od_tol_mm": 0.1
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "No Amazon ASIN found for BNTECHGO 18 AWG; Newegg Business listing used. One Newegg spec field wrongly says 14 AWG. TBD: ASIN and price."
+  },
+  {
+    "item": "Silicone wire 20 AWG black spool",
+    "category": "wiring",
+    "vendor": "Amazon (BNTECHGO)",
+    "part_number": "B01K4QVI46",
+    "description": "20 AWG silicone, tinned copper, 600 V, 200 C; single colour spool",
+    "pack_qty": "100 ft",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B01K4QVI46",
+    "observed": "2026-10-24",
+    "dims": {
+      "strands": "100 x 0.08 mm",
+      "od_mm": 1.8,
+      "od_tol_mm": 0.1
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "ASIN from reseller page (black, 100 ft). Buy red too for servo power runs. TBD: price."
+  },
+  {
+    "item": "Silicone wire 22 AWG 7-colour kit",
+    "category": "wiring",
+    "vendor": "Amazon (BNTECHGO)",
+    "part_number": "B08FMF3NBL",
+    "description": "22 AWG silicone, tinned copper, 600 V, 200 C; 7 colours x 50 ft",
+    "pack_qty": "7 x 50 ft",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B08FMF3NBL",
+    "observed": "2026-10-24",
+    "dims": {
+      "strands": "60 x 0.08 mm",
+      "od_mm": 1.7,
+      "od_tol_mm": 0.1
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Robu lists a 22 AWG at 252/0.08 (conflict); BNTECHGO listings say 60/0.08. TBD: price."
+  },
+  {
+    "item": "XT60 male-female pair",
+    "category": "wiring",
+    "vendor": "Pololu",
+    "part_number": "2175",
+    "description": "XT60 pair, yellow, gold-plated brass, 60 A cont / 100 A peak",
+    "pack_qty": "1 pair",
+    "price_usd": 2.95,
+    "price_status": "listing",
+    "url": "https://www.pololu.com/product/2175",
+    "observed": "2026-10-24",
+    "dims": {
+      "body_w_mm": 15.5,
+      "body_h_mm": 8.1,
+      "body_l_mm": 20.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Pololu lists brand as 'Generic', NOT Amass-genuine. Out of stock (backorder) per category page."
+  },
+  {
+    "item": "Amass XT60H connectors, 5 sets",
+    "category": "wiring",
+    "vendor": "GetFPV (Amass)",
+    "part_number": "Amass XT60H-M / XT60H-F (GetFPV SKU 11788)",
+    "description": "Genuine Amass XT60H with sheath, 5 male + 5 female; 30 A cont / 60 A peak per resellers",
+    "pack_qty": "5 pairs",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.getfpv.com/batteries/battery-accessories/amass-xt60h-power-connectors-male-female-5-sets-10-pcs.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_with_sheath_mm": 21.0,
+      "w_mm": 15.7,
+      "h_mm": 8.1,
+      "dims_source": "reseller (ifuturetech), unverified"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "GetFPV page 403 to fetch; snippet says out of stock. XT60H rating 30 A continuous per Electrokit/Probots vs 60 A on Robu. TBD: price, official Amass drawing."
+  },
+  {
+    "item": "Amass XT30U connectors, 5 pairs",
+    "category": "wiring",
+    "vendor": "GetFPV (Amass)",
+    "part_number": "Amass XT30U-M / XT30U-F",
+    "description": "Genuine Amass XT30U, 5 male + 5 female; 15 A cont / 30 A peak; 16-20 AWG",
+    "pack_qty": "5 pairs",
+    "price_usd": 7.69,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.getfpv.com/amass-xt30-u-lipo-connector-set-5-pairs.html",
+    "observed": "2026-10-24",
+    "dims": {
+      "l_mm": 13.7,
+      "w_mm": 10.2,
+      "h_mm": 5.2,
+      "dims_source": "reseller (Out of Darts), unverified"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Two GetFPV URLs disagree on stock. Rating 15 A continuous (Pimoroni, TME, LCSC) -- adequate only for <=15 A branches."
+  },
+  {
+    "item": "Powerpole PP15/45 housing, red",
+    "category": "wiring",
+    "vendor": "Mouser (Anderson)",
+    "part_number": "1327",
+    "description": "PP15/45 housing only, red",
+    "pack_qty": "1",
+    "price_usd": 0.73,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Anderson-Power-Products/1327",
+    "observed": "2026-10-24",
+    "dims": {
+      "approx_mm": "7.9 x 7.9 x 24.6",
+      "dims_source": "third-party copy of Anderson catalog, unlabelled; verify DS-PP1545"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.andersonpower.com",
+      "licence": "TBD: Anderson download terms (login)"
+    },
+    "notes": "Mouser 879-1327; stock 43,538. Same housing takes 15, 30 and 45 A contacts."
+  },
+  {
+    "item": "Powerpole PP15/45 housing, black",
+    "category": "wiring",
+    "vendor": "Mouser (Anderson)",
+    "part_number": "1327G6",
+    "description": "PP15/45 housing only, black",
+    "pack_qty": "1",
+    "price_usd": 0.73,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Anderson-Power-Products/1327G6",
+    "observed": "2026-10-24",
+    "dims": {
+      "approx_mm": "7.9 x 7.9 x 24.6",
+      "dims_source": "unverified, see 1327"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.andersonpower.com",
+      "licence": "TBD"
+    },
+    "notes": "Mouser 879-1327G6; stock 84,497."
+  },
+  {
+    "item": "Powerpole 15 A contact",
+    "category": "wiring",
+    "vendor": "Mouser (Anderson)",
+    "part_number": "1332",
+    "description": "PP15 contact, 16-20 AWG, low detent",
+    "pack_qty": "1",
+    "price_usd": 0.55,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Anderson-Power-Products/1332",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "16-20"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Note: 1332 is the 15 A contact (16-20 AWG); 1331 is the 30 A. Easy to swap by mistake."
+  },
+  {
+    "item": "Powerpole 30 A contact",
+    "category": "wiring",
+    "vendor": "Mouser (Anderson)",
+    "part_number": "1331",
+    "description": "PP30 contact, 12-16 AWG, low detent",
+    "pack_qty": "1",
+    "price_usd": 0.51,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Anderson-Power-Products/1331",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "12-16"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser 879-1331; stock 35,462. Right contact for 12-14 AWG battery and bus feeders."
+  },
+  {
+    "item": "Powerpole 45 A contact",
+    "category": "wiring",
+    "vendor": "Mouser (Anderson)",
+    "part_number": "261G2",
+    "description": "PP45 contact, 10-14 AWG, tin, reeled (sold cut tape)",
+    "pack_qty": "1",
+    "price_usd": 0.36,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Anderson-Power-Products/261G2",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "10-14"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser 879-261G2; MOQ 1."
+  },
+  {
+    "item": "Powerpole 30 A sets, unassembled, 10",
+    "category": "wiring",
+    "vendor": "Powerwerx",
+    "part_number": "PP30-10",
+    "description": "10 sets: red + black housing, 2 x 30 A contacts, roll pin each",
+    "pack_qty": "10 sets",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://powerwerx.com/anderson-powerpole-connectors-30amp-unassembled",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "12-16"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Powerwerx page returns 403 to fetch. Bonded WP30-10 is $16.99 (snippet) at Powerwerx, $13.95 at RFParts. TBD: PP30-10 price."
+  },
+  {
+    "item": "Powerpole 15 A sets, unassembled, 10",
+    "category": "wiring",
+    "vendor": "Powerwerx",
+    "part_number": "PP15-10",
+    "description": "10 sets of 15 A Powerpole (housings + contacts + roll pins)",
+    "pack_qty": "10 sets",
+    "price_usd": 12.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://powerwerx.com/anderson-powerpole-connectors-15amp-unassembled",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "16-20"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from search snippet."
+  },
+  {
+    "item": "Powerpole 45 A sets, unassembled, 10",
+    "category": "wiring",
+    "vendor": "Powerwerx",
+    "part_number": "PP45-10",
+    "description": "10 sets of 45 A Powerpole (housings + contacts + roll pins)",
+    "pack_qty": "10 sets",
+    "price_usd": 19.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://powerwerx.com/anderson-powerpole-connectors-45amp-unassembled",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "10-14"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price from search snippet; Altex $20.95."
+  },
+  {
+    "item": "Molex Mini-SPOX 3P receptacle housing",
+    "category": "wiring",
+    "vendor": "Digi-Key (Molex)",
+    "part_number": "0050375033 (50-37-5033)",
+    "description": "2.50 mm pitch, 3-pos receptacle housing, free hanging, locking ramp, PA nylon, -55..105 C",
+    "pack_qty": "1",
+    "price_usd": 0.14,
+    "price_status": "listing",
+    "url": "https://www.digikey.com/en/products/detail/molex/0050375033/280419",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch_mm": 2.5,
+      "positions": 3
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.molex.com/en-us/products/part-detail/50375033",
+      "licence": "Molex terms"
+    },
+    "notes": "Digi-Key WM18874-ND, stock 24,897; Mouser 538-50-37-5033 also $0.14. This is the '5264 3P' housing on Feetech cables."
+  },
+  {
+    "item": "Molex Mini-SPOX crimp socket 22-28 AWG",
+    "category": "wiring",
+    "vendor": "Digi-Key (Molex)",
+    "part_number": "0008701040 (08-70-1040)",
+    "description": "Crimp socket for 5264 housing, 22-28 AWG, tin, bulk (loose)",
+    "pack_qty": "1",
+    "price_usd": 0.23,
+    "price_status": "listing",
+    "url": "https://www.digikey.com/en/products/detail/molex/0008701040/259393",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "22-28"
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.molex.com/en-us/products/part-detail/08701040",
+      "licence": "Molex terms"
+    },
+    "notes": "Digi-Key WM17406-ND. 08-70-1039 is the same terminal on 12k reel (MOQ 12,000). Max 22 AWG: servo bus power current limited by wire."
+  },
+  {
+    "item": "Feetech 5264 3P servo cable 300 mm, 6 pcs",
+    "category": "wiring",
+    "vendor": "Waveshare",
+    "part_number": "SR-Cable-5264-3PIN-300mm-6PCS",
+    "description": "5264-3PIN F-F servo bus cables for ST/SC/CF servos, 300 mm",
+    "pack_qty": "6",
+    "price_usd": 1.99,
+    "price_status": "listing",
+    "url": "https://www.waveshare.com/sr-cable-5264-3pin.htm?sku=34171",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 300,
+      "pitch_mm": 2.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Page tiers show $1.89 (1-9) vs $1.99 base: ambiguous. Wire gauge not stated. Waveshare only offers 300 and 900 mm."
+  },
+  {
+    "item": "Feetech 5264 3P servo cable 900 mm, 6 pcs",
+    "category": "wiring",
+    "vendor": "Waveshare",
+    "part_number": "SR-Cable-5264-3PIN-900mm-6PCS",
+    "description": "5264-3PIN F-F servo bus cables, 900 mm",
+    "pack_qty": "6",
+    "price_usd": 3.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.waveshare.com/sr-cable-5264-3pin.htm?sku=34172",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 900,
+      "pitch_mm": 2.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mixed pack 3x300+3x900 is SKU 34322 (SR-Cable-5264-3PIN-MIX-6PCS)."
+  },
+  {
+    "item": "Feetech 5264 3P cable 15 cm",
+    "category": "wiring",
+    "vendor": "aifitlab (Feetech)",
+    "part_number": "FEETECH 5264 Terminal Cable 15 cm",
+    "description": "Feetech-branded 3-pin 5264 cable, 15 cm, black/red/white",
+    "pack_qty": "1",
+    "price_usd": 3.0,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://aifitlab.com/products/feetech-5264-terminal-cable",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 150
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Backordered; listing says 'SCS series / PWM servo'. No Feetech official store, Seeed or Amazon listing for 200/400/500 mm lengths found -- crimp your own with 50-37-5033 + 08-70-1040 for custom lengths."
+  },
+  {
+    "item": "Servo extension 300 mm M-F",
+    "category": "wiring",
+    "vendor": "Pololu",
+    "part_number": "2184",
+    "description": "Servo extension 12 in male-female, 22 AWG (60 strand), JR/Futaba compatible",
+    "pack_qty": "1",
+    "price_usd": 4.64,
+    "price_status": "listing",
+    "url": "https://www.pololu.com/product/2184",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 300,
+      "awg": 22
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Backorder only. Twisted version #2169 $5.25 (snippet)."
+  },
+  {
+    "item": "Servo extension 600 mm M-F (nearest to 500 mm)",
+    "category": "wiring",
+    "vendor": "Pololu",
+    "part_number": "2185",
+    "description": "Servo extension 24 in male-female, 22 AWG (60 strand)",
+    "pack_qty": "1",
+    "price_usd": 6.58,
+    "price_status": "listing",
+    "url": "https://www.pololu.com/product/2185",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 600,
+      "awg": 22
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Pololu has no 500 mm; 24 in is next. Backorder only. No 22 AWG 500 mm 10-pack verified on Amazon (one 50 cm listing is 26 AWG)."
+  },
+  {
+    "item": "JST-PH compatible 2.0 mm crimp kit",
+    "category": "wiring",
+    "vendor": "Adafruit",
+    "part_number": "4422",
+    "description": "220 pcs: 10 each 2/3/4/5/6/8-pin female + male housings, 100 crimp sockets",
+    "pack_qty": "220 pcs",
+    "price_usd": 8.95,
+    "price_status": "listing",
+    "url": "https://www.adafruit.com/product/4422",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch_mm": 2.0
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "76 in stock. Crimp tool not included; PH and XH need different dies."
+  },
+  {
+    "item": "JST-XH compatible 2.5 mm crimp kit",
+    "category": "wiring",
+    "vendor": "Adafruit",
+    "part_number": "4423",
+    "description": "20 each 2/3/4/5-pin housings, 200 crimp pins, 20 each 2-5 pin TH shrouded headers",
+    "pack_qty": "'560 pcs' (itemised list sums to 360)",
+    "price_usd": 24.95,
+    "price_status": "listing",
+    "url": "https://www.adafruit.com/product/4423",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch_mm": 2.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Adafruit page piece count is inconsistent (560 claimed, 360 itemised)."
+  },
+  {
+    "item": "Ferrule crimp kit, 1200 ferrules",
+    "category": "wiring",
+    "vendor": "Amazon (Preciva)",
+    "part_number": "TBD: ASIN unconfirmed (B073TZ5BBG reported as SKU)",
+    "description": "Self-adjusting ratchet ferrule crimper + 1200 insulated ferrules, AWG 23-7 (0.25-10 mm2)",
+    "pack_qty": "1 kit",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B073TZ5BBG",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "23-7"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "ASIN not confirmed (one reseller lists 0.08-6 mm2, conflict). Industrial alt: Phoenix Crimpfox 1200102 on Digi-Key (not found via API). TBD: confirm ASIN, price."
+  },
+  {
+    "item": "Heat shrink kit 3:1 adhesive-lined, 180 pcs",
+    "category": "wiring",
+    "vendor": "Amazon (Wirefy)",
+    "part_number": "B084GDLSCK",
+    "description": "Dual-wall polyolefin 3:1, 7 sizes 3/32-3/4 in, 3.5 in pieces, black",
+    "pack_qty": "180 pcs",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.amazon.com/dp/B084GDLSCK",
+    "observed": "2026-10-24",
+    "dims": {
+      "sizes_in": "3/32 to 3/4",
+      "piece_len_in": 3.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Snippet prices range $8.99-$23.80 across sellers; not quoted. TBD: Amazon price."
+  },
+  {
+    "item": "Heat shrink kit 2:1 assorted colour, 3M",
+    "category": "wiring",
+    "vendor": "Mouser (3M)",
+    "part_number": "FP-301 KIT",
+    "description": "3M FP-301 2:1 polyolefin, assorted colours, 6 in lengths, 133 pcs",
+    "pack_qty": "1 kit",
+    "price_usd": 153.57,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/3M-Electronic-Specialty/FP-301-KIT",
+    "observed": "2026-10-24",
+    "dims": {
+      "piece_len_in": 6
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser 517-5100, stock 13. Expensive vs Amazon kit; listed as distributor-grade option."
+  },
+  {
+    "item": "Braided expandable sleeving 1/4 in (~6 mm)",
+    "category": "wiring",
+    "vendor": "Altex (Techflex)",
+    "part_number": "PTN0.25BK",
+    "description": "Techflex Flexo PET 1/4 in black, sold per foot",
+    "pack_qty": "per ft",
+    "price_usd": 0.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://altex.com/products/techflex-ptn0-25bk-flexo-pet-1-4in-black-expandable-sleeving-per-foot",
+    "observed": "2026-10-24",
+    "dims": {
+      "nominal_id_mm": 6.35
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Markertek 100 ft roll $22.50 (snippet). McMaster category exists but page gives no PNs/prices to fetch."
+  },
+  {
+    "item": "Braided expandable sleeving 3/8 in (~10 mm)",
+    "category": "wiring",
+    "vendor": "Techflex",
+    "part_number": "PTN0.38BK",
+    "description": "Techflex Flexo PET 3/8 in black",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.techflex.com",
+    "observed": "2026-10-24",
+    "dims": {
+      "nominal_id_mm": 9.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "No direct listing price found; eBay 100 ft roll ~$23.47 (not a preferred vendor). TBD: distributor price."
+  },
+  {
+    "item": "Braided expandable sleeving 1/2 in (~13 mm)",
+    "category": "wiring",
+    "vendor": "Techflex",
+    "part_number": "PTN0.50BK",
+    "description": "Techflex Flexo PET 1/2 in black",
+    "pack_qty": "TBD",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.techflex.com",
+    "observed": "2026-10-24",
+    "dims": {
+      "nominal_id_mm": 12.7
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "TBD: distributor price (McMaster/Digi-Key)."
+  },
+  {
+    "item": "Cable drag chain 10x15 mm, 1 m",
+    "category": "wiring",
+    "vendor": "VXB",
+    "part_number": "10x15 drag chain PA66",
+    "description": "Open drag chain, PA66 nylon, white, R18",
+    "pack_qty": "1 m",
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://vxb.com/fr/products/10-x-15-mm-inner-height-by-width-drag-chain-cable",
+    "observed": "2026-10-24",
+    "dims": {
+      "inner_h_x_w_mm": "10 x 15",
+      "outer_h_x_w_mm": "15 x 23",
+      "bend_radius_mm": 18,
+      "length_mm": 1000,
+      "mass_g": 133
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Page shows $59.99 and $88.00 with swapped regular/sale labels -- not trusted. Generic 10x15 chains are far cheaper elsewhere; igus E2 micro not found on Digi-Key/Mouser. TBD: price."
+  },
+  {
+    "item": "Spiral wrap 1/4 in x 100 ft",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "T25N-C",
+    "description": "Spiral wrap 0.25 in (6.3 mm) x 100 ft nylon natural",
+    "pack_qty": "100 ft",
+    "price_usd": 160.68,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/T25N-C",
+    "observed": "2026-10-24",
+    "dims": {
+      "size_mm": 6.3,
+      "length_ft": 100
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 9. Expensive; 3/8 in T38N-C is $262.84. Consider sleeving instead."
+  },
+  {
+    "item": "Cable ties 99 mm miniature, 100 pk",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "PLT1M-C",
+    "description": "Cable tie 3.9 in (99 mm), miniature, nylon natural",
+    "pack_qty": "100",
+    "price_usd": 21.2,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/PLT1M-C",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 99
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Unit $0.212 at MOQ 100 -> $21.20/100 computed from listing unit price."
+  },
+  {
+    "item": "Cable ties 188 mm standard, 100 pk",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "PLT2S-C",
+    "description": "Cable tie 7.4 in (188 mm), standard, nylon natural",
+    "pack_qty": "100",
+    "price_usd": 29.3,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/PLT2S-C",
+    "observed": "2026-10-24",
+    "dims": {
+      "length_mm": 188
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Unit $0.293 at MOQ 100 -> $29.30/100 computed."
+  },
+  {
+    "item": "WAGO 221-412 lever splice 2-pos",
+    "category": "wiring",
+    "vendor": "Digi-Key (WAGO)",
+    "part_number": "221-412",
+    "description": "Lever splice, 2 entries, 24-12 AWG, transparent",
+    "pack_qty": "1",
+    "price_usd": 0.62,
+    "price_status": "listing",
+    "url": "https://www.digikey.com/en/products/detail/wago-corporation/221-412/13175703",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "24-12",
+      "max_mm2": 4
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://wago.priintcloud.com/datasheets/221-412/en",
+      "licence": "WAGO terms"
+    },
+    "notes": "Digi-Key 2946-221-412-ND, stock 356,818."
+  },
+  {
+    "item": "WAGO 221-413 lever splice 3-pos",
+    "category": "wiring",
+    "vendor": "Digi-Key (WAGO)",
+    "part_number": "221-413",
+    "description": "Lever splice, 3 entries, 24-12 AWG",
+    "pack_qty": "1",
+    "price_usd": 0.76,
+    "price_status": "listing",
+    "url": "https://www.digikey.com/en/products/detail/wago-corporation/221-413/13549610",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "24-12",
+      "max_mm2": 4
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://wago.priintcloud.com/datasheets/221-413/en",
+      "licence": "WAGO terms"
+    },
+    "notes": "Stock 398,762."
+  },
+  {
+    "item": "WAGO 221-415 lever splice 5-pos",
+    "category": "wiring",
+    "vendor": "Digi-Key (WAGO)",
+    "part_number": "221-415",
+    "description": "Lever splice, 5 entries, 24-12 AWG",
+    "pack_qty": "1",
+    "price_usd": 1.17,
+    "price_status": "listing",
+    "url": "https://www.digikey.com/en/products/detail/wago-corporation/221-415/13549457",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "24-12",
+      "max_mm2": 4
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://wago.priintcloud.com/datasheets/221-415/en",
+      "licence": "WAGO terms"
+    },
+    "notes": "Active, stock 236,087 -- a Digi-Key forum post calling it obsolete is outdated."
+  },
+  {
+    "item": "2-position barrier terminal block",
+    "category": "wiring",
+    "vendor": "Mouser (Cinch)",
+    "part_number": "2-140",
+    "description": "Barrier terminal block, 2 terminals, 0.375 in (9.5 mm) spacing",
+    "pack_qty": "1",
+    "price_usd": 10.68,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Cinch/2-140",
+    "observed": "2026-10-24",
+    "dims": {
+      "pitch_mm": 9.5,
+      "positions": 2
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 695. Pricey per pole; DIN alternative below."
+  },
+  {
+    "item": "DIN feed-through terminal block UK 5 N",
+    "category": "wiring",
+    "vendor": "Mouser (Phoenix Contact)",
+    "part_number": "3004362",
+    "description": "UK 5 N feed-through, 6.2 mm wide, 30 A, 600 V, grey (use 2 for a 2-pole)",
+    "pack_qty": "1",
+    "price_usd": 3.2,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Phoenix-Contact/3004362",
+    "observed": "2026-10-24",
+    "dims": {
+      "width_mm": 6.2
+    },
+    "cad": {
+      "available": "TBD",
+      "url": "https://www.phoenixcontact.com",
+      "licence": "Phoenix terms"
+    },
+    "notes": "Needs DIN rail, end cover and end clamps (not sourced here)."
+  },
+  {
+    "item": "ATO fuse 10 A, Littelfuse",
+    "category": "wiring",
+    "vendor": "Mouser (Littelfuse)",
+    "part_number": "0287010.PXCN",
+    "description": "ATO blade fuse 10 A 32 V, nylon",
+    "pack_qty": "1",
+    "price_usd": 0.36,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Littelfuse/0287010.PXCN",
+    "observed": "2026-10-24",
+    "dims": {
+      "l_w_h_mm": "19.30 x 5.25 x 12.50 (ATO standard per Digi-Key ATC-10 listing)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 58,374. 0257010.PXPV is Obsolete at Mouser -- do not use."
+  },
+  {
+    "item": "ATO fuse 30 A, Littelfuse",
+    "category": "wiring",
+    "vendor": "Mouser (Littelfuse)",
+    "part_number": "0287030.PXCN",
+    "description": "ATO blade fuse 30 A 32 V, nylon",
+    "pack_qty": "1",
+    "price_usd": 0.36,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Littelfuse/0287030.PXCN",
+    "observed": "2026-10-24",
+    "dims": {
+      "l_w_h_mm": "19.30 x 5.25 x 12.50"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 27,918. 0257030.PXPV obsolete."
+  },
+  {
+    "item": "ATC fuse 10 A, Bussmann",
+    "category": "wiring",
+    "vendor": "Mouser (Eaton Bussmann)",
+    "part_number": "ATC-10",
+    "description": "ATC blade fuse 10 A 32 V fast acting, 1 kA",
+    "pack_qty": "Standard pack 5 (price basis unclear)",
+    "price_usd": 4.03,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Bussmann-Eaton/ATC-10",
+    "observed": "2026-10-24",
+    "dims": {
+      "l_w_h_mm": "19.30 x 5.25 x 12.50"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser 504-ATC-10-2; $4.03 may be per 5-pack ('Standard Pack Qty 5') -- confirm. Digi-Key ATC-10 MOQ 1215."
+  },
+  {
+    "item": "ATC fuse 30 A, Bussmann",
+    "category": "wiring",
+    "vendor": "Mouser (Eaton Bussmann)",
+    "part_number": "ATC-30",
+    "description": "ATC blade fuse 30 A 32 V fast acting",
+    "pack_qty": "Standard pack 5 (price basis unclear)",
+    "price_usd": 5.2,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Bussmann-Eaton/ATC-30",
+    "observed": "2026-10-24",
+    "dims": {
+      "l_w_h_mm": "19.30 x 5.25 x 12.50"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser 504-ATC-30-2; confirm per-piece vs per-pack."
+  },
+  {
+    "item": "Ring terminal 16-14 AWG #10",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "PV14-10R-C",
+    "description": "Vinyl insulated ring, 16-14 AWG, #10 stud (fits M5), blue",
+    "pack_qty": "1 (pack 100)",
+    "price_usd": 0.79,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/PV14-10R-C",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "16-14",
+      "stud": "#10"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 48,518. PV14-10R-L is Obsolete."
+  },
+  {
+    "item": "Ring terminal 16-14 AWG #8",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "PV14-8R-C",
+    "description": "Vinyl insulated ring, 16-14 AWG, #8 stud, blue",
+    "pack_qty": "1 (pack 100)",
+    "price_usd": 1.21,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/PV14-8R-C",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "16-14",
+      "stud": "#8"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "PV14-8R-L obsolete."
+  },
+  {
+    "item": "Ring terminal 12-10 AWG #10",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "PV10-10R-L",
+    "description": "Vinyl insulated ring, 12-10 AWG, #10 stud (fits M5), yellow",
+    "pack_qty": "1 (pack 50)",
+    "price_usd": 1.33,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/PV10-10R-L",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "12-10",
+      "stud": "#10"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 20,624."
+  },
+  {
+    "item": "Ring terminal 12-10 AWG #8",
+    "category": "wiring",
+    "vendor": "Mouser (Panduit)",
+    "part_number": "PV10-8R-L",
+    "description": "Vinyl insulated ring, 12-10 AWG, #8 stud, funnel entry",
+    "pack_qty": "1 (pack 50)",
+    "price_usd": 1.29,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Panduit/PV10-8R-L",
+    "observed": "2026-10-24",
+    "dims": {
+      "awg_range": "12-10",
+      "stud": "#8"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Stock 6,055."
+  },
+  {
+    "item": "PETG 1 kg (Prusament)",
+    "category": "printing",
+    "vendor": "Prusa Research (maker store)",
+    "part_number": "Prusament PETG Jet Black 1kg",
+    "description": "PETG filament, 1.75 mm, 1 kg spool",
+    "pack_qty": 1,
+    "price_usd": 23.99,
+    "price_status": "listing",
+    "url": "https://www.prusa3d.com/product/prusament-petg-jet-black-1kg/",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "250 +/-10"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Sale price $23.99 (regular $29.99) on prusa3d.com at fetch. Standard brass nozzle OK."
+  },
+  {
+    "item": "PETG 1 kg (Polymaker)",
+    "category": "printing",
+    "vendor": "MatterHackers",
+    "part_number": "Polymaker PolyLite PETG 1.75mm 1kg",
+    "description": "PETG filament, 1.75 mm, 1 kg spool",
+    "pack_qty": 1,
+    "price_usd": 21.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://matterhackers.com/store/l/polymaker-polylite-petg-grey-175mm-1kg/sk/MUR5Z8PG",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "230-260 (MatterHackers); 240-250 per another retailer"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Maker store us.polymaker.com returned 429 (rate limit). Amazon listing: https://www.amazon.com/dp/B09DKRTSXW (price not captured). B&H snippet showed $19.99."
+  },
+  {
+    "item": "PETG 1 kg (Elegoo Rapid PETG)",
+    "category": "printing",
+    "vendor": "Amazon (ELEGOO official)",
+    "part_number": "ELEGOO Rapid PETG 1.75mm 1kg",
+    "description": "PETG filament, 1.75 mm, 1 kg spools",
+    "pack_qty": 4,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://slickdeals.net/f/18969466-4-count-of-1kg-elegoo-rapid-1-75mm-petg-3d-printer-filament-40-amazon",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "230-250 (standard Elegoo PETG, EU retailer)"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "TBD: current price from us.elegoo.com (429 at fetch) or Amazon ASIN. Only data point is a Dec-2025 Amazon deal of ~$40 per 4 x 1 kg, expired. URL is the deal post, not a store page."
+  },
+  {
+    "item": "PLA+ 1 kg (eSUN)",
+    "category": "printing",
+    "vendor": "MatterHackers",
+    "part_number": "eSUN PLA+ Black 1.75mm 1kg",
+    "description": "PLA+ filament, 1.75 mm, 1 kg spool",
+    "pack_qty": 1,
+    "price_usd": 22.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://matterhackers.com/store/l/esun-black-pla-filament-175mm-1kg/sk/MVTKKKVM",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "205 +/-15",
+      "bed_temp_c": "40 +/-15"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Temp confirmed on page fetch; price only from search snippet (page fetch showed no price). Other retailers state 200-230 C."
+  },
+  {
+    "item": "PLA+ 1 kg (Elegoo)",
+    "category": "printing",
+    "vendor": "Amazon (ELEGOO Official US)",
+    "part_number": "ELEGOO PLA+ 1.75mm 1kg x4",
+    "description": "PLA+ filament, 1.75 mm, 4 x 1 kg",
+    "pack_qty": 4,
+    "price_usd": 36.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://slickdeals.net/f/20056668-4x-1kg-elegoo-pla-3d-printer-filament-black-36-99-free-s-h-amazon",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg_each": 1.0
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Deal posted 2026-09-24 (~$9.25/kg), may have ended. URL is the deal post; Amazon ASIN TBD. Print temp TBD: Elegoo spec sheet."
+  },
+  {
+    "item": "PLA+ 1 kg (Overture)",
+    "category": "printing",
+    "vendor": "Wood Art Supply",
+    "part_number": "Overture PLA Plus 1.75mm 1kg Black",
+    "description": "PLA+ filament, 1.75 mm, 1 kg spool",
+    "pack_qty": 1,
+    "price_usd": 15.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://woodartsupply.com/products/overture-pla-plus-pla-filament-1-75mm-stronger-more-durable-professional-toughness-3d-printer-filament-1kg-2-2lbs-high-precision-0-02mm-tangle-free-black",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "tolerance_mm": 0.02
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Amazon price TBD (only expired 2025 deals found). Print temp TBD: Overture spec."
+  },
+  {
+    "item": "CF-PETG 1 kg (Bambu Lab PETG-CF)",
+    "category": "printing",
+    "vendor": "3D Universe (US Bambu reseller)",
+    "part_number": "Bambu Lab PETG-CF 1.75mm 1kg",
+    "description": "Carbon-fibre reinforced PETG, 1.75 mm, 1 kg",
+    "pack_qty": 1,
+    "price_usd": 34.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://shop3duniverse.com/collections/bambu-lab-filaments/products/bambu-lab-petg-cf-carbon-fiber-reinforced-petg-1-75mm-1kg",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "TBD: Bambu TDS"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "HARDENED NOZZLE REQUIRED (stainless not recommended per retailer). us.store.bambulab.com returned HTTP 402 to fetch. EU price ~EUR 33-37."
+  },
+  {
+    "item": "CF-PETG 1 kg (eSUN PETG-CF)",
+    "category": "printing",
+    "vendor": "3DJake",
+    "part_number": "eSUN PETG-CF Black 1.75mm 1kg",
+    "description": "Carbon-fibre PETG, 1.75 mm, 1 kg",
+    "pack_qty": 1,
+    "price_usd": 28.13,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.3djake.com/esun/petg-cf-black-3?sai=20883",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "240-260",
+      "bed_temp_c": "75-90"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price excl. VAT/shipping (EU retailer, USD view). Hardened nozzle required (abrasive CF). US source TBD."
+  },
+  {
+    "item": "CF-PETG 0.5 kg (Polymaker Fiberon PETG-rCF08)",
+    "category": "printing",
+    "vendor": "Polymaker (maker store)",
+    "part_number": "Fiberon PETG-rCF08 1.75mm 0.5kg",
+    "description": "PETG with 8% recycled carbon fibre",
+    "pack_qty": 1,
+    "price_usd": 19.99,
+    "price_status": "listing",
+    "url": "https://shop.polymaker.com/products/fiberon-petg-rcf08",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 0.5,
+      "nozzle_temp_c": "240-270",
+      "bed_temp_c": "60-70",
+      "density_g_cm3": 1.3,
+      "tensile_xy_mpa": 59.8,
+      "hdt_0_45mpa_c": 68.6
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "'From $19.99'; 0.5 kg backordered/unavailable at fetch; 3 kg size also listed. Hardened nozzle >=0.4 mm REQUIRED. Dry 65 C 3 h if wet. Polymaker has no plain 'PETG-CF' 1 kg found in US; aggregator filamenthound.com shows PETG-CF from $29/kg (all brands)."
+  },
+  {
+    "item": "CF-PETG 1 kg (MatterHackers Build Series PETG-CF)",
+    "category": "printing",
+    "vendor": "MatterHackers",
+    "part_number": "MH Build Series PETG-CF Black 1.75mm 1kg",
+    "description": "Carbon-fibre PETG, 1.75 mm, 1 kg",
+    "pack_qty": 1,
+    "price_usd": 35.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.matterhackers.com/store/l/black-mh-build-series-petg-cf-filament/sk/M52DT12W",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "TBD: MH spec"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Category page snippet showed $33.99 ($25.49 bulk); product snippet $35.99. Hardened nozzle required."
+  },
+  {
+    "item": "CF-PET 0.5 kg (Polymaker Fiberon PET-CF17)",
+    "category": "printing",
+    "vendor": "Polymaker (maker store)",
+    "part_number": "Fiberon PET-CF17 1.75mm 0.5kg",
+    "description": "PET with 17% carbon fibre (stiffer, hotter than PETG-CF)",
+    "pack_qty": 1,
+    "price_usd": 24.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://shop.polymaker.com/products/fiberon-pet-cf17",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 0.5,
+      "nozzle_temp_c": "270-300"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Hardened nozzle required. Option for stiffer arm links if printer reaches 300 C. 1 kg size also offered (price TBD)."
+  },
+  {
+    "item": "PA6-CF (Polymaker Fiberon PA6-CF20)",
+    "category": "printing",
+    "vendor": "Polymaker (maker store)",
+    "part_number": "Fiberon PA6-CF20 1.75mm",
+    "description": "Nylon 6 with 20% carbon fibre, 1.75 mm",
+    "pack_qty": 1,
+    "price_usd": 39.99,
+    "price_status": "listing",
+    "url": "https://shop.polymaker.com/products/fiberon-pa6-cf20",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": "TBD: page shows one price for 0.5/1/2/3 kg options; likely the 0.5 kg default",
+      "nozzle_temp_c": "280-300"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "SOLD OUT at fetch (0.5 kg new packaging backordered). Needs all-metal hotend >=280 C + HARDENED nozzle. Dry 100 C 10 h if wet; anneal 100 C 16 h. EU 0.5 kg ~$42.51 excl VAT (3DJake)."
+  },
+  {
+    "item": "PA6-CF 1 kg (Bambu Lab PA6-CF)",
+    "category": "printing",
+    "vendor": "3DJake",
+    "part_number": "Bambu Lab PA6-CF Black 1kg",
+    "description": "Carbon-fibre nylon 6, 1.75 mm, 1 kg",
+    "pack_qty": 1,
+    "price_usd": 79.8,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.3djake.com/bambu-lab/pa6-cf-black",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_mm": 1.75,
+      "net_weight_kg": 1.0,
+      "nozzle_temp_c": "TBD: Bambu TDS"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Snippets $79.80-$80.93/kg excl. VAT (EU retailer). US price TBD: us.store.bambulab.com returned HTTP 402. EU store 'from EUR 29.24' (0.5 kg). Hardened nozzle required; dry before use (hygroscopic)."
+  },
+  {
+    "item": "1/4 in birch plywood 2x4 ft (cut to 2x2)",
+    "category": "base",
+    "vendor": "Home Depot",
+    "part_number": "Internet # 202088745 / model 1503008",
+    "description": "Birch plywood, common 1/4 in x 2 ft x 4 ft",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.homedepot.com/p/Birch-Plywood-Common-1-4-in-x-2-ft-x-4-ft-Actual-0-195-in-x-23-75-in-x-47-75-in-1503008/202088745",
+    "observed": "2026-10-24",
+    "dims": {
+      "thickness_in": 0.195,
+      "width_in": 23.75,
+      "length_in": 47.75
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "No US Home Depot 1/4 in birch 2x2 ft panel found (HD Canada has Alexandria Moulding 2x2). Price TBD: HD page returned 403; snippet showed 0 in stock. Sister listing 206120891 same size. Actual 23.75 in is under 24 in: a 24 in disc cannot be cut from it."
+  },
+  {
+    "item": "1/4 in 2x2 ft sanded pine plywood",
+    "category": "base",
+    "vendor": "Home Depot",
+    "part_number": "Internet # 205603419",
+    "description": "Sanded BC pine plywood project panel, 1/4 in x 2 ft x 2 ft (not birch)",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.homedepot.com/p/205603419",
+    "observed": "2026-10-24",
+    "dims": {
+      "thickness_in": "7/32 (actual)",
+      "nominal_ft": "2 x 2"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Price TBD: HD page 403 to fetch. Only US 2x2 1/4 in panel found."
+  },
+  {
+    "item": "3/4 in birch plywood 2x2 ft",
+    "category": "base",
+    "vendor": "Home Depot",
+    "part_number": "Falken Design FALKENDESIGN-PW-Birch-A2-3/4-2424 (Internet # 319137413)",
+    "description": "Birch plywood project panel 3/4 in x 2 ft x 2 ft",
+    "pack_qty": 1,
+    "price_usd": 29.49,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://homedepot.com/p/Falken-Design-3-4-in-x-2-ft-x-2-ft-Birch-Plywood-Project-Panel-FALKENDESIGN-PW-Birch-A2-3-4-2424/319137413",
+    "observed": "2026-10-24",
+    "dims": {
+      "thickness_in": "3/4 nominal",
+      "nominal_ft": "2 x 2"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Lower-grade variants (D4 #319137365, B3 #319137342) snippets $21.58-$23.42. Stiffer base option; actual size TBD (check if a full 24 in disc fits)."
+  },
+  {
+    "item": "24 in round birch disc 1/2 in",
+    "category": "base",
+    "vendor": "Wood Art Supply (Woodpeckers brand)",
+    "part_number": "Woodpeckers wood circle 24 in x 1/2 in",
+    "description": "Unfinished birch plywood circle, 24 in dia, 1/2 in thick",
+    "pack_qty": 1,
+    "price_usd": 41.61,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://woodartsupply.com/products/wood-circles-24-inch-1-2-inch-thick-unfinished-birch-plaques-pack-of-1-wooden-circle-for-crafts-and-blank-sign-rounds-by-woodpeckers",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_in": 24,
+      "thickness_in": 0.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Sale $41.61 vs regular $47.99; another snapshot $48.03. Also sold on Amazon (ASIN TBD). Best match for the 24 in skirt/base."
+  },
+  {
+    "item": "24 in round Baltic birch panel 1/2 in",
+    "category": "base",
+    "vendor": "Trekell",
+    "part_number": "Raw Round Wood Panel 1/2 in Baltic Birch 24 in",
+    "description": "Baltic birch round art panel, 24 in, 1/2 in",
+    "pack_qty": 1,
+    "price_usd": 98.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.trekell.com/products/raw-round-wood-panel-1-2-baltic-birch",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_in": 24,
+      "thickness_in": 0.5
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Premium alternative; much dearer than Woodpeckers."
+  },
+  {
+    "item": "24 in round table top (laminate, not plywood)",
+    "category": "base",
+    "vendor": "Home Depot",
+    "part_number": "Flash Furniture XURD24MBT (Internet # 301092686)",
+    "description": "24 in round reversible black/mahogany laminate table top",
+    "pack_qty": 1,
+    "price_usd": 40.71,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.homedepot.com/p/Flash-Furniture-24-in-Round-Table-Top-with-Black-or-Mahogany-Reversible-Laminate-Top-XURD24MBT/301092686",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_in": 24,
+      "thickness_in": "TBD: listing"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "No 24 in plywood round found at Home Depot or Lowe's (HD has 12 in and 18 in birch circles only). Laminate top is a fallback; thickness/weight TBD."
+  },
+  {
+    "item": "Felt pads 2 in round, heavy duty",
+    "category": "base",
+    "vendor": "Home Depot",
+    "part_number": "Everbilt 49927 (Internet # 203661116)",
+    "description": "2 in beige round felt heavy-duty self-adhesive furniture pads",
+    "pack_qty": 4,
+    "price_usd": 5.27,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://homedepot.com/p/Everbilt-2-in-Beige-Round-Felt-Heavy-Duty-Self-Adhesive-Furniture-Pads-4-Pack-49927/203661116",
+    "observed": "2026-10-24",
+    "dims": {
+      "diameter_in": 2
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "For underside of bucket/base disc on indoor floors. 3 in 4-pack also exists (49928). Thickness TBD."
+  },
+  {
+    "item": "Levelling feet 3/8-16 (10-pack)",
+    "category": "base",
+    "vendor": "Home Depot",
+    "part_number": "Angel Sar ECPQ8508 (Internet # 331622743)",
+    "description": "Metal adjustable furniture levelling feet, 3/8-16 thread, with T-nuts and felt pads",
+    "pack_qty": 10,
+    "price_usd": 58.33,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.homedepot.com/p/Angel-Sar-Black-Metal-Adjustable-Furniture-Leveling-Feet-with-3-8-in-16-Thread-T-nuts-and-Telt-Pads-10-Pack-ECPQ8508/331622743",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "3/8-16",
+      "load_per_foot_lb": 330,
+      "base_diameter": "TBD: listing",
+      "stud_length": "TBD: listing"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "T-nuts suit mounting through the plywood base disc. Base dia/stud length TBD."
+  },
+  {
+    "item": "Levelling mount 3/8-16 rubber base",
+    "category": "base",
+    "vendor": "McMaster-Carr",
+    "part_number": "TBD: choose on page (Base Material: Rubber)",
+    "description": "Threaded-stud levelling mounts, 3/8-16, rubber base option",
+    "pack_qty": 1,
+    "price_usd": null,
+    "price_status": "TBD",
+    "url": "https://www.mcmaster.com/levels/thread-size~3-8-16/",
+    "observed": "2026-10-24",
+    "dims": {
+      "thread": "3/8-16",
+      "base_diameter_range_in": "7/8 to 4",
+      "thread_length_range_in": "1/2 to 8"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.mcmaster.com/levels/thread-size~3-8-16/",
+      "licence": "McMaster CAD download terms"
+    },
+    "notes": "Page fetch shows filters only (247 products); part number and price TBD by filtering on mcmaster.com. McMaster provides CAD per part."
+  },
+  {
+    "item": "M18 battery wall mount (StealthMounts, 6-pack)",
+    "category": "misc",
+    "vendor": "Tool Nut / Walmart",
+    "part_number": "StealthMounts BM-MW18-BLK-6",
+    "description": "ABS battery mount for Milwaukee M18 packs, black, 6-pack",
+    "pack_qty": 6,
+    "price_usd": 24.99,
+    "price_status": "snippet, unconfirmed",
+    "url": "https://www.toolnut.com/products/stealthmounts-battery-mounts-for-milwaukee-m18-6-pack",
+    "observed": "2026-10-24",
+    "dims": {
+      "mount_dims": "TBD: stealthmounts.com spec",
+      "screw_holes": "countersunk"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Red 6-pack BM-MW18-RED-6 $23.38-$23.99 (Grizzly/Gemplers snippets). Screws likely not included (inferred). Holds pack only, no electrical contacts: an M18 power adapter is still needed for power."
+  },
+  {
+    "item": "M18 battery holder (printed, Printables 1118857)",
+    "category": "misc",
+    "vendor": "Printables",
+    "part_number": "model 1118857",
+    "description": "Printable wall hanger for M18 batteries (author prints in PETG)",
+    "pack_qty": 1,
+    "price_usd": 0,
+    "price_status": "listing",
+    "url": "https://www.printables.com/model/1118857-milwaukee-m18-battery-holder",
+    "observed": "2026-10-24",
+    "dims": {
+      "stl": "TBD: download"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.printables.com/model/1118857-milwaukee-m18-battery-holder",
+      "licence": "TBD: read Printables license field"
+    },
+    "notes": "Free download. Licence TBD: Printables page returned 403 to fetch; check License field before use (author marks it original)."
+  },
+  {
+    "item": "M12/M18 locking battery wall mounts (printed, Printables 621105)",
+    "category": "misc",
+    "vendor": "Printables",
+    "part_number": "model 621105",
+    "description": "Printable M12 & M18 wall mounts, locking and non-locking versions",
+    "pack_qty": 1,
+    "price_usd": 0,
+    "price_status": "listing",
+    "url": "https://www.printables.com/model/621105-milwaukee-battery-wall-mounts-m12-m18",
+    "observed": "2026-10-24",
+    "dims": {
+      "stl": "TBD: download"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.printables.com/model/621105-milwaukee-battery-wall-mounts-m12-m18",
+      "licence": "TBD: read Printables license field and upstream Thingiverse licence"
+    },
+    "notes": "M18 design adapted from a Thingiverse model; locking version useful on a moving robot. Licence TBD (page 403); remix licence must also be checked."
+  },
+  {
+    "item": "Cable gland PG7 nylon",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Alpha Wire PPC7 BK080 (Mouser 602-PPC7-BK)",
+    "description": "Nylon PG7 cable gland, black, 3-6.5 mm clamp range",
+    "pack_qty": 1,
+    "price_usd": 2.97,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Alpha-Wire/PPC7-BK080?qs=MLItCLRbWszw2znZxR4kzA%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "cable_range_mm": "3-6.5",
+      "panel_hole_mm": 12.5,
+      "thread_length_in": 0.31,
+      "thread": "PG7"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser API price $2.97 @1, 73 in stock; 'standard pack qty 10' and Jameco sells the family as 10-piece packages: confirm whether $2.97 is each or per bag. Hole 12.5 mm (0.492 in) per Alpha Wire PG7 listing. Datasheet: https://www.mouser.com/datasheet/3/307/1/Alpha_Wire_PPC_7_Tech_Data.pdf"
+  },
+  {
+    "item": "Cable gland PG9 nylon",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Alpha Wire PPC9 BK080 (Mouser 602-PPC9-BK)",
+    "description": "Nylon PG9 cable gland, black, 4-8 mm clamp range, with locknut",
+    "pack_qty": 1,
+    "price_usd": 3.38,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Alpha-Wire/PPC9-BK080?qs=MLItCLRbWsyka%252BGmi%2Fr%252BVg%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "cable_range_mm": "4-8",
+      "panel_hole_mm": 15.2,
+      "thread_od_mm": 15.2,
+      "thread_pitch_mm": 1.41,
+      "thread_length_in": 0.31,
+      "thread": "PG9"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Mouser API $3.38 @1, 107 in stock; same each-vs-bag question. Hole 15.2 mm per Jameco (0.598 in); 15.2 mm is also the PG9 thread OD (DIN 40430), so a clearance hole ~15.2-15.5 mm. Datasheet: https://www.mouser.com/datasheet/3/307/1/Alpha_Wire_PPC_9_Tech_Data.pdf"
+  },
+  {
+    "item": "E-stop enclosure, 1-hole yellow (Schneider XALK01H7)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Schneider Electric XALK01H7 (Mouser 996-XALK01H7)",
+    "description": "Harmony XALK yellow 1-hole pushbutton enclosure for 22 mm E-stop (enclosure only)",
+    "pack_qty": 1,
+    "price_usd": 26.02,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Schneider-Electric/XALK01H7?qs=4R4UwjOJpC3Qi7CgpTrn7w%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "cutout_mm": "22 (Harmony 22 mm series; exact punched dia TBD: datasheet)",
+      "outer_dims": "TBD: datasheet"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "Cheapest branded yellow 1-hole box found; 130 in stock. Needs 22 mm E-stop head + NC contact block separately (e.g. ZB5AS844 head $67.99 is turn-release trigger-action). 'H7' suffix meaning (cable entry) TBD. Datasheet: https://www.mouser.com/datasheet/3/187/31/c9bcfcaa7f3bb6ba3dd8409e9f9621edc8ea8510.pdf"
+  },
+  {
+    "item": "E-stop enclosure, 1-hole yellow (Eaton M22-IY1)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Eaton M22-IY1 (Mouser 504-M22-IY1)",
+    "description": "Surface-mount enclosure, 1 element, yellow, metric knockouts",
+    "pack_qty": 1,
+    "price_usd": 89.97,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Eaton-Electrical/M22-IY1?qs=HFfMDpzxxd1u7MmvJJvJNw%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "cutout_mm": 22,
+      "outer_dims": "TBD: datasheet"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "13 in stock. Expensive vs Schneider XALK01H7. E-stop actuator and contacts separate."
+  },
+  {
+    "item": "E-stop station complete (IDEC FB1W-HW1B-V402R)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "IDEC FB1W-HW1B-V402R (Mouser 199-FB1WHW1BV402R)",
+    "description": "Emergency-stop switch in enclosure box (complete station)",
+    "pack_qty": 1,
+    "price_usd": 78.91,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/IDEC/FB1W-HW1B-V402R?qs=9r4v7xj2LnnCGWkaDjOnBg%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "contacts": "TBD: '02' suffix suggests 2NC, confirm datasheet",
+      "outer_dims": "TBD"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "42 in stock. Ready-made station, no assembly."
+  },
+  {
+    "item": "E-stop station complete (Schneider XALK178)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Schneider Electric XALK178 (Mouser 996-XALK178)",
+    "description": "Yellow E-stop control station with turn-release mushroom",
+    "pack_qty": 1,
+    "price_usd": 108.05,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Schneider-Electric/XALK178?qs=qu071zG02iRWxXwR3D0%252BvA%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "contacts": "TBD: datasheet",
+      "outer_dims": "TBD: datasheet"
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "64 in stock. Datasheet: https://www.mouser.com/datasheet/3/187/30/951fd27d785a80b7868af2f5d764fedb6c5fb73c.pdf"
+  },
+  {
+    "item": "35 mm DIN rail, 1 m",
+    "category": "misc",
+    "vendor": "Digi-Key",
+    "part_number": "Weidmuller 0514510000 (Digi-Key 281-1534-ND)",
+    "description": "DIN rail TS35 x 7.5, slotted, galvanised steel, 1000 mm",
+    "pack_qty": 1,
+    "price_usd": 16.6,
+    "price_status": "listing",
+    "url": "https://www.digikey.com/en/products/detail/weidm%C3%BCller/0514510000/385533",
+    "observed": "2026-10-24",
+    "dims": {
+      "width_mm": 35,
+      "height_mm": 7.5,
+      "length_mm": 1000,
+      "thickness_mm": 1.0
+    },
+    "cad": {
+      "available": false,
+      "url": null,
+      "licence": null
+    },
+    "notes": "395 in stock. Cut to ~107 mm for a 1554N box. Alt: Phoenix 0801733 NS 35/7,5 PERF at Mouser $12.76/m (0 stock)."
+  },
+  {
+    "item": "Electronics enclosure, PC 120x120x61 mm (Hammond 1554N2GY)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Hammond 1554N2GY (Mouser 546-1554N2GY; Digi-Key HM1807-ND)",
+    "description": "Polycarbonate IP68/NEMA 4X enclosure, grey lid, molded DIN rail tabs",
+    "pack_qty": 1,
+    "price_usd": 25.67,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Hammond-Manufacturing/1554N2GY?qs=a2MtRaTmNORhsK38QspLMQ%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "outside_mm": "120 x 120 x 61",
+      "inside_length_mm": 112.91,
+      "inside_width_mm": 106.91,
+      "inside_height_mm": 54.5,
+      "wall_mm": 3.0
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.hammfg.com/electronics/small-case/plastic/1554",
+      "licence": "Hammond free download (terms on hammfg.com; site returned 403 to fetch)"
+    },
+    "notes": "Inside dims from Hammond 1554N drawing PDF (text extraction; confirm on drawing). Digi-Key $27.04 (6 stock); Mouser 40 stock. Molded internal DIN tabs (sizes C/D lack them). Inner steel panel 1554NPL $10.39 (Mouser). ABS version 1554NGY $22.38. Hammond says STEP/x_t available."
+  },
+  {
+    "item": "Electronics enclosure, PC 180x180x60 mm (Hammond 1554W2GY)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Hammond 1554W2GY (Mouser 546-1554W2GY)",
+    "description": "Polycarbonate IP68 enclosure, grey lid, 7.1 x 7.1 x 2.4 in",
+    "pack_qty": 1,
+    "price_usd": 35.65,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Hammond-Manufacturing/1554W2GY?qs=ahcBuItHZ3yR7oJk%252ByXbyQ%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "outside_mm": "180 x 180 x 60",
+      "inside_mm": "TBD: Hammond 1554W drawing"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.hammfg.com/electronics/small-case/plastic/1554",
+      "licence": "Hammond free download (terms on hammfg.com; site returned 403 to fetch)"
+    },
+    "notes": "Larger option if stepper driver + MCU + buck + relay do not fit the 1554N. 5 in stock. Inner panel 1554WPL $14.08."
+  },
+  {
+    "item": "Electronics enclosure, PC 120x65x40 mm (Hammond 1554C2GY)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Hammond 1554C2GY (Mouser 546-1554C2GY)",
+    "description": "Polycarbonate IP68 enclosure, 4.7 x 2.6 x 1.6 in",
+    "pack_qty": 1,
+    "price_usd": 18.5,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Hammond-Manufacturing/1554C2GY?qs=KAyCPn5Kmerm9BlK6PXt0Q%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "outside_mm": "120 x 65 x 41",
+      "inside_mm": "TBD: Hammond 1554C drawing"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.hammfg.com/electronics/small-case/plastic/1554",
+      "licence": "Hammond free download (terms on hammfg.com; site returned 403 to fetch)"
+    },
+    "notes": "Small; NO molded DIN rail tabs on size C per datasheet. 4 in stock."
+  },
+  {
+    "item": "Electronics enclosure, ABS 112x85x44 mm (Hammond 1591XXSSBK)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Hammond 1591XXSSBK (Mouser 546-1591XXSSBK)",
+    "description": "ABS economical enclosure, black, IP54",
+    "pack_qty": 1,
+    "price_usd": 8.54,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Hammond-Manufacturing/1591XXSSBK?qs=DnAu0gX0Ns7v%252BnGztYHhag%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "outside_mm": "~112.5 x 84.62 x 44 (drawing)",
+      "inside_length_mm": 105.95,
+      "inside_width_mm": 78.05,
+      "inside_height_mm": 40.0,
+      "wall_mm": 2.0,
+      "max_pcb_mm": "TBD: read Hammond drawing"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.hammfg.com/electronics/small-case/plastic/1591",
+      "licence": "Hammond free download (terms on hammfg.com; site returned 403 to fetch)"
+    },
+    "notes": "Inside dims from Hammond drawing PDF text extraction. 93 in stock. Cheap indoor option, no DIN tabs."
+  },
+  {
+    "item": "Electronics enclosure, ABS 221x150x64 mm (Hammond 1591XXFSBK)",
+    "category": "misc",
+    "vendor": "Mouser",
+    "part_number": "Hammond 1591XXFSBK (Mouser 546-1591XXFSBK)",
+    "description": "ABS economical enclosure, black",
+    "pack_qty": 1,
+    "price_usd": 12.71,
+    "price_status": "listing",
+    "url": "https://www.mouser.com/ProductDetail/Hammond-Manufacturing/1591XXFSBK?qs=%252BxyxD9GtKu0naP4hehFwhw%3D%3D",
+    "observed": "2026-10-24",
+    "dims": {
+      "outside_mm": "221 x 150 x 63.5",
+      "inside_mm": "TBD: Hammond 1591XXF drawing"
+    },
+    "cad": {
+      "available": true,
+      "url": "https://www.hammfg.com/electronics/small-case/plastic/1591",
+      "licence": "Hammond free download (terms on hammfg.com; site returned 403 to fetch)"
+    },
+    "notes": "Roomy and cheap (162 in stock) if a DIN rail is screwed to the floor."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "tech-docs",
+  "extension": {
+    "id": "@protoboardai/ext-docs",
+    "version": "0.1.7"
+  },
+  "effect": "export",
+  "inputs": {
+    "pdf": "true",
+    "standins": "true"
+  },
+  "projectDigest": "sha256:07997c4446bcf458200892b33ebe7a44b69057684d995f474177fd2ef8765325",
+  "tools": [
+    {
+      "id": "chrome",
+      "available": true,
+      "detail": "Google Chrome 156.0.8078.47 (/usr/bin/google-chrome)"
+    }
+  ],
+  "startedAt": "2026-10-24T17:00:45.043Z",
+  "status": "failed",
+  "summary": "Cannot read properties of undefined (reading 'replace')",
+  "outputs": [],
+  "finishedAt": "2026-10-24T17:00:54.800Z"
+}

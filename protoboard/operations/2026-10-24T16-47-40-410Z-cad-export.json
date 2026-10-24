@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "iso10511-m4",
+    "config": "parts/local/mech/hw/iso10511-m4/cad.config.ts",
+    "configDigest": "sha256:01a700a9385bcaccdd676c504c22571d3adbd19001e56a79cb36b1a482e2f09d",
+    "moduleDigest": "sha256:864601af30246acee1c9c56564e3427b00d6e36f172b761dd9673d4c7cffa939"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:8334f1320d1395da71388b92174a3f803d5709b56bc4e331f0d60314895be905",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:47:40.410Z",
+  "status": "succeeded",
+  "summary": "iso10511-m4: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso10511-m4/out (149.344 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/iso10511-m4/out/body.step",
+      "digest": "sha256:70fe858598f272b53e26fc25ab2c7370cd8e98dd66db4a0af6757d880d06f149",
+      "bytes": 28612,
+      "description": "iso10511-m4: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/iso10511-m4/out/body.glb",
+      "digest": "sha256:0e9e21d810ee7d70ce558e701d3c05eed3a0a14413b47447cecb6f6252af7352",
+      "bytes": 12884,
+      "description": "iso10511-m4: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/iso10511-m4/out/body.manifest.json",
+      "digest": "sha256:3865bcff71c4a8f2c198abee235415c6e1c7267c279d0d6ae3a3ffdc01c88be4",
+      "bytes": 546,
+      "description": "iso10511-m4: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "iso10511-m4",
+    "out": "parts/local/mech/hw/iso10511-m4/out",
+    "volume_mm3": 149.344,
+    "previousVolume_mm3": 149.344,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:47:45.043Z"
+}

@@ -5,8 +5,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerIn, PowerOut, Ground } from "@deltarobotics/uhd";
 import { part } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const M18_POWER_WHEEL_ADAPTER: ModuleDef = part({
+const M18_POWER_WHEEL_ADAPTER_ELECTRICAL: ModuleDef = part({
   id: "m18-power-wheel-adapter", name: "M18 battery adapter (switch, 30 A fuse, 12 AWG)", manufacturer: "Generic", part_number: "Power Wheel Adapter for Milwaukee M18",
   description: "Dock that takes an M18 pack and brings it out on 12 AWG leads through an on/off switch and a 30 A fuse.",
   categories: ["connector.power_connector"], tags: ["m18", "adapter"],
@@ -20,3 +21,6 @@ export const M18_POWER_WHEEL_ADAPTER: ModuleDef = part({
     { type: "source_discrepancy", params: { field: "max current", values: ["18 A", "20 A"], sources: ["listings"], resolution: "18 A used" } },
   ],
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const M18_POWER_WHEEL_ADAPTER: ModuleDef = withMech(M18_POWER_WHEEL_ADAPTER_ELECTRICAL as ModuleDef, "jj-body-dock");

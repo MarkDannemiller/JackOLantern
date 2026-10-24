@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "8b786e62e3518673374cb6b0d803fdd19f5e0cc3886049a952c6aa2a542902a8",
+  "units": "mm",
+  "volume_mm3": 2930.002,
+  "bodies": {
+    "nut": 2930.002
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/tee-nut-m5-hammer-in/frame-cad/params.json",
+    "digest": "sha256:5df559fc4355d6961c06db857e557fad0877fff6c66086b13877d1e8d6543dc8"
+  }
+}

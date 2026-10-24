@@ -1,0 +1,125 @@
+{
+ "artifact": "jj-mitt-a-palm",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 206562.4,
+ "mass_g": 144.28,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "grip_servo_flange": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -3.6,
+     -22.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": true,
+    "insert": "heatset-insert-m4",
+    "shape": "rectangle",
+    "spacing": 49.5,
+    "count": 4,
+    "spacing_y": 10
+   }
+  },
+  "pivot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     30.0,
+     -32.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": true,
+    "insert": "heatset-insert-m4",
+    "positions": [
+     [
+      0.0,
+      0.0
+     ]
+    ],
+    "shape": "positions"
+   }
+  },
+  "on_wrist": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     40.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 24.0,
+    "count": 4,
+    "spacing_y": 24.0
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.4 mm nozzle, 0.2 mm layers, 4 walls, 30 % gyroid",
+  "inserts": [
+   [
+    4,
+    4
+   ],
+   [
+    4,
+    1
+   ]
+  ],
+  "design_origin": [
+   0.0,
+   0.0,
+   -520.0
+  ]
+ }
+}

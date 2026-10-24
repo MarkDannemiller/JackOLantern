@@ -1,0 +1,59 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:generate",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "generate",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "hex-bolt-1-4-20x1in",
+    "config": "parts/local/mech/hw/hex-bolt-1-4-20x1in/cad.config.ts",
+    "configDigest": "sha256:e361cfa17407607eea6ee4c37ab741132915c76fe49d703e2568e8d02004b28a",
+    "moduleDigest": "sha256:590b26404e32f359cf2d4fa261940d853968c121c8dd05c77051f6adc5968e9d"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:fc9d2b1ea99162732f4c020945512e7f9d7141abd7519c1c6f7dfe8a7784cf92",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:15:15.189Z",
+  "status": "succeeded",
+  "summary": "hex-bolt-1-4-20x1in: screw parameters in parts/local/mech/hw/hex-bolt-1-4-20x1in/frame-cad; run cad:export for the body",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1in/frame-cad/params.json",
+      "digest": "sha256:17321214daa48ac5a37bdc5539acaf55135aec16422f465a241b3e60749dd538",
+      "bytes": 267,
+      "description": "hex-bolt-1-4-20x1in: generator parameters from its sizes"
+    }
+  ],
+  "data": {
+    "module": "hex-bolt-1-4-20x1in",
+    "kind": "screw",
+    "native": "parts/local/mech/hw/hex-bolt-1-4-20x1in/frame-cad",
+    "params": {
+      "schema": "protoboard.hardware-cad.params/v0",
+      "module": "hex-bolt-1-4-20x1in",
+      "name": "hex-bolt-1-4-20x1in",
+      "part": {
+        "kind": "screw",
+        "diameter": 6.35,
+        "length": 25.4,
+        "head_diameter": 11.1,
+        "head_height": 4,
+        "outer": null
+      }
+    },
+    "generator": "@protoboardai/ext-frame-cad/py/hardware_cad.py"
+  },
+  "finishedAt": "2026-10-24T16:15:17.504Z"
+}

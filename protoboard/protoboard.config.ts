@@ -25,5 +25,8 @@ export default defineConfig({
   cloud: { url: "https://protoboard-parts-628357308644.us-central1.run.app" },
   // extension packages (`protoboard extensions add <name>` adds one);
   // `protoboard doctor` reports their tools, `protoboard skills` their skills
+  // the Manufacturing Package (protoboard release): the body and each arm are built and tested as sub-assemblies
+  // before final assembly; the root (system/) unit joins them, fits the head and the packs and wires the power
+  release: { units: ["body", "arm_r", "arm_l"], build: 1 },
   extensions: ["@protoboardai/ext-hardware", "@protoboardai/ext-parts", "@protoboardai/ext-sourcing", "@protoboardai/ext-frame-cad", "@protoboardai/ext-enclosure-cad", "@protoboardai/ext-harness-cad", "@protoboardai/ext-docs", "@protoboardai/ext-release"],
 });

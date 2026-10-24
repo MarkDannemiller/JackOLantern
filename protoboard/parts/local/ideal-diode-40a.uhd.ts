@@ -4,10 +4,14 @@
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { powerStage } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const IDEAL_DIODE_40A: ModuleDef = powerStage({
+const IDEAL_DIODE_40A_ELECTRICAL: ModuleDef = powerStage({
   id: "ideal-diode-40a", name: "Ideal-diode module, 40 A", manufacturer: "DIY-Module", part_number: "40A-60A ideal diode module",
   description: "MOSFET ideal diode in the positive line: several sources OR-ed onto one bus, so a pack can be swapped while the other runs.",
   categories: ["power.distribution"], tags: ["ideal-diode", "hot-swap"], sources: [{ id: "src_listing", name: "BOM row (listing)", url: "https://www.amazon.com/s?k=ideal+diode+module+40A" }],
   vin: [0, 40], vout: [0, 40], iout: 40,
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const IDEAL_DIODE_40A: ModuleDef = withMech(IDEAL_DIODE_40A_ELECTRICAL as ModuleDef, "jj-body-ideal_diode");

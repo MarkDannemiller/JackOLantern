@@ -1,0 +1,13 @@
+{
+  "module": "iso7379-5x8",
+  "name": "iso7379-5x8",
+  "part": {
+    "diameter": 4,
+    "head_diameter": 8,
+    "head_height": 3.5,
+    "kind": "screw",
+    "length": 14.5,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

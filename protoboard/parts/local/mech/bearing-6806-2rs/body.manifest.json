@@ -1,0 +1,95 @@
+{
+ "artifact": "bearing-6806-2rs",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 4636.09,
+ "mass_g": 20.5,
+ "material": "metal_steel",
+ "category": "bought",
+ "features": {
+  "od_face": {
+   "kind": "bearing",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "od": 42,
+    "bore": 30,
+    "width": 7
+   }
+  },
+  "od_face_top": {
+   "kind": "bearing",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     7.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "od": 42,
+    "bore": 30,
+    "width": 7
+   }
+  },
+  "bore": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "gender": "bore",
+    "diameter": 30
+   }
+  }
+ },
+ "source": "ISO 15 boundary dimensions",
+ "meta": {
+  "bore": 30,
+  "od": 42,
+  "width": 7,
+  "code": "6806-2rs"
+ }
+}

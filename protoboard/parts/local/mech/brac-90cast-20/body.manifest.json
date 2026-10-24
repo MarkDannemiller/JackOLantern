@@ -1,0 +1,80 @@
+{
+ "artifact": "brac-90cast-20",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 3024.08,
+ "mass_g": 12.0,
+ "material": "metal_alu",
+ "category": "bought",
+ "features": {
+  "leg_a": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     10.0,
+     10.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": false
+   }
+  },
+  "leg_b": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     10.0,
+     10.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": false
+   }
+  }
+ },
+ "source": "Maker Store USA BRAC-90CAST listing, $1.80 (research/sourcing/20261025-hardware-sourcing.json); dimensions nominal",
+ "meta": {
+  "part_number": "BRAC-90CAST",
+  "price_usd": 1.8
+ }
+}

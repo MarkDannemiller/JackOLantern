@@ -1,0 +1,65 @@
+{
+ "artifact": "jj-base-skirt",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 5552686.48,
+ "mass_g": 3609.25,
+ "material": "wood_ply",
+ "category": "cut",
+ "features": {
+  "top": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     19.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  },
+  "bucket_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     19.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "structure",
+    "shape": "circle",
+    "spacing": 180.0,
+    "count": 4,
+    "fastener": "1/4-20",
+    "threaded": false
+   }
+  }
+ },
+ "source": "design; 3/4 in plywood (research: a 24 in birch round, Woodpeckers, ~$41.61 snippet)",
+ "meta": {
+  "material": "wood_ply"
+ }
+}

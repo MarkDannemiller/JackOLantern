@@ -1,0 +1,1129 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "release",
+  "extension": {
+    "id": "@protoboardai/ext-release",
+    "version": "0.1.7"
+  },
+  "effect": "export",
+  "inputs": {
+    "allow-dirty": "true",
+    "check": "false",
+    "version": "0.2.0-a"
+  },
+  "projectDigest": "sha256:abb1aa442ed8a2029c6845bca9eb06ddb3e9029c3cc607d7ae7b1436773bbc66",
+  "tools": [
+    {
+      "id": "chrome",
+      "available": true,
+      "detail": "Google Chrome 156.0.8078.47 (/usr/bin/google-chrome)"
+    }
+  ],
+  "startedAt": "2026-10-24T17:08:09.602Z",
+  "status": "succeeded",
+  "summary": "release/0.2.0-a: 4 unit(s), 21 documents (151 pages), 164 files; package 7d193d59b03c",
+  "outputs": [
+    {
+      "path": "release/0.2.0-a/00-overview.pdf",
+      "digest": "sha256:1dd498c923ba939e39febddd1ce7b9520fa9e500e328440e87519a674c500148",
+      "bytes": 501293,
+      "description": "overview, order of work, index and traceability"
+    },
+    {
+      "path": "release/0.2.0-a/assets/fonts/KodeMono-Bold.ttf",
+      "digest": "sha256:fb8e3bd30f23195495f577c21919a4e56f74a204e8e895bbfc667da86e42b6dd",
+      "bytes": 43468,
+      "description": "Kode Mono (SIL Open Font License)"
+    },
+    {
+      "path": "release/0.2.0-a/assets/fonts/KodeMono-Medium.ttf",
+      "digest": "sha256:f2f83fce1c8edbf8bc8e630aff724c80242d919319d1ea4c6ddf4a64c4f014ca",
+      "bytes": 43572,
+      "description": "Kode Mono (SIL Open Font License)"
+    },
+    {
+      "path": "release/0.2.0-a/assets/fonts/KodeMono-Regular.ttf",
+      "digest": "sha256:76b65c04b353e2e38f8b0f7fecad2d1820c902d2dde500f161d009a011a3b153",
+      "bytes": 43476,
+      "description": "Kode Mono (SIL Open Font License)"
+    },
+    {
+      "path": "release/0.2.0-a/assets/fonts/KodeMono-SemiBold.ttf",
+      "digest": "sha256:d41ea722f247efb86fce550219927d05afbb3432f59b34890801b719eabed349",
+      "bytes": 43564,
+      "description": "Kode Mono (SIL Open Font License)"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-01-arm-l-shoulder-1.png",
+      "digest": "sha256:8174759bbd53a1f39b0b4a42131a7c61c20f311a7efe273536117ec6e5591466",
+      "bytes": 268758,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-02-arm-l-shoulder-2.png",
+      "digest": "sha256:deeee10036f91652b5c8be8f20002c4e65b0fc2245e441a6d626b2bdba585af3",
+      "bytes": 217044,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-03-arm-l-balancer-1.png",
+      "digest": "sha256:8fcf3444d50e3925f73b1dbd559453b3d12b6bc01f13792267b190915d0a7feb",
+      "bytes": 167451,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-04-arm-l-balancer-2.png",
+      "digest": "sha256:c8659e1d8edbff9b161c55d941f527d8596ef57463a959a8cbc34d63af41749b",
+      "bytes": 144368,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-05-arm-l-upper-1.png",
+      "digest": "sha256:d761293696fa62c8a434ed973500fbcc0200f8e1c3bbcbb85dbbfddbacdb4a25",
+      "bytes": 184289,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-06-arm-l-upper-2.png",
+      "digest": "sha256:7b50c84d8aaf40a0ad0d600b8ab366acf5c25a76f84bbe76d6aefb9aed045dae",
+      "bytes": 144948,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-07-arm-l-elbow-1.png",
+      "digest": "sha256:995b5770fba8a5dc237ee3fdc3f043381fd9dc05914554233494a6c5b799a559",
+      "bytes": 124820,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-08-arm-l-elbow-2.png",
+      "digest": "sha256:18e1776805d210458784c1f2bbee979cd5d1fceef4c3983161214956ad46b73f",
+      "bytes": 128160,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-09-arm-l-forearm.png",
+      "digest": "sha256:0728f58f31e59bbeecfe7405513a03cffd3b3ab817ed138a77b1045f57c5ec85",
+      "bytes": 96077,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_l-10-arm-l-hand.png",
+      "digest": "sha256:e0e8f448fd4587d18bb005d5acd61c431c6e43841a04cfe0d3cae160582d2ce1",
+      "bytes": 86692,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-01-arm-r-shoulder-1.png",
+      "digest": "sha256:fdbd2cdc1989f8d430a76a38213adf97711eb60458974547d9da30a759d09fe2",
+      "bytes": 227133,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-02-arm-r-shoulder-2.png",
+      "digest": "sha256:876a8704ba5f2d5317e0d949b5797b851c23b203f9893236baabb8c1d9918124",
+      "bytes": 209813,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-03-arm-r-balancer-1.png",
+      "digest": "sha256:e824eaa6e6add0658d6e9cde09cb048690b4e12b27119e9d0c63f6cca75c6479",
+      "bytes": 172824,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-04-arm-r-balancer-2.png",
+      "digest": "sha256:a13ee2fc1f0d9ca9dfbf3d05001d46ab093f1d78f50b05b03aabe8794c562ae7",
+      "bytes": 135173,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-05-arm-r-upper-1.png",
+      "digest": "sha256:5f24c77c0f3d9ab9be51436cc0b9eccaeb49479a2fde48ced012dce9ca629ce8",
+      "bytes": 182308,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-06-arm-r-upper-2.png",
+      "digest": "sha256:fcdfa385ba8b1d9deff1e1eb3a9998883dd72813b2d3a2ebd45b36e61dbed5f0",
+      "bytes": 199794,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-07-arm-r-elbow-1.png",
+      "digest": "sha256:aab34f218178d5674f7e39355d2a9b0ce8bf3d4b69529d188045e21d40243c95",
+      "bytes": 166998,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-08-arm-r-elbow-2.png",
+      "digest": "sha256:1811ec075d4078919d2862186e61e17dc99b87f9c493bf98182c907b67bf01c4",
+      "bytes": 166348,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-09-arm-r-forearm.png",
+      "digest": "sha256:2c8abf518edfebea9b5ae38ab8ea3867ce1f5a7f09cc7b4289717e12e14cbc8d",
+      "bytes": 121246,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-arm_r-10-arm-r-hand.png",
+      "digest": "sha256:5baef04932185adcab3cc62b5ec6e8029641efa7afef04b481f8e82883436049",
+      "bytes": 97622,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-body-01-body-base.png",
+      "digest": "sha256:101f674b52b80deb5bcded7b2f3d658d99b1db70ba2df3ef98707521c734a9cd",
+      "bytes": 68284,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-body-02-body-torso.png",
+      "digest": "sha256:8af877a2f679a6acd95cd7fc26ba825dd660179326c2383855816e5ac51f0d54",
+      "bytes": 76121,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-body-03-body-neck-1.png",
+      "digest": "sha256:f82cedda28c518b2fc3a08be254c0d03f411bb61cb11612afdcd1301fce8b097",
+      "bytes": 76959,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-body-04-body-neck-2.png",
+      "digest": "sha256:f135384eac6a986017a7418c57083f5e4d79cdd37e2e42554022f90a546299ef",
+      "bytes": 75552,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-body-05-body-electronics-1.png",
+      "digest": "sha256:ed680314167eece06905ea686e67c70724d0f558834995b30b4e2c4ac1ddf212",
+      "bytes": 75301,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-body-06-body-electronics-2.png",
+      "digest": "sha256:45172d8f8a31efb6bad71c2eb177eb64b70a22fe637c4a9272b5dfae3eb760e1",
+      "bytes": 74170,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-01-root-electronics-root-1.png",
+      "digest": "sha256:9ff5f417729c223e6741d50791b9a23859441cc3b125fc9bb0a3dcc128701e76",
+      "bytes": 74288,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-02-root-electronics-root-2.png",
+      "digest": "sha256:62c922bccb798c75a3594519d23fdb25464ef7303a0f159f71c91226292f11f2",
+      "bytes": 75803,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-03-root-arms.png",
+      "digest": "sha256:3b9921e9201bd9f9758beabb08026e536881720c4ff1567cd7087f21ca0202fd",
+      "bytes": 111569,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-04-root-head.png",
+      "digest": "sha256:1a8d9fa777e43c7b107f9eab4a4c842fded14192f7e124fbdb3089e1fbdb1a35",
+      "bytes": 117026,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-05-wiring-head.png",
+      "digest": "sha256:ff033f11b18e31b605fc4432e51938a0fd3145225b3f6368f4dcae5cbc2fa474",
+      "bytes": 410395,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-06-wiring-power.png",
+      "digest": "sha256:9478ac43a0505d4049a84217fc57146b60ed6a652f0a2a74280e56b6af62d38f",
+      "bytes": 321763,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/ag-system-07-root-battery.png",
+      "digest": "sha256:0e561005083bf2606a68e6aeb146bdc06de1f00cf93739af286c62a327ef3311",
+      "bytes": 116681,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-bearing-624-2rs.png",
+      "digest": "sha256:b6ca6370b84d7d932d4c009172add3fc7a6d514db5a1f926443065aa9297d744",
+      "bytes": 16112,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-bearing-625-2rs.png",
+      "digest": "sha256:8c6fc091eb3a4e2ac3a8db0fa92c5f199683051b0360ed55a4670fee703acf23",
+      "bytes": 16203,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-bearing-6806-2rs.png",
+      "digest": "sha256:ed4659d39341269c3c96c4345bf72c3b64141f934ce802c7b80625ddc5e0278e",
+      "bytes": 18847,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-brac-90cast-20.png",
+      "digest": "sha256:85b4f0ea2ba5e3d86d406e0a45af149f3e4eb7fe0d6eea1172e25b3bd53e51d7",
+      "bytes": 13351,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-bucket-5gal.png",
+      "digest": "sha256:eb878eafa917a80a25af85c2469945aded48ed0920f72ffea0fcd662b7df3e8a",
+      "bytes": 15415,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-concrete-fill.png",
+      "digest": "sha256:3b3f0b0d282e12fd975806505d193cbbd31695d477a70efdf504b6ad2964f010",
+      "bytes": 11722,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-dowel-5x16.png",
+      "digest": "sha256:ee47596fa5676e4df1ee476ef2ee719bdb111725ffb2e6a337645b15e95bdd6c",
+      "bytes": 6117,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-drok-300w-buck.png",
+      "digest": "sha256:0d3e7e0584d95e28632acf7667ba0ca5ccf9feb71627d14d3da4841c9d272dce",
+      "bytes": 9297,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-dsservo-ds3225mg-270.png",
+      "digest": "sha256:b706872236d884d6e317865f822fcba01c723a6951bd102be14426bc3307f81d",
+      "bytes": 26888,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-dsservo-ds3235.png",
+      "digest": "sha256:09266248fbef8fb226a0f5841ecc3327ccadaf9654508e98b56a90e1a96b721a",
+      "bytes": 14417,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-dyneema-2mm-260.png",
+      "digest": "sha256:fc5636fd21b9af293a703b8cc33314e04b1da84697dc5895d15d8c57876e6e72",
+      "bytes": 4763,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-estop-22mm-nc.png",
+      "digest": "sha256:3d3376cf0b44d77ce5acecc1d7615eefd7c8d29c63c02efba2afd7a165b3415e",
+      "bytes": 8558,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-floor-flange-1in.png",
+      "digest": "sha256:10f7a22f386f860d3142601eac25ccae44bf2302c7d37fc78b31d9787ce11eb0",
+      "bytes": 14099,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-gt3-belt-210-9mm.png",
+      "digest": "sha256:772241e8f197468fd2535e0218828e51459d34be59d1174553e899cb3c35b47c",
+      "bytes": 13630,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-gt3-belt-240-9mm.png",
+      "digest": "sha256:19f0cf5bc2d67ee892422bad4c1c92a24c01cc932be9ea987e40bfa62122d27f",
+      "bytes": 12720,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-heatset-insert-m3.png",
+      "digest": "sha256:f22a1a614048c478196807689174867305cfba19276416ebf1dadf952f28d3ec",
+      "bytes": 9362,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-heatset-insert-m4.png",
+      "digest": "sha256:684ce3a55efb69d35436562e73fbfa2a4d78f01139a0ec64b8ad6009108d4d75",
+      "bytes": 9285,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-hex-bolt-1-4-20x1.25in.png",
+      "digest": "sha256:0a41f7aad56520ba10c7ea3f33ab9657553bcef0521953ebed5d42b855101670",
+      "bytes": 7820,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-hfs5-2020-102-neck-post.png",
+      "digest": "sha256:6f1b71b97ee7bc44c6504fcae6433e786db298d65b02dfd47ed59f0321b3be03",
+      "bytes": 7189,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-hfs5-2020-190-balancer-column.png",
+      "digest": "sha256:085b4ccb3261edfdd76578c43b12068539e7c1b9546f2b908b8feda293bafcb3",
+      "bytes": 6148,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-inline-atc-fuse.png",
+      "digest": "sha256:d43a49d1f69c8f7f17d4622ae6f232c4b82da54189b48de911a596f1605802cf",
+      "bytes": 8649,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso10511-m4.png",
+      "digest": "sha256:0186d87c1b5d110ecf5748902e2693ea31f98dca87e4ee1a937d9361ebaf444a",
+      "bytes": 10439,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso10511-m5.png",
+      "digest": "sha256:9e7a941f62d9ba8587e6bd72a8632ac5895b435d75a8e383b1baa8fb956d9766",
+      "bytes": 11051,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m3x12.png",
+      "digest": "sha256:85d1c31e5c3625915cf568a013ae9d4eb6518ed834a3d7ee3cc15619392a313c",
+      "bytes": 8121,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m3x14.png",
+      "digest": "sha256:bc93b00060730e3a568b436c5143b760a1d1dda986f0644537831ed858867a24",
+      "bytes": 7619,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m3x8.png",
+      "digest": "sha256:6ef13a54221097d4d8533d028528720742031d2b5312126cf86d0bb2671b9e2d",
+      "bytes": 9118,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m4x10.png",
+      "digest": "sha256:6f7eabea26e7021199e1164f3faefe06edf4f16eb2a36e3d0abcc2abb6909817",
+      "bytes": 9144,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m4x12.png",
+      "digest": "sha256:f2f1851ba8d9a9e18c70ebd330563cf5ae7a953ddfb3af53cb81210fb7a32432",
+      "bytes": 8810,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m4x16.png",
+      "digest": "sha256:cbaeec66cf729b405a4899f1e0b81041da7b65f8db024e69bc815027ae6178ca",
+      "bytes": 7971,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m4x25.png",
+      "digest": "sha256:b6ca84795da54d1b3eb865d8d9293980940e1a7f5cd050f0054e95de98508d66",
+      "bytes": 7050,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m5x10.png",
+      "digest": "sha256:c8fbd3bb6292b5dd72603b2b2ca92709f1dd6ce23d72affe3d53ebac87a19e7e",
+      "bytes": 9603,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m5x12.png",
+      "digest": "sha256:95141e753550420baaa7fc785eb16b0359de74d864c7611d938539fa859b26b5",
+      "bytes": 9115,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m5x16.png",
+      "digest": "sha256:35a087255cb808e17a2e353db01de71c31a1052d5c6a07c5ec4fcaef8023789c",
+      "bytes": 8506,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso4762-m5x20.png",
+      "digest": "sha256:b6463a94e89711060ff436d5f79c0d9efd244e0e5d1de5e0831a301ecb8a1524",
+      "bytes": 7933,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso7089-m4.png",
+      "digest": "sha256:9d79b7584ac5219dd045bc357e7434b8c3b58a62685a24180b62c78781ef635a",
+      "bytes": 12081,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso7089-m5.png",
+      "digest": "sha256:30882466a10fcb260f9d4a74d8e7802112504bb14eee8d86d8c7f7ff266fcd8d",
+      "bytes": 12215,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-iso7379-5x8.png",
+      "digest": "sha256:821254c650590386e78f8252dfab6b41c2c43277b5442aa2b0f297c2aa00920e",
+      "bytes": 8656,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-elbow-housing-a.png",
+      "digest": "sha256:7a3144b2824afd5626785616a9a82413727d0b4b2a31d8011c377cd0483f18db",
+      "bytes": 25563,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-fore-body-a.png",
+      "digest": "sha256:6bb4ffe443c2ec3f1cbc149735fa72c0c2f50d29794724a83ac918648078fc60",
+      "bytes": 6431,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-fore-fork-in-a.png",
+      "digest": "sha256:217fd7c87f389f445652362ed019d66071442e6e9bbbeab76d3047774bcf4e15",
+      "bytes": 9009,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-fore-fork-out-a.png",
+      "digest": "sha256:14ec9c08d4d9075388d3c74ef972947a141629b762ca3c259d7c7f2b55f38152",
+      "bytes": 9012,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-j1-bal-anchor-a.png",
+      "digest": "sha256:3917c2925346e797df24c116f4c95763f55dd8a344d31ec2a9ff060df9f63d5b",
+      "bytes": 9714,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-j1-bal-equalizer-a.png",
+      "digest": "sha256:5fd665a9353962198813f9cbe6059dccedd058ee19b259bdf9c33d12b45038a3",
+      "bytes": 8175,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-j1-bal-lever-a.png",
+      "digest": "sha256:dd0a1722182c8e1fec47b78cbdf51493c1bd934f7a811c4aed398597ee942cd3",
+      "bytes": 16275,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-j1-bal-post-a.png",
+      "digest": "sha256:275292f65f48942d9f41922234486f653beaf9b3462498d56bc5cb2e3dc5625a",
+      "bytes": 9635,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-j1-bal-spool-a.png",
+      "digest": "sha256:ebacf3a73e4a389ef920f8eba0b12a48eb91de11834ed4ab8ea182f8a6fca6e6",
+      "bytes": 26432,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-j1-housing-a.png",
+      "digest": "sha256:42a8d7a3aa09666b7164b1f7d4c6283a0c9dcfdda8fbc0594566866533868da1",
+      "bytes": 27016,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-upper-head-a.png",
+      "digest": "sha256:b98504703c5208257437625f283d5f837dc011baf874fe62481fe1a075210ab8",
+      "bytes": 15233,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-arm-yoke-a.png",
+      "digest": "sha256:b8cc859b8e918996f9552e17624af620d59cd029020e4d092030966281d27217",
+      "bytes": 17041,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-base-skirt.png",
+      "digest": "sha256:cc86b4ae5a995b2c7c9e34201128c645545f43d228c34cea9577cf301353975f",
+      "bytes": 9726,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-cable-sheave-22.png",
+      "digest": "sha256:94e808be8e7625fa58e55be3f20f5957bc7f71b2223f7b0cbe4a96b879fef6b5",
+      "bytes": 15717,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-cap-48t.png",
+      "digest": "sha256:ddebf94eeb5275a1209f3bd447e77179bff0b9be30e200e9d972f15bc05e5823",
+      "bytes": 15530,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-cap-60t.png",
+      "digest": "sha256:2ef748a88cfa960fd5454a3d847a4395e84d6a1ce651cafcf7f9c3b90a4049d5",
+      "bytes": 14928,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-electronics-board-a.png",
+      "digest": "sha256:695b47bbccd157dd573791d49b382829e27eeca7a04762af81a9cd57d6fc87d1",
+      "bytes": 7106,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-estop-bracket-a.png",
+      "digest": "sha256:345381ab4a69c215c5c2f8f8aedc8c0dae77235740207b033adfe232e2033fc6",
+      "bytes": 7802,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-head.png",
+      "digest": "sha256:b7d25fa99fcc497a307629d91068d2d09606493af69502149b6d20cd6979ecb6",
+      "bytes": 50103,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-hub-48t-gt3.png",
+      "digest": "sha256:8aeddd5c754199f000a3036096bbc42abcf377f9a94e6d21bf0798a83af5725a",
+      "bytes": 23429,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-hub-60t-gt3.png",
+      "digest": "sha256:0efa61d3bdf29952d1415d61838538553c1c755818a02edf2d99b2ab9af1fd91",
+      "bytes": 21698,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-mitt-a-paddle-l.png",
+      "digest": "sha256:60631cf79c6185e0cbac409a4b1e19aab5b7ad32f6231bbda3d594d2e771f199",
+      "bytes": 15597,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-mitt-a-paddle.png",
+      "digest": "sha256:397fbb53892cb5bde47454249484ed60ec0a784a18d82f43dcc0d9bdec529750",
+      "bytes": 15544,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-mitt-a-palm-l.png",
+      "digest": "sha256:b606e39b3f5a27722354182dccacff16bc18771c5b95808beff6851ff2fc6baa",
+      "bytes": 14814,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-mitt-a-palm.png",
+      "digest": "sha256:bb09ac15a5b0e068112188e9a3ba0465669c6c3423bbe069d2fe868d56ae1f0e",
+      "bytes": 13470,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-neck-plate.png",
+      "digest": "sha256:3610183dc1ad4589a4219a40d336a25a62a736eac24503df4722c3f0d5fae85f",
+      "bytes": 11568,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-pulley-16t-gt3-horn.png",
+      "digest": "sha256:c92f906a16107466fdee19b2d857a0f6ee6790a008717b04f07ed25000453f1e",
+      "bytes": 20064,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-pulley-20t-gt3-horn.png",
+      "digest": "sha256:a11c605370f1cc1ba7ca9585ba73f129ac0318ed9e3881e18fd4b51ae66f16f0",
+      "bytes": 18394,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-torso-a-bottom.png",
+      "digest": "sha256:e764eef80e20ba49f4c1b86f450456438f576ad605f4099ba38848c016acd749",
+      "bytes": 9652,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-torso-a-side-l.png",
+      "digest": "sha256:e9f51f53f20d9c5a97b5982a9d6e5fcf98bddd240139d501fe4b9231f9c7054c",
+      "bytes": 5993,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-torso-a-side-r.png",
+      "digest": "sha256:e9f51f53f20d9c5a97b5982a9d6e5fcf98bddd240139d501fe4b9231f9c7054c",
+      "bytes": 5993,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-torso-a-top.png",
+      "digest": "sha256:abf0cd53cbae50319e48ceff1baefd3bc7a025964ff9ad4a99e0e82d161e7486",
+      "bytes": 9498,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-tray-drok.png",
+      "digest": "sha256:6a9915f9b65bee5f70aee80acdfccfba8a428bd59f1e7a987eea754eda28e20a",
+      "bytes": 12835,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-tray-fuse_inline.png",
+      "digest": "sha256:39c628955b46423bc48032d914cabb6a646043c3c153d46b1568ce5a002b8c00",
+      "bytes": 12101,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-tray-lvc.png",
+      "digest": "sha256:1d54bccb5b4d7b70b9bda20180d5675bfa82eb344946e92b80c2de0c7b77a6f2",
+      "bytes": 12941,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-jj-tray-pca.png",
+      "digest": "sha256:49c3d53de035d5cc65f209e05003d73e6c887ff3cb9a82ba359cb07fca924322",
+      "bytes": 12400,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-m18-power-wheel-adapter.png",
+      "digest": "sha256:b4bb62d386f3eb6219fa2734eb6ff729ddfbb6c716ea19c676f5de1ee810e5af",
+      "bytes": 9876,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-milwaukee-m18-pack.png",
+      "digest": "sha256:9735101877ad3439454675fccb0ce2b2b54f0ca0f7f33af2591680e4562c7b25",
+      "bytes": 9648,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-nylock-1-4-20.png",
+      "digest": "sha256:296be72ec27ae5b08c879ad29135f01cb465f419b405acef65ecc10db8517214",
+      "bytes": 10898,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-pca9685-16ch-servo-driver-0x41.png",
+      "digest": "sha256:bb1364f810f543130ef793358df1dcfd74a7b692468d2040124fe6d5cfb88633",
+      "bytes": 8568,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-pipe-nipple-1x30.png",
+      "digest": "sha256:06cecefc8be30f29b2d4b4bfcf30031dab0f73068446a9fcefc383565e15bf5b",
+      "bytes": 4614,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-spring-century-90cs.png",
+      "digest": "sha256:e6da22c6eac8f6989d55fb993e84dca1e1bc16aca00db60c9fbc6c03e745c014",
+      "bytes": 20509,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-tee-nut-m5-hammer-in.png",
+      "digest": "sha256:331800b9b06ae8856d5013621e047a0c1dc4c17c0fee99104bb90eb9ead240f3",
+      "bytes": 9790,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-tnut-2020-m5.png",
+      "digest": "sha256:7cc299a800e2360b6532f3d944e24ca5a17a3a7655f161d4dd875a9087da1d7d",
+      "bytes": 10934,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-towerpro-mg996r.png",
+      "digest": "sha256:09266248fbef8fb226a0f5841ecc3327ccadaf9654508e98b56a90e1a96b721a",
+      "bytes": 14417,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-towerpro-sg90.png",
+      "digest": "sha256:6a4fb50d5f19659847c895d21548c9cb44dc59ddf5f02fd8cce140601ef49acc",
+      "bytes": 11731,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-wood-screw-4x0.5in.png",
+      "digest": "sha256:9793ca3c3379d7ee09e02f335d671d0fb641760a3db061406b170ad0eb8b0abb",
+      "bytes": 9193,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-wood-screw-8x0.75in.png",
+      "digest": "sha256:7511a0484a718174424b41503b9a1020920c8212a0b3de52719745cdae733b1f",
+      "bytes": 8162,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-wood-screw-8x1.25in.png",
+      "digest": "sha256:6fbb6a8c9e41668297b2f38a5d5e093fc9a7cec2c6f09660e6ac433231196e13",
+      "bytes": 6994,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/part-xh-m609-lvc.png",
+      "digest": "sha256:c7cb935ffc38e0ac8c4e523f30ff4e2748e299c4adf4af90993a04230960f30a",
+      "bytes": 9268,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-arm_l.png",
+      "digest": "sha256:a6ffd7a38973ba7311d488c04005fda0863efe0d259385da1f76108feccb00f4",
+      "bytes": 134368,
+      "description": "assembled unit, line art from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-arm_r.png",
+      "digest": "sha256:95c0a1d9f380e268d0c0adb7826b03b71d282d61debbb49121f6c41d24f7e2ab",
+      "bytes": 129678,
+      "description": "assembled unit, line art from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-body.png",
+      "digest": "sha256:62399554ff4c22c0427f061a71140beb6e57e34ee177d93de303a66efcc921d2",
+      "bytes": 99168,
+      "description": "assembled unit, line art from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-system.png",
+      "digest": "sha256:ec0d6bd4810a836ab8453d5b2e7ca24ff8ad89adfb48569d02935fcbed4e6058",
+      "bytes": 166428,
+      "description": "assembled unit, line art from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-thumb-arm_l.png",
+      "digest": "sha256:121febcb014fb0c8ab69dfa01cd9f9e384cd48d4edad9ca45386702fcc6ae272",
+      "bytes": 14962,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-thumb-arm_r.png",
+      "digest": "sha256:b15ee1e6e46d7b9020c9a4c4f29a13ce6c4bc5336db5bf32fad61c77eab5c5e1",
+      "bytes": 14891,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/assets/images/unit-thumb-body.png",
+      "digest": "sha256:78ed7d94178da8bd9ede5c243dd657fc7698debb3f51642341494a71a3cd8f38",
+      "bytes": 13608,
+      "description": "figure rendered from the model's CAD"
+    },
+    {
+      "path": "release/0.2.0-a/index.html",
+      "digest": "sha256:d70f020b4dd7e768de04ea95b832d4eacdf94dde1b80a7fec20330a284a19bdd",
+      "bytes": 708338,
+      "description": "the whole package, by unit and by section"
+    },
+    {
+      "path": "release/0.2.0-a/system/assembly-guide.pdf",
+      "digest": "sha256:7b456b3fd146c6f59a6307bebe00ca51712b5b80bc697b83a01dd1e35c0850a2",
+      "bytes": 1166135,
+      "description": "Assembly guide"
+    },
+    {
+      "path": "release/0.2.0-a/system/bom.csv",
+      "digest": "sha256:9e94600df3417b1eb3a2f15f76445cc5852bda28372b6ae752a48426a256034a",
+      "bytes": 6948,
+      "description": "module breakdown of one build"
+    },
+    {
+      "path": "release/0.2.0-a/system/bom.pdf",
+      "digest": "sha256:dcb844398c8571b8b32bb2b77e0cc5d553b457c0ff3ce71d477db82f0fadc33b",
+      "bytes": 324188,
+      "description": "Bill of materials"
+    },
+    {
+      "path": "release/0.2.0-a/system/files/model/uhd-bundle.json",
+      "digest": "sha256:be732a5b8d28f27877faf77dc8588a2e4224b7c9ca881cb4495844780283c846",
+      "bytes": 840523,
+      "description": "UHD bundle of the released system"
+    },
+    {
+      "path": "release/0.2.0-a/system/files/test/test-record.csv",
+      "digest": "sha256:f2699ed5efb5b116dbae1ccd95259ecde4b7fda9e9ecf633dc18278c90fd67e7",
+      "bytes": 8047,
+      "description": "test record to fill in, one row per check"
+    },
+    {
+      "path": "release/0.2.0-a/system/ordering-list.csv",
+      "digest": "sha256:283f2056e8a60f4ade695472e7e46a25a85802d60bb2737661d8242bf5c2b4a8",
+      "bytes": 24164,
+      "description": "whole-product ordering list"
+    },
+    {
+      "path": "release/0.2.0-a/system/spec-sheet.pdf",
+      "digest": "sha256:499eaf03686d3569d799d8e088be8af0a4b74a34e214d511770555372eea6238",
+      "bytes": 166912,
+      "description": "Spec sheet"
+    },
+    {
+      "path": "release/0.2.0-a/system/test-plan.pdf",
+      "digest": "sha256:12508936df39e38edcb269cd10074edf3327e9f7306a2d7d999516079d2477be",
+      "bytes": 119282,
+      "description": "Test and validation plan"
+    },
+    {
+      "path": "release/0.2.0-a/system/work-order.pdf",
+      "digest": "sha256:f9e5e315cd496609f0ee6f49d9287ccd735b985c984c90a763206d1a1286180b",
+      "bytes": 346903,
+      "description": "Work order"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/assembly-guide.pdf",
+      "digest": "sha256:1a800ecc0da8465ec124114916507a75c7645020a7dd9b503f053a36901495f5",
+      "bytes": 1741666,
+      "description": "Assembly guide"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/bom.csv",
+      "digest": "sha256:c86bc44fa8fdde00a58c02ad071db271ceda4f363b2be32941c8a38244ac1b0c",
+      "bytes": 20818,
+      "description": "module breakdown of one build"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/bom.pdf",
+      "digest": "sha256:534a6c070a2ae6b242058b6d23279bf6a467ad99d4b4234d635bd20f629a62c8",
+      "bytes": 237852,
+      "description": "Bill of materials"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/files/test/test-record.csv",
+      "digest": "sha256:1c09c9bf82ccb2ba702ec969403fab3b27fe7cf29484c29019d9b41e683043f4",
+      "bytes": 4236,
+      "description": "test record to fill in, one row per check"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/spec-sheet.pdf",
+      "digest": "sha256:66f679281cd7ca360e08a87319fee81388e790a1341c1ac628e33773f8808c6f",
+      "bytes": 227747,
+      "description": "Spec sheet"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/test-plan.pdf",
+      "digest": "sha256:2c6669eaaf6a90114e7d8eab27d4f942d44b64290360922a349e347b2d3a31e5",
+      "bytes": 63487,
+      "description": "Test and validation plan"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_l/work-order.pdf",
+      "digest": "sha256:b6715e501ebffda601999e789bce339f83c4567a6b10c8085b25e86e13e0fbe7",
+      "bytes": 378548,
+      "description": "Work order"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/assembly-guide.pdf",
+      "digest": "sha256:680eee8c3a55584ffeb8e69ed350b61116ea64fd7b3a4fb9c4bbf5d6f33f8bc9",
+      "bytes": 1867447,
+      "description": "Assembly guide"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/bom.csv",
+      "digest": "sha256:26fc833f30d500919761e4f967db5c7fe88d8221aaf155b5014e25f06c9a0c9a",
+      "bytes": 20800,
+      "description": "module breakdown of one build"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/bom.pdf",
+      "digest": "sha256:a5d8a6ea856d7caeeaab315f7754dfb9001803cf0953d442899322c1ec5f0bd7",
+      "bytes": 237914,
+      "description": "Bill of materials"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/files/test/test-record.csv",
+      "digest": "sha256:f5433392a179fb56a0b55a7ca2dfd3ec78cd4c84b8326ea7267b42b6e09f7b6d",
+      "bytes": 4251,
+      "description": "test record to fill in, one row per check"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/spec-sheet.pdf",
+      "digest": "sha256:40b01df3d589b436c0697a8a61ac2338dcc1600b3d1dcdf348c20b7663e6c88d",
+      "bytes": 226386,
+      "description": "Spec sheet"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/test-plan.pdf",
+      "digest": "sha256:9ad4cd40af353edbc85aa4348af3b0ea08e941370b0854dd2616b4176acf9a55",
+      "bytes": 63487,
+      "description": "Test and validation plan"
+    },
+    {
+      "path": "release/0.2.0-a/units/arm_r/work-order.pdf",
+      "digest": "sha256:517cd6a0e42dddbeca0c84a360d4e41b88bec90b4a4f354cfffc92026b243ca0",
+      "bytes": 378582,
+      "description": "Work order"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/assembly-guide.pdf",
+      "digest": "sha256:5de17ab5f1d8680ad905d25252061322d14c74a0133f2074b32085669e09c27e",
+      "bytes": 646293,
+      "description": "Assembly guide"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/bom.csv",
+      "digest": "sha256:7647a1752a1508da8102c80d35839335a10326b8a0aa9709a50ce671611f30d4",
+      "bytes": 14596,
+      "description": "module breakdown of one build"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/bom.pdf",
+      "digest": "sha256:4e1ecbe198fa1c76ac597816d6cde5fd2e10ce7de748a999c869ddeb7f41cb9a",
+      "bytes": 173484,
+      "description": "Bill of materials"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/files/test/test-record.csv",
+      "digest": "sha256:9b4d2ca2e13b5c3f835731f5e4477c8b5ef48fe9113f740e0cab3015be489196",
+      "bytes": 2110,
+      "description": "test record to fill in, one row per check"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/spec-sheet.pdf",
+      "digest": "sha256:7d33d0203392a80112b5997b9378679c7bd610b38905f45824c27e880c98f870",
+      "bytes": 179443,
+      "description": "Spec sheet"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/test-plan.pdf",
+      "digest": "sha256:a3e48d01a9720f26a86f52f283bef9e3fc59dbd892f54f09b15dc872e6a3ae85",
+      "bytes": 38526,
+      "description": "Test and validation plan"
+    },
+    {
+      "path": "release/0.2.0-a/units/body/work-order.pdf",
+      "digest": "sha256:e4f24db4c99a1344254449dd69fa00f5f97f3fbbc3fa0c6469d4a13786fcd046",
+      "bytes": 227488,
+      "description": "Work order"
+    },
+    {
+      "path": "release/0.2.0-a/manifest.json",
+      "digest": "sha256:650adddf5f6235a080233127f765762a78dac95e5d4900010f7ae15d7b0b8951",
+      "bytes": 213020,
+      "description": "release manifest"
+    }
+  ],
+  "data": {
+    "status": "succeeded",
+    "summary": "release/0.2.0-a: 4 unit(s), 21 documents (151 pages), 164 files; package 7d193d59b03c",
+    "diagnostics": [],
+    "version": "0.2.0-a",
+    "dir": "release/0.2.0-a",
+    "units": [
+      {
+        "id": "body",
+        "folder": "units/body",
+        "perProduct": 1
+      },
+      {
+        "id": "arm_r",
+        "folder": "units/arm_r",
+        "perProduct": 1
+      },
+      {
+        "id": "arm_l",
+        "folder": "units/arm_l",
+        "perProduct": 1
+      },
+      {
+        "id": "system",
+        "folder": "system",
+        "perProduct": 1
+      }
+    ],
+    "documents": [
+      {
+        "path": "00-overview.pdf",
+        "pages": 9
+      },
+      {
+        "path": "units/body/spec-sheet.pdf",
+        "pages": 3
+      },
+      {
+        "path": "units/body/bom.pdf",
+        "pages": 4
+      },
+      {
+        "path": "units/body/work-order.pdf",
+        "pages": 8
+      },
+      {
+        "path": "units/body/assembly-guide.pdf",
+        "pages": 14
+      },
+      {
+        "path": "units/body/test-plan.pdf",
+        "pages": 1
+      },
+      {
+        "path": "units/arm_r/spec-sheet.pdf",
+        "pages": 3
+      },
+      {
+        "path": "units/arm_r/bom.pdf",
+        "pages": 5
+      },
+      {
+        "path": "units/arm_r/work-order.pdf",
+        "pages": 14
+      },
+      {
+        "path": "units/arm_r/assembly-guide.pdf",
+        "pages": 18
+      },
+      {
+        "path": "units/arm_r/test-plan.pdf",
+        "pages": 2
+      },
+      {
+        "path": "units/arm_l/spec-sheet.pdf",
+        "pages": 3
+      },
+      {
+        "path": "units/arm_l/bom.pdf",
+        "pages": 5
+      },
+      {
+        "path": "units/arm_l/work-order.pdf",
+        "pages": 14
+      },
+      {
+        "path": "units/arm_l/assembly-guide.pdf",
+        "pages": 17
+      },
+      {
+        "path": "units/arm_l/test-plan.pdf",
+        "pages": 2
+      },
+      {
+        "path": "system/spec-sheet.pdf",
+        "pages": 2
+      },
+      {
+        "path": "system/bom.pdf",
+        "pages": 5
+      },
+      {
+        "path": "system/work-order.pdf",
+        "pages": 6
+      },
+      {
+        "path": "system/assembly-guide.pdf",
+        "pages": 12
+      },
+      {
+        "path": "system/test-plan.pdf",
+        "pages": 4
+      }
+    ],
+    "packageDigest": "sha256:7d193d59b03cc4edb937f1af34422b15cef9cef5f31ba1be7a564d56c5463e44",
+    "manifestDigest": "sha256:650adddf5f6235a080233127f765762a78dac95e5d4900010f7ae15d7b0b8951"
+  },
+  "finishedAt": "2026-10-24T17:09:15.277Z"
+}

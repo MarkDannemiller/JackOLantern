@@ -1,0 +1,665 @@
+{
+ "tier": "b",
+ "cables": [
+  {
+   "id": "arm-r-bus-1",
+   "kind": "bus",
+   "from_": "arm_r/bus_adapter",
+   "to": "arm_r/shoulder_flex",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 650,
+   "note": "daisy chain from the bus adapter; through 0 joint hub(s)",
+   "links": [
+    "arm_r/shoulder_flex_bus",
+    "arm_r/shoulder_flex_vplus",
+    "arm_r/shoulder_flex_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-bus-2",
+   "kind": "bus",
+   "from_": "arm_r/shoulder_flex",
+   "to": "arm_r/shoulder_out",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 410,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_r/shoulder_out_bus",
+    "arm_r/shoulder_out_vplus",
+    "arm_r/shoulder_out_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-bus-3",
+   "kind": "bus",
+   "from_": "arm_r/shoulder_out",
+   "to": "arm_r/upper_twist",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 300,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_r/upper_twist_bus",
+    "arm_r/upper_twist_vplus",
+    "arm_r/upper_twist_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-bus-4",
+   "kind": "bus",
+   "from_": "arm_r/upper_twist",
+   "to": "arm_r/elbow",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 280,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_r/elbow_bus",
+    "arm_r/elbow_vplus",
+    "arm_r/elbow_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-bus-5",
+   "kind": "bus",
+   "from_": "arm_r/elbow",
+   "to": "arm_r/wrist_twist",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 480,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_r/wrist_twist_bus",
+    "arm_r/wrist_twist_vplus",
+    "arm_r/wrist_twist_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-bus-6",
+   "kind": "bus",
+   "from_": "arm_r/wrist_twist",
+   "to": "arm_r/fingers",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 350,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_r/fingers_bus",
+    "arm_r/fingers_vplus",
+    "arm_r/fingers_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-bus-7",
+   "kind": "bus",
+   "from_": "arm_r/fingers",
+   "to": "arm_r/thumb",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 170,
+   "note": "daisy chain from the previous servo; through 0 joint hub(s)",
+   "links": [
+    "arm_r/thumb_bus",
+    "arm_r/thumb_vplus",
+    "arm_r/thumb_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-1",
+   "kind": "bus",
+   "from_": "arm_l/bus_adapter",
+   "to": "arm_l/shoulder_flex",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 560,
+   "note": "daisy chain from the bus adapter; through 0 joint hub(s)",
+   "links": [
+    "arm_l/shoulder_flex_bus",
+    "arm_l/shoulder_flex_vplus",
+    "arm_l/shoulder_flex_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-2",
+   "kind": "bus",
+   "from_": "arm_l/shoulder_flex",
+   "to": "arm_l/shoulder_out",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 410,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_l/shoulder_out_bus",
+    "arm_l/shoulder_out_vplus",
+    "arm_l/shoulder_out_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-3",
+   "kind": "bus",
+   "from_": "arm_l/shoulder_out",
+   "to": "arm_l/upper_twist",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 300,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_l/upper_twist_bus",
+    "arm_l/upper_twist_vplus",
+    "arm_l/upper_twist_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-4",
+   "kind": "bus",
+   "from_": "arm_l/upper_twist",
+   "to": "arm_l/elbow",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 280,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_l/elbow_bus",
+    "arm_l/elbow_vplus",
+    "arm_l/elbow_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-5",
+   "kind": "bus",
+   "from_": "arm_l/elbow",
+   "to": "arm_l/wrist_twist",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 480,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_l/wrist_twist_bus",
+    "arm_l/wrist_twist_vplus",
+    "arm_l/wrist_twist_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-6",
+   "kind": "bus",
+   "from_": "arm_l/wrist_twist",
+   "to": "arm_l/fingers",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 350,
+   "note": "daisy chain from the previous servo; through 1 joint hub(s)",
+   "links": [
+    "arm_l/fingers_bus",
+    "arm_l/fingers_vplus",
+    "arm_l/fingers_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-bus-7",
+   "kind": "bus",
+   "from_": "arm_l/fingers",
+   "to": "arm_l/thumb",
+   "conductors": [
+    "signal",
+    "V+ 12 V",
+    "GND"
+   ],
+   "gauge": null,
+   "terminations": "Molex 5264 3-pin both ends (Feetech servo cable)",
+   "length_mm": 170,
+   "note": "daisy chain from the previous servo; through 0 joint hub(s)",
+   "links": [
+    "arm_l/thumb_bus",
+    "arm_l/thumb_vplus",
+    "arm_l/thumb_gnd"
+   ]
+  },
+  {
+   "id": "dock1-or",
+   "kind": "power",
+   "from_": "dock_1:lead_plus",
+   "to": "or_1:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 440,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock_1",
+   "links": [
+    "dock1_or",
+    "or_1_gnd"
+   ]
+  },
+  {
+   "id": "dock2-or",
+   "kind": "power",
+   "from_": "dock_2:lead_plus",
+   "to": "or_2:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 480,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock_1",
+   "links": [
+    "dock2_or",
+    "or_2_gnd"
+   ]
+  },
+  {
+   "id": "or1-bus",
+   "kind": "power",
+   "from_": "or_1:vout",
+   "to": "monitor:shunt_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 220,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock_1",
+   "links": [
+    "or1_bus",
+    "monitor_gnd"
+   ]
+  },
+  {
+   "id": "or2-bus",
+   "kind": "power",
+   "from_": "or_2:vout",
+   "to": "monitor:shunt_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 150,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock_1",
+   "links": [
+    "or2_bus",
+    "monitor_gnd"
+   ]
+  },
+  {
+   "id": "monitor-lvc",
+   "kind": "power",
+   "from_": "monitor:shunt_out",
+   "to": "lvc:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 270,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock_1",
+   "links": [
+    "monitor_lvc",
+    "lvc_gnd"
+   ]
+  },
+  {
+   "id": "lvc-fuses",
+   "kind": "power",
+   "from_": "lvc:vout",
+   "to": "fuses:feed",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 180,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock_1",
+   "links": [
+    "lvc_fuses",
+    "fuses_gnd"
+   ]
+  },
+  {
+   "id": "act-relay",
+   "kind": "power",
+   "from_": "fuses:out1",
+   "to": "relay:contact_30",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 170,
+   "note": "actuator feeds; return paired from dock_1",
+   "links": [
+    "act_relay",
+    "relay_coil_gnd"
+   ]
+  },
+  {
+   "id": "estop-feed",
+   "kind": "power",
+   "from_": "fuses:out3",
+   "to": "estop:vin",
+   "conductors": [
+    "+"
+   ],
+   "gauge": 20,
+   "terminations": "ferrules / 6.3 mm spade",
+   "length_mm": 320,
+   "note": "E-stop chain (relay coil)",
+   "links": [
+    "estop_feed"
+   ]
+  },
+  {
+   "id": "estop-coil",
+   "kind": "power",
+   "from_": "estop:vout",
+   "to": "relay:coil_86",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 20,
+   "terminations": "ferrules / 6.3 mm spade",
+   "length_mm": 300,
+   "note": "E-stop chain (relay coil); return paired from dock_1",
+   "links": [
+    "estop_coil",
+    "relay_coil_gnd"
+   ]
+  },
+  {
+   "id": "relay-arm-r",
+   "kind": "power",
+   "from_": "relay:contact_87",
+   "to": "buck_arm_r:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 380,
+   "note": "actuator feeds; return paired from dock_1",
+   "links": [
+    "relay_arm_r",
+    "buck_arm_r_gnd"
+   ]
+  },
+  {
+   "id": "relay-arm-l",
+   "kind": "power",
+   "from_": "relay:contact_87",
+   "to": "buck_arm_l:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 280,
+   "note": "actuator feeds; return paired from dock_1",
+   "links": [
+    "relay_arm_l",
+    "buck_arm_l_gnd"
+   ]
+  },
+  {
+   "id": "relay-head",
+   "kind": "power",
+   "from_": "relay:contact_87",
+   "to": "buck_head:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 320,
+   "note": "actuator feeds; return paired from dock_1",
+   "links": [
+    "relay_head",
+    "buck_head_gnd"
+   ]
+  },
+  {
+   "id": "pi-feed",
+   "kind": "power",
+   "from_": "fuses:out2",
+   "to": "buck_pi:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules / USB-C pigtail",
+   "length_mm": 170,
+   "note": "5 V computer feeds; return paired from dock_1",
+   "links": [
+    "pi_feed",
+    "buck_pi_gnd"
+   ]
+  },
+  {
+   "id": "pi-5v",
+   "kind": "power",
+   "from_": "buck_pi:vout",
+   "to": "head:pi_5v_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules / USB-C pigtail",
+   "length_mm": 470,
+   "note": "5 V computer feeds; return paired from dock_1",
+   "links": [
+    "pi_5v",
+    "head_gnd"
+   ]
+  },
+  {
+   "id": "head-servo-rail",
+   "kind": "power",
+   "from_": "buck_head:vout",
+   "to": "head:servo_vplus_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 16,
+   "terminations": "ferrules / servo header",
+   "length_mm": 490,
+   "note": "head and hand servo rails; return paired from dock_1",
+   "links": [
+    "head_servo_rail",
+    "head_gnd"
+   ]
+  },
+  {
+   "id": "monitor-i2c",
+   "kind": "i2c",
+   "from_": "head:i2c",
+   "to": "monitor:i2c",
+   "conductors": [
+    "i2c"
+   ],
+   "gauge": 26,
+   "terminations": "STEMMA QT / JST-SH 4-pin",
+   "length_mm": 370,
+   "note": "I2C",
+   "links": [
+    "monitor_i2c"
+   ]
+  },
+  {
+   "id": "monitor-logic",
+   "kind": "power",
+   "from_": "head:logic_3v3",
+   "to": "monitor:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules",
+   "length_mm": 370,
+   "note": "other power; return paired from dock_1",
+   "links": [
+    "monitor_logic",
+    "monitor_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-12v",
+   "kind": "power",
+   "from_": "buck_arm_r:vout",
+   "to": "arm_r:power_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 160,
+   "note": "actuator feeds; return paired from dock_1",
+   "links": [
+    "arm_r_12v",
+    "arm_r_gnd"
+   ]
+  },
+  {
+   "id": "arm-l-12v",
+   "kind": "power",
+   "from_": "buck_arm_l:vout",
+   "to": "arm_l:power_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 160,
+   "note": "actuator feeds; return paired from dock_1",
+   "links": [
+    "arm_l_12v",
+    "arm_l_gnd"
+   ]
+  },
+  {
+   "id": "arm-r-usb",
+   "kind": "usb",
+   "from_": "head:usb_a",
+   "to": "arm_r:usb",
+   "conductors": [
+    "usb"
+   ],
+   "gauge": null,
+   "terminations": "USB-A to USB-C cable (bought)",
+   "length_mm": 620,
+   "note": "USB",
+   "links": [
+    "arm_r_usb"
+   ]
+  },
+  {
+   "id": "arm-l-usb",
+   "kind": "usb",
+   "from_": "head:usb_b",
+   "to": "arm_l:usb",
+   "conductors": [
+    "usb"
+   ],
+   "gauge": null,
+   "terminations": "USB-A to USB-C cable (bought)",
+   "length_mm": 620,
+   "note": "USB",
+   "links": [
+    "arm_l_usb"
+   ]
+  }
+ ],
+ "totals_mm_by_awg": {
+  "12": 3480,
+  "14": 2940,
+  "20": 920,
+  "18": 2020,
+  "16": 980,
+  "26": 370
+ },
+ "bus_cables": 14,
+ "rules": "* a supply and its return travel in one cable (a ground link pairs with the supply link to the same part)\n  * the Feetech serial bus is daisy-chained along each arm in joint order, through the hollow joint hubs; the\n    model draws it as a star from the adapter (each servo linked to the adapter), the build chains it\n  * cut length = path between the ends (sum of the x, y and z offsets, routed along the frame) x 1.1, plus\n    80 mm for terminations and service loops, plus 120 mm at every arm joint a cable crosses; rounded up to 10 mm\n  * gauge from the current the branch can carry (fuse or regulator rating): 12 AWG for the pack trunk (30 A\n    fuse), 14 AWG for the 12 V arm feeds (20 A converters), 16 AWG for the head servo rail (DROK, 10 A),\n    18 AWG for 5 V logic feeds, 20 AWG for the E-stop chain, 26 AWG signals; ampacity per the silicone-wire\n    sellers' tables cited in research/sourcing (assumption: short runs inside the torso, 200 C silicone)"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Seeed Studio Amazing Hand (Right Hand) developer kit, SKU 100063642",
+    "url": "https://github.com/pollen-robotics/AmazingHand",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"dof\": 8, \"fingers\": 4, \"actuators\": \"8x Feetech SCS0009 (2 per finger)\", \"weight_g\": 400, \"supply\": \"external 5 V / 2 A recommended\", \"servo_rated_V\": 5}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

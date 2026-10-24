@@ -1,0 +1,384 @@
+{
+ "tier": "a",
+ "cables": [
+  {
+   "id": "dock-lvc",
+   "kind": "power",
+   "from_": "dock:lead_plus",
+   "to": "lvc:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 12,
+   "terminations": "XT60 / ferrules",
+   "length_mm": 450,
+   "note": "pack trunk, 30 A dock fuse; return paired from dock",
+   "links": [
+    "dock_lvc",
+    "lvc_gnd"
+   ]
+  },
+  {
+   "id": "lvc-fuse-pi",
+   "kind": "power",
+   "from_": "lvc:vout",
+   "to": "fuse_pi:vin",
+   "conductors": [
+    "+"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules / USB-C pigtail",
+   "length_mm": 290,
+   "note": "5 V computer feeds",
+   "links": [
+    "lvc_fuse_pi"
+   ]
+  },
+  {
+   "id": "lvc-estop",
+   "kind": "power",
+   "from_": "lvc:vout",
+   "to": "estop:vin",
+   "conductors": [
+    "+"
+   ],
+   "gauge": 20,
+   "terminations": "ferrules / 6.3 mm spade",
+   "length_mm": 290,
+   "note": "E-stop chain (relay coil)",
+   "links": [
+    "lvc_estop"
+   ]
+  },
+  {
+   "id": "estop-fuse-head",
+   "kind": "power",
+   "from_": "estop:vout",
+   "to": "fuse_head:vin",
+   "conductors": [
+    "+"
+   ],
+   "gauge": 16,
+   "terminations": "ferrules / servo header",
+   "length_mm": 440,
+   "note": "head and hand servo rails",
+   "links": [
+    "estop_fuse_head"
+   ]
+  },
+  {
+   "id": "estop-fuse-arm",
+   "kind": "power",
+   "from_": "estop:vout",
+   "to": "fuse_arm:vin",
+   "conductors": [
+    "+"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 500,
+   "note": "actuator feeds",
+   "links": [
+    "estop_fuse_arm"
+   ]
+  },
+  {
+   "id": "fuse-buck-pi",
+   "kind": "power",
+   "from_": "fuse_pi:vout",
+   "to": "buck_pi:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules / USB-C pigtail",
+   "length_mm": 390,
+   "note": "5 V computer feeds; return paired from dock",
+   "links": [
+    "fuse_buck_pi",
+    "buck_pi_gnd"
+   ]
+  },
+  {
+   "id": "fuse-buck-head",
+   "kind": "power",
+   "from_": "fuse_head:vout",
+   "to": "buck_head:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 16,
+   "terminations": "ferrules / servo header",
+   "length_mm": 260,
+   "note": "head and hand servo rails; return paired from dock",
+   "links": [
+    "fuse_buck_head",
+    "buck_head_gnd"
+   ]
+  },
+  {
+   "id": "fuse-buck-arm",
+   "kind": "power",
+   "from_": "fuse_arm:vout",
+   "to": "buck_arm:vin",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 220,
+   "note": "actuator feeds; return paired from dock",
+   "links": [
+    "fuse_buck_arm",
+    "buck_arm_gnd"
+   ]
+  },
+  {
+   "id": "pi-5v",
+   "kind": "power",
+   "from_": "buck_pi:vout",
+   "to": "head:pi_5v_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules / USB-C pigtail",
+   "length_mm": 380,
+   "note": "5 V computer feeds; return paired from dock",
+   "links": [
+    "pi_5v",
+    "head_gnd"
+   ]
+  },
+  {
+   "id": "head-servo-rail",
+   "kind": "power",
+   "from_": "buck_head:vout",
+   "to": "head:servo_vplus_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 16,
+   "terminations": "ferrules / servo header",
+   "length_mm": 460,
+   "note": "head and hand servo rails; return paired from dock",
+   "links": [
+    "head_servo_rail",
+    "head_gnd"
+   ]
+  },
+  {
+   "id": "arm-rail",
+   "kind": "power",
+   "from_": "buck_arm:vout",
+   "to": "arm_driver:vplus_in",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 14,
+   "terminations": "ring terminal / 6.3 mm spade / ferrules",
+   "length_mm": 190,
+   "note": "actuator feeds; return paired from head",
+   "links": [
+    "arm_rail",
+    "arm_driver_gnd"
+   ]
+  },
+  {
+   "id": "arm-driver-i2c",
+   "kind": "i2c",
+   "from_": "head:i2c",
+   "to": "arm_driver:i2c",
+   "conductors": [
+    "i2c"
+   ],
+   "gauge": 26,
+   "terminations": "STEMMA QT / JST-SH 4-pin",
+   "length_mm": 480,
+   "note": "I2C",
+   "links": [
+    "arm_driver_i2c"
+   ]
+  },
+  {
+   "id": "arm-driver-logic",
+   "kind": "power",
+   "from_": "head:logic_3v3",
+   "to": "arm_driver:vcc",
+   "conductors": [
+    "+",
+    "-"
+   ],
+   "gauge": 18,
+   "terminations": "ferrules",
+   "length_mm": 480,
+   "note": "other power; return paired from head",
+   "links": [
+    "arm_driver_logic",
+    "arm_driver_gnd"
+   ]
+  },
+  {
+   "id": "ch0",
+   "kind": "rc_servo",
+   "from_": "arm_driver:ch0",
+   "to": "arm_r:shoulder_flex_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 630,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch0"
+   ]
+  },
+  {
+   "id": "ch1",
+   "kind": "rc_servo",
+   "from_": "arm_driver:ch1",
+   "to": "arm_r:shoulder_out_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 700,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch1"
+   ]
+  },
+  {
+   "id": "ch2",
+   "kind": "pwm",
+   "from_": "arm_driver:ch2",
+   "to": "arm_r:elbow_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 780,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch2"
+   ]
+  },
+  {
+   "id": "ch3",
+   "kind": "rc_servo",
+   "from_": "arm_driver:ch3",
+   "to": "arm_r:grip_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 1070,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch3"
+   ]
+  },
+  {
+   "id": "ch4",
+   "kind": "rc_servo",
+   "from_": "arm_driver:ch4",
+   "to": "arm_l:shoulder_flex_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 540,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch4"
+   ]
+  },
+  {
+   "id": "ch5",
+   "kind": "rc_servo",
+   "from_": "arm_driver:ch5",
+   "to": "arm_l:shoulder_out_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 710,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch5"
+   ]
+  },
+  {
+   "id": "ch6",
+   "kind": "pwm",
+   "from_": "arm_driver:ch6",
+   "to": "arm_l:elbow_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 780,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch6"
+   ]
+  },
+  {
+   "id": "ch7",
+   "kind": "rc_servo",
+   "from_": "arm_driver:ch7",
+   "to": "arm_l:grip_servo",
+   "conductors": [
+    "signal",
+    "V+",
+    "GND"
+   ],
+   "gauge": 22,
+   "terminations": "3-pin 0.1 in servo plug (extension lead)",
+   "length_mm": 1070,
+   "note": "hobby servo signal + power",
+   "links": [
+    "ch7"
+   ]
+  }
+ ],
+ "totals_mm_by_awg": {
+  "12": 900,
+  "18": 2790,
+  "20": 290,
+  "16": 1880,
+  "14": 1320,
+  "26": 480,
+  "22": 6280
+ },
+ "bus_cables": 0,
+ "rules": "* a supply and its return travel in one cable (a ground link pairs with the supply link to the same part)\n  * the Feetech serial bus is daisy-chained along each arm in joint order, through the hollow joint hubs; the\n    model draws it as a star from the adapter (each servo linked to the adapter), the build chains it\n  * cut length = path between the ends (sum of the x, y and z offsets, routed along the frame) x 1.1, plus\n    80 mm for terminations and service loops, plus 120 mm at every arm joint a cable crosses; rounded up to 10 mm\n  * gauge from the current the branch can carry (fuse or regulator rating): 12 AWG for the pack trunk (30 A\n    fuse), 14 AWG for the 12 V arm feeds (20 A converters), 16 AWG for the head servo rail (DROK, 10 A),\n    18 AWG for 5 V logic feeds, 20 AWG for the E-stop chain, 26 AWG signals; ampacity per the silicone-wire\n    sellers' tables cited in research/sourcing (assumption: short runs inside the torso, 200 C silicone)"
+}

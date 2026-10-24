@@ -1,0 +1,905 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "tech-docs",
+  "extension": {
+    "id": "@protoboardai/ext-docs",
+    "version": "0.1.7"
+  },
+  "effect": "export",
+  "inputs": {
+    "only": "assembly",
+    "pdf": "false",
+    "standins": "true"
+  },
+  "projectDigest": "sha256:ab6a852382f622242c44b2abf3a29d604601891fcfd1b8f8aae07afe5f54d732",
+  "tools": [
+    {
+      "id": "chrome",
+      "available": true,
+      "detail": "Google Chrome 156.0.8078.47 (/usr/bin/google-chrome)"
+    }
+  ],
+  "startedAt": "2026-10-24T15:43:03.943Z",
+  "status": "failed",
+  "summary": "assembly: 83 pages, 134 bound values; page overflow in assembly",
+  "outputs": [
+    {
+      "path": "docs/joyful-jack-b-assembly-guide.html",
+      "digest": "sha256:7e87e2adb881d794f304b1ce18600bf5bf94da86c8f8dc9a4f204c098b41fd95",
+      "bytes": 629732,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/joyful-jack-b-assembly-guide.values.json",
+      "digest": "sha256:96f3051592475a2725106617b11fb09aa88fd995e91405b604a44905ebede532",
+      "bytes": 18902,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/joyful-jack-b-bom.json",
+      "digest": "sha256:263b5f99a8a04bc8f9345ee478e955d56f9c1dd86848ad0f8f76d455b7b0aa07",
+      "bytes": 44231,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-hero.png",
+      "digest": "sha256:412731920e26ff6404435832c48da388c50e2f951eb1821642c45bf6887c5bfd",
+      "bytes": 147151,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-01-body-base.png",
+      "digest": "sha256:b315a7067aac6dce72e3942d37b3788017f5a062a0331bfcec7149ed03781974",
+      "bytes": 65190,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-02-body-torso.png",
+      "digest": "sha256:41a6e1706fa0aab5d1b1e2d7e61862c152032a6580c1c8e986b2307929dd83e2",
+      "bytes": 70207,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-03-body-neck.png",
+      "digest": "sha256:796854e443d2e3674482cdbcc6564eeb696e7a584e2f474dd751108eb6bcbf18",
+      "bytes": 56512,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-04-body-electronics.png",
+      "digest": "sha256:f96bf6e4c6eb27db7886fe62b4d9bc7b4963279cc48a8010ecf9baf94134c761",
+      "bytes": 60321,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-05-root-electronics-root.png",
+      "digest": "sha256:16e02d29842b5bde2d0e9adc54cfd110d004f271f2e24e4bb5a3a5b6d4b016fe",
+      "bytes": 60142,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-06-arm-r-shoulder.png",
+      "digest": "sha256:fa30864d04473970efdd0487233719e7880cecde1a3fdd61be0302752447a381",
+      "bytes": 60154,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-07-arm-r-upper.png",
+      "digest": "sha256:e9c5e02d78a82558644e923e9acd2d14dcab93d2b14f2e5f8cf473cb3a99749a",
+      "bytes": 65156,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-08-arm-r-elbow.png",
+      "digest": "sha256:28e4c63aba3b804768cb3406f093deb3aae3261e586e386a894c2eded937d354",
+      "bytes": 64815,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-09-arm-r-forearm.png",
+      "digest": "sha256:77be5bebff333e133ca80da7c8015ec404c4a49d04a85e9284fb621cc381a189",
+      "bytes": 66411,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-10-arm-r-hand.png",
+      "digest": "sha256:1c94948c18668c9faf2e36669b3de03bf3d632392b47202ea4b59b64504c5c18",
+      "bytes": 69327,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-11-arm-l-shoulder.png",
+      "digest": "sha256:a434fe0cb17a2b4c01de386949c358a6e20dce97b89b34b43fbcb7661ba34815",
+      "bytes": 71337,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-12-arm-l-upper.png",
+      "digest": "sha256:d0470ab20e58f0e1512bdb58721559b24b8b8fb0581ce1c7b6b6954e43772b54",
+      "bytes": 75881,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-13-arm-l-elbow.png",
+      "digest": "sha256:b849871b12f96800d7c2a21941a00c964fadd74d4f66e9e38f7af47060072123",
+      "bytes": 75639,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-14-arm-l-forearm.png",
+      "digest": "sha256:6e9f18f94dd592d3d514f58de38bbecdf0b2abe3978f97872e643004817a1039",
+      "bytes": 76929,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-15-arm-l-hand.png",
+      "digest": "sha256:898fead4c507c6d040aba94d9b0d64eaa520225d886d9d35bcdd648cb5b88668",
+      "bytes": 79289,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-16-root-arms.png",
+      "digest": "sha256:511b54d99561ad696465e97bedcb1678377261da5d4c65955b7d4a043808652d",
+      "bytes": 75138,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-17-root-head.png",
+      "digest": "sha256:d8b6fd7b8162b84287d76239f7fbe6cb1589f634284f056383131f52dd96a457",
+      "bytes": 83081,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/ag-step-18-root-battery.png",
+      "digest": "sha256:a44686a5840df06348acfd461a4b6c4445ebf5e8a7837187a2557964f09a45eb",
+      "bytes": 82320,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-adafruit-ina228.png",
+      "digest": "sha256:e934de2393d450d148d35411a9f07ed0acfd65c2808739ee1a3e665eb7aad3e8",
+      "bytes": 9086,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-bearing-625-2rs.png",
+      "digest": "sha256:8c6fc091eb3a4e2ac3a8db0fa92c5f199683051b0360ed55a4670fee703acf23",
+      "bytes": 16203,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-bearing-6806-2rs.png",
+      "digest": "sha256:ed4659d39341269c3c96c4345bf72c3b64141f934ce802c7b80625ddc5e0278e",
+      "bytes": 18847,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-brac-90cast-20.png",
+      "digest": "sha256:85b4f0ea2ba5e3d86d406e0a45af149f3e4eb7fe0d6eea1172e25b3bd53e51d7",
+      "bytes": 13351,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-bucket-5gal.png",
+      "digest": "sha256:eb878eafa917a80a25af85c2469945aded48ed0920f72ffea0fcd662b7df3e8a",
+      "bytes": 15415,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-concrete-fill.png",
+      "digest": "sha256:3b3f0b0d282e12fd975806505d193cbbd31695d477a70efdf504b6ad2964f010",
+      "bytes": 11722,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-dowel-5x16.png",
+      "digest": "sha256:ee47596fa5676e4df1ee476ef2ee719bdb111725ffb2e6a337645b15e95bdd6c",
+      "bytes": 6117,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-drok-300w-buck.png",
+      "digest": "sha256:0d3e7e0584d95e28632acf7667ba0ca5ccf9feb71627d14d3da4841c9d272dce",
+      "bytes": 9297,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-dsservo-ds3225mg-270.png",
+      "digest": "sha256:b706872236d884d6e317865f822fcba01c723a6951bd102be14426bc3307f81d",
+      "bytes": 26888,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-ekylin-12v-20a-buck.png",
+      "digest": "sha256:e39a853a19411c5786ca7b7c8d3a5ed516713e7664b8ec6aa701249ec7d20623",
+      "bytes": 9063,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-estop-22mm-nc.png",
+      "digest": "sha256:32bfa6ee254bf8802cef22d78e04dfa12160cb190a59c400d8e6192af0b1d017",
+      "bytes": 8558,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-feetech-sts3215-c047.png",
+      "digest": "sha256:e57172ccbfbf4f7272dbedfeaa4895b94f2ecd28d3f12c6b554daabef82265bf",
+      "bytes": 20395,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-floor-flange-1in.png",
+      "digest": "sha256:10f7a22f386f860d3142601eac25ccae44bf2302c7d37fc78b31d9787ce11eb0",
+      "bytes": 14099,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-fuse-block-6way.png",
+      "digest": "sha256:79b674d55a56b27280aa2de6f5839697d9100cd62d152c9fcdad99102144ab7a",
+      "bytes": 9781,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-gt3-belt-210-9mm.png",
+      "digest": "sha256:772241e8f197468fd2535e0218828e51459d34be59d1174553e899cb3c35b47c",
+      "bytes": 13630,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-gt3-belt-240-9mm.png",
+      "digest": "sha256:19f0cf5bc2d67ee892422bad4c1c92a24c01cc932be9ea987e40bfa62122d27f",
+      "bytes": 12720,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-heatset-insert-m3.png",
+      "digest": "sha256:f22a1a614048c478196807689174867305cfba19276416ebf1dadf952f28d3ec",
+      "bytes": 9362,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hex-bolt-1-4-20x1.25in.png",
+      "digest": "sha256:0a41f7aad56520ba10c7ea3f33ab9657553bcef0521953ebed5d42b855101670",
+      "bytes": 7820,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hex-bolt-1-4-20x1in.png",
+      "digest": "sha256:5ff20f8452183ada40633bb8219548cb47cdbfcc0a2846944c27320420bd4051",
+      "bytes": 8229,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_bot_l.png",
+      "digest": "sha256:a010da5793c3a61faeb95956d75601806c1c98ca730aa12e84a34b2fbccbbb09",
+      "bytes": 7159,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_bot_r.png",
+      "digest": "sha256:a010da5793c3a61faeb95956d75601806c1c98ca730aa12e84a34b2fbccbbb09",
+      "bytes": 7159,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_top_l.png",
+      "digest": "sha256:a010da5793c3a61faeb95956d75601806c1c98ca730aa12e84a34b2fbccbbb09",
+      "bytes": 7159,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_top_r.png",
+      "digest": "sha256:a010da5793c3a61faeb95956d75601806c1c98ca730aa12e84a34b2fbccbbb09",
+      "bytes": 7159,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-102-neck-post-bc--neck_post_b.png",
+      "digest": "sha256:6f1b71b97ee7bc44c6504fcae6433e786db298d65b02dfd47ed59f0321b3be03",
+      "bytes": 7189,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-102-neck-post-bc--neck_post_f.png",
+      "digest": "sha256:6f1b71b97ee7bc44c6504fcae6433e786db298d65b02dfd47ed59f0321b3be03",
+      "bytes": 7189,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_bot_b.png",
+      "digest": "sha256:e4b897126b60bd556b2e90baeb52d92dd4a1efcb9636e177103b93533e4ea0d4",
+      "bytes": 6175,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_bot_f.png",
+      "digest": "sha256:e4b897126b60bd556b2e90baeb52d92dd4a1efcb9636e177103b93533e4ea0d4",
+      "bytes": 6175,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_top_b.png",
+      "digest": "sha256:e4b897126b60bd556b2e90baeb52d92dd4a1efcb9636e177103b93533e4ea0d4",
+      "bytes": 6175,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_top_f.png",
+      "digest": "sha256:e4b897126b60bd556b2e90baeb52d92dd4a1efcb9636e177103b93533e4ea0d4",
+      "bytes": 6175,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-340-upright-bc--upright_lb.png",
+      "digest": "sha256:4afcc185e9877fd827cf0eb436923bda400436e8738ecf96a45adcc6b891445f",
+      "bytes": 5147,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-340-upright-bc--upright_lf.png",
+      "digest": "sha256:4afcc185e9877fd827cf0eb436923bda400436e8738ecf96a45adcc6b891445f",
+      "bytes": 5147,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-340-upright-bc--upright_rb.png",
+      "digest": "sha256:4afcc185e9877fd827cf0eb436923bda400436e8738ecf96a45adcc6b891445f",
+      "bytes": 5147,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-hfs5-2020-340-upright-bc--upright_rf.png",
+      "digest": "sha256:4afcc185e9877fd827cf0eb436923bda400436e8738ecf96a45adcc6b891445f",
+      "bytes": 5147,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-ideal-diode-40a.png",
+      "digest": "sha256:034e946fc97f244de11b43fec75c6cb76674464699a889486a01040180b77c76",
+      "bytes": 9162,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso10511-m4.png",
+      "digest": "sha256:0186d87c1b5d110ecf5748902e2693ea31f98dca87e4ee1a937d9361ebaf444a",
+      "bytes": 10439,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso10511-m5.png",
+      "digest": "sha256:9e7a941f62d9ba8587e6bd72a8632ac5895b435d75a8e383b1baa8fb956d9766",
+      "bytes": 11051,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m3x12.png",
+      "digest": "sha256:85d1c31e5c3625915cf568a013ae9d4eb6518ed834a3d7ee3cc15619392a313c",
+      "bytes": 8121,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m3x14.png",
+      "digest": "sha256:bc93b00060730e3a568b436c5143b760a1d1dda986f0644537831ed858867a24",
+      "bytes": 7619,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m3x30.png",
+      "digest": "sha256:77360e7e6e79da2ef09b3ab61c6016dd143d4b907fa066563418dc2cce445427",
+      "bytes": 6317,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m3x6.png",
+      "digest": "sha256:1bfbd64b84628f242d156d48ab692979e35b5f5e01cce8e5c50088732d771217",
+      "bytes": 9739,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m3x8.png",
+      "digest": "sha256:6ef13a54221097d4d8533d028528720742031d2b5312126cf86d0bb2671b9e2d",
+      "bytes": 9118,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m4x20.png",
+      "digest": "sha256:af9c05d5051b36403233a4857ff68a698c88902b3ec4e8eba17e393b8a6cd6d0",
+      "bytes": 7470,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m5x10.png",
+      "digest": "sha256:c8fbd3bb6292b5dd72603b2b2ca92709f1dd6ce23d72affe3d53ebac87a19e7e",
+      "bytes": 9603,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m5x12.png",
+      "digest": "sha256:95141e753550420baaa7fc785eb16b0359de74d864c7611d938539fa859b26b5",
+      "bytes": 9115,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso4762-m5x20.png",
+      "digest": "sha256:b6463a94e89711060ff436d5f79c0d9efd244e0e5d1de5e0831a301ecb8a1524",
+      "bytes": 7933,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso7089-m4.png",
+      "digest": "sha256:9d79b7584ac5219dd045bc357e7434b8c3b58a62685a24180b62c78781ef635a",
+      "bytes": 12081,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-iso7089-m5.png",
+      "digest": "sha256:30882466a10fcb260f9d4a74d8e7802112504bb14eee8d86d8c7f7ff266fcd8d",
+      "bytes": 12215,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-elbow-housing.png",
+      "digest": "sha256:9aa80e8a12ee461d27d0f954e355a99c2a8ac7451ef1a9be0000b47824f3c3c2",
+      "bytes": 24449,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-fore-body.png",
+      "digest": "sha256:5c61cef49050d2ab2d7931c104bb23f2f86f8dea701ed53afb5d84690ea24678",
+      "bytes": 9443,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-fore-fork-in.png",
+      "digest": "sha256:217fd7c87f389f445652362ed019d66071442e6e9bbbeab76d3047774bcf4e15",
+      "bytes": 9009,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-fore-fork-out.png",
+      "digest": "sha256:14ec9c08d4d9075388d3c74ef972947a141629b762ca3c259d7c7f2b55f38152",
+      "bytes": 9012,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-j1-housing.png",
+      "digest": "sha256:bcefcb2b7855287c52bca14ed4516223ea89769dc825bf900efdd5669467a4f5",
+      "bytes": 22249,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-j1-spring-arbor.png",
+      "digest": "sha256:0b3e88c0d52a2748f808e6bfc450841229a66198b4c50a4424e6d64aa7347ec3",
+      "bytes": 26098,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-j2-spring-arbor.png",
+      "digest": "sha256:9788016dc2897e24636b19d06c7680ef4fb60e5db65cb78340c3461dcd339c81",
+      "bytes": 26286,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-upper-head.png",
+      "digest": "sha256:a598c699b32280b7cf979760d5dac3c09f9a37b4f74249ee96904cf78291cae9",
+      "bytes": 18225,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-arm-yoke.png",
+      "digest": "sha256:c191e53fc495a7f74f12f3bd432e428d6ea2b3c906d7f146ae427312fe6a5347",
+      "bytes": 17563,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-base-skirt.png",
+      "digest": "sha256:cc86b4ae5a995b2c7c9e34201128c645545f43d228c34cea9577cf301353975f",
+      "bytes": 9726,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-cap-48t.png",
+      "digest": "sha256:ddebf94eeb5275a1209f3bd447e77179bff0b9be30e200e9d972f15bc05e5823",
+      "bytes": 15530,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-cap-60t.png",
+      "digest": "sha256:2ef748a88cfa960fd5454a3d847a4395e84d6a1ce651cafcf7f9c3b90a4049d5",
+      "bytes": 14928,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-electronics-board-b.png",
+      "digest": "sha256:aafafb0c4a9c10296472ea6607ab35702d896381137cd7e929b52787443f5a20",
+      "bytes": 7806,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-estop-bracket-bc.png",
+      "digest": "sha256:0f3739a77313b0efe83348cc06a6e1a16edfd558dbfd6bb2036694de835ef93b",
+      "bytes": 8088,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hand-b-fingers-l.png",
+      "digest": "sha256:90500555b245f8a3541d1e86c544865831b244017a1482b4ef19903a6bb6ccbd",
+      "bytes": 23818,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hand-b-fingers.png",
+      "digest": "sha256:09da75637426aaa15d9e422f14abb61a43693b61581504805176edf24f7a6776",
+      "bytes": 23564,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hand-b-palm-l.png",
+      "digest": "sha256:c9468bba6a763bbe64d71c0694fe0626bc6dbc6dd5e4bebd19718a85c3f1419b",
+      "bytes": 15585,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hand-b-palm.png",
+      "digest": "sha256:a4b34bcc100465fe828e60c1a72316e25a82be80f0aba611a094a2181b90a7eb",
+      "bytes": 15888,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hand-b-thumb-l.png",
+      "digest": "sha256:bed2d915f0538a2b40411f4ac14e955f51c4b9bb9d8e968a2321b5e158a52635",
+      "bytes": 15474,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hand-b-thumb.png",
+      "digest": "sha256:ad424547a5261806c526e5201221c155694b47dcb37b9b2ed004313bb0ee22f2",
+      "bytes": 14950,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-head.png",
+      "digest": "sha256:b7d25fa99fcc497a307629d91068d2d09606493af69502149b6d20cd6979ecb6",
+      "bytes": 50103,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hub-48t-gt3.png",
+      "digest": "sha256:8aeddd5c754199f000a3036096bbc42abcf377f9a94e6d21bf0798a83af5725a",
+      "bytes": 23429,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-hub-60t-gt3.png",
+      "digest": "sha256:0efa61d3bdf29952d1415d61838538553c1c755818a02edf2d99b2ab9af1fd91",
+      "bytes": 21698,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-neck-plate.png",
+      "digest": "sha256:3610183dc1ad4589a4219a40d336a25a62a736eac24503df4722c3f0d5fae85f",
+      "bytes": 11568,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-pulley-16t-gt3-horn.png",
+      "digest": "sha256:c92f906a16107466fdee19b2d857a0f6ee6790a008717b04f07ed25000453f1e",
+      "bytes": 20064,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-pulley-20t-gt3-horn.png",
+      "digest": "sha256:a11c605370f1cc1ba7ca9585ba73f129ac0318ed9e3881e18fd4b51ae66f16f0",
+      "bytes": 18394,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-torso-base-plate.png",
+      "digest": "sha256:6a4282565d9369a8449541aa5e2020eb20015855927b652da9d9ffa4cd8f5ac0",
+      "bytes": 10442,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-bus.png",
+      "digest": "sha256:6a620c73cf489e7189370d71ece1eb789ad7b6368621385f9c7254b556bdb8a7",
+      "bytes": 12942,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-drok.png",
+      "digest": "sha256:6a9915f9b65bee5f70aee80acdfccfba8a428bd59f1e7a987eea754eda28e20a",
+      "bytes": 12835,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-ekylin.png",
+      "digest": "sha256:1664fcd07688a1e1f6795e3671b560f062dfcf9eff9b997c2e826f66c6a9d8a5",
+      "bytes": 12304,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-fuses.png",
+      "digest": "sha256:0d86907901882223439fed5144333da715fbe3ada654320d5526c649401cb099",
+      "bytes": 13244,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-ideal_diode.png",
+      "digest": "sha256:339a349fdd3c554ebc6815eaedf57e88ab4179f34a190790847d32e8550a01c7",
+      "bytes": 12866,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-lvc.png",
+      "digest": "sha256:1d54bccb5b4d7b70b9bda20180d5675bfa82eb344946e92b80c2de0c7b77a6f2",
+      "bytes": 12941,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-monitor.png",
+      "digest": "sha256:aa939245e72c5a650bf5c64db2ea37c8e17df777db6fd42fd85aedaa15e94328",
+      "bytes": 12200,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-pololu.png",
+      "digest": "sha256:7480b593f498bd364e94f78a8e1da2094114fdcd40fe13087dd5e1486c26999e",
+      "bytes": 13366,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-tray-relay.png",
+      "digest": "sha256:ff7abf0a5ccce6652754d4a6edaafef075113ded59d2d643fd52a487594effe9",
+      "bytes": 13183,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-twist-horn-disc.png",
+      "digest": "sha256:49bd446be23ee9bf9b16b9a92e8fc1791a426fb057b45ecaf9cbc24385f1fd36",
+      "bytes": 11740,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-jj-twist-hub.png",
+      "digest": "sha256:fa73837b06325b5769906f52bdc79ce2487b12591d2e277b087c18f7d58f5e4a",
+      "bytes": 16065,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-m18-power-wheel-adapter.png",
+      "digest": "sha256:b4bb62d386f3eb6219fa2734eb6ff729ddfbb6c716ea19c676f5de1ee810e5af",
+      "bytes": 9876,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-milwaukee-m18-pack.png",
+      "digest": "sha256:9735101877ad3439454675fccb0ce2b2b54f0ca0f7f33af2591680e4562c7b25",
+      "bytes": 9648,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-nylock-1-4-20.png",
+      "digest": "sha256:296be72ec27ae5b08c879ad29135f01cb465f419b405acef65ecc10db8517214",
+      "bytes": 10898,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-pa2x6.png",
+      "digest": "sha256:35c49831c6113b3af41008f24d335744f17d44f5c9449490bb03c7a00a1bc75b",
+      "bytes": 9155,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-pa2x8.png",
+      "digest": "sha256:7ed0c6d15b45ff4cad9098c11564d178891aceb69399184973c60bc655fb809f",
+      "bytes": 8211,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-pipe-nipple-1x30.png",
+      "digest": "sha256:06cecefc8be30f29b2d4b4bfcf30031dab0f73068446a9fcefc383565e15bf5b",
+      "bytes": 4614,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-pololu-d24v50f5.png",
+      "digest": "sha256:75a0729109217bb159f990f0ede6e6a525e00c220c2ab04e343d250192c4f9fc",
+      "bytes": 9423,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-spring-to5220rcs.png",
+      "digest": "sha256:91fa7e5fe0b8bfeee548429b177e2a1391c7c9a2c0a9d1358438c76b2e816049",
+      "bytes": 31272,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-temco-relay-24v-40a.png",
+      "digest": "sha256:6ba3b0d7796245380102e8a03e7571f231b05afd01f14085ad84d254c9872e0c",
+      "bytes": 8931,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-tnut-2020-m5.png",
+      "digest": "sha256:7cc299a800e2360b6532f3d944e24ca5a17a3a7655f161d4dd875a9087da1d7d",
+      "bytes": 10934,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-towerpro-sg90.png",
+      "digest": "sha256:6a4fb50d5f19659847c895d21548c9cb44dc59ddf5f02fd8cce140601ef49acc",
+      "bytes": 11731,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-waveshare-bus-servo-adapter-a.png",
+      "digest": "sha256:dcc9e51c4fce23c295c5ebad5a4b74fce9968dd8d540e6595b2fdf48348680d6",
+      "bytes": 9382,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-wood-screw-4x0.5in.png",
+      "digest": "sha256:9793ca3c3379d7ee09e02f335d671d0fb641760a3db061406b170ad0eb8b0abb",
+      "bytes": 9193,
+      "description": "technical document"
+    },
+    {
+      "path": "docs/images/part-xh-m609-lvc.png",
+      "digest": "sha256:c7cb935ffc38e0ac8c4e523f30ff4e2748e299c4adf4af90993a04230960f30a",
+      "bytes": 9268,
+      "description": "technical document"
+    }
+  ],
+  "data": {
+    "docs": [
+      {
+        "type": "assembly",
+        "html": "docs/joyful-jack-b-assembly-guide.html",
+        "values": "docs/joyful-jack-b-assembly-guide.values.json",
+        "pages": 83,
+        "overflow": [
+          14,
+          15,
+          19,
+          23,
+          25,
+          33,
+          35,
+          45
+        ],
+        "boundValues": 134
+      }
+    ],
+    "files": [
+      "docs/joyful-jack-b-bom.json",
+      "docs/images/ag-hero.png",
+      "docs/images/ag-step-01-body-base.png",
+      "docs/images/ag-step-02-body-torso.png",
+      "docs/images/ag-step-03-body-neck.png",
+      "docs/images/ag-step-04-body-electronics.png",
+      "docs/images/ag-step-05-root-electronics-root.png",
+      "docs/images/ag-step-06-arm-r-shoulder.png",
+      "docs/images/ag-step-07-arm-r-upper.png",
+      "docs/images/ag-step-08-arm-r-elbow.png",
+      "docs/images/ag-step-09-arm-r-forearm.png",
+      "docs/images/ag-step-10-arm-r-hand.png",
+      "docs/images/ag-step-11-arm-l-shoulder.png",
+      "docs/images/ag-step-12-arm-l-upper.png",
+      "docs/images/ag-step-13-arm-l-elbow.png",
+      "docs/images/ag-step-14-arm-l-forearm.png",
+      "docs/images/ag-step-15-arm-l-hand.png",
+      "docs/images/ag-step-16-root-arms.png",
+      "docs/images/ag-step-17-root-head.png",
+      "docs/images/ag-step-18-root-battery.png",
+      "docs/images/part-adafruit-ina228.png",
+      "docs/images/part-bearing-625-2rs.png",
+      "docs/images/part-bearing-6806-2rs.png",
+      "docs/images/part-brac-90cast-20.png",
+      "docs/images/part-bucket-5gal.png",
+      "docs/images/part-concrete-fill.png",
+      "docs/images/part-dowel-5x16.png",
+      "docs/images/part-drok-300w-buck.png",
+      "docs/images/part-dsservo-ds3225mg-270.png",
+      "docs/images/part-ekylin-12v-20a-buck.png",
+      "docs/images/part-estop-22mm-nc.png",
+      "docs/images/part-feetech-sts3215-c047.png",
+      "docs/images/part-floor-flange-1in.png",
+      "docs/images/part-fuse-block-6way.png",
+      "docs/images/part-gt3-belt-210-9mm.png",
+      "docs/images/part-gt3-belt-240-9mm.png",
+      "docs/images/part-heatset-insert-m3.png",
+      "docs/images/part-hex-bolt-1-4-20x1.25in.png",
+      "docs/images/part-hex-bolt-1-4-20x1in.png",
+      "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_bot_l.png",
+      "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_bot_r.png",
+      "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_top_l.png",
+      "docs/images/part-hfs5-2020-100-rail-y-bc--rail_y_top_r.png",
+      "docs/images/part-hfs5-2020-102-neck-post-bc--neck_post_b.png",
+      "docs/images/part-hfs5-2020-102-neck-post-bc--neck_post_f.png",
+      "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_bot_b.png",
+      "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_bot_f.png",
+      "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_top_b.png",
+      "docs/images/part-hfs5-2020-180-rail-x-bc--rail_x_top_f.png",
+      "docs/images/part-hfs5-2020-340-upright-bc--upright_lb.png",
+      "docs/images/part-hfs5-2020-340-upright-bc--upright_lf.png",
+      "docs/images/part-hfs5-2020-340-upright-bc--upright_rb.png",
+      "docs/images/part-hfs5-2020-340-upright-bc--upright_rf.png",
+      "docs/images/part-ideal-diode-40a.png",
+      "docs/images/part-iso10511-m4.png",
+      "docs/images/part-iso10511-m5.png",
+      "docs/images/part-iso4762-m3x12.png",
+      "docs/images/part-iso4762-m3x14.png",
+      "docs/images/part-iso4762-m3x30.png",
+      "docs/images/part-iso4762-m3x6.png",
+      "docs/images/part-iso4762-m3x8.png",
+      "docs/images/part-iso4762-m4x20.png",
+      "docs/images/part-iso4762-m5x10.png",
+      "docs/images/part-iso4762-m5x12.png",
+      "docs/images/part-iso4762-m5x20.png",
+      "docs/images/part-iso7089-m4.png",
+      "docs/images/part-iso7089-m5.png",
+      "docs/images/part-jj-arm-elbow-housing.png",
+      "docs/images/part-jj-arm-fore-body.png",
+      "docs/images/part-jj-arm-fore-fork-in.png",
+      "docs/images/part-jj-arm-fore-fork-out.png",
+      "docs/images/part-jj-arm-j1-housing.png",
+      "docs/images/part-jj-arm-j1-spring-arbor.png",
+      "docs/images/part-jj-arm-j2-spring-arbor.png",
+      "docs/images/part-jj-arm-upper-head.png",
+      "docs/images/part-jj-arm-yoke.png",
+      "docs/images/part-jj-base-skirt.png",
+      "docs/images/part-jj-cap-48t.png",
+      "docs/images/part-jj-cap-60t.png",
+      "docs/images/part-jj-electronics-board-b.png",
+      "docs/images/part-jj-estop-bracket-bc.png",
+      "docs/images/part-jj-hand-b-fingers-l.png",
+      "docs/images/part-jj-hand-b-fingers.png",
+      "docs/images/part-jj-hand-b-palm-l.png",
+      "docs/images/part-jj-hand-b-palm.png",
+      "docs/images/part-jj-hand-b-thumb-l.png",
+      "docs/images/part-jj-hand-b-thumb.png",
+      "docs/images/part-jj-head.png",
+      "docs/images/part-jj-hub-48t-gt3.png",
+      "docs/images/part-jj-hub-60t-gt3.png",
+      "docs/images/part-jj-neck-plate.png",
+      "docs/images/part-jj-pulley-16t-gt3-horn.png",
+      "docs/images/part-jj-pulley-20t-gt3-horn.png",
+      "docs/images/part-jj-torso-base-plate.png",
+      "docs/images/part-jj-tray-bus.png",
+      "docs/images/part-jj-tray-drok.png",
+      "docs/images/part-jj-tray-ekylin.png",
+      "docs/images/part-jj-tray-fuses.png",
+      "docs/images/part-jj-tray-ideal_diode.png",
+      "docs/images/part-jj-tray-lvc.png",
+      "docs/images/part-jj-tray-monitor.png",
+      "docs/images/part-jj-tray-pololu.png",
+      "docs/images/part-jj-tray-relay.png",
+      "docs/images/part-jj-twist-horn-disc.png",
+      "docs/images/part-jj-twist-hub.png",
+      "docs/images/part-m18-power-wheel-adapter.png",
+      "docs/images/part-milwaukee-m18-pack.png",
+      "docs/images/part-nylock-1-4-20.png",
+      "docs/images/part-pa2x6.png",
+      "docs/images/part-pa2x8.png",
+      "docs/images/part-pipe-nipple-1x30.png",
+      "docs/images/part-pololu-d24v50f5.png",
+      "docs/images/part-spring-to5220rcs.png",
+      "docs/images/part-temco-relay-24v-40a.png",
+      "docs/images/part-tnut-2020-m5.png",
+      "docs/images/part-towerpro-sg90.png",
+      "docs/images/part-waveshare-bus-servo-adapter-a.png",
+      "docs/images/part-wood-screw-4x0.5in.png",
+      "docs/images/part-xh-m609-lvc.png"
+    ],
+    "standins": {
+      "written": [],
+      "kept": []
+    },
+    "figures": {
+      "rendered": 118,
+      "reused": 200
+    },
+    "fonts": true
+  },
+  "finishedAt": "2026-10-24T15:43:37.166Z"
+}

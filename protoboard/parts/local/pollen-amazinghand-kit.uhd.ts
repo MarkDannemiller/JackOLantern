@@ -8,8 +8,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerIn, Ground, USB } from "@deltarobotics/uhd";
 import { part } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const POLLEN_AMAZINGHAND_KIT: ModuleDef = part({
+const POLLEN_AMAZINGHAND_KIT_ELECTRICAL: ModuleDef = part({
   id: "pollen-amazinghand-kit", name: "Pollen AmazingHand (Seeed kit)", manufacturer: "Pollen Robotics / Seeed Studio", part_number: "AmazingHand kit",
   description: "Open-source humanoid hand: four two-jointed fingers driven by eight micro serial servos in the palm.",
   categories: ["robotics"], tags: ["hand", "humanoid", "open-source"],
@@ -21,3 +22,12 @@ export const POLLEN_AMAZINGHAND_KIT: ModuleDef = part({
   ],
   mass_g: 400,
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const POLLEN_AMAZINGHAND_KIT: ModuleDef = withMech(POLLEN_AMAZINGHAND_KIT_ELECTRICAL as ModuleDef, "pollen-amazinghand-r");
+
+/** The left-hand kit: the same parts mirrored (Pollen publishes L- and R- palm parts). */
+export const POLLEN_AMAZINGHAND_KIT_L: ModuleDef = withMech(
+  { ...(POLLEN_AMAZINGHAND_KIT_ELECTRICAL as ModuleDef), id: "pollen-amazinghand-kit-l", name: "Pollen Robotics AmazingHand kit (left)" },
+  "pollen-amazinghand-l",
+);

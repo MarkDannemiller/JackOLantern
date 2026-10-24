@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "hex-bolt-1-4-20x1.25in",
+    "config": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/cad.config.ts",
+    "configDigest": "sha256:1c5e9a36704c040e4627ef19d8d1210420cc9b73336c33319ab2ba5ad21a5a34",
+    "moduleDigest": "sha256:d9ee25a1b4283207d049a785a7547dda56de9eaa5cc84dfb957f02aa3e9523ec"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:c82c511bf290a01c1a0724cf45b12f4cad77b9684bd9c63d93fc13be2703a964",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T15:36:11.370Z",
+  "status": "succeeded",
+  "summary": "hex-bolt-1-4-20x1.25in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out (1243.623 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out/body.step",
+      "digest": "sha256:ed523cbbc0e4d16927ceb616c49d0cde8cdeadd7229f3911e645caca34e6e83d",
+      "bytes": 32762,
+      "description": "hex-bolt-1-4-20x1.25in: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out/body.glb",
+      "digest": "sha256:dab54b05eab289eb504a57b64cb17d6841f7ad1a23a4cd765fa68b9ba17f73e7",
+      "bytes": 20968,
+      "description": "hex-bolt-1-4-20x1.25in: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out/body.manifest.json",
+      "digest": "sha256:a9c822bcf1f9c1f9fc76d8f3eebffc86eb59477d63c54f14ef83a12d3ac338d1",
+      "bytes": 561,
+      "description": "hex-bolt-1-4-20x1.25in: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "hex-bolt-1-4-20x1.25in",
+    "out": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/out",
+    "volume_mm3": 1243.623,
+    "previousVolume_mm3": 1243.623,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T15:36:15.929Z"
+}

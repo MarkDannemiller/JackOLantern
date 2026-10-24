@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "5ed3ae93c28596c24dd4b31cf85e1a66f0b62ff764513d296a5784ceab2930d5",
+  "units": "mm",
+  "volume_mm3": 66.299,
+  "bodies": {
+    "spacer": 66.299
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/heatset-insert-m3/frame-cad/params.json",
+    "digest": "sha256:79091a2066d87d4b1a7921f26a3475e8ffad94f7d126175563a29997b9210804"
+  }
+}

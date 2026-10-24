@@ -1,0 +1,136 @@
+{
+ "artifact": "jj-torso-a-bottom",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 368549.27,
+ "mass_g": 239.56,
+ "material": "wood_ply",
+ "category": "cut",
+ "features": {
+  "flange_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     53.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.707107,
+     -0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M6",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 76.2,
+    "count": 4
+   }
+  },
+  "side_r_joint": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -100.0,
+     0.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "row",
+    "spacing": 100.0,
+    "count": 3,
+    "fastener": "#8 wood screw",
+    "threaded": false
+   }
+  },
+  "side_l_joint": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     100.0,
+     0.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "shape": "row",
+    "spacing": 100.0,
+    "count": 3,
+    "fastener": "#8 wood screw",
+    "threaded": false
+   }
+  },
+  "dock_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -10.0,
+     6.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": false,
+    "shape": "row",
+    "spacing": 60.0,
+    "count": 2
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "wood_ply",
+  "print": "",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   814.0
+  ]
+ }
+}

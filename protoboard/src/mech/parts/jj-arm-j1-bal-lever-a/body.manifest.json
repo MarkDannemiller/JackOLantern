@@ -1,0 +1,85 @@
+{
+ "artifact": "jj-arm-j1-bal-lever-a",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 6383.57,
+ "mass_g": 5.15,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "on_hub": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -3.0,
+     0.0,
+     21.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     -0.707107,
+     0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 22.0,
+    "count": 4
+   }
+  },
+  "pin": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     3.0,
+     0.0,
+     -21.0
+    ],
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": true,
+    "insert": "heatset-insert-m4",
+    "shape": "circle",
+    "spacing": 0.0,
+    "count": 1
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [
+   [
+    4,
+    1
+   ]
+  ],
+  "design_origin": [
+   83.51688975654116,
+   0.0,
+   -21.0
+  ]
+ }
+}

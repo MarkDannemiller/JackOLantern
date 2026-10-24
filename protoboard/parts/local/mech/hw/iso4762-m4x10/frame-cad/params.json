@@ -1,0 +1,13 @@
+{
+  "module": "iso4762-m4x10",
+  "name": "iso4762-m4x10",
+  "part": {
+    "diameter": 4,
+    "head_diameter": 7,
+    "head_height": 4,
+    "kind": "screw",
+    "length": 10,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

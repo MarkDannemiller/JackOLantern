@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "iso7089-m5",
+    "config": "parts/local/mech/hw/iso7089-m5/cad.config.ts",
+    "configDigest": "sha256:5f69fb68ed57564da69b7f7550e8fce6b4c4619f6f65d197ab86e8e42c8720ff",
+    "moduleDigest": "sha256:11b8a3a1c703a4f4fdc5b1292868757e84380181ed3a2416bfe378c9f57973c3"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:8334f1320d1395da71388b92174a3f803d5709b56bc4e331f0d60314895be905",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:48:44.975Z",
+  "status": "succeeded",
+  "summary": "iso7089-m5: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso7089-m5/out (55.638 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/iso7089-m5/out/body.step",
+      "digest": "sha256:9c38caf4d1e171de8c374f9ce559e219e7ad6909a228ab10b4f33cc2c8c79a57",
+      "bytes": 10770,
+      "description": "iso7089-m5: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/iso7089-m5/out/body.glb",
+      "digest": "sha256:7ce7a3ebcc600e019436eda6b548473de454060fd6ce2d455e0346a63f1ea939",
+      "bytes": 15536,
+      "description": "iso7089-m5: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/iso7089-m5/out/body.manifest.json",
+      "digest": "sha256:ac9cc5da31a7dbeeb8cd87e80eb4643422d556c3a06841812bd55fe2cbd3597c",
+      "bytes": 546,
+      "description": "iso7089-m5: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "iso7089-m5",
+    "out": "parts/local/mech/hw/iso7089-m5/out",
+    "volume_mm3": 55.638,
+    "previousVolume_mm3": 55.638,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:48:49.630Z"
+}

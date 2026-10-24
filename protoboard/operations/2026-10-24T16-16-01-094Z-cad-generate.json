@@ -1,0 +1,59 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:generate",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "generate",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "tnut-2020-m5",
+    "config": "parts/local/mech/hw/tnut-2020-m5/cad.config.ts",
+    "configDigest": "sha256:a7c35e7a12c9e342adde87cf2361b4145cceb86532b5713bfdaca6b4f6fe2199",
+    "moduleDigest": "sha256:aa7e830cc8cc582201ce65070d2ce863046cfa4540526d767a10a759482593f6"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:fc9d2b1ea99162732f4c020945512e7f9d7141abd7519c1c6f7dfe8a7784cf92",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:16:01.094Z",
+  "status": "succeeded",
+  "summary": "tnut-2020-m5: nut parameters in parts/local/mech/hw/tnut-2020-m5/frame-cad; run cad:export for the body",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/tnut-2020-m5/frame-cad/params.json",
+      "digest": "sha256:3ddef3ab2e75839db465b85a1111c06b8fe1d76e8b1d20f527dd3a09f79f81b4",
+      "bytes": 246,
+      "description": "tnut-2020-m5: generator parameters from its sizes"
+    }
+  ],
+  "data": {
+    "module": "tnut-2020-m5",
+    "kind": "nut",
+    "native": "parts/local/mech/hw/tnut-2020-m5/frame-cad",
+    "params": {
+      "schema": "protoboard.hardware-cad.params/v0",
+      "module": "tnut-2020-m5",
+      "name": "tnut-2020-m5",
+      "part": {
+        "kind": "nut",
+        "diameter": 5,
+        "length": 4,
+        "head_diameter": null,
+        "head_height": null,
+        "outer": 10
+      }
+    },
+    "generator": "@protoboardai/ext-frame-cad/py/hardware_cad.py"
+  },
+  "finishedAt": "2026-10-24T16:16:03.380Z"
+}

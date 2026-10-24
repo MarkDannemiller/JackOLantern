@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "iso7089-m4",
+    "config": "parts/local/mech/hw/iso7089-m4/cad.config.ts",
+    "configDigest": "sha256:88cf5dde6d343e07cde8a42bc5fe78d1485349e606d9dbbcc8b043788e15385c",
+    "moduleDigest": "sha256:9c03c294d931e79d32300677a2a950df6b2ef926858332f2f827e84d06334142"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:3aa2b89401ba9f31eaa84616501723c2dde176ff848be9d5ddfe9b2b32588574",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T15:40:00.054Z",
+  "status": "succeeded",
+  "summary": "iso7089-m4: body.step, body.glb, body.manifest.json in parts/local/mech/hw/iso7089-m4/out (38.73 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/iso7089-m4/out/body.step",
+      "digest": "sha256:8618e403b013386c011daee445ac1ff7eb730349809b6d61eb6094f511e3ba4a",
+      "bytes": 10785,
+      "description": "iso7089-m4: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/iso7089-m4/out/body.glb",
+      "digest": "sha256:203cf8f76b5061228120bee1b40eae6728496a5564b24c3e4889e4d142dd5e9f",
+      "bytes": 15628,
+      "description": "iso7089-m4: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/iso7089-m4/out/body.manifest.json",
+      "digest": "sha256:f27908732bd1211d775a4bff5f68ca56224b6500be42cd4e0656b97d2f02685b",
+      "bytes": 544,
+      "description": "iso7089-m4: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "iso7089-m4",
+    "out": "parts/local/mech/hw/iso7089-m4/out",
+    "volume_mm3": 38.73,
+    "previousVolume_mm3": 38.73,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T15:40:04.638Z"
+}

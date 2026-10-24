@@ -1,0 +1,37 @@
+{
+ "artifact": "dyneema-2mm-260",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 94.25,
+ "mass_g": 0.7,
+ "material": "rubber",
+ "category": "bought",
+ "features": {
+  "end": {
+   "kind": "anchor",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "2 mm SK78 Dyneema single braid, about 250 kgf break (typical listing; assumption until bought)",
+ "meta": {
+  "length": 260.0,
+  "kind": "consumable"
+ }
+}

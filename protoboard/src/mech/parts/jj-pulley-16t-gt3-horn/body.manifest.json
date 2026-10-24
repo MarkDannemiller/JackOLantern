@@ -1,0 +1,101 @@
+{
+ "artifact": "jj-pulley-16t-gt3-horn",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 1457.75,
+ "mass_g": 1.17,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4
+   }
+  },
+  "dowel": {
+   "kind": "shaft",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     11.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "gender": "bore",
+    "diameter": 5.0
+   }
+  },
+  "belt": {
+   "kind": "belt",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     5.75
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "teeth": 16,
+    "profile": "GT3",
+    "pitch": 3.0
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "teeth": 16
+ }
+}

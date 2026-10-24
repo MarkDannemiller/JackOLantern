@@ -6,8 +6,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerIn, Ground } from "@deltarobotics/uhd";
 import { part, feetechBus } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const FEETECH_STS3215_C047: ModuleDef = part({
+const FEETECH_STS3215_C047_ELECTRICAL: ModuleDef = part({
   id: "feetech-sts3215-c047", name: "Feetech STS3215 12 V serial bus servo", manufacturer: "Feetech", part_number: "ST3215-C047",
   description: "12 V smart servo on a daisy-chained serial bus: reports position, speed, load, voltage and temperature.",
   categories: ["actuator.motor.servo"], tags: ["servo", "feetech", "bus"], sources: [{ id: "src_seeed", name: "Seeed 108090003", url: "https://www.seeedstudio.com/" }, { id: "src_waveshare", name: "Waveshare ST3215", url: "https://www.waveshare.com/wiki/ST3215_Servo" }],
@@ -15,3 +16,6 @@ export const FEETECH_STS3215_C047: ModuleDef = part({
   traits: [{ type: "performance", params: { kind: "servo", stall_torque_kgcm: 30, rated_torque_kgcm: 10, voltage_V: 12, gear_ratio: 345, encoder_bits: 12, source: "research/sourcing/20261024-bom.json" } }],
   dims: [45.2, 24.7, 35], mass_g: 55,
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const FEETECH_STS3215_C047: ModuleDef = withMech(FEETECH_STS3215_C047_ELECTRICAL as ModuleDef, "servo-sts3215");

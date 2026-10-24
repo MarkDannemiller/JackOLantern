@@ -1,0 +1,47 @@
+{
+ "artifact": "jj-cable-sheave-22",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 861.85,
+ "mass_g": 0.6,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "seat": {
+   "kind": "bearing_seat",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "od": 13.0,
+    "depth": 5.0,
+    "retention": "press"
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.4 mm nozzle, 0.2 mm layers, 4 walls, 30 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   0.0
+  ]
+ }
+}

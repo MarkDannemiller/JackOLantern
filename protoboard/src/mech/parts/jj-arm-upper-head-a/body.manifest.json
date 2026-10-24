@@ -1,0 +1,178 @@
+{
+ "artifact": "jj-arm-upper-head-a",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 436213.0,
+ "mass_g": 351.59,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "j2_servo_flange": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -22.15,
+     -6.7885
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M4",
+    "threaded": true,
+    "insert": "heatset-insert-m4",
+    "shape": "rectangle",
+    "spacing": 49.5,
+    "count": 4,
+    "spacing_y": 10
+   }
+  },
+  "j2_driver_seat": {
+   "kind": "bearing_seat",
+   "frame": {
+    "origin": [
+     0.0,
+     12.75,
+     3.2115
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "od": 16.0,
+    "depth": 5.0,
+    "retention": "press"
+   }
+  },
+  "j2_seat_1": {
+   "kind": "bearing_seat",
+   "frame": {
+    "origin": [
+     0.0,
+     -8.5,
+     60.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 1
+   },
+   "params": {
+    "od": 42.0,
+    "depth": 7.0,
+    "retention": "shoulder"
+   }
+  },
+  "j2_cap_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     6.5,
+     60.0
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.0,
+     -0.707107
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M3",
+    "threaded": true,
+    "insert": "heatset-insert-m3",
+    "shape": "circle",
+    "spacing": 71.23377951308233,
+    "count": 4
+   }
+  },
+  "elbow_seat": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     -108.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "structure",
+    "fastener": "M3",
+    "threaded": true,
+    "insert": "heatset-insert-m3",
+    "shape": "circle",
+    "spacing": 40.0,
+    "count": 4
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [
+   [
+    4,
+    4
+   ],
+   [
+    3,
+    4
+   ],
+   [
+    3,
+    4
+   ]
+  ],
+  "design_origin": [
+   0.0,
+   0.0,
+   -60.0
+  ]
+ }
+}

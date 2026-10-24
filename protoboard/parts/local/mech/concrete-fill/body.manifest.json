@@ -1,0 +1,55 @@
+{
+ "artifact": "concrete-fill",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 18993841.76,
+ "mass_g": 43686.0,
+ "material": "concrete",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  },
+  "flange_seat": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     68.5
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.707107,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "volume from the bucket model x 2.3 g/cm3 (assumption)",
+ "meta": {}
+}

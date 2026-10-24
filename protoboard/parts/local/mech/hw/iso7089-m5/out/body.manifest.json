@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "0427159474035038aaafdfb592c988075f9785126dde5e2e6de1ecc4604145d9",
+  "units": "mm",
+  "volume_mm3": 55.638,
+  "bodies": {
+    "spacer": 55.638
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/iso7089-m5/frame-cad/params.json",
+    "digest": "sha256:aa980bb8cfe05857ba216455b6e6aab529492a38d263a29c712bad722961e785"
+  }
+}

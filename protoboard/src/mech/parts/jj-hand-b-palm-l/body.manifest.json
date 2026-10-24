@@ -1,0 +1,172 @@
+{
+ "artifact": "jj-hand-b-palm-l",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 172612.4,
+ "mass_g": 120.57,
+ "material": "petg",
+ "category": "printed",
+ "features": {
+  "on_wrist": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     40.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M3",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 40.0,
+    "count": 4
+   }
+  },
+  "fingers_servo_case_top": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     16.5,
+     -21.35
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M2",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 20.7,
+    "count": 4,
+    "spacing_y": 20.5
+   }
+  },
+  "fingers_servo_case_bottom": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -14.9,
+     -19.45
+    ],
+    "normal": [
+     0.0,
+     1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M2",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 24.5,
+    "count": 4,
+    "spacing_y": 20.5
+   }
+  },
+  "thumb_servo_case_top": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     16.5,
+     45.0,
+     6.65
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M2",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 20.7,
+    "count": 4,
+    "spacing_y": 20.5
+   }
+  },
+  "thumb_servo_case_bottom": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -14.9,
+     45.0,
+     8.55
+    ],
+    "normal": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M2",
+    "threaded": false,
+    "shape": "rectangle",
+    "spacing": 24.5,
+    "count": 4,
+    "spacing_y": 20.5
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg",
+  "print": "PETG, 0.4 mm nozzle, 0.2 mm layers, 4 walls, 30 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   0.0,
+   0.0,
+   -520.0
+  ],
+  "mirror_of": "jj-hand-b-palm"
+ }
+}

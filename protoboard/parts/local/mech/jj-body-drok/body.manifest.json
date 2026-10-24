@@ -1,0 +1,40 @@
+{
+ "artifact": "jj-body-drok",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 81250.0,
+ "mass_g": 60.0,
+ "material": "metal_alu",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "nominal envelope (assumption)",
+ "meta": {
+  "envelope": [
+   65,
+   50,
+   25
+  ]
+ }
+}

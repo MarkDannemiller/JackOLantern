@@ -5,8 +5,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerIn, PowerOut, Ground } from "@deltarobotics/uhd";
 import { part } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const TEMCO_RELAY_24V_40A: ModuleDef = part({
+const TEMCO_RELAY_24V_40A_ELECTRICAL: ModuleDef = part({
   id: "temco-relay-24v-40a", name: "TEMCo 24 V 40 A relay (SPST-NO)", manufacturer: "TEMCo", part_number: "CN0345",
   description: "Automotive relay: the E-stop chain energises the coil, the contacts switch the actuator rail.",
   categories: ["component.relay"], tags: ["relay", "safety"], sources: [{ id: "src_temco", name: "TEMCo CN0345", url: "https://www.temcoindustrialpower.com/" }],
@@ -17,3 +18,6 @@ export const TEMCO_RELAY_24V_40A: ModuleDef = part({
     { type: "assumption", params: { field: "coil range", value: "15-24 V", reason: "24 V coil driven from the 15-21 V pack: pull-in at 15 V is unverified (bench test before relying on it)." } },
   ],
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const TEMCO_RELAY_24V_40A: ModuleDef = withMech(TEMCO_RELAY_24V_40A_ELECTRICAL as ModuleDef, "jj-body-relay");

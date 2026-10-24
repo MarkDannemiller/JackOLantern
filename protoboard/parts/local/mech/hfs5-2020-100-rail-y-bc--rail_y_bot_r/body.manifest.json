@@ -1,0 +1,147 @@
+{
+ "artifact": "hfs5-2020-100-rail-y-bc--rail_y_bot_r",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 19066.56,
+ "mass_g": 50.0,
+ "material": "metal_alu",
+ "category": "bought",
+ "features": {
+  "end_a": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true
+   }
+  },
+  "end_b": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     100.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true
+   }
+  },
+  "bracket_10_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -10.0,
+     10.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  },
+  "bracket_12_slot": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     -10.0,
+     90.0
+    ],
+    "normal": [
+     0.0,
+     -1.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     -0.0,
+     -1.0
+    ]
+   },
+   "params": {
+    "role": "structure",
+    "shape": "positions",
+    "positions": [
+     [
+      0,
+      0
+     ]
+    ],
+    "fastener": "M5",
+    "threaded": true,
+    "t_slot": true
+   }
+  }
+ },
+ "source": "Misumi HFS5-2020 (0.5 kg/m, slot 6 mm, centre hole 4.2 mm: research/sourcing/20261025-hardware-sourcing.json)",
+ "meta": {
+  "kind": "extrusion",
+  "length": 100,
+  "part_number": "HFS5-2020-100-TPW"
+ }
+}

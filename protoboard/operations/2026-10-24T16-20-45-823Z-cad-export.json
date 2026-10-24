@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "nylock-1-4-20",
+    "config": "parts/local/mech/hw/nylock-1-4-20/cad.config.ts",
+    "configDigest": "sha256:3fc499f650c233cd1f4a7526e27c1170c8a729bbe37f4f6c013e710d1d7a0b12",
+    "moduleDigest": "sha256:3dfafc2a2515b27c5f24fd014141b798712485705cea1e2def5418b7d72d1531"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:3034e2d09daca83942b04eff0087c0cd42a8f5b662bd2e7ab1a95375f8afdce5",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:20:45.823Z",
+  "status": "succeeded",
+  "summary": "nylock-1-4-20: body.step, body.glb, body.manifest.json in parts/local/mech/hw/nylock-1-4-20/out (525.236 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/nylock-1-4-20/out/body.step",
+      "digest": "sha256:60cf12abc9c2c55d7d2c55078b1b52228cae0fe2b8f9ddf5f017bb288be93b59",
+      "bytes": 28588,
+      "description": "nylock-1-4-20: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/nylock-1-4-20/out/body.glb",
+      "digest": "sha256:0dcf22a7ac0b974f967d2210ebaf2b9728a21ef0bcab076a61977a836c392629",
+      "bytes": 12848,
+      "description": "nylock-1-4-20: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/nylock-1-4-20/out/body.manifest.json",
+      "digest": "sha256:2535fa64777844adae898ee2fe2e26326333b901c37e1c15da705993b7238ff3",
+      "bytes": 548,
+      "description": "nylock-1-4-20: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "nylock-1-4-20",
+    "out": "parts/local/mech/hw/nylock-1-4-20/out",
+    "volume_mm3": 525.236,
+    "previousVolume_mm3": 525.236,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:20:50.434Z"
+}

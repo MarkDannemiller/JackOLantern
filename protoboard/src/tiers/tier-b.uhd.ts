@@ -9,6 +9,7 @@
  * Control: the head's Pi 4 drives each arm's Feetech bus through its own USB adapter.
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
+import { MECH } from "../mech/assembly.gen";
 
 const L = (id: string, a: [string, string], b: [string, string], name = id) => ({ id, name, a: { child: a[0], interfaceId: a[1] }, b: { child: b[0], interfaceId: b[1] } });
 
@@ -62,11 +63,11 @@ export const JOYFUL_JACK_B: ModuleDef = {
   interfaces: [],
   children: [
     { id: "head", moduleDefId: "jj-head", name: "Head (existing)" },
-    { id: "base", moduleDefId: "jj-ballast-base", name: "Ballast base and mast" },
-    { id: "torso", moduleDefId: "jj-torso-bc", name: "Torso" },
+    { id: "body", moduleDefId: "jj-body-b", name: "Body: base, mast, torso, neck, electronics board" },
     ...dualPackPower(),
-    { id: "arm_r", moduleDefId: "jj-arm-b", name: "Right arm" },
-    { id: "arm_l", moduleDefId: "jj-arm-b", name: "Left arm" },
+    { id: "arm_r", moduleDefId: "jj-arm-b-r", name: "Right arm" },
+    { id: "arm_l", moduleDefId: "jj-arm-b-l", name: "Left arm" },
+    ...((MECH.b.root.children as unknown as NonNullable<ModuleDef["children"]>) ?? []),
   ],
   links: [
     ...dualPackLinks(),
@@ -78,5 +79,6 @@ export const JOYFUL_JACK_B: ModuleDef = {
     L("arm_r_12v", ["buck_arm_r", "vout"], ["arm_r", "power_in"]), L("arm_l_12v", ["buck_arm_l", "vout"], ["arm_l", "power_in"]),
     L("arm_r_gnd", ["dock_1", "lead_minus"], ["arm_r", "gnd"]), L("arm_l_gnd", ["dock_1", "lead_minus"], ["arm_l", "gnd"]),
     L("arm_r_usb", ["head", "usb_a"], ["arm_r", "usb"], "USB to the right arm's bus"), L("arm_l_usb", ["head", "usb_b"], ["arm_l", "usb"], "USB to the left arm's bus"),
+    ...((MECH.b.root.links as unknown as NonNullable<ModuleDef["links"]>) ?? []),
   ],
 };

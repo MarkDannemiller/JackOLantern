@@ -1,0 +1,50 @@
+{
+ "artifact": "jj-arm-j1-bal-spool-a",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 684.62,
+ "mass_g": 0.55,
+ "material": "petg-cf",
+ "category": "printed",
+ "features": {
+  "on_pin": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -4.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     -1.0,
+     0.0,
+     0.0
+    ],
+    "xAxis": [
+     0.0,
+     1.0,
+     0.0
+    ]
+   },
+   "params": {
+    "role": "component",
+    "fastener": "M4",
+    "threaded": false,
+    "shape": "circle",
+    "spacing": 0.0,
+    "count": 1
+   }
+  }
+ },
+ "source": "",
+ "meta": {
+  "material": "petg-cf",
+  "print": "PETG-CF, 0.6 mm nozzle, 0.3 mm layers, 5 walls, 40 % gyroid",
+  "inserts": [],
+  "design_origin": [
+   90.51688975654116,
+   0.0,
+   -42.0
+  ]
+ }
+}

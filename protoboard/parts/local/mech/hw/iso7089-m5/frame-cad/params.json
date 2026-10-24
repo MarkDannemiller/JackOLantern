@@ -1,0 +1,14 @@
+{
+  "module": "iso7089-m5",
+  "name": "iso7089-m5",
+  "part": {
+    "bore": 5.4,
+    "diameter": 5,
+    "head_diameter": null,
+    "head_height": null,
+    "kind": "spacer",
+    "length": 1,
+    "outer": 10
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

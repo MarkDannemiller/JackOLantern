@@ -1,0 +1,40 @@
+{
+ "artifact": "jj-body-relay",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 21952.0,
+ "mass_g": 35.0,
+ "material": "plastic_black",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "ISO mini relay envelope",
+ "meta": {
+  "envelope": [
+   28,
+   28,
+   28
+  ]
+ }
+}

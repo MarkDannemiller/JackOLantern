@@ -1,0 +1,40 @@
+{
+ "artifact": "jj-body-fuses",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 247500.0,
+ "mass_g": 150.0,
+ "material": "plastic_black",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "nominal envelope (assumption)",
+ "meta": {
+  "envelope": [
+   110,
+   75,
+   30
+  ]
+ }
+}

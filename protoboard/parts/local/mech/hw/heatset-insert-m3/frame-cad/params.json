@@ -1,0 +1,14 @@
+{
+  "module": "heatset-insert-m3",
+  "name": "heatset-insert-m3",
+  "part": {
+    "bore": 2.52,
+    "diameter": 3,
+    "head_diameter": null,
+    "head_height": null,
+    "kind": "spacer",
+    "length": 5.7,
+    "outer": 4.6
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

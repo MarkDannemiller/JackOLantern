@@ -8,23 +8,23 @@ import subprocess
 import sys
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-OUT = os.path.join(ROOT, "out", "renders")
+OUT = os.environ.get("JJ_RENDER_OUT", os.path.join(ROOT, "out", "renders"))   # out/renders/mech for render_mech.py
 
 TIER = {"a": "Tier A · Beginner", "b": "Tier B · Midrange", "c": "Tier C · Maxed"}
 CAPTIONS = {
     **{f"explode-{t}": [(0.0, 2.2, f"Joyful Jack — {TIER[t]}"), (2.2, 5.2, "Every part pulls apart"),
-                        (5.2, 8.2, "Base and pole · torso and costume · arms · head · hat"), (8.2, 12.0, "…and back together")] for t in "abc"},
+                        (5.2, 8.2, "Base and pole · torso · arms · head · every screw"), (8.2, 12.0, "…and back together")] for t in "abc"},
     "walkthrough-b": [
         (0.0, 3.0, "Meet Joyful Jack — Tier B, the Midrange build"),
         (3.0, 8.2, "He waves at visitors his camera spots"),
         (8.6, 11.0, "Under the costume: an aluminium frame on a steel pole"),
-        (11.0, 15.0, "Two Milwaukee M18 packs behind a back hatch — swap one while the other runs"),
-        (15.0, 18.0, "Battery monitor, fuses and the emergency-stop relay"),
-        (18.0, 21.0, "Power converters and the arm controllers"),
-        (21.0, 25.0, "Each arm: seven smart motors that feel their own load"),
-        (25.0, 28.0, "Glove hands that open and grip"),
-        (28.0, 32.4, "The original head: eyes, eyelids, jaw, and a neck that turns and nods"),
-        (32.6, 36.0, "Costume back on. Howdy!"),
+        (11.0, 15.0, "Two Milwaukee M18 packs at the back — swap one while the other runs"),
+        (15.0, 18.0, "The stop button, battery monitor, fuses and converters"),
+        (18.0, 21.0, "The electronics board"),
+        (21.0, 24.0, "The shoulder: a belt drive, and springs that carry the arm's weight"),
+        (24.0, 28.8, "Seven smart motors per arm; the glove hand opens and grips"),
+        (29.0, 32.6, "The original head: eyes, eyelids, jaw, and a neck that turns and nods"),
+        (33.0, 37.0, "Costume back on. Howdy!"),
     ],
 }
 

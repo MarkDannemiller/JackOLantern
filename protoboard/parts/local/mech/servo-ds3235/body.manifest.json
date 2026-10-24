@@ -1,0 +1,117 @@
+{
+ "artifact": "servo-ds3235",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 34062.24,
+ "mass_g": 66.0,
+ "material": "servo_black",
+ "category": "bought",
+ "features": {
+  "horn": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     0.707107,
+     0.707107,
+     0.0
+    ],
+    "symmetryDeg": 90
+   },
+   "params": {
+    "role": "structure",
+    "shape": "circle",
+    "spacing": 14.0,
+    "count": 4,
+    "fastener": "M3",
+    "threaded": true
+   }
+  },
+  "flange": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     -10.0,
+     0.0,
+     -16.4
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "shape": "rectangle",
+    "spacing": 49.5,
+    "spacing_y": 10,
+    "count": 4,
+    "fastener": "M4",
+    "threaded": false
+   }
+  },
+  "back": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     -43.95
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "nominal model: standard servo case 40 x 20 x 40.5, flange 54.5 with holes 49.5 x 10 (DSSERVO DS3225 drawing, catalog part dsservo-ds3225mg-180); 25T aluminium disc horn assumed \u00d825, 4 x M3 on 16 mm",
+ "meta": {
+  "servo": "ds3235",
+  "name": "DSSERVO DS3235SG (35 kg)",
+  "mass_g": 66.0,
+  "stall_kgcm": 32.0,
+  "speed_rpm": 76.92307692307692,
+  "stall_nm": 3.138128,
+  "rated_frac": 0.3333333333333333,
+  "flange_t": 2.5,
+  "case": {
+   "x": [
+    -30,
+    10
+   ],
+   "y": [
+    -10,
+    10
+   ],
+   "z": [
+    -43.95,
+    -3.4500000000000015
+   ]
+  },
+  "horn_d": 20.0
+ }
+}

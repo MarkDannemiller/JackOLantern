@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:generate",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "generate",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "heatset-insert-m3",
+    "config": "parts/local/mech/hw/heatset-insert-m3/cad.config.ts",
+    "configDigest": "sha256:52dfe25608e14e30a0b9354852a3b5763de0ede13afcc5b621613c0b721d0a2d",
+    "moduleDigest": "sha256:93130faec350a9830372eea1d303c78b259a51b89825250c077831a15812fc01"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:abb1aa442ed8a2029c6845bca9eb06ddb3e9029c3cc607d7ae7b1436773bbc66",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:43:22.874Z",
+  "status": "succeeded",
+  "summary": "heatset-insert-m3: spacer parameters in parts/local/mech/hw/heatset-insert-m3/frame-cad; run cad:export for the body",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/heatset-insert-m3/frame-cad/params.json",
+      "digest": "sha256:79091a2066d87d4b1a7921f26a3475e8ffad94f7d126175563a29997b9210804",
+      "bytes": 280,
+      "description": "heatset-insert-m3: generator parameters from its sizes"
+    }
+  ],
+  "data": {
+    "module": "heatset-insert-m3",
+    "kind": "spacer",
+    "native": "parts/local/mech/hw/heatset-insert-m3/frame-cad",
+    "params": {
+      "schema": "protoboard.hardware-cad.params/v0",
+      "module": "heatset-insert-m3",
+      "name": "heatset-insert-m3",
+      "part": {
+        "kind": "spacer",
+        "diameter": 3,
+        "length": 5.7,
+        "head_diameter": null,
+        "head_height": null,
+        "outer": 4.6,
+        "bore": 2.52
+      }
+    },
+    "generator": "@protoboardai/ext-frame-cad/py/hardware_cad.py"
+  },
+  "finishedAt": "2026-10-24T16:43:25.209Z"
+}

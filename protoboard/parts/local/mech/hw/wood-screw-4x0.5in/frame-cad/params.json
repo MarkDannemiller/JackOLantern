@@ -1,0 +1,13 @@
+{
+  "module": "wood-screw-4x0.5in",
+  "name": "wood-screw-4x0.5in",
+  "part": {
+    "diameter": 4.2,
+    "head_diameter": 8.4,
+    "head_height": 3,
+    "kind": "screw",
+    "length": 12.7,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "85ab550e3f097e0178e3e98e2f88c2448bccad036726bf31a583eeb379e59b44",
+  "units": "mm",
+  "volume_mm3": 322.699,
+  "bodies": {
+    "screw": 322.699
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/iso7379-5x8/frame-cad/params.json",
+    "digest": "sha256:3d0ba1f3597853b926516952453c10e70d0665927f183980201ef8c5aa938bca"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "module": "iso4762-m3x30",
+  "name": "iso4762-m3x30",
+  "part": {
+    "diameter": 3,
+    "head_diameter": 5.5,
+    "head_height": 3,
+    "kind": "screw",
+    "length": 30,
+    "outer": null
+  },
+  "schema": "protoboard.hardware-cad.params/v0"
+}

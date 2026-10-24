@@ -1,0 +1,90 @@
+{
+ "artifact": "jj-body-dock",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 340200.0,
+ "mass_g": 120.0,
+ "material": "plastic_black",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  },
+  "top": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     30.0,
+     45.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  },
+  "mount": {
+   "kind": "bolt_pattern",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "symmetryDeg": 180
+   },
+   "params": {
+    "role": "component",
+    "shape": "row",
+    "spacing": 60.0,
+    "count": 2,
+    "fastener": "M4",
+    "threaded": false
+   }
+  }
+ },
+ "source": "nominal envelope (assumption)",
+ "meta": {
+  "envelope": [
+   84,
+   90,
+   45
+  ]
+ }
+}

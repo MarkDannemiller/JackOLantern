@@ -6,8 +6,9 @@
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { PowerIn, PowerOut, Ground, I2C } from "@deltarobotics/uhd";
 import { part } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const ADAFRUIT_INA228: ModuleDef = part({
+const ADAFRUIT_INA228_ELECTRICAL: ModuleDef = part({
   id: "adafruit-ina228", name: "Adafruit INA228 power monitor (0x44)", manufacturer: "Adafruit Industries", part_number: "INA228 breakout",
   description: "Measures pack voltage and current on I2C, so Jack can warn before the pack runs out.",
   categories: ["power.monitor", "expansion.breakout"], tags: ["ina228", "i2c"], sources: [{ id: "src_adafruit", name: "Adafruit INA228", url: "https://www.adafruit.com/product/5832" }],
@@ -19,3 +20,6 @@ export const ADAFRUIT_INA228: ModuleDef = part({
     { type: "assumption", params: { field: "I2C address", value: "0x44", reason: "Default 0x40 collides with the head PCA9685; set by the address jumpers." } },
   ],
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const ADAFRUIT_INA228: ModuleDef = withMech(ADAFRUIT_INA228_ELECTRICAL as ModuleDef, "jj-body-monitor");

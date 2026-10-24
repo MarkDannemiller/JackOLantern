@@ -1,0 +1,18 @@
+{
+  "artifact": "body",
+  "tool": "build123d",
+  "toolVersion": "0.13.0",
+  "generator": "@protoboardai/ext-frame-cad py/hardware_cad.py",
+  "params": "../frame-cad/params.json",
+  "sourceDigest": "38380e80d7b5487f9d6585462a401716a9f7a091427db254ac901eafb6a406f1",
+  "units": "mm",
+  "volume_mm3": 1243.623,
+  "bodies": {
+    "screw": 1243.623
+  },
+  "features": {},
+  "exportedFrom": {
+    "file": "parts/local/mech/hw/hex-bolt-1-4-20x1.25in/frame-cad/params.json",
+    "digest": "sha256:43a2686fb3cd80cee1815e3dbdfb64fdeb57fc389b71ca5e3e862e3090624636"
+  }
+}

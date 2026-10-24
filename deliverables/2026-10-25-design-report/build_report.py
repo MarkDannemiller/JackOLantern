@@ -2,20 +2,50 @@
 
     python3 deliverables/2026-10-25-design-report/build_report.py [--assets assets.json]
 
-Reads research/sourcing/20261024-bom-final.json (prices), protoboard/out/cad/analysis.json (sizing) and
-writes index.html next to this file. Media are referenced as media/<name> (local copy); with --assets, a
-JSON map {name: url} from the published artifact's asset store replaces them (published copy: published.html).
+Reads research/sourcing/20261025-bom-v2.json (prices from the model's quantities), protoboard/docs/sim-results.json
+(Isaac Sim), the full-hardware model (protoboard/src/mech, out/mech/tier-<t>/scene.json), the harness lists
+(protoboard/docs/wiring) and writes index.html next to this file. Media are referenced as media/<name> (local
+copy); with --assets, a JSON map {name: url} from the published artifact's asset store replaces them (published
+copy: published.html).
 """
 import html
 import json
 import os
 import sys
+from collections import Counter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ = os.path.abspath(os.path.join(HERE, "..", ".."))
-BOM = json.load(open(os.path.join(PROJ, "research", "sourcing", "20261024-bom-final.json")))
-AN = json.load(open(os.path.join(PROJ, "protoboard", "out", "cad", "analysis.json")))
+PB = os.path.join(PROJ, "protoboard")
+BOM = json.load(open(os.path.join(PROJ, "research", "sourcing", "20261025-bom-v2.json")))
+SIM = {(r["tier"], r["scenario"]): r for r in json.load(open(os.path.join(PB, "docs", "sim-results.json")))}
+PARTS = json.load(open(os.path.join(PB, "src", "mech", "mech.json")))["parts"]
 ASSETS = json.load(open(sys.argv[sys.argv.index("--assets") + 1])) if "--assets" in sys.argv else None
+BELT_RATED = 179.6
+
+
+def model_counts(t):
+    sc = json.load(open(os.path.join(PB, "out", "mech", f"tier-{t}", "scene.json")))
+    inst = [i for i in sc["instances"] if not i["id"].startswith("costume/")]
+    cats = Counter(PARTS.get(i["part"], {}).get("category") for i in inst)
+    printed_g = sum(PARTS[i["part"]].get("mass_g") or 0 for i in inst if PARTS.get(i["part"], {}).get("category") == "printed")
+    harness = json.load(open(os.path.join(PB, "docs", "wiring", f"harness-{t}.json")))
+    return {"parts": len(inst), "printed": cats["printed"], "bought": cats["bought"], "fasteners": len(sc["hardware"]),
+            "printed_kg": printed_g / 1000, "cables": len(harness["cables"]), "joints": len(sc["joints"])}
+
+
+MC = {t: model_counts(t) for t in "abc"}
+GUIDES = os.path.join(PROJ, "deliverables", "2026-10-25-build-guides")
+
+
+def _pages(f):
+    import subprocess
+    out = subprocess.run(["pdfinfo", f], capture_output=True, text=True).stdout
+    return int(next(l.split()[-1] for l in out.splitlines() if l.startswith("Pages:")))
+
+
+GUIDE_PAGES = {t: _pages(os.path.join(GUIDES, f"joyful-jack-tier-{t}-build-guide.pdf")) for t in "abc"}
+TIP = {t: (SIM[(t, "push-bal")]["tip_force_N"], SIM[(t + "+sandbags2", "push-bal")]["tip_force_N"]) for t in "abc"}
 
 
 def m(name):
@@ -29,9 +59,10 @@ def money(x):
 
 
 T = {k.lower(): v for k, v in BOM["tiers"].items()}
-GROUP_NAMES = {"arm": "Arms and motors", "power": "Power and safety", "base": "Base and pole", "torso": "Torso frame",
-               "costume": "Costume", "fasteners": "Screws and fittings", "control": "Controllers and computer", "hand": "Hands"}
-GROUP_ORDER = ["arm", "hand", "power", "control", "torso", "base", "costume", "fasteners"]
+GROUP_NAMES = {"arm": "Arms, motors, belts", "power": "Power and safety", "base": "Base and pole", "torso": "Torso frame",
+               "costume": "Costume", "fasteners": "Screws and fittings", "control": "Controllers and computer", "hand": "Hands",
+               "print": "3D-printing filament", "wiring": "Wiring", "tools": "Tools"}
+GROUP_ORDER = ["arm", "hand", "power", "control", "torso", "base", "fasteners", "print", "wiring", "costume", "tools"]
 
 
 def groups(t):
@@ -51,7 +82,7 @@ def cost_bars(t):
         pct = g[k] / total * 100
         rows.append(f'<div class="bar"><span class="bar-label">{GROUP_NAMES.get(k, k)}</span>'
                     f'<span class="bar-track"><span class="bar-fill" style="width:{pct:.1f}%"></span></span>'
-                    f'<span class="bar-val">{money(g[k])}</span></div>')
+                    f'<span class="bar-val">{money(g[k]) if g[k] else "TBD"}</span></div>')
     return "\n".join(rows)
 
 
@@ -64,50 +95,80 @@ def bom_table(t):
                     f"<td class='num'>{money(l['line_usd']) if l['line_usd'] is not None else 'TBD'}</td><td>{link}</td></tr>")
     return ("<div class='table-wrap'><table class='bom'><thead><tr><th>Group</th><th>Item</th><th class='num'>Qty</th><th class='num'>Each</th>"
             "<th class='num'>Line</th><th>Price from</th></tr></thead><tbody>" + "\n".join(rows) +
-            f"</tbody><tfoot><tr><td colspan='4'>Total</td><td class='num'>{money(T[t]['total_usd'])}</td><td></td></tr></tfoot></table></div>")
+            f"</tbody><tfoot><tr><td colspan='4'>Total{' (TBD rows not included)' if T[t]['unpriced'] else ''}</td><td class='num'>{money(T[t]['total_usd'])}</td><td></td></tr></tfoot></table></div>")
 
-
-A = AN["tiers"]
 
 TIERS = [
-    {"key": "a", "name": "Beginner", "cap": "under $500", "tag": "A", "who": "A first build: cheap, quick, and still a character people stop for.",
-     "can": ["Waves, points and beckons with both arms", "Grips a light candy bag with a one-motor mitt", "Runs on one M18 pack with a low-battery cut-off", "Big red stop button on his back"],
-     "cant": ["Feel when he touches someone (no feedback from the motors)", "Hold a loaded arm straight out for long", "Swap the battery without switching off"],
-     "how": "Eight hobby servos, the kind used in RC cars, move the arms. A second servo board joins the one already in the head, so the head's computer runs everything. A spring at each shoulder carries the arm's weight so the small motors only have to move it. The torso is laser-cut plywood ribs.",
-     "hand": "A cartoon mitt: three fingers moulded as one paddle close against a thumb, driven by one servo. Rubber pads give it grip.",
+    {"key": "a", "name": "Beginner", "cap": "was under $500", "tag": "A", "who": "A first build: hobby servos, plywood torso, and still a character people stop for.",
+     "can": ["Waves: lifts his arm forward and up and waves from the elbow", "Grips a light candy bag with a one-motor mitt",
+             "Shoulder springs carry the arm's weight, so the small motors only move it", "Runs on one M18 pack with a low-battery cut-off", "Big red stop button on his back"],
+     "cant": ["Feel when he touches someone (no feedback from the motors)", "Twist his upper arm or wrist", "Swap the battery without switching off"],
+     "how": "Eight hobby servos, the kind used in RC cars: at each shoulder two 35 kg·cm servos, at the elbow a 25 kg·cm one, each driving its joint through a 3:1 toothed belt, plus one in each mitt. A second servo board joins the one already in the head, so the head's computer runs everything. The torso is a box of 12 mm birch plywood on the steel pole.",
+     "hand": "A cartoon mitt: three fingers as one paddle close against a thumb, driven by one servo on a shoulder-bolt pivot. Rubber pads give it grip.",
      "joints": "3 + grip", "hands": "Mitt, 1 motor", "battery": "1 pack", "feel": "No", "swap": "No", "brains": "Head computer"},
-    {"key": "b", "name": "Midrange", "cap": "up to $1,200", "tag": "B", "who": "The one to build for a season of events: smart motors, safer, and he never has to sleep.",
-     "can": ["Waves properly: the upper arm twists, so the hand comes up", "Hands that open and close around a cup or a bag handle", "Every motor reports its position, load and temperature", "Two battery packs: pull one while the other keeps him going", "Tells you when the battery is getting low"],
-     "cant": ["Move individual fingers", "Run on wall power (batteries only)"],
-     "how": "Fourteen Feetech smart servos, the same motors used in popular open-source robot arms. Each reports how hard it is working, so Jack can stop if his hand meets resistance. Belts give the shoulders and elbows 2.7 times more strength. An aluminium frame inside the torso carries two Milwaukee packs, joined so one can be swapped live.",
-     "hand": "A glove hand in a big cartoon glove: four fingers linked to close together, so they wrap around an object, and a separately driven thumb.",
+    {"key": "b", "name": "Midrange", "cap": "was up to $1,200", "tag": "B", "who": "The one to build for a season of events: smart motors, safer, and he never has to sleep.",
+     "can": ["Waves properly: the upper arm twists, so the hand comes up palm out", "Glove hands that open and close around a cup or a bag handle",
+             "Every motor reports its position, load and temperature", "Two battery packs: pull one while the other keeps him going", "Tells you when the battery is getting low"],
+     "cant": ["Move individual fingers", "Hold an arm straight out to the side for long (shown in the simulation below)"],
+     "how": "Fourteen Feetech STS3215 smart servos, the motors used in popular open-source robot arms. At each shoulder and elbow the servo drives a hollow hub on two thin bearings through a 3:1 toothed belt; the upper-arm and wrist twists are driven directly. A spring-and-cable balancer at each shoulder carries the arm's weight. An aluminium frame in the torso carries two Milwaukee packs, joined so one can be swapped live.",
+     "hand": "A glove hand in a big cartoon glove: four fingers linked to close together around an object, and a separately driven thumb.",
      "joints": "5 + 2-motor hand", "hands": "Glove, 2 motors", "battery": "2 packs, hot swap", "feel": "Yes", "swap": "Yes", "brains": "Head computer"},
     {"key": "c", "name": "Maxed", "cap": "no cap set", "tag": "C", "who": "The show piece: real robot hands with fingers that each move on their own.",
-     "can": ["Humanoid hands: four fingers, each with two moving joints", "Wrist that bends as well as twists, for a hat-tip like the concept art", "Batteries plus wall power, so he can run all day indoors", "His own computer in the chest for the arms and hands"],
+     "can": ["Humanoid hands: four fingers, each with two moving joints", "A wrist that bends as well as twists, for a hat-tip like the concept art",
+             "Batteries plus wall power, so he can run all day indoors", "His own computer in the chest for the arms and hands"],
      "cant": ["Thumbs (the hand used has four fingers, which suits a cartoon)", "Strong grip: the hand's grip force is not published"],
-     "how": "Tier B's arm, upgraded: stronger STS3250 motors at the shoulders and elbows (still through belts), plus a wrist that bends. Each hand is a Pollen Robotics AmazingHand: an open-source hand with eight tiny motors in the palm. A Raspberry Pi 5 in the chest runs the arms and hands. A mains power supply joins the two battery packs.",
+     "how": "Tier B's arm, upgraded: stronger 50 kg·cm STS3250 motors at both shoulder joints and the elbow (still through belts), plus a wrist that bends. Each hand is a Pollen Robotics AmazingHand: an open-source hand with eight tiny motors in the palm. A Raspberry Pi 5 in the chest runs the arms and hands. A mains supply joins the two battery packs.",
      "hand": "The Pollen AmazingHand: four fingers, two joints each, eight micro servos, 400 g. Open source (designs CC BY 4.0), sold as a kit by Seeed Studio.",
      "joints": "6 + 8-motor hand", "hands": "Humanoid, 8 motors", "battery": "2 packs + wall", "feel": "Yes", "swap": "Yes", "brains": "Own computer"},
 ]
 
+SCEN = [("wave-bal-lim", "Wave", "forearm up, waving for 10 s"), ("wave-lim", "Wave, springs removed", "the same, without the shoulder balancer"), ("reach-bal-lim", "Reach and grip", "arm forward, hand closes"),
+        ("hold-bal-lim", "Arm straight out", "to the side, then forward, 7 s each (stress test)"), ("estop-bal-lim", "Emergency stop", "power cut at full reach")]
+
+
+def sim_verdict(r):
+    """One line per scenario: did every gravity joint keep up, and how hard did it work."""
+    js = [r[j] for j in ("r_j1", "r_j2", "r_j4") if j in r]
+    if r["scenario"].startswith("estop"):
+        return "ok", "The arms drop to their rest stops and nothing falls."
+    err = max(j["err_deg"] for j in js)
+    load = max(j["stall_frac_max"] for j in js)
+    belt = max(j["belt_N_max"] for j in js)
+    sat = max(j["sat_frac"] for j in js)
+    good = err < 5 and sat < 0.05
+    detail = (f"worst joint {load * 100:.0f}% of motor max, within {err:.0f}° of target, "
+              + ("belt briefly at its limit" if belt >= 0.99 * BELT_RATED else f"belts at {belt / BELT_RATED * 100:.0f}% of rating"))
+    if not good:
+        detail = f"the shoulder can't hold it: {err:.0f}° short of target, at its limit {sat * 100:.0f}% of the time"
+    return ("ok" if good else "no"), detail
+
+
+def sim_table(t):
+    rows = []
+    for key, name, what in SCEN:
+        r = SIM.get((t, key))
+        if not r:
+            continue
+        v, d = sim_verdict(r)
+        rows.append(f"<tr><td><b>{name}</b><div class='choice'>{what}</div></td><td class='{'okc' if v == 'ok' else 'noc'}'>{'Passes' if v == 'ok' else 'Limit'}</td><td>{d}</td></tr>")
+    return "<table class='mini sim'>" + "".join(rows) + "</table>"
+
 
 def tier_section(d):
     t = d["key"]
-    a = A[t]
-    sh, el = a["shoulder"], a["elbow"]
     can = "".join(f"<li>{x}</li>" for x in d["can"])
     cant = "".join(f"<li>{x}</li>" for x in d["cant"])
     total = T[t]["total_usd"]
-    head = T[t]["headroom_usd"]
-    budget_line = (f"{money(total)} of a $500 cap: {money(head)} to spare" if t == "a" else
-                   f"{money(total)} of a $1,200 cap: {money(head)} to spare" if t == "b" else f"{money(total)}, no cap set")
+    mc = MC[t]
+    unpriced = len(T[t]["unpriced"])
+    budget_line = f"{money(total)} in new parts" + (f", plus {unpriced} small items not yet priced" if unpriced else "")
     return f"""
 <section class="tier" id="tier-{t}">
   <div class="wrap">
     <header class="tier-head">
       <span class="tier-letter">{d['tag']}</span>
       <div><p class="eyebrow">Tier {d['tag']} · {d['cap']}</p><h2>{d['name']}</h2><p class="lede">{d['who']}</p></div>
-      <div class="price-tag"><span class="price">{money(total)}</span><span class="price-note">{'new parts; your own flannel shirt' if t == 'a' else 'new parts'}</span></div>
+      <div class="price-tag"><span class="price">{money(total)}</span><span class="price-note">new parts{'; your own flannel shirt' if t == 'a' else ''}</span></div>
     </header>
     <div class="tier-grid">
       <figure class="hero-fig"><img src="{m(f'hero-{t}.jpg')}" alt="Tier {d['tag']} Joyful Jack, rendered" loading="lazy"></figure>
@@ -115,28 +176,30 @@ def tier_section(d):
         <h3>How he works</h3><p>{d['how']}</p>
         <h3>What he can do</h3><ul class="ticks">{can}</ul>
         <h3>What he can't</h3><ul class="crosses">{cant}</ul>
+        <p class="counts"><b>{mc['parts']}</b> parts · <b>{mc['fasteners']}</b> screws, nuts and inserts · <b>{mc['cables']}</b> cables · <b>{mc['printed_kg']:.1f} kg</b> of printed parts</p>
       </div>
+    </div>
+    <div class="pair">
+      <figure><img src="{m(f'arm-{t}.jpg')}" alt="Tier {d['tag']} arm, costume off" loading="lazy"><figcaption><b>The arm, every part modelled.</b> Belt-driven shoulder and elbow hubs on thin bearings, the servos, the screws that hold them, and the {'mitt' if t == 'a' else 'glove hand' if t == 'b' else 'AmazingHand'}.</figcaption></figure>
+      <figure><img src="{m(f'shoulder-{t}.jpg')}" alt="Tier {d['tag']} shoulder and balancer" loading="lazy"><figcaption><b>The shoulder.</b> Two extension springs on the torso pull a Dyneema cord over pulleys to a lever on the shoulder hub: a "zero-length spring" balancer that cancels most of the arm's weight at every angle.</figcaption></figure>
     </div>
     <div class="pair">
       <figure><img src="{m(f'hands-{t}.jpg')}" alt="Tier {d['tag']} hands" loading="lazy"><figcaption><b>The hands.</b> {d['hand']}</figcaption></figure>
-      <figure><img src="{m(f'internals-{t}.jpg')}" alt="Tier {d['tag']} with the costume off" loading="lazy"><figcaption><b>Costume off.</b> The frame on the pole, the battery {'pack' if t == 'a' else 'packs'} (red) behind the back hatch, and the electronics plate.</figcaption></figure>
+      <figure><img src="{m(f'internals-back-{t}.jpg')}" alt="Tier {d['tag']} from behind, costume off" loading="lazy"><figcaption><b>From behind.</b> The battery {'pack' if t == 'a' else 'packs'} (red) in {'its dock' if t == 'a' else 'their docks'}, the stop button, and the electronics board.</figcaption></figure>
     </div>
     <div class="pair">
-      <figure><img src="{m(f'exploded-{t}.jpg')}" alt="Tier {d['tag']} exploded view" loading="lazy"><figcaption><b>Every part, pulled apart.</b> Base and pole stay put; torso and costume lift; the arms move out; the head and hat rise above.</figcaption></figure>
+      <figure><img src="{m(f'exploded-{t}.jpg')}" alt="Tier {d['tag']} exploded view" loading="lazy"><figcaption><b>Every part, pulled apart.</b> Base and pole stay put, the torso lifts, the arms move out, the head rises, and every screw lifts out of its hole.</figcaption></figure>
       <div class="facts">
+        <h3>Proven in simulation</h3>
+        <p class="small">The whole robot in NVIDIA Isaac Sim with real masses from the 3D model, a 0.25 kg bag in the right hand, the shoulder springs on, and each motor limited so no belt is pulled past its rating.</p>
+        {sim_table(t)}
         <h3>Where the money goes</h3>
         <p class="budget">{budget_line}</p>
         <div class="bars">{cost_bars(t)}</div>
-        <h3>Strength check</h3>
-        <p class="small">Arm held straight out with a 0.25 kg bag: the hardest moment for the motors.</p>
-        <table class="mini"><tr><th></th><th class="num">Needed</th><th class="num">Motor can give (max)</th></tr>
-          <tr><td>Shoulder</td><td class="num">{sh['need_kgcm']:.0f} kg·cm</td><td class="num">{sh['stall_kgcm']:.0f} kg·cm</td></tr>
-          <tr><td>Elbow</td><td class="num">{el['need_kgcm']:.0f} kg·cm</td><td class="num">{el['stall_kgcm']:.0f} kg·cm</td></tr></table>
-        <p class="small">{'The shoulder spring supplies about ' + str(round(sh.get('spring_kgcm_needed', 0))) + ' kg·cm so the motor works well inside its limit.' if sh.get('spring_kgcm_needed') else ''}
-        {' The elbow is close to its limit with a load, so tier A keeps a loaded forearm near vertical.' if t == 'a' else ''}</p>
       </div>
     </div>
     <figure class="diagram"><img src="{m(f'diagram-{t}.jpg')}" alt="Tier {d['tag']} system in Protoboard" loading="lazy"><figcaption><b>The wiring, in Protoboard.</b> Every box is a real part with its voltages; Protoboard checked every connection: {('0 problems' if t != 'c' else '0 errors, 2 notes explained in the decision log')}.</figcaption></figure>
+    <div class="guide-row"><a class="guide" href="{m(f'joyful-jack-tier-{t}-build-guide.pdf')}">Build guide, tier {d['tag']} (PDF, {GUIDE_PAGES[t]} pages)</a><span class="small">Step-by-step assembly with every part, screw and torque, made by the Protoboard stack from the same model.</span></div>
     <details><summary>Full parts list for tier {d['tag']} ({len(T[t]['lines'])} lines)</summary>{bom_table(t)}</details>
   </div>
 </section>"""
@@ -150,10 +213,12 @@ def compare_table():
             ("Battery", [d["battery"] for d in TIERS]),
             ("Swap a battery while running", [d["swap"] for d in TIERS]),
             ("Runs the arms", [d["brains"] for d in TIERS]),
-            ("Arm weight (each)", [f"{A[d['key']]['arm_mass_kg']:.1f} kg" for d in TIERS])]
+            ("Parts / screws and fittings", [f"{MC[d['key']]['parts']} / {MC[d['key']]['fasteners']}" for d in TIERS]),
+            ("Build guide", [f"{GUIDE_PAGES[d['key']]} pages" for d in TIERS])]
     head = "".join(f"<th>Tier {d['tag']}<span>{d['name']}</span></th>" for d in TIERS)
     body = "".join(f"<tr><th scope='row'>{r}</th>" + "".join(f"<td>{v}</td>" for v in vals) + "</tr>" for r, vals in rows)
     return f"<div class='table-wrap'><table class='compare'><thead><tr><th></th>{head}</tr></thead><tbody>{body}</tbody></table></div>"
+
 
 
 CSS = """
@@ -237,6 +302,12 @@ summary{cursor:pointer; font-weight:600}
 .callout{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px 18px}
 .callout h3{margin-top:0}
 ol.steps{padding-left:20px; display:grid; gap:8px} ol.steps li{padding-left:4px}
+.counts{margin-top:16px; font-size:15px; color:var(--muted)} .counts b{color:var(--ink); font-variant-numeric:tabular-nums}
+.sim td{vertical-align:top} .sim .choice{font-size:12.5px; color:var(--muted)}
+.okc{color:var(--good); font-weight:700; white-space:nowrap} .noc{color:var(--bad); font-weight:700; white-space:nowrap}
+.guide-row{display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; margin-top:22px}
+a.guide{display:inline-block; background:var(--pumpkin); color:#fff; text-decoration:none; font-weight:700; padding:10px 16px; border-radius:6px}
+a.guide:hover{filter:brightness(1.08)}
 .foot{font-size:14px; color:var(--muted); padding-block:40px}
 code{font-family:var(--mono); font-size:.88em; background:var(--panel); border:1px solid var(--line); padding:1px 5px; border-radius:4px; overflow-wrap:anywhere}
 @media (max-width:820px){
@@ -255,7 +326,9 @@ def page():
       <div class="card-body"><p class="eyebrow">Tier {d['tag']} · {d['cap']}</p><h3>{d['name']}</h3><span class="price">{money(T[d['key']]['total_usd'])}</span>
       <p>{d['who']}</p><a class="more" href="#tier-{d['key']}">See tier {d['tag']} →</a></div></article>""" for d in TIERS)
     vid = lambda name, poster, label: f"""<figure><video controls muted playsinline preload="metadata" poster="{m(poster)}"><source src="{m(name)}" type="video/mp4"></video><figcaption>{label}</figcaption></figure>"""
-    ta, tb, tc = A["a"]["tip"], A["b"]["tip"], A["c"]["tip"]
+    tip_lo, tip_hi = min(v[0] for v in TIP.values()), max(v[0] for v in TIP.values())
+    sb_lo, sb_hi = min(v[1] for v in TIP.values()), max(v[1] for v in TIP.values())
+    nparts = MC["b"]["parts"] + MC["b"]["fasteners"]
     return f"""<title>Joyful Jack Design Report</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -263,16 +336,16 @@ def page():
 {CSS}
 <header class="mast">
   <div class="wrap">
-    <p class="meta">Delta Robotics · design report · 25 Oct 2026 · draft for Mark's review</p>
+    <p class="meta">Delta Robotics · design report, revision 2 · 25 Oct 2026 · draft for Mark's review</p>
     <h1>Joyful Jack</h1>
-    <p class="sub">A body and two moving arms for our animatronic pumpkin cowboy, designed three ways: a beginner build under $500, a midrange build up to $1,200, and a maxed-out build with real robot hands.</p>
+    <p class="sub">A body and two moving arms for our animatronic pumpkin cowboy, designed three ways, every screw modelled, each with a step-by-step build guide, and tested in a physics simulation before anything is bought.</p>
   </div>
-  <img src="{m('lineup-dark.jpg')}" alt="Tiers A, B and C side by side">
+  <img src="{m('lineup.jpg')}" alt="Tiers A, B and C side by side">
   <div class="wrap mast-strip">
     <div><b>{money(T['a']['total_usd'])}</b><span>Tier A, Beginner</span></div>
     <div><b>{money(T['b']['total_usd'])}</b><span>Tier B, Midrange</span></div>
     <div><b>{money(T['c']['total_usd'])}</b><span>Tier C, Maxed</span></div>
-    <div><b>~1.7 m</b><span>tall, hat included</span></div>
+    <div><b>{nparts}</b><span>parts and fasteners in tier B</span></div>
     <div><b>Milwaukee M18</b><span>battery packs</span></div>
   </div>
 </header>
@@ -294,7 +367,7 @@ def page():
   <p class="lede">All three share the same head, base, costume and battery system. They differ in the arms, the hands and how much they can sense.</p>
   <div class="cards">{cards}</div>
   {compare_table()}
-  <div class="rec"><b>Recommendation: build tier B.</b> It is the best value: motors that feel resistance make Jack safer around children, two batteries mean he never has to stop, and it comes in {money(T['b']['headroom_usd'])} under the $1,200 cap. Tier A is a good weekend build but runs at its limits. Tier C's hands are a crowd-pleaser and can be added to a tier B Jack later, since the arms share the same motors and wiring.</p>
+  <div class="rec"><b>Recommendation: build tier B.</b> It is still the best value: motors that feel resistance make Jack safer around children, and two batteries mean he never has to stop. Modelling every part raised all three prices: proper bearings, belts, shoulder springs and about 600 screws and inserts replace the rough first-pass joints, so tier B is now {money(T['b']['total_usd'])} against the old $1,200 cap and tier A {money(T['a']['total_usd'])} against $500. Tier C's hands can be added to a tier B Jack later, since the arms share the same frame, belts and wiring.</div>
 </div></section>
 
 <section id="shared"><div class="wrap">
@@ -310,7 +383,7 @@ def page():
       <p>A latching emergency stop on his back cuts power to every motor at once, while the computer stays on. In tiers B and C the button holds a heavy-duty relay, so it also stops the hands.</p>
     </div>
     <div>
-      <figure><img src="{m('lineup-light.jpg')}" alt="All three tiers at rest" loading="lazy"><figcaption><b>At rest.</b> Arms hang on their stops, so a power cut drops nothing.</figcaption></figure>
+      <figure><img src="{m('internals-b.jpg')}" alt="Tier B with the costume off" loading="lazy"><figcaption><b>Costume off (tier B).</b> The aluminium frame on the steel pole, the shoulder springs either side, and the electronics board. Arms hang on their stops, so a power cut drops nothing.</figcaption></figure>
     </div>
   </div>
   <div class="grid2">
@@ -325,8 +398,8 @@ def page():
     </div>
     <div class="callout">
       <h3>Keeping him upright</h3>
-      <p>With both arms out, a push of about {ta['push_to_tip_kgf']:.0f}–{tb['push_to_tip_kgf']:.0f} kg of force at shoulder height would tip him over. A teenager leaning on his shoulder could do that.</p>
-      <p><b>For events:</b> lay sandbags on the plywood disc under the costume, or tie the pole to a post. Two 25 lb bags add about a third more margin; four bring it to about 1.7 times.</p>
+      <p>In the simulation, a push at shoulder height with both arms out tips him at {tip_lo:.0f}–{tip_hi:.0f} N (about {tip_lo / 9.81:.0f}–{tip_hi / 9.81:.0f} kg of force). A teenager leaning on his shoulder could do that.</p>
+      <p><b>For events:</b> lay two 25 lb sandbags on the plywood disc under the costume: the simulation then needs {sb_lo:.0f}–{sb_hi:.0f} N, about a third more. Or tie the pole to a post.</p>
     </div>
   </div>
 </div></section>
@@ -336,8 +409,9 @@ def page():
 <section id="motion"><div class="wrap">
   <p class="eyebrow">See him move</p>
   <h2>Animations</h2>
-  <p class="lede">A walkthrough of the recommended build, then each tier taken apart and put back together.</p>
-  <div class="feature-video">{vid('walkthrough-b.mp4', 'hero-b.jpg', '<b>System walkthrough, tier B.</b> The wave, the costume coming off, the battery packs and electronics, the arm and glove hand, and the head. 36 seconds.')}</div>
+  <p class="lede">A walkthrough of the recommended build, the physics simulation of its wave, then each tier taken apart and put back together.</p>
+  <div class="feature-video">{vid('walkthrough-b.mp4', 'hero-b.jpg', '<b>System walkthrough, tier B.</b> The wave, the costume coming off, the battery packs and electronics, the shoulder springs, the arm and glove hand, and the head. 37 seconds.')}</div>
+  <div class="feature-video">{vid('sim-wave-b.mp4', 'hero-b.jpg', '<b>Isaac Sim, tier B wave.</b> The physics simulation: real masses, a 0.25 kg bag in the hand, motors with their real torque and speed limits, shoulder springs on. Every joint keeps up and no belt passes its rating.')}</div>
   <div class="videos">
     {vid('explode-a.mp4', 'exploded-a.jpg', '<b>Tier A</b> exploded view')}
     {vid('explode-b.mp4', 'exploded-b.jpg', '<b>Tier B</b> exploded view')}
@@ -355,6 +429,7 @@ def page():
         <li>Which tier to build. Recommended: B, with C's hands as a later upgrade.</li>
         <li>Sign the design brief (it sets what "done" means: runtime per pack, tip test, gesture list).</li>
         <li>What Jack should hold: we assumed a 0.25 kg candy bag.</li>
+        <li>Gestures: keep arms raised forward rather than straight out sideways (the simulation's one limit), or add a second spring at the shoulder-out joint.</li>
         <li>Indoor only, or outdoors too? Rain changes the electronics enclosure.</li>
         <li>Is the overall height (about 1.7 m with the hat) right?</li>
       </ol>
@@ -362,6 +437,7 @@ def page():
     <div>
       <h3>Bench tests before the first event</h3>
       <ol class="steps">
+        <li>Set each shoulder and elbow servo's torque limit (the simulation's belt limit) before the first power-up.</li>
         <li>Weigh the head (assumed 2 kg in the tip check).</li>
         <li>Measure average power with the arms moving, which sets the real runtime.</li>
         <li>Check the stop relay switches on reliably from a part-drained pack (tiers B and C).</li>
@@ -377,13 +453,13 @@ def page():
     </div>
     <div class="callout">
       <h3>How sure are these numbers?</h3>
-      <p>Prices were looked up on 24 Oct 2026, mostly from store listings, and will move. Tier A has only {money(T['a']['headroom_usd'])} to spare. The strength and tip numbers come from the 3D model's weights and published motor ratings. The hobby servos publish no continuous rating, so we assumed a third of their maximum. Nothing has been ordered.</p>
+      <p>Prices were looked up on 24 Oct 2026, mostly from store listings, and will move; quantities come straight from the 3D model, packs bought whole. A few items (some wire gauges, an M5 tap) are not priced yet. The simulation uses the model's weights and the makers' motor ratings; the hobby servos publish no continuous rating, so we assumed a third of their maximum. The belt rating is the belt maker's figure. The head's 2 kg is an assumption until weighed. Nothing has been ordered.</p>
     </div>
   </div>
 </div></section>
 
 <footer class="wrap foot">
-  <p>Built in the Protoboard stack: the head, body, arms and power systems of all three tiers are modelled and checked in <code>projects/internal/2026-10-24-joyful-jack/protoboard</code> (choose a tier with <code>JJ_TIER=a|b|c</code>). 3D models: <code>protoboard/cad/joyful_jack_cad.py</code>. Renders: Blender. Prices: <code>research/sourcing/20261024-bom-final.md</code>. Decisions and engineering checks: <code>protoboard/docs/decisions.md</code>.</p>
+  <p>Built in the Protoboard stack: the head, body, arms and power systems of all three tiers are modelled and checked in <code>projects/internal/2026-10-24-joyful-jack/protoboard</code> (choose a tier with <code>JJ_TIER=a|b|c</code>). Mechanical model, every part and fastener: <code>protoboard/cad/mech</code>. Build guides: <code>protoboard release</code> 0.2.0-a/b/c. Simulation: NVIDIA Isaac Sim 6.2, <code>protoboard/cad/mech/sim</code>, results in <code>protoboard/docs/sim-results.md</code>. Wiring cut lists: <code>protoboard/docs/wiring</code>. Renders: Blender. Prices: <code>research/sourcing/20261025-bom-v2.md</code>. Decisions: <code>protoboard/docs/decisions.md</code>.</p>
 </footer>
 """
 

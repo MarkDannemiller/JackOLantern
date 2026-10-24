@@ -1,0 +1,1707 @@
+[
+  {
+    "line": 1,
+    "partId": "wood-screw-4x0.5in",
+    "name": "#4 x 0.5 in flat head wood screw",
+    "quantity": 24,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_tray_or_1_on_board/wood_screw_4x0_5in",
+      "body/j_tray_or_2_on_board/wood_screw_4x0_5in",
+      "body/j_tray_monitor_on_board/wood_screw_4x0_5in",
+      "body/j_tray_lvc_on_board/wood_screw_4x0_5in",
+      "body/j_tray_fuses_on_board/wood_screw_4x0_5in",
+      "body/j_tray_relay_on_board/wood_screw_4x0_5in",
+      "body/j_tray_buck_head_on_board/wood_screw_4x0_5in",
+      "body/j_tray_buck_pi_on_board/wood_screw_4x0_5in",
+      "body/j_tray_buck_arm_r_on_board/wood_screw_4x0_5in",
+      "body/j_tray_buck_arm_l_on_board/wood_screw_4x0_5in",
+      "body/j_tray_arm_r__bus_adapter_on_board/wood_screw_4x0_5in",
+      "body/j_tray_arm_l__bus_adapter_on_board/wood_screw_4x0_5in"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 2,
+    "partId": "floor-flange-1in",
+    "name": "1 in floor flange, malleable iron (Anvil FIG 1190)",
+    "partNumber": "Anvil 0319900105 (FIG 1190, 1 in)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "body/flange_bottom",
+      "body/flange_top"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 3,
+    "partId": "pipe-nipple-1x30",
+    "name": "1 in x 30 in black steel pipe nipple (NPS, threaded both ends)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/mast"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 4,
+    "partId": "nylock-1-4-20",
+    "name": "1/4-20 nylon-insert lock nut, zinc",
+    "quantity": 8,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_bucket_on_skirt/nylock_1_4_20",
+      "body/j_plate_on_flange/nylock_1_4_20"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 5,
+    "partId": "hex-bolt-1-4-20x1in",
+    "name": "1/4-20 x 1 in hex bolt, zinc",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_plate_on_flange/hex_bolt_1_4_20x1in"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 6,
+    "partId": "hex-bolt-1-4-20x1.25in",
+    "name": "1/4-20 x 1.25 in hex bolt, zinc",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_bucket_on_skirt/hex_bolt_1_4_20x1_25in"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 7,
+    "partId": "dyneema-2mm-260",
+    "name": "2 mm Dyneema (UHMWPE) braided cord, 260 mm cut",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_cord",
+      "arm_l/j1_cord"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 8,
+    "partId": "hfs5-2020-100-rail-y",
+    "name": "2020 aluminium extrusion, 100 mm (rail-y), M5 tapped both ends",
+    "partNumber": "HFS5-2020-100-TPW",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "body/rail_y_top_r",
+      "body/rail_y_top_l",
+      "body/rail_y_bot_r",
+      "body/rail_y_bot_l"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 9,
+    "partId": "hfs5-2020-102-neck-post",
+    "name": "2020 aluminium extrusion, 102 mm (neck-post), M5 tapped both ends",
+    "partNumber": "HFS5-2020-102-TPW",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "body/neck_post_f",
+      "body/neck_post_b"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 10,
+    "partId": "hfs5-2020-180-rail-x",
+    "name": "2020 aluminium extrusion, 180 mm (rail-x), M5 tapped both ends",
+    "partNumber": "HFS5-2020-180-TPW",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "body/rail_x_top_f",
+      "body/rail_x_top_b",
+      "body/rail_x_bot_f",
+      "body/rail_x_bot_b"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 11,
+    "partId": "hfs5-2020-190-balancer-column",
+    "name": "2020 aluminium extrusion, 190 mm (balancer-column), M5 tapped both ends",
+    "partNumber": "HFS5-2020-190-TPW",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_column",
+      "arm_l/j1_column"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 12,
+    "partId": "hfs5-2020-340-upright",
+    "name": "2020 aluminium extrusion, 340 mm (upright), M5 tapped both ends",
+    "partNumber": "HFS5-2020-340-TPW",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "body/upright_rf",
+      "body/upright_rb",
+      "body/upright_lf",
+      "body/upright_lb"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 13,
+    "partId": "dowel-5x16",
+    "name": "5 mm x 16 mm hardened steel dowel pin (ISO 8734)",
+    "quantity": 6,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_dowel",
+      "arm_r/j2_dowel",
+      "arm_r/j4_dowel",
+      "arm_l/j1_dowel",
+      "arm_l/j2_dowel",
+      "arm_l/j4_dowel"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 14,
+    "partId": "iso7379-5x8",
+    "name": "5 mm x 8 mm shoulder screw (M4 thread), ISO 7379",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_spool_on_lever/iso7379_5x8",
+      "arm_l/j_arm_l_j1_spool_on_lever/iso7379_5x8"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 15,
+    "partId": "bucket-5gal",
+    "name": "5 US gal HDPE bucket (lid not used)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/bucket"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 16,
+    "partId": "fuse-block-6way",
+    "name": "6-way ATC fuse block with negative bus",
+    "manufacturer": "Sea-Dog",
+    "partNumber": "blade fuse block, 6-way",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "fuses"
+    ],
+    "source": "https://www.drsa.com/products/sea-dog-blade-style-led-indicator-fuse-block-w-negative-bus-bar-6-circuit-445185-1",
+    "assumptions": 0,
+    "openGaps": 1
+  },
+  {
+    "line": 17,
+    "partId": "bearing-624-2rs",
+    "name": "624-2RS ball bearing (4 x 13 x 5 mm)",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_sheave_a_bearing",
+      "arm_r/j1_sheave_b_bearing",
+      "arm_l/j1_sheave_a_bearing",
+      "arm_l/j1_sheave_b_bearing"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 18,
+    "partId": "bearing-625-2rs",
+    "name": "625-2RS ball bearing (5 x 16 x 5 mm)",
+    "quantity": 6,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_driver_bearing",
+      "arm_r/j2_driver_bearing",
+      "arm_r/j4_driver_bearing",
+      "arm_l/j1_driver_bearing",
+      "arm_l/j2_driver_bearing",
+      "arm_l/j4_driver_bearing"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 19,
+    "partId": "bearing-6806-2rs",
+    "name": "6806-2RS ball bearing (30 x 42 x 7 mm)",
+    "quantity": 20,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_bearing_1",
+      "arm_r/j1_bearing_2",
+      "arm_r/j2_bearing_1",
+      "arm_r/j2_bearing_2",
+      "arm_r/j3_bearing_up",
+      "arm_r/j3_bearing_lo",
+      "arm_r/j4_bearing_1",
+      "arm_r/j4_bearing_2",
+      "arm_r/j5_bearing_up",
+      "arm_r/j5_bearing_lo",
+      "arm_l/j1_bearing_1",
+      "arm_l/j1_bearing_2",
+      "arm_l/j2_bearing_1",
+      "arm_l/j2_bearing_2",
+      "arm_l/j3_bearing_up",
+      "arm_l/j3_bearing_lo",
+      "arm_l/j4_bearing_1",
+      "arm_l/j4_bearing_2",
+      "arm_l/j5_bearing_up",
+      "arm_l/j5_bearing_lo"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 20,
+    "partId": "adafruit-ina228",
+    "name": "Adafruit INA228 power monitor (0x44)",
+    "manufacturer": "Adafruit Industries",
+    "partNumber": "INA228 breakout",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "monitor"
+    ],
+    "source": "https://www.adafruit.com/product/5832",
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 21,
+    "partId": "jj-base-skirt",
+    "name": "Base skirt: 24 in round, 3/4 in birch plywood",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/skirt"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 22,
+    "partId": "jj-cap-48t",
+    "name": "Belt-joint bearing cap (48T housing)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j4_cap",
+      "arm_l/j4_cap"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 23,
+    "partId": "jj-cap-60t",
+    "name": "Belt-joint bearing cap (60T housing)",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_cap",
+      "arm_r/j2_cap",
+      "arm_l/j1_cap",
+      "arm_l/j2_cap"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 24,
+    "partId": "jj-hub-48t-gt3",
+    "name": "Belt-joint hub with 48T GT3 pulley (hollow, 14 mm bore)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j4_hub",
+      "arm_l/j4_hub"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 25,
+    "partId": "jj-hub-60t-gt3",
+    "name": "Belt-joint hub with 60T GT3 pulley (hollow, 14 mm bore)",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_hub",
+      "arm_r/j2_hub",
+      "arm_l/j1_hub",
+      "arm_l/j2_hub"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 26,
+    "partId": "jj-cable-sheave-22",
+    "name": "Cable sheave for a 624 bearing (printed)",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_sheave_a",
+      "arm_r/j1_sheave_b",
+      "arm_l/j1_sheave_a",
+      "arm_l/j1_sheave_b"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 27,
+    "partId": "brac-90cast-20",
+    "name": "Cast 90 deg corner bracket, 20 series (one M5 per leg)",
+    "partNumber": "BRAC-90CAST",
+    "quantity": 20,
+    "buy": "purchase",
+    "usedBy": [
+      "body/bracket_01",
+      "body/bracket_02",
+      "body/bracket_03",
+      "body/bracket_04",
+      "body/bracket_05",
+      "body/bracket_06",
+      "body/bracket_07",
+      "body/bracket_08",
+      "body/bracket_09",
+      "body/bracket_10",
+      "body/bracket_11",
+      "body/bracket_12",
+      "body/bracket_13",
+      "body/bracket_14",
+      "body/bracket_15",
+      "body/bracket_16",
+      "body/neck_post_f_bracket_0",
+      "body/neck_post_f_bracket_1",
+      "body/neck_post_b_bracket_0",
+      "body/neck_post_b_bracket_1"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 28,
+    "partId": "spring-century-90cs",
+    "name": "Century Spring 90CS extension spring (0.625 in OD, 6.4 lb/in, 27 lbf max)",
+    "partNumber": "90CS",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_spring_0",
+      "arm_r/j1_spring_1",
+      "arm_l/j1_spring_0",
+      "arm_l/j1_spring_1"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 29,
+    "partId": "concrete-fill",
+    "name": "Concrete fill, about 2 x 50 lb bags of quick-setting concrete",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/concrete"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 30,
+    "partId": "jj-pulley-16t-gt3-horn",
+    "name": "Driver pulley, 16T GT3, on the STS horn",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j4_driver",
+      "arm_l/j4_driver"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 31,
+    "partId": "jj-pulley-20t-gt3-horn",
+    "name": "Driver pulley, 20T GT3, on the STS horn",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_driver",
+      "arm_r/j2_driver",
+      "arm_l/j1_driver",
+      "arm_l/j2_driver"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 32,
+    "partId": "drok-300w-buck",
+    "name": "DROK 300 W adjustable buck (10 A)",
+    "manufacturer": "DROK",
+    "partNumber": "300W CC/CV buck",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "buck_head"
+    ],
+    "source": "https://www.droking.com/dc-buck/300W-Power-Supply-Module-DC-3.5-30V-to-0.8-29V-10A-Buck-Converter-Adjustable-Voltage-Regulator-Adapter-Driver-Module-Voltmeter",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 33,
+    "partId": "dsservo-ds3225mg-270",
+    "name": "DSSERVO DS3225MG 25 kg digital servo (270°)",
+    "manufacturer": "Dongguan City Dsservo Technology Co., Ltd (DSSERVO)",
+    "partNumber": "DS3225MG (270°)",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "head/jaw_l",
+      "head/jaw_r",
+      "head/neck/pitch_l",
+      "head/neck/pitch_r"
+    ],
+    "source": "https://www.dsservo.com/down.asp?id=24",
+    "assumptions": 3,
+    "openGaps": 2
+  },
+  {
+    "line": 34,
+    "partId": "jj-estop-bracket-bc",
+    "name": "E-stop bracket (on the back of the shoulders)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/estop_bracket"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 35,
+    "partId": "ekylin-12v-20a-buck",
+    "name": "EKYLIN 12 V 20 A buck",
+    "manufacturer": "EKYLIN",
+    "partNumber": "24V to 12V 20A 240W",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "buck_arm_r",
+      "buck_arm_l"
+    ],
+    "source": "https://www.amazon.com/dp/B01JAIC9EM",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 36,
+    "partId": "jj-arm-elbow-housing",
+    "name": "Elbow housing (J4 drum and servo)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/elbow_housing",
+      "arm_l/elbow_housing"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 37,
+    "partId": "jj-electronics-board-b",
+    "name": "Electronics board, tier B: 6 mm birch plywood 180 x 290",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/ebd"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 38,
+    "partId": "estop-22mm-nc",
+    "name": "Emergency stop, 22 mm, latching, NC",
+    "manufacturer": "Generic",
+    "partNumber": "22 mm NC mushroom E-stop",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "estop"
+    ],
+    "source": "https://www.fridayparts.com/22mm-nc-n-c-red-mushroom-emergency-stop-push-button-switch-600v-10a-zb2-be102c-xb2-bs142",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 39,
+    "partId": "feetech-sts3215-c047",
+    "name": "Feetech STS3215 12 V serial bus servo",
+    "manufacturer": "Feetech",
+    "partNumber": "ST3215-C047",
+    "quantity": 14,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/shoulder_flex",
+      "arm_r/shoulder_out",
+      "arm_r/upper_twist",
+      "arm_r/elbow",
+      "arm_r/wrist_twist",
+      "arm_r/fingers",
+      "arm_r/thumb",
+      "arm_l/shoulder_flex",
+      "arm_l/shoulder_out",
+      "arm_l/upper_twist",
+      "arm_l/elbow",
+      "arm_l/wrist_twist",
+      "arm_l/fingers",
+      "arm_l/thumb"
+    ],
+    "source": "https://www.waveshare.com/wiki/ST3215_Servo",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 40,
+    "partId": "jj-arm-fore-body",
+    "name": "Forearm body (J5 servo and twist bearings)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/fore",
+      "arm_l/fore"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 41,
+    "partId": "jj-arm-fore-fork-in",
+    "name": "Forearm fork plate (inboard)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/fork_in",
+      "arm_l/fork_in"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 42,
+    "partId": "jj-arm-fore-fork-out",
+    "name": "Forearm fork plate (outboard)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/fork_out",
+      "arm_l/fork_out"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 43,
+    "partId": "jj-hand-b-fingers",
+    "name": "Glove fingers (four, on one servo)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/hand__fingers"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 44,
+    "partId": "jj-hand-b-fingers-l",
+    "name": "Glove fingers (four, on one servo) (left)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_l/hand__fingers"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 45,
+    "partId": "jj-hand-b-palm",
+    "name": "Glove hand palm",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/hand__palm"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 46,
+    "partId": "jj-hand-b-palm-l",
+    "name": "Glove hand palm (left)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_l/hand__palm"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 47,
+    "partId": "jj-hand-b-thumb",
+    "name": "Glove thumb",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/hand__thumb"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 48,
+    "partId": "jj-hand-b-thumb-l",
+    "name": "Glove thumb (left)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_l/hand__thumb"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 49,
+    "partId": "gt3-belt-210-9mm",
+    "name": "GT3 (3 mm pitch) closed belt, 210 mm (70 teeth), 9 mm wide",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j4_belt",
+      "arm_l/j4_belt"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 50,
+    "partId": "gt3-belt-240-9mm",
+    "name": "GT3 (3 mm pitch) closed belt, 240 mm (80 teeth), 9 mm wide",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_belt",
+      "arm_r/j2_belt",
+      "arm_l/j1_belt",
+      "arm_l/j2_belt"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 51,
+    "partId": "ideal-diode-40a",
+    "name": "Ideal-diode module, 40 A",
+    "manufacturer": "DIY-Module",
+    "partNumber": "40A-60A ideal diode module",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "or_1",
+      "or_2"
+    ],
+    "source": "https://www.amazon.com/dp/B0DDBYNDX5",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 52,
+    "partId": "jj-arm-j1-bal-spool",
+    "name": "J1 balancer cord spool (on a shoulder screw)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_spool",
+      "arm_l/j1_spool"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 53,
+    "partId": "jj-arm-j1-bal-equalizer",
+    "name": "J1 balancer equaliser (cord to two springs)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_equalizer",
+      "arm_l/j1_equalizer"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 54,
+    "partId": "jj-arm-j1-bal-lever",
+    "name": "J1 balancer lever (on hub face B)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_lever",
+      "arm_l/j1_lever"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 55,
+    "partId": "jj-arm-j1-bal-post",
+    "name": "J1 balancer post (on the shoulder housing's foot)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_post",
+      "arm_l/j1_post"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 56,
+    "partId": "jj-arm-j1-bal-anchor",
+    "name": "J1 balancer spring anchor (on the column)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_anchor",
+      "arm_l/j1_anchor"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 57,
+    "partId": "jj-arm-j1-housing",
+    "name": "J1 shoulder housing (on the torso)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j1_housing",
+      "arm_l/j1_housing"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 58,
+    "partId": "m18-power-wheel-adapter",
+    "name": "M18 battery adapter (switch, 30 A fuse, 12 AWG)",
+    "manufacturer": "Generic",
+    "partNumber": "Power Wheel Adapter for Milwaukee M18",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "dock_1",
+      "dock_2"
+    ],
+    "source": "https://www.amazon.com/dp/B0BVG1HTM2",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 59,
+    "partId": "heatset-insert-m3",
+    "name": "M3 brass heat-set insert (4.6 mm OD x 5.7 mm)",
+    "quantity": 108,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_cap_on_drum/heatset_insert_m3",
+      "arm_r/j_arm_r_j1_lever_on_hub/heatset_insert_m3",
+      "arm_r/j_arm_r_yoke_on_j1_hub/heatset_insert_m3",
+      "arm_r/j_arm_r_j2_cap_on_drum/heatset_insert_m3",
+      "arm_r/j_arm_r_yoke_fork_face_a/heatset_insert_m3",
+      "arm_r/j_arm_r_yoke_fork_face_b/heatset_insert_m3",
+      "arm_r/j_arm_r_j3_hub_to_disc/heatset_insert_m3",
+      "arm_r/j_arm_r_j4_cap_on_drum/heatset_insert_m3",
+      "arm_r/j_arm_r_elbow_on_j3_hub/heatset_insert_m3",
+      "arm_r/j_arm_r_fork_in_on_j4/heatset_insert_m3",
+      "arm_r/j_arm_r_fork_out_on_j4/heatset_insert_m3",
+      "arm_r/j_arm_r_j5_hub_to_disc/heatset_insert_m3",
+      "arm_r/j_arm_r_fork_in_to_body/heatset_insert_m3",
+      "arm_r/j_arm_r_fork_out_to_body/heatset_insert_m3",
+      "arm_r/j_arm_r_hand_palm_on_wrist/heatset_insert_m3",
+      "arm_l/j_arm_l_j1_cap_on_drum/heatset_insert_m3",
+      "arm_l/j_arm_l_j1_lever_on_hub/heatset_insert_m3",
+      "arm_l/j_arm_l_yoke_on_j1_hub/heatset_insert_m3",
+      "arm_l/j_arm_l_j2_cap_on_drum/heatset_insert_m3",
+      "arm_l/j_arm_l_yoke_fork_face_a/heatset_insert_m3",
+      "arm_l/j_arm_l_yoke_fork_face_b/heatset_insert_m3",
+      "arm_l/j_arm_l_j3_hub_to_disc/heatset_insert_m3",
+      "arm_l/j_arm_l_j4_cap_on_drum/heatset_insert_m3",
+      "arm_l/j_arm_l_elbow_on_j3_hub/heatset_insert_m3",
+      "arm_l/j_arm_l_fork_in_on_j4/heatset_insert_m3",
+      "arm_l/j_arm_l_fork_out_on_j4/heatset_insert_m3",
+      "arm_l/j_arm_l_j5_hub_to_disc/heatset_insert_m3",
+      "arm_l/j_arm_l_fork_in_to_body/heatset_insert_m3",
+      "arm_l/j_arm_l_fork_out_to_body/heatset_insert_m3",
+      "arm_l/j_arm_l_hand_palm_on_wrist/heatset_insert_m3"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 60,
+    "partId": "iso4762-m3x12",
+    "name": "M3 x 12 socket head cap screw, ISO 4762",
+    "quantity": 64,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_lever_on_hub/iso4762_m3x12",
+      "arm_r/j_arm_r_yoke_on_j1_hub/iso4762_m3x12",
+      "arm_r/j_arm_r_yoke_fork_face_a/iso4762_m3x12",
+      "arm_r/j_arm_r_yoke_fork_face_b/iso4762_m3x12",
+      "arm_r/j_arm_r_fork_in_on_j4/iso4762_m3x12",
+      "arm_r/j_arm_r_fork_out_on_j4/iso4762_m3x12",
+      "arm_r/j_arm_r_fork_in_to_body/iso4762_m3x12",
+      "arm_r/j_arm_r_fork_out_to_body/iso4762_m3x12",
+      "arm_r/j_arm_r_hand_palm_on_wrist/iso4762_m3x12",
+      "arm_l/j_arm_l_j1_lever_on_hub/iso4762_m3x12",
+      "arm_l/j_arm_l_yoke_on_j1_hub/iso4762_m3x12",
+      "arm_l/j_arm_l_yoke_fork_face_a/iso4762_m3x12",
+      "arm_l/j_arm_l_yoke_fork_face_b/iso4762_m3x12",
+      "arm_l/j_arm_l_fork_in_on_j4/iso4762_m3x12",
+      "arm_l/j_arm_l_fork_out_on_j4/iso4762_m3x12",
+      "arm_l/j_arm_l_fork_in_to_body/iso4762_m3x12",
+      "arm_l/j_arm_l_fork_out_to_body/iso4762_m3x12",
+      "arm_l/j_arm_l_hand_palm_on_wrist/iso4762_m3x12"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 61,
+    "partId": "iso4762-m3x14",
+    "name": "M3 x 14 socket head cap screw, ISO 4762",
+    "quantity": 56,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_driver_on_horn/iso4762_m3x14",
+      "arm_r/j_arm_r_j1_cap_on_drum/iso4762_m3x14",
+      "arm_r/j_arm_r_j2_driver_on_horn/iso4762_m3x14",
+      "arm_r/j_arm_r_j2_cap_on_drum/iso4762_m3x14",
+      "arm_r/j_arm_r_j4_driver_on_horn/iso4762_m3x14",
+      "arm_r/j_arm_r_j4_cap_on_drum/iso4762_m3x14",
+      "arm_r/j_arm_r_elbow_on_j3_hub/iso4762_m3x14",
+      "arm_l/j_arm_l_j1_driver_on_horn/iso4762_m3x14",
+      "arm_l/j_arm_l_j1_cap_on_drum/iso4762_m3x14",
+      "arm_l/j_arm_l_j2_driver_on_horn/iso4762_m3x14",
+      "arm_l/j_arm_l_j2_cap_on_drum/iso4762_m3x14",
+      "arm_l/j_arm_l_j4_driver_on_horn/iso4762_m3x14",
+      "arm_l/j_arm_l_j4_cap_on_drum/iso4762_m3x14",
+      "arm_l/j_arm_l_elbow_on_j3_hub/iso4762_m3x14"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 62,
+    "partId": "iso4762-m3x30",
+    "name": "M3 x 30 socket head cap screw, ISO 4762",
+    "quantity": 12,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j3_hub_to_disc/iso4762_m3x30",
+      "arm_r/j_arm_r_j5_hub_to_disc/iso4762_m3x30",
+      "arm_l/j_arm_l_j3_hub_to_disc/iso4762_m3x30",
+      "arm_l/j_arm_l_j5_hub_to_disc/iso4762_m3x30"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 63,
+    "partId": "iso4762-m3x6",
+    "name": "M3 x 6 socket head cap screw, ISO 4762",
+    "quantity": 16,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j3_disc_on_horn/iso4762_m3x6",
+      "arm_r/j_arm_r_j5_disc_on_horn/iso4762_m3x6",
+      "arm_l/j_arm_l_j3_disc_on_horn/iso4762_m3x6",
+      "arm_l/j_arm_l_j5_disc_on_horn/iso4762_m3x6"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 64,
+    "partId": "iso4762-m3x8",
+    "name": "M3 x 8 socket head cap screw, ISO 4762",
+    "quantity": 32,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_hand_fingers_on_horn/iso4762_m3x8",
+      "arm_r/j_arm_r_hand_fingers_on_rear_horn/iso4762_m3x8",
+      "arm_r/j_arm_r_hand_thumb_on_horn/iso4762_m3x8",
+      "arm_r/j_arm_r_hand_thumb_on_rear_horn/iso4762_m3x8",
+      "arm_l/j_arm_l_hand_fingers_on_horn/iso4762_m3x8",
+      "arm_l/j_arm_l_hand_fingers_on_rear_horn/iso4762_m3x8",
+      "arm_l/j_arm_l_hand_thumb_on_horn/iso4762_m3x8",
+      "arm_l/j_arm_l_hand_thumb_on_rear_horn/iso4762_m3x8"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 65,
+    "partId": "heatset-insert-m4",
+    "name": "M4 brass heat-set insert (6.3 mm OD x 8.1 mm)",
+    "quantity": 14,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_spool_on_lever/heatset_insert_m4",
+      "arm_r/j_arm_r_j1_post_on_foot/heatset_insert_m4",
+      "arm_r/j_arm_r_j1_sheave_a_axle/heatset_insert_m4",
+      "arm_r/j_arm_r_j1_sheave_b_axle/heatset_insert_m4",
+      "arm_r/j_arm_r_j1_spring_0_on_pin/heatset_insert_m4",
+      "arm_r/j_arm_r_j1_spring_1_on_pin/heatset_insert_m4",
+      "arm_l/j_arm_l_j1_spool_on_lever/heatset_insert_m4",
+      "arm_l/j_arm_l_j1_post_on_foot/heatset_insert_m4",
+      "arm_l/j_arm_l_j1_sheave_a_axle/heatset_insert_m4",
+      "arm_l/j_arm_l_j1_sheave_b_axle/heatset_insert_m4",
+      "arm_l/j_arm_l_j1_spring_0_on_pin/heatset_insert_m4",
+      "arm_l/j_arm_l_j1_spring_1_on_pin/heatset_insert_m4"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 66,
+    "partId": "iso7089-m4",
+    "name": "M4 flat washer, ISO 7089",
+    "quantity": 16,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_sheave_a_axle/iso7089_m4",
+      "arm_r/j_arm_r_j1_sheave_b_axle/iso7089_m4",
+      "arm_l/j_arm_l_j1_sheave_a_axle/iso7089_m4",
+      "arm_l/j_arm_l_j1_sheave_b_axle/iso7089_m4",
+      "j_dock_1_on_base/iso7089_m4",
+      "j_dock_2_on_base/iso7089_m4"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 67,
+    "partId": "iso10511-m4",
+    "name": "M4 nyloc hex nut, ISO 10511",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "j_dock_1_on_base/iso10511_m4",
+      "j_dock_2_on_base/iso10511_m4"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 68,
+    "partId": "iso4762-m4x12",
+    "name": "M4 x 12 socket head cap screw, ISO 4762",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_post_on_foot/iso4762_m4x12",
+      "arm_l/j_arm_l_j1_post_on_foot/iso4762_m4x12"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 69,
+    "partId": "iso4762-m4x16",
+    "name": "M4 x 16 socket head cap screw, ISO 4762",
+    "quantity": 8,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_sheave_a_axle/iso4762_m4x16",
+      "arm_r/j_arm_r_j1_sheave_b_axle/iso4762_m4x16",
+      "arm_r/j_arm_r_j1_spring_0_on_pin/iso4762_m4x16",
+      "arm_r/j_arm_r_j1_spring_1_on_pin/iso4762_m4x16",
+      "arm_l/j_arm_l_j1_sheave_a_axle/iso4762_m4x16",
+      "arm_l/j_arm_l_j1_sheave_b_axle/iso4762_m4x16",
+      "arm_l/j_arm_l_j1_spring_0_on_pin/iso4762_m4x16",
+      "arm_l/j_arm_l_j1_spring_1_on_pin/iso4762_m4x16"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 70,
+    "partId": "iso4762-m4x20",
+    "name": "M4 x 20 socket head cap screw, ISO 4762",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "j_dock_1_on_base/iso4762_m4x20",
+      "j_dock_2_on_base/iso4762_m4x20"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 71,
+    "partId": "iso7089-m5",
+    "name": "M5 flat washer, ISO 7089",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "j_head_on_neck_plate/iso7089_m5"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 72,
+    "partId": "iso10511-m5",
+    "name": "M5 nyloc hex nut, ISO 10511",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "j_head_on_neck_plate/iso10511_m5"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 73,
+    "partId": "tnut-2020-m5",
+    "name": "M5 roll-in T-nut for 2020 extrusion",
+    "quantity": 49,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_bracket_01_on_rail/tnut_2020_m5",
+      "body/j_bracket_01_on_upright/tnut_2020_m5",
+      "body/j_bracket_02_on_rail/tnut_2020_m5",
+      "body/j_bracket_02_on_upright/tnut_2020_m5",
+      "body/j_bracket_03_on_rail/tnut_2020_m5",
+      "body/j_bracket_03_on_upright/tnut_2020_m5",
+      "body/j_bracket_04_on_rail/tnut_2020_m5",
+      "body/j_bracket_04_on_upright/tnut_2020_m5",
+      "body/j_bracket_05_on_rail/tnut_2020_m5",
+      "body/j_bracket_05_on_upright/tnut_2020_m5",
+      "body/j_bracket_06_on_rail/tnut_2020_m5",
+      "body/j_bracket_06_on_upright/tnut_2020_m5",
+      "body/j_bracket_07_on_rail/tnut_2020_m5",
+      "body/j_bracket_07_on_upright/tnut_2020_m5",
+      "body/j_bracket_08_on_rail/tnut_2020_m5",
+      "body/j_bracket_08_on_upright/tnut_2020_m5",
+      "body/j_bracket_09_on_rail/tnut_2020_m5",
+      "body/j_bracket_09_on_upright/tnut_2020_m5",
+      "body/j_bracket_10_on_rail/tnut_2020_m5",
+      "body/j_bracket_10_on_upright/tnut_2020_m5",
+      "body/j_bracket_11_on_rail/tnut_2020_m5",
+      "body/j_bracket_11_on_upright/tnut_2020_m5",
+      "body/j_bracket_12_on_rail/tnut_2020_m5",
+      "body/j_bracket_12_on_upright/tnut_2020_m5",
+      "body/j_bracket_13_on_rail/tnut_2020_m5",
+      "body/j_bracket_13_on_upright/tnut_2020_m5",
+      "body/j_bracket_14_on_rail/tnut_2020_m5",
+      "body/j_bracket_14_on_upright/tnut_2020_m5",
+      "body/j_bracket_15_on_rail/tnut_2020_m5",
+      "body/j_bracket_15_on_upright/tnut_2020_m5",
+      "body/j_bracket_16_on_rail/tnut_2020_m5",
+      "body/j_bracket_16_on_upright/tnut_2020_m5",
+      "body/j_neck_post_f_bracket_0_on_rail/tnut_2020_m5",
+      "body/j_neck_post_f_bracket_0_on_post/tnut_2020_m5",
+      "body/j_neck_post_f_bracket_1_on_rail/tnut_2020_m5",
+      "body/j_neck_post_f_bracket_1_on_post/tnut_2020_m5",
+      "body/j_neck_post_b_bracket_0_on_rail/tnut_2020_m5",
+      "body/j_neck_post_b_bracket_0_on_post/tnut_2020_m5",
+      "body/j_neck_post_b_bracket_1_on_rail/tnut_2020_m5",
+      "body/j_neck_post_b_bracket_1_on_post/tnut_2020_m5",
+      "body/j_ebd_tab_0/tnut_2020_m5",
+      "body/j_ebd_tab_1/tnut_2020_m5",
+      "body/j_ebd_tab_2/tnut_2020_m5",
+      "body/j_ebd_tab_3/tnut_2020_m5",
+      "body/j_estop_bracket_on_rail/tnut_2020_m5",
+      "j_arm_r_foot/tnut_2020_m5",
+      "j_arm_l_foot/tnut_2020_m5"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 74,
+    "partId": "iso4762-m5x10",
+    "name": "M5 x 10 socket head cap screw, ISO 4762",
+    "quantity": 41,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_bracket_01_on_rail/iso4762_m5x10",
+      "body/j_bracket_01_on_upright/iso4762_m5x10",
+      "body/j_bracket_02_on_rail/iso4762_m5x10",
+      "body/j_bracket_02_on_upright/iso4762_m5x10",
+      "body/j_bracket_03_on_rail/iso4762_m5x10",
+      "body/j_bracket_03_on_upright/iso4762_m5x10",
+      "body/j_bracket_04_on_rail/iso4762_m5x10",
+      "body/j_bracket_04_on_upright/iso4762_m5x10",
+      "body/j_bracket_05_on_rail/iso4762_m5x10",
+      "body/j_bracket_05_on_upright/iso4762_m5x10",
+      "body/j_bracket_06_on_rail/iso4762_m5x10",
+      "body/j_bracket_06_on_upright/iso4762_m5x10",
+      "body/j_bracket_07_on_rail/iso4762_m5x10",
+      "body/j_bracket_07_on_upright/iso4762_m5x10",
+      "body/j_bracket_08_on_rail/iso4762_m5x10",
+      "body/j_bracket_08_on_upright/iso4762_m5x10",
+      "body/j_bracket_09_on_rail/iso4762_m5x10",
+      "body/j_bracket_09_on_upright/iso4762_m5x10",
+      "body/j_bracket_10_on_rail/iso4762_m5x10",
+      "body/j_bracket_10_on_upright/iso4762_m5x10",
+      "body/j_bracket_11_on_rail/iso4762_m5x10",
+      "body/j_bracket_11_on_upright/iso4762_m5x10",
+      "body/j_bracket_12_on_rail/iso4762_m5x10",
+      "body/j_bracket_12_on_upright/iso4762_m5x10",
+      "body/j_bracket_13_on_rail/iso4762_m5x10",
+      "body/j_bracket_13_on_upright/iso4762_m5x10",
+      "body/j_bracket_14_on_rail/iso4762_m5x10",
+      "body/j_bracket_14_on_upright/iso4762_m5x10",
+      "body/j_bracket_15_on_rail/iso4762_m5x10",
+      "body/j_bracket_15_on_upright/iso4762_m5x10",
+      "body/j_bracket_16_on_rail/iso4762_m5x10",
+      "body/j_bracket_16_on_upright/iso4762_m5x10",
+      "body/j_neck_post_f_bracket_0_on_rail/iso4762_m5x10",
+      "body/j_neck_post_f_bracket_0_on_post/iso4762_m5x10",
+      "body/j_neck_post_f_bracket_1_on_rail/iso4762_m5x10",
+      "body/j_neck_post_f_bracket_1_on_post/iso4762_m5x10",
+      "body/j_neck_post_b_bracket_0_on_rail/iso4762_m5x10",
+      "body/j_neck_post_b_bracket_0_on_post/iso4762_m5x10",
+      "body/j_neck_post_b_bracket_1_on_rail/iso4762_m5x10",
+      "body/j_neck_post_b_bracket_1_on_post/iso4762_m5x10",
+      "body/j_estop_bracket_on_rail/iso4762_m5x10"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 75,
+    "partId": "iso4762-m5x12",
+    "name": "M5 x 12 socket head cap screw, ISO 4762",
+    "quantity": 18,
+    "buy": "purchase",
+    "usedBy": [
+      "body/j_upright_rf_on_plate/iso4762_m5x12",
+      "body/j_upright_rb_on_plate/iso4762_m5x12",
+      "body/j_upright_lf_on_plate/iso4762_m5x12",
+      "body/j_upright_lb_on_plate/iso4762_m5x12",
+      "body/j_neck_plate_on_neck_post_f/iso4762_m5x12",
+      "body/j_neck_plate_on_neck_post_b/iso4762_m5x12",
+      "body/j_ebd_tab_0/iso4762_m5x12",
+      "body/j_ebd_tab_1/iso4762_m5x12",
+      "body/j_ebd_tab_2/iso4762_m5x12",
+      "body/j_ebd_tab_3/iso4762_m5x12",
+      "arm_r/j_arm_r_j1_column_on_foot/iso4762_m5x12",
+      "arm_r/j_arm_r_j1_anchor_on_column/iso4762_m5x12",
+      "arm_l/j_arm_l_j1_column_on_foot/iso4762_m5x12",
+      "arm_l/j_arm_l_j1_anchor_on_column/iso4762_m5x12",
+      "j_arm_r_foot/iso4762_m5x12",
+      "j_arm_l_foot/iso4762_m5x12"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 76,
+    "partId": "iso4762-m5x20",
+    "name": "M5 x 20 socket head cap screw, ISO 4762",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "j_head_on_neck_plate/iso4762_m5x20"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 77,
+    "partId": "milwaukee-m18-pack",
+    "name": "Milwaukee M18 REDLITHIUM pack (owned)",
+    "manufacturer": "Milwaukee Tool",
+    "partNumber": "48-11-1812 (HD12.0) / 48-11-1880 (XC8.0)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "pack_1",
+      "pack_2"
+    ],
+    "source": "https://www.customtruck.com/tools/tools/power-equipment-battery/milwaukee-m18-red-lithium-battery-high-output-hd-12.0/48-11-1812",
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 78,
+    "partId": "jj-neck-plate",
+    "name": "Neck plate, 6 mm 6061 aluminium",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/neck_plate"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 79,
+    "partId": "yaw-home-switch",
+    "name": "Neck yaw home switch (model TBD)",
+    "manufacturer": "TBD",
+    "partNumber": "TBD",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "head/neck/yaw_home"
+    ],
+    "source": "",
+    "assumptions": 0,
+    "openGaps": 1
+  },
+  {
+    "line": 80,
+    "partId": "nema17-pancake-stepper",
+    "name": "NEMA 17 pancake stepper (model TBD)",
+    "manufacturer": "TBD",
+    "partNumber": "NEMA 17 pancake (model TBD)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "head/neck/yaw_motor"
+    ],
+    "source": "",
+    "assumptions": 1,
+    "openGaps": 1
+  },
+  {
+    "line": 81,
+    "partId": "ov5647-ir-cut-camera",
+    "name": "OV5647 IR-cut camera module",
+    "manufacturer": "TBD",
+    "partNumber": "OV5647 IR-cut (vendor TBD)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "head/camera"
+    ],
+    "source": "https://www.raspberrypi.com/documentation/accessories/camera.html",
+    "assumptions": 0,
+    "openGaps": 1
+  },
+  {
+    "line": 82,
+    "partId": "pa2x6",
+    "name": "PA2.0 x 6 pan head self-tapping screw (for plastic)",
+    "quantity": 32,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_hand_fingers_servo_case_top/pa2x6",
+      "arm_r/j_arm_r_hand_fingers_servo_case_bottom/pa2x6",
+      "arm_r/j_arm_r_hand_thumb_servo_case_top/pa2x6",
+      "arm_r/j_arm_r_hand_thumb_servo_case_bottom/pa2x6",
+      "arm_l/j_arm_l_hand_fingers_servo_case_top/pa2x6",
+      "arm_l/j_arm_l_hand_fingers_servo_case_bottom/pa2x6",
+      "arm_l/j_arm_l_hand_thumb_servo_case_top/pa2x6",
+      "arm_l/j_arm_l_hand_thumb_servo_case_bottom/pa2x6"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 83,
+    "partId": "pa2x8",
+    "name": "PA2.0 x 8 pan head self-tapping screw (for plastic)",
+    "quantity": 80,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j_arm_r_j1_servo_case_top/pa2x8",
+      "arm_r/j_arm_r_j1_servo_case_bottom/pa2x8",
+      "arm_r/j_arm_r_j2_servo_case_top/pa2x8",
+      "arm_r/j_arm_r_j2_servo_case_bottom/pa2x8",
+      "arm_r/j_arm_r_j3_servo_case_top/pa2x8",
+      "arm_r/j_arm_r_j3_servo_case_bottom/pa2x8",
+      "arm_r/j_arm_r_j4_servo_case_top/pa2x8",
+      "arm_r/j_arm_r_j4_servo_case_bottom/pa2x8",
+      "arm_r/j_arm_r_j5_servo_case_top/pa2x8",
+      "arm_r/j_arm_r_j5_servo_case_bottom/pa2x8",
+      "arm_l/j_arm_l_j1_servo_case_top/pa2x8",
+      "arm_l/j_arm_l_j1_servo_case_bottom/pa2x8",
+      "arm_l/j_arm_l_j2_servo_case_top/pa2x8",
+      "arm_l/j_arm_l_j2_servo_case_bottom/pa2x8",
+      "arm_l/j_arm_l_j3_servo_case_top/pa2x8",
+      "arm_l/j_arm_l_j3_servo_case_bottom/pa2x8",
+      "arm_l/j_arm_l_j4_servo_case_top/pa2x8",
+      "arm_l/j_arm_l_j4_servo_case_bottom/pa2x8",
+      "arm_l/j_arm_l_j5_servo_case_top/pa2x8",
+      "arm_l/j_arm_l_j5_servo_case_bottom/pa2x8"
+    ],
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 84,
+    "partId": "pca9685-16ch-servo-driver",
+    "name": "PCA9685 16-channel servo driver breakout (0x40)",
+    "manufacturer": "TBD (Adafruit 815 assumed)",
+    "partNumber": "PCA9685 breakout",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "head/servo_driver"
+    ],
+    "source": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "assumptions": 3,
+    "openGaps": 0
+  },
+  {
+    "line": 85,
+    "partId": "pololu-d24v50f5",
+    "name": "Pololu D24V50F5 5 V 5 A buck",
+    "manufacturer": "Pololu",
+    "partNumber": "D24V50F5 (#2851)",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "buck_pi"
+    ],
+    "source": "https://www.pololu.com/product/2851",
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 86,
+    "partId": "raspberry-pi-4-model-b",
+    "name": "Raspberry Pi 4 Model B",
+    "manufacturer": "Raspberry Pi Ltd",
+    "partNumber": "Raspberry Pi 4 Model B",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "head/computer"
+    ],
+    "source": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf",
+    "assumptions": 0,
+    "openGaps": 2
+  },
+  {
+    "line": 87,
+    "partId": "jj-arm-yoke",
+    "name": "Shoulder yoke",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/yoke",
+      "arm_l/yoke"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 88,
+    "partId": "stepper-driver-step-dir",
+    "name": "Step/dir stepper driver (model TBD)",
+    "manufacturer": "TBD",
+    "partNumber": "TBD",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "head/neck/yaw_driver"
+    ],
+    "source": "",
+    "assumptions": 0,
+    "openGaps": 1
+  },
+  {
+    "line": 89,
+    "partId": "temco-relay-24v-40a",
+    "name": "TEMCo 24 V 40 A relay (SPST-NO)",
+    "manufacturer": "TEMCo",
+    "partNumber": "CN0345",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "relay"
+    ],
+    "source": "https://temcoindustrial.com/24v-40a-4-pin-bosch-style-automotive-relay-spst/",
+    "assumptions": 1,
+    "openGaps": 0
+  },
+  {
+    "line": 90,
+    "partId": "jj-torso-base-plate",
+    "name": "Torso base plate, 6 mm 6061 aluminium, 220 x 140",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/base_plate"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 91,
+    "partId": "towerpro-sg90",
+    "name": "TowerPro SG90 Micro Servo",
+    "manufacturer": "TowerPro",
+    "partNumber": "SG90",
+    "quantity": 6,
+    "buy": "purchase",
+    "usedBy": [
+      "head/eyes/eye_y",
+      "head/eyes/eye_x",
+      "head/eyes/lid_tl",
+      "head/eyes/lid_tr",
+      "head/eyes/lid_bl",
+      "head/eyes/lid_br"
+    ],
+    "source": "https://towerpro.com.tw/product/sg90-analog/",
+    "verification": "audited 12/12",
+    "assumptions": 3,
+    "openGaps": 5
+  },
+  {
+    "line": 92,
+    "partId": "jj-tray-fuses",
+    "name": "Tray for the 6-way ATC fuse block with negative bus",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__fuses"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 93,
+    "partId": "jj-tray-monitor",
+    "name": "Tray for the Adafruit INA228 breakout",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__monitor"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 94,
+    "partId": "jj-tray-drok",
+    "name": "Tray for the DROK 300 W buck converter",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__buck_head"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 95,
+    "partId": "jj-tray-ekylin",
+    "name": "Tray for the EKYLIN 12 V 20 A buck converter",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__buck_arm_r",
+      "body/tray__buck_arm_l"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 96,
+    "partId": "jj-tray-ideal_diode",
+    "name": "Tray for the Ideal diode module, 40 A",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__or_1",
+      "body/tray__or_2"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 97,
+    "partId": "jj-tray-pololu",
+    "name": "Tray for the Pololu D24V50F5 / D36V50F5 5 V regulator",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__buck_pi"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 98,
+    "partId": "jj-tray-relay",
+    "name": "Tray for the Temco 24 V 40 A automotive relay",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__relay"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 99,
+    "partId": "jj-tray-bus",
+    "name": "Tray for the Waveshare Bus Servo Adapter",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__arm_r__bus_adapter",
+      "body/tray__arm_l__bus_adapter"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 100,
+    "partId": "jj-tray-lvc",
+    "name": "Tray for the XH-M609 low-voltage cutoff",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "body/tray__lvc"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 101,
+    "partId": "jj-twist-horn-disc",
+    "name": "Twist-joint horn disc",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j3_disc",
+      "arm_r/j5_disc",
+      "arm_l/j3_disc",
+      "arm_l/j5_disc"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 102,
+    "partId": "jj-twist-hub",
+    "name": "Twist-joint hub (6806 pair)",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/j3_hub",
+      "arm_r/j5_hub",
+      "arm_l/j3_hub",
+      "arm_l/j5_hub"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 103,
+    "partId": "jj-arm-upper-head",
+    "name": "Upper arm (J2 housing, J2 and J3 servos)",
+    "quantity": 2,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/upper",
+      "arm_l/upper"
+    ],
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 104,
+    "partId": "waveshare-bus-servo-adapter-a",
+    "name": "Waveshare Bus Servo Adapter (A)",
+    "manufacturer": "Waveshare",
+    "partNumber": "25514",
+    "quantity": 4,
+    "buy": "purchase",
+    "usedBy": [
+      "arm_r/bus_adapter",
+      "arm_r/bus_adapter",
+      "arm_l/bus_adapter",
+      "arm_l/bus_adapter"
+    ],
+    "source": "https://www.waveshare.com/bus-servo-adapter-a.htm",
+    "assumptions": 0,
+    "openGaps": 0
+  },
+  {
+    "line": 105,
+    "partId": "xh-m609-lvc",
+    "name": "XH-M609 low-voltage cutoff",
+    "manufacturer": "Generic",
+    "partNumber": "XH-M609",
+    "quantity": 1,
+    "buy": "purchase",
+    "usedBy": [
+      "lvc"
+    ],
+    "source": "https://www.amazon.com/XH-M609-Digital-Disconnect-Discharge-Protection/dp/B07WRZSJ5M",
+    "assumptions": 0,
+    "openGaps": 0
+  }
+]

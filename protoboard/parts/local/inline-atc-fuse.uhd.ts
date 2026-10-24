@@ -4,11 +4,15 @@
  */
 import type { ModuleDef } from "@deltarobotics/uhd";
 import { powerStage } from "./lib/jj";
+import { withMech } from "../../src/mech/lib";
 
-export const INLINE_ATC_FUSE: ModuleDef = powerStage({
+const INLINE_ATC_FUSE_ELECTRICAL: ModuleDef = powerStage({
   id: "inline-atc-fuse", name: "Inline ATC fuse holder (24 A)", manufacturer: "Eaton Bussmann", part_number: "BK/HHD",
   description: "Inline ATC blade fuse holder on 12 AWG leads; one per branch, with the fuse sized to the branch.",
   categories: ["component.protection"], tags: ["fuse"], sources: [{ id: "src_waytek", name: "Waytek BK/HHD", url: "https://www.waytekwire.com/product/eaton-s-bussmann-series-bk-hhd-atc-in-line-fuse" }],
   vin: [0, 32], vout: [0, 32], iout: 24, ground: false,
   traits: [{ type: "assumption", params: { field: "voltage rating", value: "32 V DC", reason: "ATC holders are typically 32 V DC rated; this listing states only 24 A." } }],
 });
+
+/** With its body and mounting faces from the mechanical model (cad/mech, src/mech/mech.json). */
+export const INLINE_ATC_FUSE: ModuleDef = withMech(INLINE_ATC_FUSE_ELECTRICAL as ModuleDef, "jj-body-fuse_inline");

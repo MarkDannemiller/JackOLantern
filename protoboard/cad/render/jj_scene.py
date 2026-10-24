@@ -526,4 +526,5 @@ def main():
     bpy.ops.render.render(animation=True)
 
 
-main()
+if __name__ == "__main__":
+    main()

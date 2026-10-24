@@ -1,0 +1,40 @@
+{
+ "artifact": "jj-body-pack",
+ "units": "mm",
+ "tool": "build123d",
+ "volume_mm3": 1140000.0,
+ "mass_g": 1500.0,
+ "material": "battery_red",
+ "category": "bought",
+ "features": {
+  "bottom": {
+   "kind": "face",
+   "frame": {
+    "origin": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "normal": [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    "xAxis": [
+     1.0,
+     0.0,
+     0.0
+    ]
+   },
+   "params": {}
+  }
+ },
+ "source": "envelope and mass: assumption (D7), measure yours",
+ "meta": {
+  "envelope": [
+   80,
+   150,
+   95
+  ]
+ }
+}

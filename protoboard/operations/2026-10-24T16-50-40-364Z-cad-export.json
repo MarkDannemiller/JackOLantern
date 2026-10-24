@@ -1,0 +1,60 @@
+{
+  "schema": "protoboard.operation/v0",
+  "operation": "cad:export",
+  "extension": {
+    "id": "@protoboardai/ext-frame-cad",
+    "version": "0.1.7"
+  },
+  "capability": {
+    "id": "cad",
+    "operation": "export",
+    "provider": "@protoboardai/ext-frame-cad",
+    "module": "hex-bolt-1-4-20x1in",
+    "config": "parts/local/mech/hw/hex-bolt-1-4-20x1in/cad.config.ts",
+    "configDigest": "sha256:e361cfa17407607eea6ee4c37ab741132915c76fe49d703e2568e8d02004b28a",
+    "moduleDigest": "sha256:590b26404e32f359cf2d4fa261940d853968c121c8dd05c77051f6adc5968e9d"
+  },
+  "effect": "export",
+  "inputs": {},
+  "projectDigest": "sha256:3244c7138309ca1aa3ce476c3b5569c1c332720bb588fa0e2986b4339125875d",
+  "tools": [
+    {
+      "id": "python-build123d",
+      "available": true,
+      "detail": "build123d 0.13.0",
+      "source": "environment"
+    }
+  ],
+  "startedAt": "2026-10-24T16:50:40.364Z",
+  "status": "succeeded",
+  "summary": "hex-bolt-1-4-20x1in: body.step, body.glb, body.manifest.json in parts/local/mech/hw/hex-bolt-1-4-20x1in/out (1062.131 mm³)",
+  "outputs": [
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1in/out/body.step",
+      "digest": "sha256:cd51018c4c780c92f45f5415d64f9d5e047f0542724a259c5592d9413829dad4",
+      "bytes": 32749,
+      "description": "hex-bolt-1-4-20x1in: nominal body"
+    },
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1in/out/body.glb",
+      "digest": "sha256:e8f3d004afb329e5d7f44a8cea8ae92b6aa2e8ab8987541acc60bea69912a8ba",
+      "bytes": 20964,
+      "description": "hex-bolt-1-4-20x1in: viewer mesh"
+    },
+    {
+      "path": "parts/local/mech/hw/hex-bolt-1-4-20x1in/out/body.manifest.json",
+      "digest": "sha256:8c48f3b476d21b6a98068ec1fbe0d9725c32ac4df1a28815e6a2ed347d04112a",
+      "bytes": 558,
+      "description": "hex-bolt-1-4-20x1in: geometry manifest (volume)"
+    }
+  ],
+  "data": {
+    "module": "hex-bolt-1-4-20x1in",
+    "out": "parts/local/mech/hw/hex-bolt-1-4-20x1in/out",
+    "volume_mm3": 1062.131,
+    "previousVolume_mm3": 1062.131,
+    "toolVersion": "0.13.0"
+  },
+  "diagnostics": [],
+  "finishedAt": "2026-10-24T16:50:45.003Z"
+}
