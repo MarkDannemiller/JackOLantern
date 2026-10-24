@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Feetech ST3215-C047 12V 30 kg.cm, 1:345 (Seeed SKU 108090003); equivalent STS3215-C018 12V 1/345",
+    "url": "https://www.waveshare.com/wiki/ST3215_Servo",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"voltage_range\": \"6-12.6 V (Waveshare ST3215 12V); 4-14 V per a distributor C047 datasheet\", \"stall_torque\": \"30 kg.cm @ 12 V\", \"rated_torque\": \"10 kg.cm\", \"stall_current\": \"2.7 A (Waveshare ST3215 12V, voltage not stated; assumed 12 V)\", \"no_load_current\": \"200 mA\", \"speed\": \"0.222 s/60deg (45 RPM) @ 12 V no load\", \"gear_ratio\": \"1:345\", \"gear_material\": \"metal (Waveshare: copper and steel gears"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

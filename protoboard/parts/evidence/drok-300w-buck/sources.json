@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "DROK 300W Power Supply Module, DC 3.5-30V to 0.8-29V 10A adjustable buck with voltmeter (DROK product code 200143)",
+    "url": "https://www.droking.com/dc-buck/300W-Power-Supply-Module-DC-3.5-30V-to-0.8-29V-10A-Buck-Converter-Adjustable-Voltage-Regulator-Adapter-Driver-Module-Voltmeter",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input_voltage\": \"3.5-30 V (do not exceed 30 V); covers 15-21 V\", \"output_voltage\": \"0.8-29 V adjustable\", \"output_current_max\": \"10 A (continuous rating not stated)\", \"min_input_output_headroom\": \"Vin >= Vout + 1 V (at 6.8 V out, needs >= 7.8 V in)\", \"efficiency\": \"92% (24 V to 12 V at 2 A)\", \"quiescent_current\": \"2-8 mA\", \"dimensions_mm\": [85, 58, 33], \"mass_g\": 105, \"protection\": \"NO reverse-p"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

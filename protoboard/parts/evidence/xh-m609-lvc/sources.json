@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "XH-M609 digital low voltage disconnect module, 12-36 V, relay output (Amazon ASIN B0FJ8NC729, MTDELE)",
+    "url": "https://www.amazon.com/XH-M609-Digital-Disconnect-Discharge-Protection/dp/B07WRZSJ5M",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input_voltage_V\": \"12-36 (some listings 6-60)\", \"relay_contact_A\": 20, \"accuracy_V\": 0.1, \"factory_cutoff_V\": 12, \"dimensions_mm\": [57, 42, 19]}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "TEMCo 24V 40A 4-pin Bosch-style automotive relay, SPST (SKU CN0345)",
+    "url": "https://temcoindustrial.com/24v-40a-4-pin-bosch-style-automotive-relay-spst/",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"coil_voltage_V\": 24, \"contact_rating_A\": 40, \"contact_form\": \"SPST-NO, 4 pin\", \"duty\": \"continuous (per page)\", \"coil_current_mA\": null, \"coil_resistance_ohm\": null}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

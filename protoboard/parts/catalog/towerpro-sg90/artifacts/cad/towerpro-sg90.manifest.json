@@ -1,0 +1,144 @@
+{
+  "artifact": "towerpro-sg90",
+  "tool": "build123d (representative geometry from datasheet dimensions, library/cad/py/partkit.py)",
+  "toolVersion": "0.13.0",
+  "sourceDigest": "e690c538934a6c646ee9adaa54f1767c70ad4d2407ad4e7124804d13e8caca25",
+  "units": "mm",
+  "volume_mm3": 8506.537,
+  "bodies": {
+    "case": 7477.38,
+    "flange": 969.442,
+    "spline": 59.715
+  },
+  "bbox": {
+    "min": [
+      -16.15,
+      -6.1,
+      0.0
+    ],
+    "max": [
+      16.15,
+      6.1,
+      30.3
+    ]
+  },
+  "features": {
+    "flange_holes": {
+      "area_mm2": 31.416,
+      "centroid": [
+        0.0,
+        0.0,
+        18.25
+      ],
+      "faces": 2,
+      "centres": [
+        [
+          -13.75,
+          0.0,
+          18.25
+        ],
+        [
+          13.75,
+          0.0,
+          18.25
+        ]
+      ],
+      "diameter_mm": 2.0
+    },
+    "flange_top": {
+      "area_mm2": 387.777,
+      "centroid": [
+        0.0,
+        0.0,
+        19.5
+      ],
+      "faces": 1,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "spline": {
+      "area_mm2": 49.763,
+      "centroid": [
+        5.6,
+        0.0,
+        28.65
+      ],
+      "faces": 1,
+      "centres": [
+        [
+          5.6,
+          0.0,
+          28.65
+        ]
+      ],
+      "diameter_mm": 4.8
+    },
+    "spline_top": {
+      "area_mm2": 18.096,
+      "centroid": [
+        5.6,
+        0.0,
+        30.3
+      ],
+      "faces": 1,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "case_top": {
+      "area_mm2": 276.94,
+      "centroid": [
+        0.0,
+        0.0,
+        27.0
+      ],
+      "faces": 1,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "generator": {
+    "function": "catalog script (TowerPro SG90 dimension table A-F)",
+    "params": {
+      "A": 30.3,
+      "B": 22.7,
+      "C": 27.0,
+      "D": 12.2,
+      "E": 32.3,
+      "F": 17.0,
+      "flange_t": 2.5,
+      "hole_d": 2.0,
+      "hole_x": 13.75,
+      "spline_d": 4.8,
+      "spline_x": 5.6
+    },
+    "references": [
+      "towerpro.com.tw SG90 Analog: product configure table A-F and specifications",
+      "torqpro.com dimension diagram (A-F definitions)"
+    ]
+  },
+  "assumptions": [
+    {
+      "field": "flange",
+      "value": "2.5 mm thick, one \u00d82.0 mm hole per ear at x = \u00b113.75 mm (not dimensioned)"
+    },
+    {
+      "field": "spline",
+      "value": "\u00d84.8 mm, 5.6 mm from the case centre (not dimensioned)"
+    }
+  ],
+  "data_gaps": [
+    {
+      "field": "details",
+      "note": "the lead, case steps and gear-housing bump are not modelled"
+    }
+  ]
+}

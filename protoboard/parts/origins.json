@@ -1,0 +1,127 @@
+{
+  "schema": "protoboard.origins/v0",
+  "definitions": {
+    "dsservo-ds3225mg-180": {
+      "file": "parts/catalog/dsservo-ds3225mg-180.json",
+      "tier": "catalog",
+      "provider": "protoboard-cloud",
+      "library": "protoboard",
+      "service": "https://protoboard-parts-628357308644.us-central1.run.app",
+      "partId": "dsservo-ds3225mg-180",
+      "revision": 3,
+      "uhdSchema": "0.2.0",
+      "digest": "sha256:71c98e25d18f4f2529eb0c2b9140248c9599a9d0ce628366ea109f9a32888c8a",
+      "envelopeDigest": "sha256:b2144ecfd4322a06f8a91b6b17e688a3722d0237f978ec1b15a85dfb6b959627",
+      "retrievedAt": "2026-10-24T06:51:57.568Z",
+      "artifactBase": {
+        "kind": "vendored",
+        "dir": "parts/catalog/dsservo-ds3225mg-180",
+        "strip": "library/parts/dsservo-ds3225mg-180/"
+      },
+      "files": {
+        "artifacts/cad/dsservo-ds3225mg-180-vendor.manifest.json": "sha256:48b569d13f025f1fc0b69b67ee20dc942634c1e70517df7c3ea8899cb1934548",
+        "artifacts/cad/vendor/DS3218-3d.rar": "sha256:19ca1b5ee9f3201b76af4bfc5101cf75172f92fb826129bfe4e35d66bac72bae",
+        "artifacts/cad/vendor/DS3218.glb": "sha256:6fca34c85cbfe036a574abef236c2fa0150a2e594be255fe11961b0b39f1dedb",
+        "artifacts/cad/vendor/DS3218.stp": "sha256:77efdcd37d3a68b946ddb7a8f013f3893d59c01b7a24cb9c022c81544b406fb7",
+        "artifacts/cad/vendor/interfaces/flange_mount.glb": "sha256:32c2368e7cafad720efdc2b49d52f23417798e93c3076491f0b084783006bf42",
+        "artifacts/cad/vendor/interfaces/output_spline.glb": "sha256:e46344f22ca6144c87047b0c853f64e1f8b9d4a6f9ec9ed2966bdecad83b4a4c",
+        "artifacts/thumbnail.png": "sha256:21e296dddb93b77d0f5af64f98d9312ee718bdb09b73637f60c64ae10c4eb37c",
+        "sources.json": "sha256:e3813aceca50c85bc0b555a087ff0cab6ea29f491fc9518f679627222581e70a",
+        "verification.json": "sha256:3bc0b89aacdcc379207c783006ffaa247d44ffd8b097aa4b0f092e92b07e51c7"
+      },
+      "evidence": [
+        {
+          "kind": "sources",
+          "path": "sources.json"
+        },
+        {
+          "kind": "verification",
+          "path": "verification.json"
+        }
+      ]
+    },
+    "raspberry-pi-5": {
+      "file": "parts/catalog/raspberry-pi-5.json",
+      "tier": "catalog",
+      "provider": "protoboard-cloud",
+      "library": "protoboard",
+      "service": "https://protoboard-parts-628357308644.us-central1.run.app",
+      "partId": "raspberry-pi-5",
+      "revision": 3,
+      "uhdSchema": "0.2.0",
+      "digest": "sha256:c52b8df39c7b7b4a4257e31097634f502f4e98f194e54f9f16924440a280448d",
+      "envelopeDigest": "sha256:ddf69eed78d4a3ba238f2abaf75f04b3e51104c6b41d4a90dcfdc1e32f674916",
+      "retrievedAt": "2026-10-24T07:41:23.311Z",
+      "artifactBase": {
+        "kind": "vendored",
+        "dir": "parts/catalog/raspberry-pi-5",
+        "strip": "library/parts/raspberry-pi-5/"
+      },
+      "files": {
+        "artifacts/cad/raspberry-pi-5-vendor.manifest.json": "sha256:9da7acd1fae18b6a5dfde8d0fe7888357dbe75a780cdd5f58696b1ae4e52a391",
+        "artifacts/cad/vendor/interfaces/gpio_header.glb": "sha256:c7f2dedc61b9a40337b1a765b3e2100f0a182676f1c730688ef26bc2a61168b0",
+        "artifacts/cad/vendor/interfaces/mount.glb": "sha256:f0ca926c984bc08621498ece402a0c2a0a29fc92f5019a2df19e8d2acd3d493d",
+        "artifacts/cad/vendor/interfaces/usb_c.glb": "sha256:71d60b1a703e5530ccc21cc3819576105e31cd851d13ed99a51a732fd3e58dd0",
+        "artifacts/cad/vendor/LICENSE.txt": "sha256:4ca2d350552b24137e55587e13fb09a249b757c6af49652ff02ea524d154c7fc",
+        "artifacts/cad/vendor/raspberry-pi-5.glb": "sha256:4d535994149ae5e671089abdfa9d8bd0bb38912692b6a3b54bcd1223e7508b3b",
+        "artifacts/cad/vendor/RaspberryPi5-step.zip": "sha256:6841637b4cfa97637bf34b529bfe896f24d9634b2c40b57a156781f55d88f06f",
+        "artifacts/cad/vendor/rpi-5b_no_graphics.step": "sha256:78164070c1cc7ab854382950d2e85926c6e35432f1e5a146b733397a7c6afb44",
+        "artifacts/thumbnail.png": "sha256:9e2398691f50204397c036107d8dac9bac17676b31e487f4cda1666e41a0a5d9",
+        "sources.json": "sha256:ff2153b75bace2383b79de022dbc3deb38f0839872d26b8268b3f0f708722d67",
+        "verification.json": "sha256:8c662033d83151ab6af73aa333510b7c46658b8df6debb8e1b08c6896db3921b"
+      },
+      "evidence": [
+        {
+          "kind": "sources",
+          "path": "sources.json"
+        },
+        {
+          "kind": "verification",
+          "path": "verification.json"
+        }
+      ]
+    },
+    "towerpro-sg90": {
+      "file": "parts/catalog/towerpro-sg90.json",
+      "tier": "catalog",
+      "provider": "protoboard-cloud",
+      "library": "protoboard",
+      "service": "https://protoboard-parts-628357308644.us-central1.run.app",
+      "partId": "towerpro-sg90",
+      "revision": 2,
+      "uhdSchema": "0.2.0",
+      "digest": "sha256:9c4f430d0707fac59d78a4f8943c80a5c1399dbf57a2718980fd28e6b4651005",
+      "envelopeDigest": "sha256:e3262c6c42e94af0c053139f17ec409036e75b8d22034301c4ae9beb5ceb7024",
+      "retrievedAt": "2026-10-24T06:51:54.502Z",
+      "artifactBase": {
+        "kind": "vendored",
+        "dir": "parts/catalog/towerpro-sg90",
+        "strip": "library/parts/towerpro-sg90/"
+      },
+      "files": {
+        "artifacts/cad/interfaces/case_top.glb": "sha256:a712a598be9d4d7b8bd5a3533ba79365832e5e2618144fc84c2ef5e26bce5fe1",
+        "artifacts/cad/interfaces/flange_holes.glb": "sha256:d792dae94a80889225b9c239705b983c70b42bed378ce912e753e0ed029b1532",
+        "artifacts/cad/interfaces/flange_top.glb": "sha256:f8d7d98bfb115f90a3f86c96abf5a1f9e4c6eb78d5f85ebc69dd8ce978924d08",
+        "artifacts/cad/interfaces/spline_top.glb": "sha256:9d5f0c186bc48d2a673c9488cb3559743e61b5bcb1a36196c80930a1bbe2c0d9",
+        "artifacts/cad/interfaces/spline.glb": "sha256:da797e69a2ae73bccb442309690290876becec95e98163106a3ceedf2e638eed",
+        "artifacts/cad/towerpro-sg90.glb": "sha256:2576bfb37a31bb4d1d9ba861c648eed2b0d2b1fb43e82ff2d268e64927ffdc16",
+        "artifacts/cad/towerpro-sg90.manifest.json": "sha256:f1bf8335af3209616d7e35565e5f76d655f12c51eee7478f600d563792cc2151",
+        "artifacts/cad/towerpro-sg90.step": "sha256:5c4ab862ea65d3bc2fba3731ee220fcdcde2d418ec72d422dc4ce3374d493a3e",
+        "artifacts/thumbnail.png": "sha256:c24eeb8fb1c8853acd2394ee31c140acf33d155e5b20a4adf39c3684eba8d9e5",
+        "library/cad/py/catalog/towerpro-sg90.py": "sha256:0c167cbf28027a68423f1ba414410410a867d2d1b3c85222d4b4483658008c06",
+        "sources.json": "sha256:03ecc25d548c06fe8912eef2f564e1d7f3ed588fa52570baaed3fdd8ceea7b55",
+        "verification.json": "sha256:c42f28dfa92d005858023b9fadf3490122256c86d46e3f73f67e1229121c2456"
+      },
+      "evidence": [
+        {
+          "kind": "sources",
+          "path": "sources.json"
+        },
+        {
+          "kind": "verification",
+          "path": "verification.json"
+        }
+      ]
+    }
+  }
+}

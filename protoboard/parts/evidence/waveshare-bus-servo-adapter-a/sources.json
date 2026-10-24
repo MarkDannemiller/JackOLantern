@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Waveshare Bus Servo Adapter (A), SKU 25514",
+    "url": "https://www.waveshare.com/bus-servo-adapter-a.htm",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input_voltage\": \"9-12.6 V DC (must match servo voltage)\", \"interface\": \"USB Type-C or UART (jumper selected); 5.5x2.1 mm DC jack + screw terminal\", \"max_servos\": \"253 ST/SC servos per bus\", \"dimensions_mm\": [42.0, 33.0, null], \"mounting_holes\": \"2.5 mm, 37 x 28 mm spacing\", \"feedback\": \"position, speed, torque, mode\"}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

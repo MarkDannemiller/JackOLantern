@@ -1,0 +1,48 @@
+[
+  {
+    "id": "src_code",
+    "title": "Head motion controller (2023 head code)",
+    "path": "protoboard/software/head/motion_controller.py",
+    "type": "documentation",
+    "authority": "project",
+    "sha256": "41490d3b6459fbcf6b99e4175d679b3e1de9cbf33bc231e1d57ff2cc4bd45127",
+    "supports": [
+      "GPIO.BCM numbering; BCM13/19/26 yaw EN/DIR/STEP; BCM22 home; BCM23/24 eye LEDs; channels 29/31 driven high"
+    ]
+  },
+  {
+    "id": "src_cad",
+    "title": "Fusion 360 archive of Head Assembly v79 (received 2026-10-24)",
+    "path": "inbox/20261024-head-assembly.f3z",
+    "type": "documentation",
+    "authority": "project",
+    "sha256": "79f6ad2a66cc2d955e7afff1a0add046e3ece0e1ecbed3cfb25fc97d898cdd14",
+    "supports": [
+      "component 'Raspberry Pi 4 Model B'"
+    ]
+  },
+  {
+    "id": "src_brief",
+    "title": "Raspberry Pi 4 Model B product brief",
+    "url": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "note": "Not fetched yet in this project; cited for well-known facts, to be fetched and verified (uhd-part-research) at level 4.",
+    "supports": [
+      "5 V DC via USB-C, 3 A minimum",
+      "2-lane MIPI CSI camera port"
+    ]
+  },
+  {
+    "id": "src_gpio",
+    "title": "Raspberry Pi documentation: GPIO and the 40-pin header",
+    "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "note": "Not fetched yet in this project; cited for well-known facts, to be fetched and verified (uhd-part-research) at level 4.",
+    "supports": [
+      "3.3 V GPIO logic",
+      "header pin numbers for GPIO2/3/5/6/13/19/22/23/24/26"
+    ]
+  }
+]

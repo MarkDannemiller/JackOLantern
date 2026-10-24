@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Sea-Dog blade style LED indicator fuse block with negative bus bar, 6 circuit, 445185-1",
+    "url": "https://www.drsa.com/products/sea-dog-blade-style-led-indicator-fuse-block-w-negative-bus-bar-6-circuit-445185-1",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"ways\": 6, \"fuse_type\": \"ATC/ATO blade\", \"negative_bus\": true, \"blown_fuse_indicator\": \"red LED\"}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

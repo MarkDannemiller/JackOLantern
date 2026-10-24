@@ -1,0 +1,35 @@
+[
+  {
+    "id": "src_code",
+    "title": "Head motion controller (2023 head code)",
+    "path": "protoboard/software/head/motion_controller.py",
+    "type": "documentation",
+    "authority": "project",
+    "sha256": "41490d3b6459fbcf6b99e4175d679b3e1de9cbf33bc231e1d57ff2cc4bd45127",
+    "supports": [
+      "ServoKit(channels=16); channel map 0-9"
+    ]
+  },
+  {
+    "id": "src_pca9685",
+    "title": "NXP PCA9685 datasheet",
+    "url": "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "note": "Not fetched yet in this project; cited for well-known facts, to be fetched and verified (uhd-part-research) at level 4.",
+    "supports": [
+      "16 channels, 12-bit PWM, I2C, all-call address 0x70"
+    ]
+  },
+  {
+    "id": "src_servokit",
+    "title": "Adafruit CircuitPython ServoKit",
+    "url": "https://docs.circuitpython.org/projects/servokit/en/latest/",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "note": "Not fetched yet in this project; cited for well-known facts, to be fetched and verified (uhd-part-research) at level 4.",
+    "supports": [
+      "default I2C address 0x40"
+    ]
+  }
+]

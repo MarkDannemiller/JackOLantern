@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Pololu D24V50F5, item #2851",
+    "url": "https://www.pololu.com/product/2851",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input_max_v\": 38, \"output_v\": 5, \"output_a\": 5}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

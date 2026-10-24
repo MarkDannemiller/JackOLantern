@@ -1,0 +1,608 @@
+{
+  "artifacts": [
+    {
+      "id": "art_product",
+      "name": "TowerPro SG90 Analog",
+      "type": "documentation",
+      "url": "https://towerpro.com.tw/product/sg90-analog/"
+    },
+    {
+      "id": "art_dim_diagram",
+      "name": "TowerPro servo dimension diagram (A-F)",
+      "type": "documentation",
+      "url": "http://torqpro.com/wp-content/uploads/2014/07/%E5%B0%8F%E9%A6%AC%E9%81%94%E5%B0%BA%E5%AF%B8%E6%A8%99%E7%A4%BA%E5%9C%96B.jpg"
+    },
+    {
+      "filePath": "library/cad/py/catalog/towerpro-sg90.py",
+      "format": "py",
+      "id": "cad_source",
+      "name": "towerpro-sg90 generator",
+      "role": "source",
+      "type": "cad"
+    },
+    {
+      "description": "Body plus one named sub-shape per interface feature; features and signatures in the manifest.",
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/towerpro-sg90.step",
+      "format": "step",
+      "id": "cad_step",
+      "name": "towerpro-sg90 (STEP)",
+      "provenance": {
+        "generatedFrom": "cad_source",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "body",
+      "type": "3d_model",
+      "units": "mm"
+    },
+    {
+      "description": "Viewer mesh of the STEP body (glTF metres, Y-up).",
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/towerpro-sg90.glb",
+      "format": "glb",
+      "id": "cad_glb",
+      "name": "towerpro-sg90 (GLB)",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "body",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/towerpro-sg90.manifest.json",
+      "format": "json",
+      "id": "cad_manifest",
+      "name": "towerpro-sg90 feature manifest",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "source",
+      "type": "cad"
+    },
+    {
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/interfaces/flange_holes.glb",
+      "format": "glb",
+      "id": "cad_if_flange_holes",
+      "interfaceId": "flange_holes",
+      "name": "flange_holes geometry",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/interfaces/flange_top.glb",
+      "format": "glb",
+      "id": "cad_if_flange_top",
+      "interfaceId": "flange_top",
+      "name": "flange_top geometry",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/interfaces/spline.glb",
+      "format": "glb",
+      "id": "cad_if_spline",
+      "interfaceId": "spline",
+      "name": "spline geometry",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/interfaces/spline_top.glb",
+      "format": "glb",
+      "id": "cad_if_spline_top",
+      "interfaceId": "spline_top",
+      "name": "spline_top geometry",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/towerpro-sg90/artifacts/cad/interfaces/case_top.glb",
+      "format": "glb",
+      "id": "cad_if_case_top",
+      "interfaceId": "case_top",
+      "name": "case_top geometry",
+      "provenance": {
+        "generatedFrom": "cad_step",
+        "tool": "build123d 0.13.0"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    }
+  ],
+  "categories": [
+    "actuator.motor.servo",
+    "robotics.rc",
+    "kit.freenove_fnk0082"
+  ],
+  "description": "TowerPro SG90 analog 9 g micro servo: stall torque 1.8 kg·cm and 0.12 s/60° at 4.8 V, POM gear set, 1 µs dead band, 25 cm lead with a JR plug. 23 x 12.2 x 29 mm case (30.3 mm to the spline top, 32.3 mm over the flange ears), 9 g. 0-55 °C.",
+  "domains": [
+    {
+      "domain": "electrical",
+      "power_domains": [
+        {
+          "id": "servo",
+          "name": "Servo supply",
+          "nominal_voltage_V": 4.8
+        }
+      ]
+    },
+    {
+      "dimensions_mm": {
+        "height": 29,
+        "length": 23,
+        "width": 12.2
+      },
+      "domain": "mechanical",
+      "metadata": {
+        "gears": "POM gear set",
+        "lead_cm": 25,
+        "table_mm": {
+          "A": 30.3,
+          "B": 22.7,
+          "C": 27,
+          "D": 12.2,
+          "E": 32.3,
+          "F": 17
+        }
+      },
+      "weight_g": 9
+    },
+    {
+      "domain": "thermal",
+      "operating_temperature_C": [
+        0,
+        55
+      ]
+    }
+  ],
+  "id": "towerpro-sg90",
+  "interfaces": [
+    {
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "id": "lead_vplus",
+      "name": "V+ (lead)",
+      "parameters": [
+        {
+          "id": "voltage",
+          "range": [
+            4.8,
+            6
+          ],
+          "unit": "V",
+          "value": 4.8
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "input"
+          ],
+          "type": "power"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "description": "V+ wire of the servo lead: \"Operating voltage: 4.8v\"; \"Power Supply: Through External Adapter\".",
+            "source": "https://towerpro.com.tw/product/sg90-analog/"
+          },
+          "type": "pin_functions"
+        },
+        {
+          "params": {
+            "field": "supply range",
+            "reason": "TowerPro states 4.8 V only; the common RC-servo 4.8-6.0 V span is assumed so a 5 V supply pairs.",
+            "source": "https://towerpro.com.tw/product/sg90-analog/",
+            "value": "4.8-6.0 V"
+          },
+          "type": "assumption"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "ground"
+      ],
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "id": "lead_gnd",
+      "name": "GND (lead)",
+      "protocols": [
+        {
+          "roles": [
+            "ground"
+          ],
+          "type": "power"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "description": "Ground wire of the servo lead.",
+            "source": "https://towerpro.com.tw/product/sg90-analog/"
+          },
+          "type": "pin_functions"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "servo_signal"
+      ],
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "id": "servo_signal",
+      "name": "Signal (lead)",
+      "pin": "signal wire",
+      "protocols": [
+        {
+          "roles": [
+            "input"
+          ],
+          "type": "pwm"
+        }
+      ]
+    },
+    {
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "id": "rc_servo_3wire",
+      "max_instances": 1,
+      "name": "Servo lead (JR plug, 25 cm)",
+      "profiles": [
+        {
+          "bindings": {
+            "ground": "lead_gnd",
+            "power": "lead_vplus",
+            "signal": "servo_signal"
+          },
+          "default_active": true,
+          "id": "rc_servo_3wire_default",
+          "label": "Servo wires"
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "input"
+          ],
+          "type": "rc_servo"
+        }
+      ],
+      "slots": [
+        {
+          "id": "signal",
+          "label": "SIG",
+          "match": {
+            "capability": "servo_signal",
+            "protocol": "pwm",
+            "role": "input"
+          },
+          "required": true
+        },
+        {
+          "id": "power",
+          "label": "V+",
+          "match": {
+            "protocol": "power",
+            "role": "input"
+          },
+          "required": false
+        },
+        {
+          "id": "ground",
+          "label": "GND",
+          "match": {
+            "protocol": "power",
+            "role": "ground"
+          },
+          "required": false
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "connector_type": "servo_3pin_jr",
+            "gender": "plug"
+          },
+          "type": "connector"
+        },
+        {
+          "params": {
+            "note": "\"servo wire length: 25 cm\"; \"Servo Plug: JR (Fits JR and Futaba)\"; \"Dead band width: 1us\". Pulse-width range and frame rate are not stated by TowerPro.",
+            "source": "https://towerpro.com.tw/product/sg90-analog/"
+          },
+          "type": "usage_note"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "bolt_pattern"
+      ],
+      "default_active": true,
+      "domain": "mechanical",
+      "exposed": true,
+      "geometry": {
+        "frame": {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "origin": [
+            0,
+            0,
+            17
+          ],
+          "xAxis": [
+            1,
+            0,
+            0
+          ]
+        },
+        "refs": [
+          {
+            "artifact": "cad_step",
+            "kind": "feature",
+            "name": "flange_holes",
+            "signature": {
+              "area_mm2": 31.416,
+              "centroid": [
+                0,
+                0,
+                18.25
+              ]
+            }
+          },
+          {
+            "artifact": "cad_if_flange_holes",
+            "kind": "artifact"
+          },
+          {
+            "generator": "bolt_pattern",
+            "kind": "procedural"
+          }
+        ]
+      },
+      "id": "flange_mount",
+      "name": "Mounting flange (2 ears)",
+      "parameters": [
+        {
+          "id": "hole_spacing",
+          "unit": "mm",
+          "value": 27.5
+        },
+        {
+          "id": "hole_count",
+          "unit": "dimensionless",
+          "value": 2
+        },
+        {
+          "id": "fastener_diameter",
+          "unit": "mm",
+          "value": 2
+        },
+        {
+          "id": "hole_spacing_y",
+          "unit": "mm",
+          "value": 0
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "component"
+          ],
+          "type": "bolt_pattern"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "field": "flange holes",
+            "reason": "The A-F table gives the ear span (E) and case length (B) but not the holes.",
+            "source": "https://towerpro.com.tw/product/sg90-analog/",
+            "value": "Ø2.0 mm, centred in each ear, 27.5 mm apart; flange 2.5 mm thick"
+          },
+          "type": "assumption"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "shaft"
+      ],
+      "default_active": true,
+      "domain": "mechanical",
+      "exposed": true,
+      "geometry": {
+        "frame": {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "origin": [
+            5.6,
+            0,
+            27
+          ],
+          "xAxis": [
+            1,
+            0,
+            0
+          ]
+        },
+        "refs": [
+          {
+            "artifact": "cad_step",
+            "kind": "feature",
+            "name": "spline",
+            "signature": {
+              "area_mm2": 49.763,
+              "centroid": [
+                5.6,
+                0,
+                28.65
+              ]
+            }
+          },
+          {
+            "artifact": "cad_if_spline",
+            "kind": "artifact"
+          },
+          {
+            "generator": "shaft",
+            "kind": "procedural"
+          }
+        ]
+      },
+      "id": "output_spline",
+      "max_instances": 1,
+      "name": "Output spline",
+      "parameters": [
+        {
+          "id": "shaft_diameter",
+          "unit": "mm",
+          "value": 4.8
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "output"
+          ],
+          "type": "shaft"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "field": "spline",
+            "reason": "Not dimensioned by TowerPro; position read from the (not to scale) diagram, diameter a typical 9 g servo spline.",
+            "source": "https://towerpro.com.tw/product/sg90-analog/",
+            "value": "Ø4.8 mm, 5.6 mm from the case centre"
+          },
+          "type": "assumption"
+        }
+      ]
+    }
+  ],
+  "manufacturer": "TowerPro",
+  "name": "TowerPro SG90 Micro Servo",
+  "part_number": "SG90",
+  "tags": [
+    "towerpro",
+    "sg90",
+    "micro-servo",
+    "rc-servo",
+    "9g",
+    "analog",
+    "pwm",
+    "freenove"
+  ],
+  "traits": [
+    {
+      "params": {
+        "at_voltage_V": 4.8,
+        "dead_band_us": 1,
+        "gears": "POM",
+        "kind": "servo",
+        "source": "https://towerpro.com.tw/product/sg90-analog/",
+        "speed_s_per_60deg": 0.12,
+        "stall_torque_kgcm": 1.8
+      },
+      "type": "performance"
+    },
+    {
+      "params": {
+        "operating_voltage_V": 4.8,
+        "source": "https://towerpro.com.tw/product/sg90-analog/",
+        "temperature_C": [
+          0,
+          55
+        ]
+      },
+      "type": "operating_conditions"
+    },
+    {
+      "params": {
+        "note": "TowerPro warns of counterfeit SG90 servos sold without the TowerPro logo. The SG90 Digital page describes a newer digital version; this part is the analog SG90.",
+        "source": "https://towerpro.com.tw/product/sg90-analog/"
+      },
+      "type": "usage_note"
+    },
+    {
+      "params": {
+        "field": "speed and weight",
+        "resolution": "Specification values used.",
+        "sources": [
+          "https://towerpro.com.tw/product/sg90-analog/"
+        ],
+        "values": [
+          "0.12 s/60° and 9 g (specifications)",
+          "0.1 s/60° (product configure table); 0.019 kg (additional information, shipping weight)"
+        ]
+      },
+      "type": "source_discrepancy"
+    },
+    {
+      "params": {
+        "field": "control and supply",
+        "resolution": "Only TowerPro values are parameters; the supply range is an assumption trait; the rest are data gaps.",
+        "sources": [
+          "https://github.com/Delta-Robotics-Inc/ProtoPart/blob/main/protoparts/towerpro-sg90/definition.json",
+          "https://towerpro.com.tw/product/sg90-analog/"
+        ],
+        "values": [
+          "4.8-6.0 V, 1.0-2.0 ms pulses at 50 Hz, ~650 mA stall, wire colours (ProtoPart)",
+          "4.8 V, 1 µs dead band only (TowerPro)"
+        ]
+      },
+      "type": "source_discrepancy"
+    },
+    {
+      "params": {
+        "field": "pulse width, frame rate, current, wire colours",
+        "note": "Not stated on TowerPro's SG90 pages."
+      },
+      "type": "data_gap"
+    },
+    {
+      "params": {
+        "field": "manufacturer CAD",
+        "note": "TowerPro publishes no CAD for the SG90 (product pages checked 2026-10-03). The body is generated from the A-F dimension table."
+      },
+      "type": "data_gap"
+    }
+  ],
+  "version": "1.0.0"
+}

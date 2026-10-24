@@ -1,0 +1,56 @@
+[
+  {
+    "id": "src_product",
+    "title": "TowerPro: SG90 Analog product page (specifications, product configure table A-F)",
+    "url": "https://towerpro.com.tw/product/sg90-analog/",
+    "type": "datasheet",
+    "authority": "manufacturer",
+    "fetched_at": "2026-10-03T11:23:49Z",
+    "sha256": "b32b3acb5a521132a94ecbbdc30a537bfaa08ed3a43d2c3e2223f0983567bbc9",
+    "supports": [
+      "original manufacturer of the SG90; counterfeit warning",
+      "weight 9 g, dimension 23 x 12.2 x 29 mm",
+      "stall torque 1.8 kg/cm (4.8 V), POM gear set, 0.12 s/60° (4.8 V)",
+      "operating voltage 4.8 V, temperature 0-55 °C, dead band 1 us",
+      "external power, 25 cm wire, JR plug (fits JR and Futaba)",
+      "table: weight 9, torque 1.8, speed 0.1, A 30.3, B 22.7, C 27, D 12.2, E 32.3, F 17",
+      "additional information weight 0.019 kg"
+    ]
+  },
+  {
+    "id": "src_dim_diagram",
+    "title": "TowerPro servo dimension diagram (A-F), torqpro.com image linked from the SG90 Analog table",
+    "url": "http://torqpro.com/wp-content/uploads/2014/07/%E5%B0%8F%E9%A6%AC%E9%81%94%E5%B0%BA%E5%AF%B8%E6%A8%99%E7%A4%BA%E5%9C%96B.jpg",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "fetched_at": "2026-10-03T11:28:00Z",
+    "sha256": "239562be5f25bb06d03900741d7388dcb30ab004a294155a060c10875b151f8c",
+    "supports": [
+      "meaning of A (base to spline top), B (case length), C (base to gear housing top), D (width), E (over the flange ears), F (base to flange underside)"
+    ]
+  },
+  {
+    "id": "src_product_digital",
+    "title": "TowerPro: SG90 Digital product page",
+    "url": "https://www.towerpro.com.tw/product/sg90-7/",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "fetched_at": "2026-10-03T11:23:44Z",
+    "sha256": "875c6b57ae8b6ef6c78b5f6641daae69c67e359e84f0cd0290ab7e7bdcb35cc9",
+    "supports": [
+      "the digital SG90 is the newer version of the analog SG90"
+    ]
+  },
+  {
+    "id": "src_protopart",
+    "title": "ProtoPart towerpro-sg90 definition.json at commit 51e74eb95652fb1ab421b57b76df8151d80f39dc (claims only)",
+    "url": "https://github.com/Delta-Robotics-Inc/ProtoPart/blob/main/protoparts/towerpro-sg90/definition.json",
+    "type": "documentation",
+    "authority": "community",
+    "fetched_at": "2026-10-03T10:33:00Z",
+    "sha256": "ee7d4a40417b5f8e57e8ce8bff52802a7807d8259317398c9b997f660fc749bc",
+    "supports": [
+      "claims checked against the manufacturer sources; differences recorded as source_discrepancy traits"
+    ]
+  }
+]

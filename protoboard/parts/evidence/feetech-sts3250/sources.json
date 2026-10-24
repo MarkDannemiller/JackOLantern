@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Feetech STS3250 (ST-3250-C001, 12 V 50 kg.cm, magnetic encoder, double shaft, with bracket); alt variant STS3250-C002 (1/345) at OpenELAB",
+    "url": "https://evelta.com/sts3250-12v-50kg-360deg-magnetic-encoder-double-shaft-ttl-servo/",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"voltage_range\": \"6-12 V\", \"stall_torque\": \"50 kg.cm @ 12 V (peak)\", \"rated_torque\": \"16 kg.cm @ 12 V\", \"stall_current\": \"4.2 A @ 12 V\", \"no_load_current\": \"280 mA @ 12 V\", \"speed\": \"0.133 s/60deg @ 12 V no load\", \"gear_ratio\": \"1/345 (stated on OpenELAB STS3250-C002 listing; not on the evelta/C001 listing)\", \"gear_material\": \"steel (spec table) / metal gearbox (description)\", \"dimensions_mm\": [4"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

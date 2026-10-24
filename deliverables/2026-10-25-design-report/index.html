@@ -1,0 +1,470 @@
+<title>Joyful Jack Design Report</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&family=Zilla+Slab:wght@500;700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* Layout: a dusk-lit long read. One pumpkin accent, LED-blue second, bone text on night; paper in light theme. */
+:root{
+  --bg:#f3eee6; --panel:#fffaf2; --ink:#20160f; --muted:#6c5d50; --line:#e2d6c6;
+  --pumpkin:#c8530f; --pumpkin-soft:#f2d2bb; --led:#2563c9; --good:#2f7d43; --bad:#a23a2a;
+  --display:"Rye", "Georgia", serif; --head:"Zilla Slab", "Rockwell", Georgia, serif; --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0f1116; --panel:#171a22; --ink:#efe6d6; --muted:#a39886; --line:#2a2e39; --pumpkin:#ef7a2a; --pumpkin-soft:#3a2416; --led:#6ea2ff; --good:#7ccf8e; --bad:#ef8f7c; color-scheme: dark } }
+:root[data-theme="dark"]{ --bg:#0f1116; --panel:#171a22; --ink:#efe6d6; --muted:#a39886; --line:#2a2e39; --pumpkin:#ef7a2a; --pumpkin-soft:#3a2416; --led:#6ea2ff; --good:#7ccf8e; --bad:#ef8f7c; color-scheme: dark }
+body{background:var(--bg); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.6}
+.wrap{max-width:1120px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--head); line-height:1.15; text-wrap:balance; margin:0}
+h2{font-size:clamp(28px,4vw,40px)} h3{font-size:20px; margin-top:22px; margin-bottom:6px}
+p{margin:0 0 12px} .lede{font-size:19px; color:var(--muted); max-width:62ch}
+.eyebrow{font-family:var(--mono); font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--pumpkin); margin-bottom:6px}
+a{color:var(--led)} a:focus-visible, summary:focus-visible{outline:2px solid var(--led); outline-offset:3px}
+img,video{max-width:100%; display:block; border-radius:6px}
+figure{margin:0} figcaption{font-size:15px; color:var(--muted); margin-top:8px; max-width:70ch}
+figcaption b{color:var(--ink)}
+.small{font-size:14px; color:var(--muted)}
+/* masthead */
+.mast{background:#0b0c10; color:#efe6d6; padding-block:36px 0}
+.mast .wrap{display:grid; gap:20px}
+.mast h1{font-family:var(--display); font-weight:400; font-size:clamp(46px,9vw,104px); color:#ef7a2a; letter-spacing:.01em}
+.mast .sub{font-size:clamp(18px,2.3vw,23px); max-width:58ch; color:#d9cdb9}
+.mast .meta{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:#a39886}
+.mast img{border-radius:0; width:100%}
+.mast .mast-strip{display:flex; flex-wrap:wrap; gap:10px 32px; padding-block:16px 28px}
+.mast-strip div{display:flex; flex-direction:column} .mast-strip b{font-family:var(--head); font-size:26px; color:#efe6d6}
+.mast-strip span{font-size:13px; color:#a39886}
+section{padding-block:56px}
+section + section{border-top:1px solid var(--line)}
+.story{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:22px}
+.story figure{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px}
+.story img{aspect-ratio:3/4; object-fit:cover; width:100%}
+.cards{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:26px}
+.card{background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; display:flex; flex-direction:column}
+.card img{border-radius:0; aspect-ratio:4/5; object-fit:cover; object-position:center 20%}
+.card .card-body{padding:16px 18px 20px; display:flex; flex-direction:column; gap:6px; min-width:0}
+.card h3{margin:0; font-size:24px} .card .price{font-family:var(--head); font-size:30px; color:var(--pumpkin)}
+.card a.more{margin-top:auto; font-weight:600; text-decoration:none}
+.rec{margin-top:26px; background:var(--pumpkin-soft); border-left:4px solid var(--pumpkin); padding:16px 20px; border-radius:6px}
+.rec b{font-family:var(--head); font-size:19px}
+.table-wrap{overflow-x:auto; margin-top:16px}
+table{border-collapse:collapse; width:100%; font-size:15px}
+th,td{padding:9px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top}
+.compare thead th{font-family:var(--head); font-size:20px} .compare thead th span{display:block; font-family:var(--body); font-size:13px; color:var(--muted); font-weight:400}
+.compare tbody th{font-weight:600; color:var(--muted); font-size:14px}
+.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap}
+.tier-head{display:grid; grid-template-columns:auto 1fr auto; gap:20px; align-items:center; margin-bottom:24px}
+.tier-letter{font-family:var(--display); font-size:64px; color:var(--pumpkin); line-height:1}
+.price-tag{text-align:right} .price-tag .price{font-family:var(--head); font-size:38px; display:block; font-variant-numeric:tabular-nums}
+.price-tag .price-note{font-size:13px; color:var(--muted)}
+.tier-grid{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; align-items:start}
+.hero-fig img{width:100%}
+.tier-text{min-width:0}
+ul.ticks, ul.crosses{list-style:none; padding:0; margin:0; display:grid; gap:6px}
+ul.ticks li::before{content:"✓"; color:var(--good); font-weight:700; margin-right:8px}
+ul.crosses li::before{content:"–"; color:var(--bad); font-weight:700; margin-right:10px}
+.pair{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; margin-top:28px; align-items:start}
+.facts{min-width:0} .facts h3:first-child{margin-top:0}
+.budget{font-family:var(--head); font-size:18px}
+.bars{display:grid; gap:7px}
+.bar{display:grid; grid-template-columns:minmax(0,11em) 1fr auto; gap:10px; align-items:center; font-size:14px}
+.bar-track{height:10px; background:var(--line); border-radius:5px; overflow:hidden}
+.bar-fill{display:block; height:100%; background:var(--pumpkin)}
+.bar-val{font-variant-numeric:tabular-nums; color:var(--muted)}
+.mini{font-size:14px} .mini th{color:var(--muted); font-weight:600}
+.diagram{margin-top:28px} .diagram img{border:1px solid var(--line)}
+details{margin-top:22px; background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px 16px}
+summary{cursor:pointer; font-weight:600}
+.bom .choice{font-size:12.5px; color:var(--muted)} .bom tfoot td{font-weight:700}
+.videos{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:20px}
+.feature-video{margin-top:22px}
+.grid2{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; margin-top:20px}
+.callout{background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px 18px}
+.callout h3{margin-top:0}
+ol.steps{padding-left:20px; display:grid; gap:8px} ol.steps li{padding-left:4px}
+.foot{font-size:14px; color:var(--muted); padding-block:40px}
+code{font-family:var(--mono); font-size:.88em; background:var(--panel); border:1px solid var(--line); padding:1px 5px; border-radius:4px; overflow-wrap:anywhere}
+@media (max-width:820px){
+  .story,.cards,.videos{grid-template-columns:1fr}
+  .tier-grid,.pair,.grid2{grid-template-columns:1fr}
+  .tier-head{grid-template-columns:auto 1fr} .price-tag{grid-column:1/-1; text-align:left}
+}
+@media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto} }
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <p class="meta">Delta Robotics · design report · 25 Oct 2026 · draft for Mark's review</p>
+    <h1>Joyful Jack</h1>
+    <p class="sub">A body and two moving arms for our animatronic pumpkin cowboy, designed three ways: a beginner build under $500, a midrange build up to $1,200, and a maxed-out build with real robot hands.</p>
+  </div>
+  <img src="media/lineup-dark.jpg" alt="Tiers A, B and C side by side">
+  <div class="wrap mast-strip">
+    <div><b>$498</b><span>Tier A, Beginner</span></div>
+    <div><b>$1,175</b><span>Tier B, Midrange</span></div>
+    <div><b>$2,140</b><span>Tier C, Maxed</span></div>
+    <div><b>~1.7 m</b><span>tall, hat included</span></div>
+    <div><b>Milwaukee M18</b><span>battery packs</span></div>
+  </div>
+</header>
+
+<section id="story"><div class="wrap">
+  <p class="eyebrow">Where Jack comes from</p>
+  <h2>A head that already works, looking for a body</h2>
+  <p class="lede">Jack's head was built in 2023: printed orange face, glowing blue eyes, blinking eyelids, a talking jaw, and a neck that turns and nods. A camera in his nose finds faces so he can look at whoever walks up, and he has a few dozen cowboy voice lines. This project gives him a torso, two arms and hands, and a battery so he can stand on his own all evening.</p>
+  <div class="story">
+    <figure><img src="media/concept-sketch.jpg" alt="Original notebook sketch" loading="lazy"><figcaption><b>The first sketch.</b> A scarecrow on a pole, no legs, a heavy base.</figcaption></figure>
+    <figure><img src="media/head-real.jpg" alt="The real head" loading="lazy"><figcaption><b>The real head.</b> Reused as-is in every tier.</figcaption></figure>
+    <figure><img src="media/concept-art.jpg" alt="Concept art" loading="lazy"><figcaption><b>The character.</b> Hat, bandana, tattered vest, weathered orange arm shells.</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="choices"><div class="wrap">
+  <p class="eyebrow">The three versions</p>
+  <h2>Pick how much Jack can do</h2>
+  <p class="lede">All three share the same head, base, costume and battery system. They differ in the arms, the hands and how much they can sense.</p>
+  <div class="cards"><article class="card"><img src="media/hero-a.jpg" alt="Tier A" loading="lazy">
+      <div class="card-body"><p class="eyebrow">Tier A · under $500</p><h3>Beginner</h3><span class="price">$498</span>
+      <p>A first build: cheap, quick, and still a character people stop for.</p><a class="more" href="#tier-a">See tier A →</a></div></article><article class="card"><img src="media/hero-b.jpg" alt="Tier B" loading="lazy">
+      <div class="card-body"><p class="eyebrow">Tier B · up to $1,200</p><h3>Midrange</h3><span class="price">$1,175</span>
+      <p>The one to build for a season of events: smart motors, safer, and he never has to sleep.</p><a class="more" href="#tier-b">See tier B →</a></div></article><article class="card"><img src="media/hero-c.jpg" alt="Tier C" loading="lazy">
+      <div class="card-body"><p class="eyebrow">Tier C · no cap set</p><h3>Maxed</h3><span class="price">$2,140</span>
+      <p>The show piece: real robot hands with fingers that each move on their own.</p><a class="more" href="#tier-c">See tier C →</a></div></article></div>
+  <div class='table-wrap'><table class='compare'><thead><tr><th></th><th>Tier A<span>Beginner</span></th><th>Tier B<span>Midrange</span></th><th>Tier C<span>Maxed</span></th></tr></thead><tbody><tr><th scope='row'>Price (new parts)</th><td>$498</td><td>$1,175</td><td>$2,140</td></tr><tr><th scope='row'>Moving joints, each arm</th><td>3 + grip</td><td>5 + 2-motor hand</td><td>6 + 8-motor hand</td></tr><tr><th scope='row'>Hands</th><td>Mitt, 1 motor</td><td>Glove, 2 motors</td><td>Humanoid, 8 motors</td></tr><tr><th scope='row'>Feels resistance</th><td>No</td><td>Yes</td><td>Yes</td></tr><tr><th scope='row'>Battery</th><td>1 pack</td><td>2 packs, hot swap</td><td>2 packs + wall</td></tr><tr><th scope='row'>Swap a battery while running</th><td>No</td><td>Yes</td><td>Yes</td></tr><tr><th scope='row'>Runs the arms</th><td>Head computer</td><td>Head computer</td><td>Own computer</td></tr><tr><th scope='row'>Arm weight (each)</th><td>1.3 kg</td><td>1.5 kg</td><td>1.6 kg</td></tr></tbody></table></div>
+  <div class="rec"><b>Recommendation: build tier B.</b> It is the best value: motors that feel resistance make Jack safer around children, two batteries mean he never has to stop, and it comes in $25.05 under the $1,200 cap. Tier A is a good weekend build but runs at its limits. Tier C's hands are a crowd-pleaser and can be added to a tier B Jack later, since the arms share the same motors and wiring.</p>
+</div></section>
+
+<section id="shared"><div class="wrap">
+  <p class="eyebrow">What every Jack has</p>
+  <h2>How he stands, and what powers him</h2>
+  <div class="grid2">
+    <div>
+      <h3>A bucket of concrete for feet</h3>
+      <p>Jack has no legs. He stands on a steel pipe set into a 5-gallon bucket filled with concrete, about 44 kg, sitting on a 24-inch plywood disc that hides under his costume. The pipe screws into a floor flange cast into the concrete.</p>
+      <h3>One battery system</h3>
+      <p>He runs on the Milwaukee M18 packs we already own. A dock with a switch and a fuse takes the pack. A cut-off module switches everything off before the pack runs flat, because an M18 pack can't be relied on to protect itself without a Milwaukee tool attached. Converters then make the voltages each part needs.</p>
+      <h3>A big red stop button</h3>
+      <p>A latching emergency stop on his back cuts power to every motor at once, while the computer stays on. In tiers B and C the button holds a heavy-duty relay, so it also stops the hands.</p>
+    </div>
+    <div>
+      <figure><img src="media/lineup-light.jpg" alt="All three tiers at rest" loading="lazy"><figcaption><b>At rest.</b> Arms hang on their stops, so a power cut drops nothing.</figcaption></figure>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="callout">
+      <h3>How long he runs</h3>
+      <p>A 12 Ah pack holds about 216 watt-hours. We will measure Jack's real power draw on the bench. Until then, here are planning figures (assumed draws, 85% converter efficiency):</p>
+      <table class="mini"><tr><th>If Jack averages</th><th class="num">12 Ah pack</th><th class="num">8 Ah pack</th></tr>
+      <tr><td>30 W (mostly idle)</td><td class="num">~6 h</td><td class="num">~4 h</td></tr>
+      <tr><td>50 W (regular gestures)</td><td class="num">~3.7 h</td><td class="num">~2.4 h</td></tr>
+      <tr><td>80 W (busy all evening)</td><td class="num">~2.3 h</td><td class="num">~1.5 h</td></tr></table>
+      <p class="small">Tiers B and C swap packs without stopping, and tier C can also run from the wall.</p>
+    </div>
+    <div class="callout">
+      <h3>Keeping him upright</h3>
+      <p>With both arms out, a push of about 15–16 kg of force at shoulder height would tip him over. A teenager leaning on his shoulder could do that.</p>
+      <p><b>For events:</b> lay sandbags on the plywood disc under the costume, or tie the pole to a post. Two 25 lb bags add about a third more margin; four bring it to about 1.7 times.</p>
+    </div>
+  </div>
+</div></section>
+
+
+<section class="tier" id="tier-a">
+  <div class="wrap">
+    <header class="tier-head">
+      <span class="tier-letter">A</span>
+      <div><p class="eyebrow">Tier A · under $500</p><h2>Beginner</h2><p class="lede">A first build: cheap, quick, and still a character people stop for.</p></div>
+      <div class="price-tag"><span class="price">$498</span><span class="price-note">new parts; your own flannel shirt</span></div>
+    </header>
+    <div class="tier-grid">
+      <figure class="hero-fig"><img src="media/hero-a.jpg" alt="Tier A Joyful Jack, rendered" loading="lazy"></figure>
+      <div class="tier-text">
+        <h3>How he works</h3><p>Eight hobby servos, the kind used in RC cars, move the arms. A second servo board joins the one already in the head, so the head's computer runs everything. A spring at each shoulder carries the arm's weight so the small motors only have to move it. The torso is laser-cut plywood ribs.</p>
+        <h3>What he can do</h3><ul class="ticks"><li>Waves, points and beckons with both arms</li><li>Grips a light candy bag with a one-motor mitt</li><li>Runs on one M18 pack with a low-battery cut-off</li><li>Big red stop button on his back</li></ul>
+        <h3>What he can't</h3><ul class="crosses"><li>Feel when he touches someone (no feedback from the motors)</li><li>Hold a loaded arm straight out for long</li><li>Swap the battery without switching off</li></ul>
+      </div>
+    </div>
+    <div class="pair">
+      <figure><img src="media/hands-a.jpg" alt="Tier A hands" loading="lazy"><figcaption><b>The hands.</b> A cartoon mitt: three fingers moulded as one paddle close against a thumb, driven by one servo. Rubber pads give it grip.</figcaption></figure>
+      <figure><img src="media/internals-a.jpg" alt="Tier A with the costume off" loading="lazy"><figcaption><b>Costume off.</b> The frame on the pole, the battery pack (red) behind the back hatch, and the electronics plate.</figcaption></figure>
+    </div>
+    <div class="pair">
+      <figure><img src="media/exploded-a.jpg" alt="Tier A exploded view" loading="lazy"><figcaption><b>Every part, pulled apart.</b> Base and pole stay put; torso and costume lift; the arms move out; the head and hat rise above.</figcaption></figure>
+      <div class="facts">
+        <h3>Where the money goes</h3>
+        <p class="budget">$498 of a $500 cap: $1.95 to spare</p>
+        <div class="bars"><div class="bar"><span class="bar-label">Arms and motors</span><span class="bar-track"><span class="bar-fill" style="width:34.4%"></span></span><span class="bar-val">$171</span></div>
+<div class="bar"><span class="bar-label">Power and safety</span><span class="bar-track"><span class="bar-fill" style="width:32.0%"></span></span><span class="bar-val">$159</span></div>
+<div class="bar"><span class="bar-label">Controllers and computer</span><span class="bar-track"><span class="bar-fill" style="width:3.0%"></span></span><span class="bar-val">$14.95</span></div>
+<div class="bar"><span class="bar-label">Torso frame</span><span class="bar-track"><span class="bar-fill" style="width:7.9%"></span></span><span class="bar-val">$39.20</span></div>
+<div class="bar"><span class="bar-label">Base and pole</span><span class="bar-track"><span class="bar-fill" style="width:12.7%"></span></span><span class="bar-val">$63.18</span></div>
+<div class="bar"><span class="bar-label">Costume</span><span class="bar-track"><span class="bar-fill" style="width:6.6%"></span></span><span class="bar-val">$32.65</span></div>
+<div class="bar"><span class="bar-label">Screws and fittings</span><span class="bar-track"><span class="bar-fill" style="width:3.6%"></span></span><span class="bar-val">$17.73</span></div></div>
+        <h3>Strength check</h3>
+        <p class="small">Arm held straight out with a 0.25 kg bag: the hardest moment for the motors.</p>
+        <table class="mini"><tr><th></th><th class="num">Needed</th><th class="num">Motor can give (max)</th></tr>
+          <tr><td>Shoulder</td><td class="num">62 kg·cm</td><td class="num">32 kg·cm</td></tr>
+          <tr><td>Elbow</td><td class="num">21 kg·cm</td><td class="num">24 kg·cm</td></tr></table>
+        <p class="small">The shoulder spring supplies about 51 kg·cm so the motor works well inside its limit.
+         The elbow is close to its limit with a load, so tier A keeps a loaded forearm near vertical.</p>
+      </div>
+    </div>
+    <figure class="diagram"><img src="media/diagram-a.jpg" alt="Tier A system in Protoboard" loading="lazy"><figcaption><b>The wiring, in Protoboard.</b> Every box is a real part with its voltages; Protoboard checked every connection: 0 problems.</figcaption></figure>
+    <details><summary>Full parts list for tier A (23 lines)</summary><div class='table-wrap'><table class='bom'><thead><tr><th>Group</th><th>Item</th><th class='num'>Qty</th><th class='num'>Each</th><th class='num'>Line</th><th>Price from</th></tr></thead><tbody><tr><td>Arms and motors</td><td>Shoulder servos (flex x2 + out x2), 35 kg·cm class<div class='choice'>DIYmall 2 Sets 35kg DS3235 Digital Servo, coreless, full metal gear, 270° (ASIN B0CCNFQC6S); pack = 2 servos +</div></td><td class='num'>2</td><td class='num'>$48.00</td><td class='num'>$96.00</td><td><a href="https://www.amazon.com/dp/B0CCNFQC6S" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>Elbow servos, 25 kg class, 270°<div class='choice'>DSSERVO DS3225 MG, 270° angle option, with metal arm/horn accessory option (AIFitLab DSSERVO store)</div></td><td class='num'>2</td><td class='num'>$20.00</td><td class='num'>$40.00</td><td><a href="https://aifitlab.com/products/dsservo-ds3225-mg-servo-motor" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>Extension springs, shoulder counterbalance<div class='choice'>Grainger 1NAE3 crossover centre loop extension spring, 0.5 in OD, 0.063 in wire, carbon steel, pack of 3</div></td><td class='num'>2</td><td class='num'>$9.08</td><td class='num'>$18.16</td><td><a href="https://www.grainger.com/product/Extension-Spring-Crossover-1NAE3" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>Hand grip servos (tier A), MG996R 4-pack<div class='choice'>Hosyond MG996R 55 g metal-gear digital servo, 4-pack</div></td><td class='num'>1</td><td class='num'>$16.99</td><td class='num'>$16.99</td><td><a href="https://www.amazon.com/s?k=hosyond+mg996r+4+pack" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Milwaukee M18 battery adapter with switch, fuse and 12 AWG leads<div class='choice'>Generic &#x27;Power Wheel Adapter for Milwaukee M18&#x27; with on/off switch, 30 A blade fuse, 12 AWG leads, 1-pack (Ama</div></td><td class='num'>1</td><td class='num'>$34.99</td><td class='num'>$34.99</td><td><a href="https://www.newegg.com/p/1WM-0071-00050" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Bucks (tier A): one 6.8 V rail for both arms, one 5-6 V rail for the head servos, one 5.1 V for the Pi<div class='choice'>DROK 300W Power Supply Module, DC 3.5-30V to 0.8-29V 10A adjustable buck with voltmeter (DROK product code 200</div></td><td class='num'>3</td><td class='num'>$10.20</td><td class='num'>$30.60</td><td><a href="https://www.droking.com/dc-buck/300W-Power-Supply-Module-DC-3.5-30V-to-0.8-29V-10A-Buck-Converter-Adjustable-Voltage-Regulator-Adapter-Driver-Module-Voltmeter" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>12 AWG silicone wire, red + black<div class='choice'>BNTECHGO 12 AWG silicone wire, 10 ft red + 10 ft black (Amazon ASIN B01ABOPMEI)</div></td><td class='num'>1</td><td class='num'>$27.52</td><td class='num'>$27.52</td><td><a href="https://www.newegg.com/PISKEKAT-Work-Lights/BrandSubCat/ID-218576-2092/Page-13" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Servo extension leads, 300 mm, 10-pack<div class='choice'>Generic 300 mm male-female servo extension, 26 AWG, JR/Futaba (10 pcs)</div></td><td class='num'>2</td><td class='num'>$9.95</td><td class='num'>$19.90</td><td><a href="https://www.ebay.de/itm/335657377415" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Latching mushroom emergency stop, 22 mm, NC<div class='choice'>22mm NC red mushroom emergency stop push button, 40 mm head, latching (ZB2-BE102C / XB2-BS142 style)</div></td><td class='num'>1</td><td class='num'>$12.17</td><td class='num'>$12.17</td><td><a href="https://www.fridayparts.com/22mm-nc-n-c-red-mushroom-emergency-stop-push-button-switch-600v-10a-zb2-be102c-xb2-bs142" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Adjustable low-voltage cutoff for 5S Li-ion (~18 V) pack<div class='choice'>XH-M609 digital low voltage disconnect module, 12-36 V, relay output (Amazon ASIN B0FJ8NC729, MTDELE)</div></td><td class='num'>1</td><td class='num'>$9.99</td><td class='num'>$9.99</td><td><a href="https://sentinel.rocketium.com/products/amazon/B0FJ8NC729" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Inline ATC fuse holder, 12 AWG<div class='choice'>Eaton Bussmann BK/HHD ATC in-line fuse holder, 12 Ga. leads (24 A)</div></td><td class='num'>4</td><td class='num'>$2.18</td><td class='num'>$8.72</td><td><a href="https://www.waytekwire.com/product/eaton-s-bussmann-series-bk-hhd-atc-in-line-fuse" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>ATC blade fuse assortment<div class='choice'>Bussmann ATC fuse assortment, variety pack (10/15/20/25/30 A)</div></td><td class='num'>1</td><td class='num'>$8.32</td><td class='num'>$8.32</td><td><a href="https://www.walmart.com/ip/1764066057" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>XT60 connector pairs<div class='choice'>Amass XT60 connectors, 2 pairs, yellow (BuddyRC SKU 002-0201)</div></td><td class='num'>2</td><td class='num'>$3.49</td><td class='num'>$6.98</td><td><a href="https://buddyrc.com/products/genuine-xt60-connectors-2-pairs-yellow-1" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Second PCA9685 16-channel servo driver<div class='choice'>Adafruit 16-Channel 12-bit PWM/Servo Driver, I2C (PCA9685), Product ID 815</div></td><td class='num'>1</td><td class='num'>$14.95</td><td class='num'>$14.95</td><td><a href="https://www.adafruit.com/product/815" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>PETG filament 1 kg<div class='choice'>ELEGOO PETG PRO 1.75 mm 1 kg</div></td><td class='num'>2</td><td class='num'>$13.99</td><td class='num'>$27.98</td><td><a href="https://us.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>1/4 in plywood, 2 x 4 ft project panel (torso ribs, tier A)<div class='choice'>B/C Sanded Plywood Project Panel 1/4 in x 2 ft x 4 ft (Home Depot Internet # 205748601)</div></td><td class='num'>1</td><td class='num'>$11.22</td><td class='num'>$11.22</td><td><a href="https://homedepot.com/p/1-4-in-x-2-ft-x-4-ft-B-C-Sanded-Plywood-Project-Panel-00102/205748601" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>ALTERNATE for the 24 in round pine board: 3/4 in birch plywood 2x2 ft project panel, cut to a 24 in circle in-house<div class='choice'>Falken Design 3/4 in x 2 ft x 2 ft Birch Plywood Project Panel, FALKENDESIGN-PW-Birch-A2-3-4-2424 (HD 31913741</div></td><td class='num'>1</td><td class='num'>$29.49</td><td class='num'>$29.49</td><td><a href="https://www.homedepot.com/p/Falken-Design-3-4-in-x-2-ft-x-2-ft-Birch-Plywood-Project-Panel-FALKENDESIGN-PW-Birch-A2-3-4-2424/319137413" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>1 in black steel pipe, ~36 in, threaded both ends (center post)<div class='choice'>PLUMBFLEX 1 in. x 36 in. Black Steel Pipe 1036PBL (1 in nominal, 1.315 in OD)</div></td><td class='num'>1</td><td class='num'>$16.06</td><td class='num'>$16.06</td><td><a href="https://www.homedepot.com/p/PLUMBFLEX-1-in-x-36-in-Black-Steel-Pipe-1036PBL/307752681" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>1 in floor flange for center post<div class='choice'>Southland 1 in. Black Malleable Iron Threaded Floor Flange 521-605HN</div></td><td class='num'>1</td><td class='num'>$6.97</td><td class='num'>$6.97</td><td><a href="https://homedepot.com/p/Southland-1-in-Black-Malleable-Iron-Threaded-Floor-Flange-521-605HN/100179931" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>Concrete mix to fill bucket (~18.9 L = 0.667 cu ft)<div class='choice'>Quikrete Concrete Mix No. 1101, 80 lb bag (Home Depot model 110180)</div></td><td class='num'>1</td><td class='num'>$5.68</td><td class='num'>$5.68</td><td><a href="https://shopsavvy.com/products/quickrete-80lb-concrete-mix" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>5 US gallon plastic bucket (ballast base)<div class='choice'>The Home Depot 5 Gallon Orange Homer Bucket, model 05GLHD2 (Internet #100087613)</div></td><td class='num'>1</td><td class='num'>$4.98</td><td class='num'>$4.98</td><td><a href="https://www.homedepot.com/p/The-Home-Depot-5-Gallon-Orange-Homer-Bucket-05GLHD2/100087613" rel="noopener">source</a></td></tr>
+<tr><td>Costume</td><td>Cowboy / western vest<div class='choice'>TiaoBug Men&#x27;s 3-piece faux suede western cowboy vest set (vest + bandanna + hat), black</div></td><td class='num'>1</td><td class='num'>$32.65</td><td class='num'>$32.65</td><td><a href="https://www.walmart.com/ip/9980614009" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M3 socket head cap screw kit<div class='choice'>MYWISH 550-Piece M3 Hex Socket Cap Screws and Nuts Kit, 304 stainless, DIN912, with washers and wrenches (SF-T</div></td><td class='num'>1</td><td class='num'>$17.73</td><td class='num'>$17.73</td><td><a href="https://www.homedepot.com/p/MYWISH-550-Piece-M3-Hex-Socket-Cap-Screws-and-Nuts-Kit-304-Stainless-Steel-DIN912-with-Washers-and-Wrenches-SF-TZ00085/337777102" rel="noopener">source</a></td></tr></tbody><tfoot><tr><td colspan='4'>Total</td><td class='num'>$498</td><td></td></tr></tfoot></table></div></details>
+  </div>
+</section>
+<section class="tier" id="tier-b">
+  <div class="wrap">
+    <header class="tier-head">
+      <span class="tier-letter">B</span>
+      <div><p class="eyebrow">Tier B · up to $1,200</p><h2>Midrange</h2><p class="lede">The one to build for a season of events: smart motors, safer, and he never has to sleep.</p></div>
+      <div class="price-tag"><span class="price">$1,175</span><span class="price-note">new parts</span></div>
+    </header>
+    <div class="tier-grid">
+      <figure class="hero-fig"><img src="media/hero-b.jpg" alt="Tier B Joyful Jack, rendered" loading="lazy"></figure>
+      <div class="tier-text">
+        <h3>How he works</h3><p>Fourteen Feetech smart servos, the same motors used in popular open-source robot arms. Each reports how hard it is working, so Jack can stop if his hand meets resistance. Belts give the shoulders and elbows 2.7 times more strength. An aluminium frame inside the torso carries two Milwaukee packs, joined so one can be swapped live.</p>
+        <h3>What he can do</h3><ul class="ticks"><li>Waves properly: the upper arm twists, so the hand comes up</li><li>Hands that open and close around a cup or a bag handle</li><li>Every motor reports its position, load and temperature</li><li>Two battery packs: pull one while the other keeps him going</li><li>Tells you when the battery is getting low</li></ul>
+        <h3>What he can't</h3><ul class="crosses"><li>Move individual fingers</li><li>Run on wall power (batteries only)</li></ul>
+      </div>
+    </div>
+    <div class="pair">
+      <figure><img src="media/hands-b.jpg" alt="Tier B hands" loading="lazy"><figcaption><b>The hands.</b> A glove hand in a big cartoon glove: four fingers linked to close together, so they wrap around an object, and a separately driven thumb.</figcaption></figure>
+      <figure><img src="media/internals-b.jpg" alt="Tier B with the costume off" loading="lazy"><figcaption><b>Costume off.</b> The frame on the pole, the battery packs (red) behind the back hatch, and the electronics plate.</figcaption></figure>
+    </div>
+    <div class="pair">
+      <figure><img src="media/exploded-b.jpg" alt="Tier B exploded view" loading="lazy"><figcaption><b>Every part, pulled apart.</b> Base and pole stay put; torso and costume lift; the arms move out; the head and hat rise above.</figcaption></figure>
+      <div class="facts">
+        <h3>Where the money goes</h3>
+        <p class="budget">$1,175 of a $1,200 cap: $25.05 to spare</p>
+        <div class="bars"><div class="bar"><span class="bar-label">Arms and motors</span><span class="bar-track"><span class="bar-fill" style="width:34.1%"></span></span><span class="bar-val">$400</span></div>
+<div class="bar"><span class="bar-label">Hands</span><span class="bar-track"><span class="bar-fill" style="width:1.5%"></span></span><span class="bar-val">$17.99</span></div>
+<div class="bar"><span class="bar-label">Power and safety</span><span class="bar-track"><span class="bar-fill" style="width:27.9%"></span></span><span class="bar-val">$327</span></div>
+<div class="bar"><span class="bar-label">Controllers and computer</span><span class="bar-track"><span class="bar-fill" style="width:2.1%"></span></span><span class="bar-val">$24.93</span></div>
+<div class="bar"><span class="bar-label">Torso frame</span><span class="bar-track"><span class="bar-fill" style="width:13.0%"></span></span><span class="bar-val">$153</span></div>
+<div class="bar"><span class="bar-label">Base and pole</span><span class="bar-track"><span class="bar-fill" style="width:6.8%"></span></span><span class="bar-val">$80.03</span></div>
+<div class="bar"><span class="bar-label">Costume</span><span class="bar-track"><span class="bar-fill" style="width:5.5%"></span></span><span class="bar-val">$64.62</span></div>
+<div class="bar"><span class="bar-label">Screws and fittings</span><span class="bar-track"><span class="bar-fill" style="width:9.1%"></span></span><span class="bar-val">$107</span></div></div>
+        <h3>Strength check</h3>
+        <p class="small">Arm held straight out with a 0.25 kg bag: the hardest moment for the motors.</p>
+        <table class="mini"><tr><th></th><th class="num">Needed</th><th class="num">Motor can give (max)</th></tr>
+          <tr><td>Shoulder</td><td class="num">60 kg·cm</td><td class="num">82 kg·cm</td></tr>
+          <tr><td>Elbow</td><td class="num">18 kg·cm</td><td class="num">82 kg·cm</td></tr></table>
+        <p class="small">The shoulder spring supplies about 32 kg·cm so the motor works well inside its limit.
+        </p>
+      </div>
+    </div>
+    <figure class="diagram"><img src="media/diagram-b.jpg" alt="Tier B system in Protoboard" loading="lazy"><figcaption><b>The wiring, in Protoboard.</b> Every box is a real part with its voltages; Protoboard checked every connection: 0 problems.</figcaption></figure>
+    <details><summary>Full parts list for tier B (40 lines)</summary><div class='table-wrap'><table class='bom'><thead><tr><th>Group</th><th>Item</th><th class='num'>Qty</th><th class='num'>Each</th><th class='num'>Line</th><th>Price from</th></tr></thead><tbody><tr><td>Arms and motors</td><td>Serial bus servo 12 V 30 kg.cm (wrist/forearm/hand joints)<div class='choice'>Feetech ST3215-C047 12V 30 kg.cm, 1:345 (Seeed SKU 108090003); equivalent STS3215-C018 12V 1/345</div></td><td class='num'>14</td><td class='num'>$22.00</td><td class='num'>$308</td><td><a href="https://www.seeedstudio.com/STS3215-30KG-Serial-Servo-p-6340.html" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>8 mm shaft bearings<div class='choice'>Phidgets Flanged Rotary Bearing for 8mm shaft (2 pcs), TRM4500_0</div></td><td class='num'>6</td><td class='num'>$4.00</td><td class='num'>$24.00</td><td><a href="https://www.phidgets.com/?prodid=874" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>Extension springs, shoulder counterbalance<div class='choice'>Grainger 1NAE3 crossover centre loop extension spring, 0.5 in OD, 0.063 in wire, carbon steel, pack of 3</div></td><td class='num'>2</td><td class='num'>$9.08</td><td class='num'>$18.16</td><td><a href="https://www.grainger.com/product/Extension-Spring-Crossover-1NAE3" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>GT2 driven pulley (large), shoulder flex reduction<div class='choice'>Phidgets GT2 Pulley 8mm bore 60 teeth, TRM4105_0</div></td><td class='num'>6</td><td class='num'>$3.00</td><td class='num'>$18.00</td><td><a href="https://www.phidgets.com/?prodid=754" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>GT2 drive pulley (small), shoulder flex reduction<div class='choice'>Phidgets GT2 Pulley 8mm bore 22 teeth, TRM4102_0</div></td><td class='num'>6</td><td class='num'>$2.75</td><td class='num'>$16.50</td><td><a href="https://www.phidgets.com/?prodid=751" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>GT2 6 mm closed belt, 220 mm<div class='choice'>Phidgets GT2 closed-loop timing belt 6 mm x 220 mm, TRM4203_0</div></td><td class='num'>6</td><td class='num'>$1.50</td><td class='num'>$9.00</td><td><a href="https://phidgets.com/?catid=42&amp;pcid=35&amp;tier=2" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>8 mm steel shaft<div class='choice'>Phidgets 8mm precision ground rotary shaft, TRM4000_0, 1 m (cut to length)</div></td><td class='num'>1</td><td class='num'>$6.50</td><td class='num'>$6.50</td><td><a href="https://www.phidgets.com/?tier=3&amp;catid=83&amp;pcid=74&amp;prodid=730" rel="noopener">source</a></td></tr>
+<tr><td>Hands</td><td>TPU 95A filament 1 kg<div class='choice'>ELEGOO TPU 95A 1.75 mm 1 kg</div></td><td class='num'>1</td><td class='num'>$17.99</td><td class='num'>$17.99</td><td><a href="https://us.elegoo.com/products/tpu-filament-1-75mm-colored-1kg" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>18 AWG silicone wire, red + black<div class='choice'>BNTECHGO 18 AWG silicone wire spool, 25 ft red + 25 ft black (150 strands tinned copper, 200 C, 600 V)</div></td><td class='num'>1</td><td class='num'>$45.99</td><td class='num'>$45.99</td><td><a href="https://bigamart.com/product/bntechgo-18-gauge-silicone-wire-spool-50-ft-ultra-flexible-high-temp-200-deg-c-600v-18-awg-silicone-wire-150-strands-of-tinned-copper-wire-25-ft-black-and-25-ft-red-stranded-wire-for-model-b/" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Milwaukee M18 battery adapter with switch, fuse and 12 AWG leads<div class='choice'>Generic &#x27;Power Wheel Adapter for Milwaukee M18&#x27; with on/off switch, 30 A blade fuse, 12 AWG leads, 1-pack (Ama</div></td><td class='num'>1</td><td class='num'>$34.99</td><td class='num'>$34.99</td><td><a href="https://www.newegg.com/p/1WM-0071-00050" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Milwaukee M18 battery adapter with switch, fuse and 12 AWG leads<div class='choice'>Generic &#x27;Power Wheel Adapter for Milwaukee M18&#x27; with on/off switch, 30 A blade fuse, 12 AWG leads, 1-pack (Ama</div></td><td class='num'>1</td><td class='num'>$34.99</td><td class='num'>$34.99</td><td><a href="https://www.newegg.com/p/1WM-0071-00050" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>18 V -&gt; 12 V DC-DC buck, 20 A<div class='choice'>EKYLIN 24V to 12V 20A 240W step-down converter, DC 15-40V input (Amazon ASIN B01JAIC9EM)</div></td><td class='num'>2</td><td class='num'>$17.47</td><td class='num'>$34.94</td><td><a href="https://www.amazon.com/dp/B01JAIC9EM" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Blade fuse block, 6-way ATC/ATO, with negative bus<div class='choice'>Sea-Dog blade style LED indicator fuse block with negative bus bar, 6 circuit, 445185-1</div></td><td class='num'>1</td><td class='num'>$30.99</td><td class='num'>$30.99</td><td><a href="https://www.drsa.com/products/sea-dog-blade-style-led-indicator-fuse-block-w-negative-bus-bar-6-circuit-445185-1" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>ALTERNATE for the Pi 5 V buck: Pololu D24V50F5 5 V 5 A step-down<div class='choice'>Pololu D24V50F5, item #2851</div></td><td class='num'>1</td><td class='num'>$29.95</td><td class='num'>$29.95</td><td><a href="https://www.pololu.com/product/2851" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Ideal-diode OR of two battery inputs<div class='choice'>GODIYMODULES / DIY-Module 40A-60A ideal diode module, single channel (Amazon ASIN B0DDBYNDX5), one per input i</div></td><td class='num'>2</td><td class='num'>$13.99</td><td class='num'>$27.98</td><td><a href="https://www.amazon.com/dp/B0DDBYNDX5" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>12 AWG silicone wire, red + black<div class='choice'>BNTECHGO 12 AWG silicone wire, 10 ft red + 10 ft black (Amazon ASIN B01ABOPMEI)</div></td><td class='num'>1</td><td class='num'>$27.52</td><td class='num'>$27.52</td><td><a href="https://www.newegg.com/PISKEKAT-Work-Lights/BrandSubCat/ID-218576-2092/Page-13" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Latching mushroom emergency stop, 22 mm, NC<div class='choice'>22mm NC red mushroom emergency stop push button, 40 mm head, latching (ZB2-BE102C / XB2-BS142 style)</div></td><td class='num'>1</td><td class='num'>$12.17</td><td class='num'>$12.17</td><td><a href="https://www.fridayparts.com/22mm-nc-n-c-red-mushroom-emergency-stop-push-button-switch-600v-10a-zb2-be102c-xb2-bs142" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>XT60 connector pairs<div class='choice'>Amass XT60 connectors, 2 pairs, yellow (BuddyRC SKU 002-0201)</div></td><td class='num'>3</td><td class='num'>$3.49</td><td class='num'>$10.47</td><td><a href="https://buddyrc.com/products/genuine-xt60-connectors-2-pairs-yellow-1" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Buck for the head&#x27;s servo rail (5-6 V)<div class='choice'>DROK 300W Power Supply Module, DC 3.5-30V to 0.8-29V 10A adjustable buck with voltmeter (DROK product code 200</div></td><td class='num'>1</td><td class='num'>$10.20</td><td class='num'>$10.20</td><td><a href="https://www.droking.com/dc-buck/300W-Power-Supply-Module-DC-3.5-30V-to-0.8-29V-10A-Buck-Converter-Adjustable-Voltage-Regulator-Adapter-Driver-Module-Voltmeter" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Adjustable low-voltage cutoff for 5S Li-ion (~18 V) pack<div class='choice'>XH-M609 digital low voltage disconnect module, 12-36 V, relay output (Amazon ASIN B0FJ8NC729, MTDELE)</div></td><td class='num'>1</td><td class='num'>$9.99</td><td class='num'>$9.99</td><td><a href="https://sentinel.rocketium.com/products/amazon/B0FJ8NC729" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Relay &gt;=30 A for actuator rail, switched by e-stop<div class='choice'>TEMCo 24V 40A 4-pin Bosch-style automotive relay, SPST (SKU CN0345)</div></td><td class='num'>1</td><td class='num'>$8.73</td><td class='num'>$8.73</td><td><a href="https://temcoindustrial.com/24v-40a-4-pin-bosch-style-automotive-relay-spst/" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>ATC blade fuse assortment<div class='choice'>Bussmann ATC fuse assortment, variety pack (10/15/20/25/30 A)</div></td><td class='num'>1</td><td class='num'>$8.32</td><td class='num'>$8.32</td><td><a href="https://www.walmart.com/ip/1764066057" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Current/voltage monitor, I2C (chosen)<div class='choice'>Adafruit INA228 I2C 85V 20-bit high/low side power monitor, STEMMA QT (product 5832)</div></td><td class='num'>1</td><td class='num'>$14.95</td><td class='num'>$14.95</td><td><a href="https://www.adafruit.com/product/5832" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Bus servo driver / USB-TTL adapter<div class='choice'>Waveshare Bus Servo Adapter (A), SKU 25514</div></td><td class='num'>2</td><td class='num'>$4.99</td><td class='num'>$9.98</td><td><a href="https://www.waveshare.com/bus-servo-adapter-a.htm" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>2020 V-slot extrusion, 500 mm<div class='choice'>Maker Store USA V-Slot 20x20mm, clear anodized, SKU LR-2020-S, 500 mm length</div></td><td class='num'>10</td><td class='num'>$6.75</td><td class='num'>$67.50</td><td><a href="https://makerstore.cc/product/v-slot-20-x-20mm/" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>Corner brackets for 2020<div class='choice'>Maker Store Cast 90 Degree Corner Bracket, SKU BRAC-90CAST</div></td><td class='num'>24</td><td class='num'>$1.80</td><td class='num'>$43.20</td><td><a href="https://makerstore.cc/product/cast-90-degree-corner-bracket/" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>PETG filament 1 kg<div class='choice'>ELEGOO PETG PRO 1.75 mm 1 kg</div></td><td class='num'>3</td><td class='num'>$13.99</td><td class='num'>$41.97</td><td><a href="https://us.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>ALTERNATE for the 24 in round pine board: 3/4 in birch plywood 2x2 ft project panel, cut to a 24 in circle in-house<div class='choice'>Falken Design 3/4 in x 2 ft x 2 ft Birch Plywood Project Panel, FALKENDESIGN-PW-Birch-A2-3-4-2424 (HD 31913741</div></td><td class='num'>1</td><td class='num'>$29.49</td><td class='num'>$29.49</td><td><a href="https://www.homedepot.com/p/Falken-Design-3-4-in-x-2-ft-x-2-ft-Birch-Plywood-Project-Panel-FALKENDESIGN-PW-Birch-A2-3-4-2424/319137413" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>Collar on 1 in pipe to set torso height<div class='choice'>Kee Klamp 75-6 Collar, size 6 (fits 1 in nominal / 1.315 in OD pipe), galvanized, set screw included</div></td><td class='num'>1</td><td class='num'>$16.85</td><td class='num'>$16.85</td><td><a href="https://www.simplifiedbuilding.com/75-6-collar-1" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>1 in black steel pipe, ~36 in, threaded both ends (center post)<div class='choice'>PLUMBFLEX 1 in. x 36 in. Black Steel Pipe 1036PBL (1 in nominal, 1.315 in OD)</div></td><td class='num'>1</td><td class='num'>$16.06</td><td class='num'>$16.06</td><td><a href="https://www.homedepot.com/p/PLUMBFLEX-1-in-x-36-in-Black-Steel-Pipe-1036PBL/307752681" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>1 in floor flange for center post<div class='choice'>Southland 1 in. Black Malleable Iron Threaded Floor Flange 521-605HN</div></td><td class='num'>1</td><td class='num'>$6.97</td><td class='num'>$6.97</td><td><a href="https://homedepot.com/p/Southland-1-in-Black-Malleable-Iron-Threaded-Floor-Flange-521-605HN/100179931" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>Concrete mix to fill bucket (~18.9 L = 0.667 cu ft)<div class='choice'>Quikrete Concrete Mix No. 1101, 80 lb bag (Home Depot model 110180)</div></td><td class='num'>1</td><td class='num'>$5.68</td><td class='num'>$5.68</td><td><a href="https://shopsavvy.com/products/quickrete-80lb-concrete-mix" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>5 US gallon plastic bucket (ballast base)<div class='choice'>The Home Depot 5 Gallon Orange Homer Bucket, model 05GLHD2 (Internet #100087613)</div></td><td class='num'>1</td><td class='num'>$4.98</td><td class='num'>$4.98</td><td><a href="https://www.homedepot.com/p/The-Home-Depot-5-Gallon-Orange-Homer-Bucket-05GLHD2/100087613" rel="noopener">source</a></td></tr>
+<tr><td>Costume</td><td>Cowboy / western vest<div class='choice'>TiaoBug Men&#x27;s 3-piece faux suede western cowboy vest set (vest + bandanna + hat), black</div></td><td class='num'>1</td><td class='num'>$32.65</td><td class='num'>$32.65</td><td><a href="https://www.walmart.com/ip/9980614009" rel="noopener">source</a></td></tr>
+<tr><td>Costume</td><td>Large white cartoon 4-finger gloves<div class='choice'>Fun World Adult Giant Cartoon Hand Gloves, item FUN6197AD (4-finger, white, one size)</div></td><td class='num'>1</td><td class='num'>$19.99</td><td class='num'>$19.99</td><td><a href="https://www.halloweencostumes.com/adult-giant-cartoon-hand-gloves.html" rel="noopener">source</a></td></tr>
+<tr><td>Costume</td><td>Men&#x27;s plaid flannel shirt<div class='choice'>George Men&#x27;s and Big Men&#x27;s Flannel Shirt with Long Sleeves (Walmart item 5454053875)</div></td><td class='num'>1</td><td class='num'>$11.98</td><td class='num'>$11.98</td><td><a href="https://www.walmart.com/ip/George-Men-s-and-Big-Men-s-Flannel-Shirt-with-Long-Sleeves-Sizes-XS-3XLT/5454053875" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M5 tee nuts for 2020 (25 pack)<div class='choice'>Maker Store Tee Nuts (25 Pack), SKU HARD-TNUT-PACK25, M5 option</div></td><td class='num'>3</td><td class='num'>$20.00</td><td class='num'>$60.00</td><td><a href="https://makerstore.cc/product/tee-nuts-25-pack/" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M5 low-profile screws, 10 mm (25 pack)<div class='choice'>Maker Store M5 Low Profile Screws, SKU SCREWS-M5-LP, 10 mm x 25 pcs</div></td><td class='num'>3</td><td class='num'>$6.20</td><td class='num'>$18.60</td><td><a href="https://makerstore.cc/product-category/screws/low-profile/low-profile-m5/" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M3 socket head cap screw kit<div class='choice'>MYWISH 550-Piece M3 Hex Socket Cap Screws and Nuts Kit, 304 stainless, DIN912, with washers and wrenches (SF-T</div></td><td class='num'>1</td><td class='num'>$17.73</td><td class='num'>$17.73</td><td><a href="https://www.homedepot.com/p/MYWISH-550-Piece-M3-Hex-Socket-Cap-Screws-and-Nuts-Kit-304-Stainless-Steel-DIN912-with-Washers-and-Wrenches-SF-TZ00085/337777102" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M3 heat-set inserts, 100-pack<div class='choice'>CNC Kitchen Heat Set Inserts - M3 standard (M3 x 5.7 mm), 100 pcs, sold by Prusa Research</div></td><td class='num'>1</td><td class='num'>$10.99</td><td class='num'>$10.99</td><td><a href="https://www.prusa3d.com/product/heat-set-inserts-m3-standard-100-pcs/" rel="noopener">source</a></td></tr></tbody><tfoot><tr><td colspan='4'>Total</td><td class='num'>$1,175</td><td></td></tr></tfoot></table></div></details>
+  </div>
+</section>
+<section class="tier" id="tier-c">
+  <div class="wrap">
+    <header class="tier-head">
+      <span class="tier-letter">C</span>
+      <div><p class="eyebrow">Tier C · no cap set</p><h2>Maxed</h2><p class="lede">The show piece: real robot hands with fingers that each move on their own.</p></div>
+      <div class="price-tag"><span class="price">$2,140</span><span class="price-note">new parts</span></div>
+    </header>
+    <div class="tier-grid">
+      <figure class="hero-fig"><img src="media/hero-c.jpg" alt="Tier C Joyful Jack, rendered" loading="lazy"></figure>
+      <div class="tier-text">
+        <h3>How he works</h3><p>Tier B's arm, upgraded: stronger STS3250 motors at the shoulders and elbows (still through belts), plus a wrist that bends. Each hand is a Pollen Robotics AmazingHand: an open-source hand with eight tiny motors in the palm. A Raspberry Pi 5 in the chest runs the arms and hands. A mains power supply joins the two battery packs.</p>
+        <h3>What he can do</h3><ul class="ticks"><li>Humanoid hands: four fingers, each with two moving joints</li><li>Wrist that bends as well as twists, for a hat-tip like the concept art</li><li>Batteries plus wall power, so he can run all day indoors</li><li>His own computer in the chest for the arms and hands</li></ul>
+        <h3>What he can't</h3><ul class="crosses"><li>Thumbs (the hand used has four fingers, which suits a cartoon)</li><li>Strong grip: the hand's grip force is not published</li></ul>
+      </div>
+    </div>
+    <div class="pair">
+      <figure><img src="media/hands-c.jpg" alt="Tier C hands" loading="lazy"><figcaption><b>The hands.</b> The Pollen AmazingHand: four fingers, two joints each, eight micro servos, 400 g. Open source (designs CC BY 4.0), sold as a kit by Seeed Studio.</figcaption></figure>
+      <figure><img src="media/internals-c.jpg" alt="Tier C with the costume off" loading="lazy"><figcaption><b>Costume off.</b> The frame on the pole, the battery packs (red) behind the back hatch, and the electronics plate.</figcaption></figure>
+    </div>
+    <div class="pair">
+      <figure><img src="media/exploded-c.jpg" alt="Tier C exploded view" loading="lazy"><figcaption><b>Every part, pulled apart.</b> Base and pole stay put; torso and costume lift; the arms move out; the head and hat rise above.</figcaption></figure>
+      <div class="facts">
+        <h3>Where the money goes</h3>
+        <p class="budget">$2,140, no cap set</p>
+        <div class="bars"><div class="bar"><span class="bar-label">Arms and motors</span><span class="bar-track"><span class="bar-fill" style="width:37.7%"></span></span><span class="bar-val">$806</span></div>
+<div class="bar"><span class="bar-label">Hands</span><span class="bar-track"><span class="bar-fill" style="width:10.1%"></span></span><span class="bar-val">$216</span></div>
+<div class="bar"><span class="bar-label">Power and safety</span><span class="bar-track"><span class="bar-fill" style="width:24.4%"></span></span><span class="bar-val">$522</span></div>
+<div class="bar"><span class="bar-label">Controllers and computer</span><span class="bar-track"><span class="bar-fill" style="width:9.9%"></span></span><span class="bar-val">$211</span></div>
+<div class="bar"><span class="bar-label">Torso frame</span><span class="bar-track"><span class="bar-fill" style="width:7.1%"></span></span><span class="bar-val">$153</span></div>
+<div class="bar"><span class="bar-label">Base and pole</span><span class="bar-track"><span class="bar-fill" style="width:3.7%"></span></span><span class="bar-val">$80.03</span></div>
+<div class="bar"><span class="bar-label">Costume</span><span class="bar-track"><span class="bar-fill" style="width:2.1%"></span></span><span class="bar-val">$44.63</span></div>
+<div class="bar"><span class="bar-label">Screws and fittings</span><span class="bar-track"><span class="bar-fill" style="width:5.0%"></span></span><span class="bar-val">$107</span></div></div>
+        <h3>Strength check</h3>
+        <p class="small">Arm held straight out with a 0.25 kg bag: the hardest moment for the motors.</p>
+        <table class="mini"><tr><th></th><th class="num">Needed</th><th class="num">Motor can give (max)</th></tr>
+          <tr><td>Shoulder</td><td class="num">68 kg·cm</td><td class="num">136 kg·cm</td></tr>
+          <tr><td>Elbow</td><td class="num">23 kg·cm</td><td class="num">136 kg·cm</td></tr></table>
+        <p class="small">The shoulder spring supplies about 24 kg·cm so the motor works well inside its limit.
+        </p>
+      </div>
+    </div>
+    <figure class="diagram"><img src="media/diagram-c.jpg" alt="Tier C system in Protoboard" loading="lazy"><figcaption><b>The wiring, in Protoboard.</b> Every box is a real part with its voltages; Protoboard checked every connection: 0 errors, 2 notes explained in the decision log.</figcaption></figure>
+    <details><summary>Full parts list for tier C (51 lines)</summary><div class='table-wrap'><table class='bom'><thead><tr><th>Group</th><th>Item</th><th class='num'>Qty</th><th class='num'>Each</th><th class='num'>Line</th><th>Price from</th></tr></thead><tbody><tr><td>Arms and motors</td><td>High-torque serial bus servo (shoulder/elbow joints)<div class='choice'>Feetech STS3250 (ST-3250-C001, 12 V 50 kg.cm, magnetic encoder, double shaft, with bracket); alt variant STS32</div></td><td class='num'>6</td><td class='num'>$97.00</td><td class='num'>$582</td><td><a href="https://aifitlab.com/products/feetech-sts3250-servo-motor" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>Serial bus servo 12 V 30 kg.cm (wrist/forearm/hand joints)<div class='choice'>Feetech ST3215-C047 12V 30 kg.cm, 1:345 (Seeed SKU 108090003); equivalent STS3215-C018 12V 1/345</div></td><td class='num'>6</td><td class='num'>$22.00</td><td class='num'>$132</td><td><a href="https://www.seeedstudio.com/STS3215-30KG-Serial-Servo-p-6340.html" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>8 mm shaft bearings<div class='choice'>Phidgets Flanged Rotary Bearing for 8mm shaft (2 pcs), TRM4500_0</div></td><td class='num'>6</td><td class='num'>$4.00</td><td class='num'>$24.00</td><td><a href="https://www.phidgets.com/?prodid=874" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>Extension springs, shoulder counterbalance<div class='choice'>Grainger 1NAE3 crossover centre loop extension spring, 0.5 in OD, 0.063 in wire, carbon steel, pack of 3</div></td><td class='num'>2</td><td class='num'>$9.08</td><td class='num'>$18.16</td><td><a href="https://www.grainger.com/product/Extension-Spring-Crossover-1NAE3" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>GT2 driven pulley (large), shoulder flex reduction<div class='choice'>Phidgets GT2 Pulley 8mm bore 60 teeth, TRM4105_0</div></td><td class='num'>6</td><td class='num'>$3.00</td><td class='num'>$18.00</td><td><a href="https://www.phidgets.com/?prodid=754" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>GT2 drive pulley (small), shoulder flex reduction<div class='choice'>Phidgets GT2 Pulley 8mm bore 22 teeth, TRM4102_0</div></td><td class='num'>6</td><td class='num'>$2.75</td><td class='num'>$16.50</td><td><a href="https://www.phidgets.com/?prodid=751" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>GT2 6 mm closed belt, 220 mm<div class='choice'>Phidgets GT2 closed-loop timing belt 6 mm x 220 mm, TRM4203_0</div></td><td class='num'>6</td><td class='num'>$1.50</td><td class='num'>$9.00</td><td><a href="https://phidgets.com/?catid=42&amp;pcid=35&amp;tier=2" rel="noopener">source</a></td></tr>
+<tr><td>Arms and motors</td><td>8 mm steel shaft<div class='choice'>Phidgets 8mm precision ground rotary shaft, TRM4000_0, 1 m (cut to length)</div></td><td class='num'>1</td><td class='num'>$6.50</td><td class='num'>$6.50</td><td><a href="https://www.phidgets.com/?tier=3&amp;catid=83&amp;pcid=74&amp;prodid=730" rel="noopener">source</a></td></tr>
+<tr><td>Hands</td><td>AmazingHand kit, right hand<div class='choice'>Seeed Studio Amazing Hand (Right Hand) developer kit, SKU 100063642</div></td><td class='num'>1</td><td class='num'>$99.00</td><td class='num'>$99.00</td><td><a href="https://www.seeedstudio.com/Amazing-Hand-Right-Hand-The-Open-Source-Robotic-Hand-Developer-Kit.html" rel="noopener">source</a></td></tr>
+<tr><td>Hands</td><td>AmazingHand kit, left hand<div class='choice'>Seeed Studio Amazing Hand (Left Hand) kit, SKU 100062181</div></td><td class='num'>1</td><td class='num'>$99.00</td><td class='num'>$99.00</td><td><a href="https://www.seeedstudio.com/amazinghand-open-source-robotic-hand-kit.html" rel="noopener">source</a></td></tr>
+<tr><td>Hands</td><td>TPU 95A filament 1 kg<div class='choice'>ELEGOO TPU 95A 1.75 mm 1 kg</div></td><td class='num'>1</td><td class='num'>$17.99</td><td class='num'>$17.99</td><td><a href="https://us.elegoo.com/products/tpu-filament-1-75mm-colored-1kg" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>5 V hand servo rail buck (one per hand)<div class='choice'>Pololu D36V50F5 5 V 5.5 A step-down, item 4091</div></td><td class='num'>2</td><td class='num'>$39.95</td><td class='num'>$79.90</td><td><a href="https://www.pololu.com/product/4091" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>18 AWG silicone wire, red + black<div class='choice'>BNTECHGO 18 AWG silicone wire spool, 25 ft red + 25 ft black (150 strands tinned copper, 200 C, 600 V)</div></td><td class='num'>1</td><td class='num'>$45.99</td><td class='num'>$45.99</td><td><a href="https://bigamart.com/product/bntechgo-18-gauge-silicone-wire-spool-50-ft-ultra-flexible-high-temp-200-deg-c-600v-18-awg-silicone-wire-150-strands-of-tinned-copper-wire-25-ft-black-and-25-ft-red-stranded-wire-for-model-b/" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Ideal-diode OR of two battery inputs<div class='choice'>GODIYMODULES / DIY-Module 40A-60A ideal diode module, single channel (Amazon ASIN B0DDBYNDX5), one per input i</div></td><td class='num'>3</td><td class='num'>$13.99</td><td class='num'>$41.97</td><td><a href="https://www.amazon.com/dp/B0DDBYNDX5" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Custom PDB: JLCPCB 2-layer 100x100 mm, 5 pcs, economic PCBA (lot)<div class='choice'>JLCPCB</div></td><td class='num'>1</td><td class='num'>$38.00</td><td class='num'>$38.00</td><td><a href="https://jlcpcb.com/help/article/pcb-assembly-price" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Milwaukee M18 battery adapter with switch, fuse and 12 AWG leads<div class='choice'>Generic &#x27;Power Wheel Adapter for Milwaukee M18&#x27; with on/off switch, 30 A blade fuse, 12 AWG leads, 1-pack (Ama</div></td><td class='num'>1</td><td class='num'>$34.99</td><td class='num'>$34.99</td><td><a href="https://www.newegg.com/p/1WM-0071-00050" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Milwaukee M18 battery adapter with switch, fuse and 12 AWG leads<div class='choice'>Generic &#x27;Power Wheel Adapter for Milwaukee M18&#x27; with on/off switch, 30 A blade fuse, 12 AWG leads, 1-pack (Ama</div></td><td class='num'>1</td><td class='num'>$34.99</td><td class='num'>$34.99</td><td><a href="https://www.newegg.com/p/1WM-0071-00050" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>18 V -&gt; 12 V DC-DC buck, 20 A<div class='choice'>EKYLIN 24V to 12V 20A 240W step-down converter, DC 15-40V input (Amazon ASIN B01JAIC9EM)</div></td><td class='num'>2</td><td class='num'>$17.47</td><td class='num'>$34.94</td><td><a href="https://www.amazon.com/dp/B01JAIC9EM" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>24 V mains supply (third OR input)<div class='choice'>Mean Well LRS-350-24</div></td><td class='num'>1</td><td class='num'>$31.40</td><td class='num'>$31.40</td><td><a href="https://punchouttest.digikey.com.mx/en/products/detail/mean-well-usa-inc/LRS-350-24/7705034" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Blade fuse block, 6-way ATC/ATO, with negative bus<div class='choice'>Sea-Dog blade style LED indicator fuse block with negative bus bar, 6 circuit, 445185-1</div></td><td class='num'>1</td><td class='num'>$30.99</td><td class='num'>$30.99</td><td><a href="https://www.drsa.com/products/sea-dog-blade-style-led-indicator-fuse-block-w-negative-bus-bar-6-circuit-445185-1" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>ALTERNATE for the Pi 5 V buck: Pololu D24V50F5 5 V 5 A step-down<div class='choice'>Pololu D24V50F5, item #2851</div></td><td class='num'>1</td><td class='num'>$29.95</td><td class='num'>$29.95</td><td><a href="https://www.pololu.com/product/2851" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>12 AWG silicone wire, red + black<div class='choice'>BNTECHGO 12 AWG silicone wire, 10 ft red + 10 ft black (Amazon ASIN B01ABOPMEI)</div></td><td class='num'>1</td><td class='num'>$27.52</td><td class='num'>$27.52</td><td><a href="https://www.newegg.com/PISKEKAT-Work-Lights/BrandSubCat/ID-218576-2092/Page-13" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Latching mushroom emergency stop, 22 mm, NC<div class='choice'>22mm NC red mushroom emergency stop push button, 40 mm head, latching (ZB2-BE102C / XB2-BS142 style)</div></td><td class='num'>1</td><td class='num'>$12.17</td><td class='num'>$12.17</td><td><a href="https://www.fridayparts.com/22mm-nc-n-c-red-mushroom-emergency-stop-push-button-switch-600v-10a-zb2-be102c-xb2-bs142" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>XT60 connector pairs<div class='choice'>Amass XT60 connectors, 2 pairs, yellow (BuddyRC SKU 002-0201)</div></td><td class='num'>3</td><td class='num'>$3.49</td><td class='num'>$10.47</td><td><a href="https://buddyrc.com/products/genuine-xt60-connectors-2-pairs-yellow-1" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Buck for the torso Raspberry Pi 5, set to 5.1 V (tier C)<div class='choice'>DROK 300W Power Supply Module, DC 3.5-30V to 0.8-29V 10A adjustable buck with voltmeter (DROK product code 200</div></td><td class='num'>1</td><td class='num'>$10.20</td><td class='num'>$10.20</td><td><a href="https://www.droking.com/dc-buck/300W-Power-Supply-Module-DC-3.5-30V-to-0.8-29V-10A-Buck-Converter-Adjustable-Voltage-Regulator-Adapter-Driver-Module-Voltmeter" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Buck for the head&#x27;s servo rail (5-6 V)<div class='choice'>DROK 300W Power Supply Module, DC 3.5-30V to 0.8-29V 10A adjustable buck with voltmeter (DROK product code 200</div></td><td class='num'>1</td><td class='num'>$10.20</td><td class='num'>$10.20</td><td><a href="https://www.droking.com/dc-buck/300W-Power-Supply-Module-DC-3.5-30V-to-0.8-29V-10A-Buck-Converter-Adjustable-Voltage-Regulator-Adapter-Driver-Module-Voltmeter" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Adjustable low-voltage cutoff for 5S Li-ion (~18 V) pack<div class='choice'>XH-M609 digital low voltage disconnect module, 12-36 V, relay output (Amazon ASIN B0FJ8NC729, MTDELE)</div></td><td class='num'>1</td><td class='num'>$9.99</td><td class='num'>$9.99</td><td><a href="https://sentinel.rocketium.com/products/amazon/B0FJ8NC729" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Relay &gt;=30 A for actuator rail, switched by e-stop<div class='choice'>TEMCo 24V 40A 4-pin Bosch-style automotive relay, SPST (SKU CN0345)</div></td><td class='num'>1</td><td class='num'>$8.73</td><td class='num'>$8.73</td><td><a href="https://temcoindustrial.com/24v-40a-4-pin-bosch-style-automotive-relay-spst/" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>ATC blade fuse assortment<div class='choice'>Bussmann ATC fuse assortment, variety pack (10/15/20/25/30 A)</div></td><td class='num'>1</td><td class='num'>$8.32</td><td class='num'>$8.32</td><td><a href="https://www.walmart.com/ip/1764066057" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Custom PDB: current/voltage monitor (one per input)<div class='choice'>TI INA226AIDGSR</div></td><td class='num'>3</td><td class='num'>$2.66</td><td class='num'>$7.98</td><td><a href="https://punchouttest.digikey.com.mx/en/products/detail/texas-instruments/INA226AIDGSR/2687236" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Custom PDB: eFuse per output branch<div class='choice'>TI TPS25982 (TPS259824ONRGET, 24-VQFN 4x4)</div></td><td class='num'>2</td><td class='num'>$3.82</td><td class='num'>$7.64</td><td><a href="https://punchouttest.digikey.com.mx/en/products/detail/texas-instruments/TPS259824ONRGET/10273222" rel="noopener">source</a></td></tr>
+<tr><td>Power and safety</td><td>Custom PDB: ideal-diode controller (one per OR input)<div class='choice'>TI LM74700QDBVRQ1</div></td><td class='num'>3</td><td class='num'>$1.89</td><td class='num'>$5.67</td><td><a href="https://punchouttest.digikey.com.mx/en/products/detail/texas-instruments/LM74700QDBVRQ1/10434692" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Main computer<div class='choice'>Raspberry Pi 5 8 GB</div></td><td class='num'>1</td><td class='num'>$175</td><td class='num'>$175</td><td><a href="https://www.pishop.us/product/raspberry-pi-5-8gb/" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Current/voltage monitor, I2C (chosen)<div class='choice'>Adafruit INA228 I2C 85V 20-bit high/low side power monitor, STEMMA QT (product 5832)</div></td><td class='num'>1</td><td class='num'>$14.95</td><td class='num'>$14.95</td><td><a href="https://www.adafruit.com/product/5832" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Pi cooling<div class='choice'>Raspberry Pi Active Cooler (SC1148)</div></td><td class='num'>1</td><td class='num'>$10.95</td><td class='num'>$10.95</td><td><a href="https://www.pishop.us/product/raspberry-pi-active-cooler/" rel="noopener">source</a></td></tr>
+<tr><td>Controllers and computer</td><td>Bus servo driver / USB-TTL adapter<div class='choice'>Waveshare Bus Servo Adapter (A), SKU 25514</div></td><td class='num'>2</td><td class='num'>$4.99</td><td class='num'>$9.98</td><td><a href="https://www.waveshare.com/bus-servo-adapter-a.htm" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>2020 V-slot extrusion, 500 mm<div class='choice'>Maker Store USA V-Slot 20x20mm, clear anodized, SKU LR-2020-S, 500 mm length</div></td><td class='num'>10</td><td class='num'>$6.75</td><td class='num'>$67.50</td><td><a href="https://makerstore.cc/product/v-slot-20-x-20mm/" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>Corner brackets for 2020<div class='choice'>Maker Store Cast 90 Degree Corner Bracket, SKU BRAC-90CAST</div></td><td class='num'>24</td><td class='num'>$1.80</td><td class='num'>$43.20</td><td><a href="https://makerstore.cc/product/cast-90-degree-corner-bracket/" rel="noopener">source</a></td></tr>
+<tr><td>Torso frame</td><td>PETG filament 1 kg<div class='choice'>ELEGOO PETG PRO 1.75 mm 1 kg</div></td><td class='num'>3</td><td class='num'>$13.99</td><td class='num'>$41.97</td><td><a href="https://us.elegoo.com/products/petg-pro-filament-1-75mm-colored-1kg" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>ALTERNATE for the 24 in round pine board: 3/4 in birch plywood 2x2 ft project panel, cut to a 24 in circle in-house<div class='choice'>Falken Design 3/4 in x 2 ft x 2 ft Birch Plywood Project Panel, FALKENDESIGN-PW-Birch-A2-3-4-2424 (HD 31913741</div></td><td class='num'>1</td><td class='num'>$29.49</td><td class='num'>$29.49</td><td><a href="https://www.homedepot.com/p/Falken-Design-3-4-in-x-2-ft-x-2-ft-Birch-Plywood-Project-Panel-FALKENDESIGN-PW-Birch-A2-3-4-2424/319137413" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>Collar on 1 in pipe to set torso height<div class='choice'>Kee Klamp 75-6 Collar, size 6 (fits 1 in nominal / 1.315 in OD pipe), galvanized, set screw included</div></td><td class='num'>1</td><td class='num'>$16.85</td><td class='num'>$16.85</td><td><a href="https://www.simplifiedbuilding.com/75-6-collar-1" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>1 in black steel pipe, ~36 in, threaded both ends (center post)<div class='choice'>PLUMBFLEX 1 in. x 36 in. Black Steel Pipe 1036PBL (1 in nominal, 1.315 in OD)</div></td><td class='num'>1</td><td class='num'>$16.06</td><td class='num'>$16.06</td><td><a href="https://www.homedepot.com/p/PLUMBFLEX-1-in-x-36-in-Black-Steel-Pipe-1036PBL/307752681" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>1 in floor flange for center post<div class='choice'>Southland 1 in. Black Malleable Iron Threaded Floor Flange 521-605HN</div></td><td class='num'>1</td><td class='num'>$6.97</td><td class='num'>$6.97</td><td><a href="https://homedepot.com/p/Southland-1-in-Black-Malleable-Iron-Threaded-Floor-Flange-521-605HN/100179931" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>Concrete mix to fill bucket (~18.9 L = 0.667 cu ft)<div class='choice'>Quikrete Concrete Mix No. 1101, 80 lb bag (Home Depot model 110180)</div></td><td class='num'>1</td><td class='num'>$5.68</td><td class='num'>$5.68</td><td><a href="https://shopsavvy.com/products/quickrete-80lb-concrete-mix" rel="noopener">source</a></td></tr>
+<tr><td>Base and pole</td><td>5 US gallon plastic bucket (ballast base)<div class='choice'>The Home Depot 5 Gallon Orange Homer Bucket, model 05GLHD2 (Internet #100087613)</div></td><td class='num'>1</td><td class='num'>$4.98</td><td class='num'>$4.98</td><td><a href="https://www.homedepot.com/p/The-Home-Depot-5-Gallon-Orange-Homer-Bucket-05GLHD2/100087613" rel="noopener">source</a></td></tr>
+<tr><td>Costume</td><td>Cowboy / western vest<div class='choice'>TiaoBug Men&#x27;s 3-piece faux suede western cowboy vest set (vest + bandanna + hat), black</div></td><td class='num'>1</td><td class='num'>$32.65</td><td class='num'>$32.65</td><td><a href="https://www.walmart.com/ip/9980614009" rel="noopener">source</a></td></tr>
+<tr><td>Costume</td><td>Men&#x27;s plaid flannel shirt<div class='choice'>George Men&#x27;s and Big Men&#x27;s Flannel Shirt with Long Sleeves (Walmart item 5454053875)</div></td><td class='num'>1</td><td class='num'>$11.98</td><td class='num'>$11.98</td><td><a href="https://www.walmart.com/ip/George-Men-s-and-Big-Men-s-Flannel-Shirt-with-Long-Sleeves-Sizes-XS-3XLT/5454053875" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M5 tee nuts for 2020 (25 pack)<div class='choice'>Maker Store Tee Nuts (25 Pack), SKU HARD-TNUT-PACK25, M5 option</div></td><td class='num'>3</td><td class='num'>$20.00</td><td class='num'>$60.00</td><td><a href="https://makerstore.cc/product/tee-nuts-25-pack/" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M5 low-profile screws, 10 mm (25 pack)<div class='choice'>Maker Store M5 Low Profile Screws, SKU SCREWS-M5-LP, 10 mm x 25 pcs</div></td><td class='num'>3</td><td class='num'>$6.20</td><td class='num'>$18.60</td><td><a href="https://makerstore.cc/product-category/screws/low-profile/low-profile-m5/" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M3 socket head cap screw kit<div class='choice'>MYWISH 550-Piece M3 Hex Socket Cap Screws and Nuts Kit, 304 stainless, DIN912, with washers and wrenches (SF-T</div></td><td class='num'>1</td><td class='num'>$17.73</td><td class='num'>$17.73</td><td><a href="https://www.homedepot.com/p/MYWISH-550-Piece-M3-Hex-Socket-Cap-Screws-and-Nuts-Kit-304-Stainless-Steel-DIN912-with-Washers-and-Wrenches-SF-TZ00085/337777102" rel="noopener">source</a></td></tr>
+<tr><td>Screws and fittings</td><td>M3 heat-set inserts, 100-pack<div class='choice'>CNC Kitchen Heat Set Inserts - M3 standard (M3 x 5.7 mm), 100 pcs, sold by Prusa Research</div></td><td class='num'>1</td><td class='num'>$10.99</td><td class='num'>$10.99</td><td><a href="https://www.prusa3d.com/product/heat-set-inserts-m3-standard-100-pcs/" rel="noopener">source</a></td></tr></tbody><tfoot><tr><td colspan='4'>Total</td><td class='num'>$2,140</td><td></td></tr></tfoot></table></div></details>
+  </div>
+</section>
+
+<section id="motion"><div class="wrap">
+  <p class="eyebrow">See him move</p>
+  <h2>Animations</h2>
+  <p class="lede">A walkthrough of the recommended build, then each tier taken apart and put back together.</p>
+  <div class="feature-video"><figure><video controls muted playsinline preload="metadata" poster="media/hero-b.jpg"><source src="media/walkthrough-b.mp4" type="video/mp4"></video><figcaption><b>System walkthrough, tier B.</b> The wave, the costume coming off, the battery packs and electronics, the arm and glove hand, and the head. 36 seconds.</figcaption></figure></div>
+  <div class="videos">
+    <figure><video controls muted playsinline preload="metadata" poster="media/exploded-a.jpg"><source src="media/explode-a.mp4" type="video/mp4"></video><figcaption><b>Tier A</b> exploded view</figcaption></figure>
+    <figure><video controls muted playsinline preload="metadata" poster="media/exploded-b.jpg"><source src="media/explode-b.mp4" type="video/mp4"></video><figcaption><b>Tier B</b> exploded view</figcaption></figure>
+    <figure><video controls muted playsinline preload="metadata" poster="media/exploded-c.jpg"><source src="media/explode-c.mp4" type="video/mp4"></video><figcaption><b>Tier C</b> exploded view</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <p class="eyebrow">Before we build</p>
+  <h2>What still needs a decision or a test</h2>
+  <div class="grid2">
+    <div>
+      <h3>Decisions for Mark</h3>
+      <ol class="steps">
+        <li>Which tier to build. Recommended: B, with C's hands as a later upgrade.</li>
+        <li>Sign the design brief (it sets what "done" means: runtime per pack, tip test, gesture list).</li>
+        <li>What Jack should hold: we assumed a 0.25 kg candy bag.</li>
+        <li>Indoor only, or outdoors too? Rain changes the electronics enclosure.</li>
+        <li>Is the overall height (about 1.7 m with the hat) right?</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Bench tests before the first event</h3>
+      <ol class="steps">
+        <li>Weigh the head (assumed 2 kg in the tip check).</li>
+        <li>Measure average power with the arms moving, which sets the real runtime.</li>
+        <li>Check the stop relay switches on reliably from a part-drained pack (tiers B and C).</li>
+        <li>Set the low-battery cut-off from the cell datasheet (about 15–16 V).</li>
+        <li>Tip test with sandbags, and a pinch check at every joint.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="callout">
+      <h3>Things we found in the existing head</h3>
+      <p>Its code sets two pins by physical number while using the chip's own pin numbering, so the "power" pins for the neck limit switch may not exist. One file imports a misspelled library name, and voice lines use paths from the old computer. None of this affects the body design, but they are worth fixing when the software is next opened.</p>
+    </div>
+    <div class="callout">
+      <h3>How sure are these numbers?</h3>
+      <p>Prices were looked up on 24 Oct 2026, mostly from store listings, and will move. Tier A has only $1.95 to spare. The strength and tip numbers come from the 3D model's weights and published motor ratings. The hobby servos publish no continuous rating, so we assumed a third of their maximum. Nothing has been ordered.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer class="wrap foot">
+  <p>Built in the Protoboard stack: the head, body, arms and power systems of all three tiers are modelled and checked in <code>projects/internal/2026-10-24-joyful-jack/protoboard</code> (choose a tier with <code>JJ_TIER=a|b|c</code>). 3D models: <code>protoboard/cad/joyful_jack_cad.py</code>. Renders: Blender. Prices: <code>research/sourcing/20261024-bom-final.md</code>. Decisions and engineering checks: <code>protoboard/docs/decisions.md</code>.</p>
+</footer>

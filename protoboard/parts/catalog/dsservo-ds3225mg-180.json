@@ -1,0 +1,834 @@
+{
+  "artifacts": [
+    {
+      "id": "art_datasheet",
+      "name": "DSSERVO DS3225 product datasheet",
+      "type": "datasheet",
+      "url": "https://www.dsservo.com/down.asp?id=24"
+    },
+    {
+      "id": "art_ds3218_datasheet",
+      "name": "DSSERVO DS3218 product datasheet (same case)",
+      "type": "documentation",
+      "url": "https://www.dsservo.com/down.asp?id=22"
+    },
+    {
+      "id": "art_makerfocus",
+      "name": "MakerFocus DS3225 25KG digital servo listing",
+      "type": "documentation",
+      "url": "https://www.makerfocus.com/products/digital-servo-25kg"
+    },
+    {
+      "description": "Manufacturer STEP (not stated on the DSSERVO download page; not redistributed). Its terms say who may receive it.",
+      "filePath": "library/parts/dsservo-ds3225mg-180/artifacts/cad/vendor/DS3218.stp",
+      "format": "step",
+      "id": "cad_vendor_step",
+      "name": "DS3218 STEP (manufacturer)",
+      "provenance": {
+        "sourceDigest": "19ca1b5ee9f3201b76af4bfc5101cf75172f92fb826129bfe4e35d66bac72bae",
+        "tool": "manufacturer"
+      },
+      "role": "source",
+      "type": "3d_model",
+      "units": "mm",
+      "url": "https://www.dsservo.com/down.asp?id=25"
+    },
+    {
+      "description": "Converted from the vendor STEP by library/cad/py/vendor_step.py; it comes under the STEP's terms.",
+      "filePath": "library/parts/dsservo-ds3225mg-180/artifacts/cad/vendor/DS3218.glb",
+      "format": "glb",
+      "id": "cad_vendor_glb",
+      "name": "DS3218 (GLB)",
+      "provenance": {
+        "generatedFrom": "cad_vendor_step",
+        "tool": "build123d 0.13.0 (library/cad/py/vendor_step.py)"
+      },
+      "role": "body",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/dsservo-ds3225mg-180/artifacts/cad/dsservo-ds3225mg-180-vendor.manifest.json",
+      "format": "json",
+      "id": "cad_vendor_manifest",
+      "name": "DS3218 vendor feature manifest",
+      "provenance": {
+        "generatedFrom": "cad_vendor_step",
+        "tool": "build123d 0.13.0 (library/cad/py/vendor_step.py)"
+      },
+      "role": "source",
+      "type": "cad"
+    },
+    {
+      "filePath": "library/parts/dsservo-ds3225mg-180/artifacts/cad/vendor/interfaces/flange_mount.glb",
+      "format": "glb",
+      "id": "cad_vendor_if_flange_mount",
+      "name": "flange_mount geometry (vendor)",
+      "provenance": {
+        "generatedFrom": "cad_vendor_step",
+        "tool": "build123d 0.13.0 (library/cad/py/vendor_step.py)"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    },
+    {
+      "filePath": "library/parts/dsservo-ds3225mg-180/artifacts/cad/vendor/interfaces/output_spline.glb",
+      "format": "glb",
+      "id": "cad_vendor_if_output_spline",
+      "name": "output_spline geometry (vendor)",
+      "provenance": {
+        "generatedFrom": "cad_vendor_step",
+        "tool": "build123d 0.13.0 (library/cad/py/vendor_step.py)"
+      },
+      "role": "interface",
+      "type": "3d_model",
+      "units": "m"
+    }
+  ],
+  "categories": [
+    "actuator.motor.servo",
+    "robotics.rc"
+  ],
+  "description": "Standard-size waterproof (IP66) digital servo, metal gears, CNC aluminium middle case: 4.8-6.8 V, stall torque 21 kg·cm @5 V / 24.5 kg·cm @6.8 V, 0.15 / 0.13 s/60°, PWM 500-2500 µs at 50-330 Hz, 180° travel, 40 x 20 x 40.5 mm, 60 g, 300 mm lead. Sold by MakerFocus as the \"25KG digital servo\".",
+  "domains": [
+    {
+      "domain": "electrical",
+      "metadata": {
+        "control": "PWM, 500-2500 µs, 50-330 Hz, 3.3-5 V pulse",
+        "idle_current_mA": {
+          "5V": 4,
+          "6.8V": 5
+        },
+        "motor": "3-pole",
+        "stall_current_A": {
+          "5V": 1.9,
+          "6.8V": 2.3
+        }
+      },
+      "power_domains": [
+        {
+          "id": "servo_supply",
+          "max_current_mA": 2300,
+          "name": "Servo supply (V+)",
+          "voltage_range_V": [
+            4.8,
+            6.8
+          ]
+        }
+      ]
+    },
+    {
+      "dimensions_mm": {
+        "height": 40.5,
+        "length": 40,
+        "width": 20
+      },
+      "domain": "mechanical",
+      "metadata": {
+        "bearing": "double bearing",
+        "flange": "54.5 mm overall, holes 49.5 x 10 mm, underside 27.7 mm above the case bottom",
+        "gear_ratio": 275,
+        "height_drawing_mm": 40.4,
+        "lead_length_mm": "300±5",
+        "waterproof": "IP66"
+      },
+      "weight_g": 60
+    },
+    {
+      "domain": "thermal",
+      "metadata": {
+        "storage_temperature_C": [
+          -30,
+          80
+        ]
+      },
+      "operating_temperature_C": [
+        -15,
+        70
+      ]
+    }
+  ],
+  "id": "dsservo-ds3225mg-180",
+  "interfaces": [
+    {
+      "capabilities": [
+        "rc_pwm_in"
+      ],
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "geometry": {
+        "refs": [
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "servo_lead",
+            "signature": {
+              "area_mm2": 109.753,
+              "centroid": [
+                29.679,
+                0.223,
+                -11.45
+              ]
+            }
+          }
+        ]
+      },
+      "id": "lead_signal",
+      "name": "Signal",
+      "parameters": [
+        {
+          "id": "voltage",
+          "range": [
+            3.3,
+            5
+          ],
+          "unit": "V"
+        },
+        {
+          "id": "max_frequency",
+          "range": [
+            50,
+            330
+          ],
+          "unit": "Hz"
+        },
+        {
+          "id": "pulse_width",
+          "name": "Pulse width range",
+          "range": [
+            500,
+            2500
+          ],
+          "unit": "µs"
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "input"
+          ],
+          "type": "pwm"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "description": "Signal: PWM control. Pulse 500-2500 µs (neutral 1500 µs) maps to 0-180°, counterclockwise with increasing width; 50-330 Hz; pulse amplitude 3.3-5 V; dead band 3 µs.",
+            "source": "https://www.dsservo.com/down.asp?id=24"
+          },
+          "type": "pin_functions"
+        },
+        {
+          "params": {
+            "connector_type": "servo_3pin",
+            "gender": "female",
+            "note": "Three-wire lead, 300±5 mm, ending in a 3-pin servo plug (drawn on the datasheet). Pin order signal / V+ (centre) / GND is the RC-servo convention, not stated by DSSERVO (assumption trait).",
+            "pinout": [
+              "signal",
+              "V+",
+              "GND"
+            ],
+            "positions": 3
+          },
+          "type": "connector"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "power_in"
+      ],
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "geometry": {
+        "refs": [
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "servo_lead",
+            "signature": {
+              "area_mm2": 109.753,
+              "centroid": [
+                29.679,
+                0.223,
+                -11.45
+              ]
+            }
+          }
+        ]
+      },
+      "id": "lead_vplus",
+      "name": "V+",
+      "parameters": [
+        {
+          "id": "voltage",
+          "range": [
+            4.8,
+            6.8
+          ],
+          "unit": "V"
+        },
+        {
+          "id": "current_draw",
+          "unit": "A",
+          "value": 2.3
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "input"
+          ],
+          "type": "power"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "description": "V+: servo supply, 4.8-6.8 V. Idle current 4 mA (5 V) / 5 mA (6.8 V); stall current 1.9 A (5 V) / 2.3 A (6.8 V).",
+            "source": "https://www.dsservo.com/down.asp?id=24"
+          },
+          "type": "pin_functions"
+        },
+        {
+          "params": {
+            "connector_type": "servo_3pin",
+            "gender": "female",
+            "note": "Three-wire lead, 300±5 mm, ending in a 3-pin servo plug (drawn on the datasheet). Pin order signal / V+ (centre) / GND is the RC-servo convention, not stated by DSSERVO (assumption trait).",
+            "pinout": [
+              "signal",
+              "V+",
+              "GND"
+            ],
+            "positions": 3
+          },
+          "type": "connector"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "ground"
+      ],
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "geometry": {
+        "refs": [
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "servo_lead",
+            "signature": {
+              "area_mm2": 109.753,
+              "centroid": [
+                29.679,
+                0.223,
+                -11.45
+              ]
+            }
+          }
+        ]
+      },
+      "id": "lead_gnd",
+      "name": "GND",
+      "protocols": [
+        {
+          "roles": [
+            "ground"
+          ],
+          "type": "power"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "description": "GND: supply and signal ground (common with the PWM source).",
+            "source": "https://www.dsservo.com/down.asp?id=24"
+          },
+          "type": "pin_functions"
+        },
+        {
+          "params": {
+            "connector_type": "servo_3pin",
+            "gender": "female",
+            "note": "Three-wire lead, 300±5 mm, ending in a 3-pin servo plug (drawn on the datasheet). Pin order signal / V+ (centre) / GND is the RC-servo convention, not stated by DSSERVO (assumption trait).",
+            "pinout": [
+              "signal",
+              "V+",
+              "GND"
+            ],
+            "positions": 3
+          },
+          "type": "connector"
+        }
+      ]
+    },
+    {
+      "default_active": true,
+      "domain": "electrical",
+      "exposed": true,
+      "geometry": {
+        "refs": [
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "servo_lead",
+            "signature": {
+              "area_mm2": 109.753,
+              "centroid": [
+                29.679,
+                0.223,
+                -11.45
+              ]
+            }
+          }
+        ]
+      },
+      "id": "rc_servo_3wire",
+      "max_instances": 1,
+      "name": "RC servo PWM control (3-wire lead)",
+      "parameters": [
+        {
+          "id": "max_frequency",
+          "range": [
+            50,
+            330
+          ],
+          "unit": "Hz"
+        },
+        {
+          "id": "pulse_width",
+          "name": "Pulse width range",
+          "range": [
+            500,
+            2500
+          ],
+          "unit": "µs"
+        }
+      ],
+      "profiles": [
+        {
+          "bindings": {
+            "ground": "lead_gnd",
+            "power": "lead_vplus",
+            "signal": "lead_signal"
+          },
+          "default_active": true,
+          "id": "lead",
+          "label": "3-wire lead: signal, V+, GND"
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "device"
+          ],
+          "type": "pwm"
+        }
+      ],
+      "slots": [
+        {
+          "id": "power",
+          "match": {
+            "capability": "power_in",
+            "protocol": "power",
+            "role": "input"
+          },
+          "required": true
+        },
+        {
+          "id": "ground",
+          "match": {
+            "capability": "ground",
+            "protocol": "power",
+            "role": "ground"
+          },
+          "required": true
+        },
+        {
+          "id": "signal",
+          "match": {
+            "capability": "rc_pwm_in",
+            "protocol": "pwm",
+            "role": "input"
+          },
+          "required": true
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "connector_type": "servo_3pin",
+            "gender": "female",
+            "note": "Three-wire lead, 300±5 mm, ending in a 3-pin servo plug (drawn on the datasheet). Pin order signal / V+ (centre) / GND is the RC-servo convention, not stated by DSSERVO (assumption trait).",
+            "pinout": [
+              "signal",
+              "V+",
+              "GND"
+            ],
+            "positions": 3
+          },
+          "type": "connector"
+        },
+        {
+          "params": {
+            "note": "PWM (pulse width modification): 0.5 ms → 0°, 1.5 ms → 90°, 2.5 ms → 180° (180° build). Neutral 1500 µs. Operating frequency 50-330 Hz. Dead band 3 µs.",
+            "source": "https://www.dsservo.com/down.asp?id=24",
+            "topic": "control"
+          },
+          "type": "usage_note"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "bolt_pattern"
+      ],
+      "default_active": true,
+      "domain": "mechanical",
+      "exposed": true,
+      "geometry": {
+        "frame": {
+          "normal": [
+            0,
+            0,
+            -1
+          ],
+          "origin": [
+            0,
+            0,
+            7.6
+          ],
+          "xAxis": [
+            1,
+            0,
+            0
+          ]
+        },
+        "refs": [
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "flange_mount",
+            "signature": {
+              "area_mm2": 147.953,
+              "centroid": [
+                -0.195,
+                0,
+                9.24
+              ]
+            }
+          },
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "flange_underside",
+            "signature": {
+              "area_mm2": 938.061,
+              "centroid": [
+                0.007,
+                0,
+                7.735
+              ]
+            }
+          },
+          {
+            "artifact": "cad_vendor_if_flange_mount",
+            "kind": "artifact"
+          },
+          {
+            "generator": "bolt_pattern",
+            "kind": "procedural"
+          }
+        ]
+      },
+      "id": "flange_mount",
+      "name": "Mounting flange",
+      "parameters": [
+        {
+          "id": "hole_spacing",
+          "unit": "mm",
+          "value": 49.5
+        },
+        {
+          "id": "hole_count",
+          "unit": "dimensionless",
+          "value": 4
+        },
+        {
+          "id": "fastener_diameter",
+          "range": [
+            3,
+            4
+          ],
+          "unit": "mm"
+        },
+        {
+          "id": "hole_spacing_y",
+          "unit": "mm",
+          "value": 10
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "component"
+          ],
+          "type": "bolt_pattern"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "fastener": "Ø4.5 mm holes (fastener not named; M3 or M4)",
+            "note": "Four holes in the two flange ears: 49.5 mm apart along the case length, 10 mm apart across it; flange 54.5 mm overall, flange underside 27.7 mm above the case bottom (drawing). Hole diameter Ø4.5 measured in the vendor STEP (not on the drawing). The flange carries rubber grommet features in the STEP.",
+            "shape": "rectangle",
+            "threaded": false
+          },
+          "type": "bolt_pattern"
+        },
+        {
+          "params": {
+            "field": "fastener diameter / hole diameter",
+            "reason": "The DSSERVO drawing dimensions the 49.5 x 10 mm pattern but not the hole size or fastener; Ø4.5 is measured in DSSERVO's DS3218 STEP.",
+            "source": [
+              "https://www.dsservo.com/down.asp?id=24",
+              "https://www.dsservo.com/down.asp?id=25"
+            ],
+            "value": "Ø4.5 holes (vendor STEP), fasteners 3-4 mm"
+          },
+          "type": "assumption"
+        }
+      ]
+    },
+    {
+      "capabilities": [
+        "shaft"
+      ],
+      "default_active": true,
+      "domain": "mechanical",
+      "exposed": true,
+      "geometry": {
+        "frame": {
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "origin": [
+            10,
+            0,
+            20.4
+          ],
+          "xAxis": [
+            1,
+            0,
+            0
+          ]
+        },
+        "refs": [
+          {
+            "artifact": "cad_vendor_step",
+            "kind": "feature",
+            "name": "output_spline",
+            "signature": {
+              "area_mm2": 71.628,
+              "centroid": [
+                10,
+                0,
+                19.7
+              ]
+            }
+          },
+          {
+            "artifact": "cad_vendor_if_output_spline",
+            "kind": "artifact"
+          },
+          {
+            "generator": "shaft",
+            "kind": "procedural"
+          }
+        ]
+      },
+      "id": "output_spline",
+      "max_instances": 1,
+      "name": "Output spline",
+      "parameters": [
+        {
+          "id": "shaft_diameter",
+          "unit": "mm",
+          "value": 6
+        }
+      ],
+      "protocols": [
+        {
+          "roles": [
+            "output"
+          ],
+          "type": "shaft"
+        }
+      ],
+      "traits": [
+        {
+          "params": {
+            "note": "Output spline on the case top, 10 mm from the case centre along the length (vendor STEP). Ø6 is the hub cylinder in the STEP; tooth count and pitch diameter are not on the datasheet. Stall torque 21 kg·cm (5 V) / 24.5 kg·cm (6.8 V); 180° travel."
+          },
+          "type": "shaft"
+        },
+        {
+          "params": {
+            "field": "spline size / tooth count",
+            "reason": "DSSERVO states neither. Ø6 is measured in the vendor STEP; 25T comes from MakerFocus's included \"25T Adjustable metal servo arm\" (distributor) and ProtoPart.",
+            "source": [
+              "https://www.dsservo.com/down.asp?id=25",
+              "https://www.makerfocus.com/products/digital-servo-25kg"
+            ],
+            "value": "Ø6 mm hub, 25T"
+          },
+          "type": "assumption"
+        }
+      ]
+    }
+  ],
+  "manufacturer": "Dongguan City Dsservo Technology Co., Ltd (DSSERVO)",
+  "name": "DSSERVO DS3225MG 25 kg digital servo (180°)",
+  "part_number": "DS3225MG (180°)",
+  "tags": [
+    "servo",
+    "digital-servo",
+    "rc-servo",
+    "metal-gear",
+    "waterproof",
+    "ip66",
+    "25kg",
+    "ds3225",
+    "dsservo",
+    "makerfocus"
+  ],
+  "traits": [
+    {
+      "params": {
+        "dead_band_us": 3,
+        "gear_ratio": 275,
+        "kind": "servo",
+        "rotating_direction": "counterclockwise (500→2500 µs)",
+        "running_degree": 180,
+        "source": "https://www.dsservo.com/down.asp?id=24",
+        "speed_s_per_60deg": {
+          "5V": 0.15,
+          "6.8V": 0.13
+        },
+        "stall_torque_kg_cm": {
+          "5V": 21,
+          "6.8V": 24.5
+        }
+      },
+      "type": "performance"
+    },
+    {
+      "params": {
+        "operating_temperature_C": [
+          -15,
+          70
+        ],
+        "source": "https://www.dsservo.com/down.asp?id=24",
+        "storage_temperature_C": [
+          -30,
+          80
+        ],
+        "supply_voltage_V": [
+          4.8,
+          6.8
+        ],
+        "waterproof": "IP66"
+      },
+      "type": "operating_conditions"
+    },
+    {
+      "params": {
+        "note": "DSSERVO builds the DS3225 as 180° or 270° with the same datasheet; this part is the 180° build sold by MakerFocus (\"180 degree rotation ... Can be rotated within 360 degrees when power off\"). The 270° build maps 500-2500 µs to 0-270°.",
+        "source": [
+          "https://www.dsservo.com/down.asp?id=24",
+          "https://www.makerfocus.com/products/digital-servo-25kg"
+        ],
+        "topic": "variant"
+      },
+      "type": "usage_note"
+    },
+    {
+      "params": {
+        "field": "lead colours and plug pin order",
+        "reason": "DSSERVO shows a 3-pin plug but no colours or order; the RC-servo convention is assumed. ProtoPart's brown (GND) / red (V+) / orange-yellow (signal) colours are not in a manufacturer source.",
+        "source": [
+          "https://www.dsservo.com/down.asp?id=24",
+          "https://github.com/Delta-Robotics-Inc/ProtoPart/blob/main/protoparts/makerfocus-ds3225mg-25kg-digital-servo-high-torque/definition.json"
+        ],
+        "value": "signal / V+ (centre) / GND"
+      },
+      "type": "assumption"
+    },
+    {
+      "params": {
+        "field": "CAD model",
+        "reason": "DSSERVO publishes no DS3225 model. Its DS3218 and DS3225 datasheets carry the identical case drawing (the embedded drawing image is byte-identical in both PDFs: 40 x 20 x 40.4, 54.5 flange, 49.5 x 10 holes, 27.7 to the flange, 24 horn, same 3-pin lead) and the same size (40*20*40.5), weight (60 g), gear ratio (275) and lead length (300±5 mm). Internals differ (DS3218: 18 / 21.5 kg·cm, 1.8 / 2.2 A) and are not modelled.",
+        "source": [
+          "https://www.dsservo.com/down.asp?id=24",
+          "https://www.dsservo.com/down.asp?id=22",
+          "https://www.dsservo.com/down.asp?id=25"
+        ],
+        "value": "DSSERVO DS3218.stp used as the DS3225MG body"
+      },
+      "type": "assumption"
+    },
+    {
+      "params": {
+        "field": "stall torque / weight (MakerFocus)",
+        "resolution": "Manufacturer values used.",
+        "sources": [
+          "https://www.dsservo.com/down.asp?id=24",
+          "https://www.makerfocus.com/products/digital-servo-25kg"
+        ],
+        "values": [
+          "21 kg·cm @5 V, 24.5 kg·cm @6.8 V, 60 g (DSSERVO datasheet)",
+          "21 kg/cm @5 V, 25 kg/cm @6.8 V, 67 g (MakerFocus listing)"
+        ]
+      },
+      "type": "source_discrepancy"
+    },
+    {
+      "params": {
+        "field": "supply voltage / waterproof rating (ProtoPart)",
+        "resolution": "Manufacturer values used: do not run this servo from a 2S LiPo (7.4 V) directly.",
+        "sources": [
+          "https://www.dsservo.com/down.asp?id=24",
+          "https://www.makerfocus.com/products/digital-servo-25kg",
+          "https://github.com/Delta-Robotics-Inc/ProtoPart/blob/main/protoparts/makerfocus-ds3225mg-25kg-digital-servo-high-torque/definition.json"
+        ],
+        "values": [
+          "4.8-6.8 V, IP66 (DSSERVO datasheet; MakerFocus 4.8-6.8 V)",
+          "\"nominal 6V-7.4V class operation\", \"IP67-class (vendor listing claim)\" (ProtoPart)"
+        ]
+      },
+      "type": "source_discrepancy"
+    },
+    {
+      "params": {
+        "field": "spline tooth count and dimensions, horn",
+        "note": "The DSSERVO datasheet gives no spline specification; see the assumption trait on output_spline."
+      },
+      "type": "data_gap"
+    },
+    {
+      "params": {
+        "field": "signal logic thresholds, running current under load",
+        "note": "Only the 3.3-5 V pulse amplitude, idle and stall currents are given."
+      },
+      "type": "data_gap"
+    }
+  ],
+  "version": "1.0.0"
+}

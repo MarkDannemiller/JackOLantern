@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Pololu D36V50F5, 5 V 5.5 A step-down regulator (Pololu item #4091)",
+    "url": "https://www.pololu.com/product/4091",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input_voltage_V\": [5.5, 50], \"output_voltage_V\": 5.0, \"output_accuracy_pct\": 4, \"max_output_current_A\": \"5.5 typical at 36 V in; 3.5-8 A depending on Vin/Vout\", \"dimensions_mm\": [25.4, 25.4, 9.5], \"mass_g\": null}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

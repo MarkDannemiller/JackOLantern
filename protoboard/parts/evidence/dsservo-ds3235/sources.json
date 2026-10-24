@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "DIYmall 2 Sets 35kg DS3235 Digital Servo, coreless, full metal gear, 270\u00b0 (ASIN B0CCNFQC6S); pack = 2 servos + 2x 25T servo arms + accessories. Standard (non-HV) DS3235 / DS3235-270 per the DSSERVO datasheet.",
+    "url": "https://hajim.rochester.edu/me/sites/kelley/me240/DS3235-270_datasheet.pdf",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"voltage_range\": \"5-7.4 V (datasheet). NOT the 4.8-6.8 V or 6-7.4 V ranges; some resellers list 4.8-6.8 V (HiRCgo DS3235MG) or 5-8.4 V, so check the label of what arrives\", \"stall_torque\": \"29 kg\\u00b7cm @ 5 V; 32 kg\\u00b7cm @ 6 V; 35 kg\\u00b7cm @ 7.4 V\", \"speed\": \"0.13 s/60\\u00b0 @ 5 V; 0.12 s/60\\u00b0 @ 6 V; 0.11 s/60\\u00b0 @ 7.4 V\", \"stall_current\": \"1.9 A @ 5 V; 2.1 A @ 6 V; 2.3 A @ 7.4 V\", \""
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

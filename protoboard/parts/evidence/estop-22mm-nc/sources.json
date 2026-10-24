@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "22mm NC red mushroom emergency stop push button, 40 mm head, latching (ZB2-BE102C / XB2-BS142 style)",
+    "url": "https://www.fridayparts.com/22mm-nc-n-c-red-mushroom-emergency-stop-push-button-switch-600v-10a-zb2-be102c-xb2-bs142",
+    "type": "documentation",
+    "authority": "vendor",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"mounting_hole_mm\": 22, \"head_diameter_mm\": 40, \"contacts\": \"1 NC\", \"rating\": \"600 V 10 A (per listing title)\", \"action\": \"latching\", \"max_panel_thickness_mm\": 5}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: verified on vendor page."
+  }
+]

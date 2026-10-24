@@ -1,0 +1,43 @@
+# Project repo ignore rules (from the protoboard-projects hub template).
+# If a tool can regenerate it, it is ignored; if not, it is committed (LFS for
+# large binaries, see .gitattributes). protoboard/ carries its own .gitignore
+# from `protoboard init`; the stack cache lines below repeat it as a safety net.
+
+# Dependency trees and the Protoboard stack's derived state
+node_modules/
+.protoboard/build/
+.protoboard/cache/
+.protoboard/local/
+.protoboard/tools/
+.protoboard/evals/
+.venv/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+
+# KiCad and tool local state
+*.kicad_prl
+*.lck
+*-backups/
+fp-info-cache
+_autosave-*
+*.blend1
+*.raw
+*.bak
+**/.history/
+
+# Secrets: never committed
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+.claude/settings.local.json
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

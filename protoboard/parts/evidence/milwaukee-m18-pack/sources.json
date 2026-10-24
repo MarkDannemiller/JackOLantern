@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Milwaukee M18 REDLITHIUM HIGH OUTPUT HD12.0, 48-11-1812",
+    "url": "https://www.customtruck.com/tools/tools/power-equipment-battery/milwaukee-m18-red-lithium-battery-high-output-hd-12.0/48-11-1812",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"nominal_voltage_V\": 18, \"capacity_Ah\": 12.0, \"energy_Wh\": null, \"energy_Wh_calc\": 216, \"mass_lb_listing\": 3.4, \"dimensions_in_listing\": [5.99, 3.38, 3.89]}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Mean Well LRS-350-24",
+    "url": "https://punchouttest.digikey.com.mx/en/products/detail/mean-well-usa-inc/LRS-350-24/7705034",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"Vout\": \"24 V\", \"Iout_A\": 14.6, \"P_W\": 350, \"Vin\": \"90-132 / 180-264 VAC, 240-370 VDC\"}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

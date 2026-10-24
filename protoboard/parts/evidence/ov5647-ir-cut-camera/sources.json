@@ -1,0 +1,25 @@
+[
+  {
+    "id": "src_cad",
+    "title": "Fusion 360 archive of Head Assembly v79 (received 2026-10-24)",
+    "path": "inbox/20261024-head-assembly.f3z",
+    "type": "documentation",
+    "authority": "project",
+    "sha256": "79f6ad2a66cc2d955e7afff1a0add046e3ece0e1ecbed3cfb25fc97d898cdd14",
+    "supports": [
+      "component 'OV5647 IR-Cut Camera' (2023-09-21)"
+    ]
+  },
+  {
+    "id": "src_rpi_camera",
+    "title": "Raspberry Pi camera documentation",
+    "url": "https://www.raspberrypi.com/documentation/accessories/camera.html",
+    "type": "documentation",
+    "authority": "manufacturer",
+    "note": "Not fetched yet in this project; cited for well-known facts, to be fetched and verified (uhd-part-research) at level 4.",
+    "supports": [
+      "Camera Module v1 uses the OV5647 (5 MP)",
+      "CSI-2 camera over FFC"
+    ]
+  }
+]

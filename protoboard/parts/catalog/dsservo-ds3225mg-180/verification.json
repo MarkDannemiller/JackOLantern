@@ -1,0 +1,28 @@
+{
+  "partId": "dsservo-ds3225mg-180",
+  "recorded_at": "2026-09-26T22:28:42.768Z",
+  "audit": {
+    "method": "independent stage-2 audit (uhd-part-verify, PB-796 port) by an agent that did not author the part: it re-fetched the cited sources (sha256 compared with sources.json where pinned) and re-checked each fact",
+    "independent": true,
+    "auditor": "stage-2 auditor of the PB-796 port (did not author the part)",
+    "checked": 19,
+    "confirmed": 19,
+    "wrong": 0,
+    "unsupported": 0
+  },
+  "repairs": "CAD-model assumption reason strengthened with byte-identical DS3218/DS3225 drawing evidence; no wrong facts",
+  "assumptions": [
+    "lead colours and plug pin order",
+    "CAD model",
+    "fastener diameter / hole diameter",
+    "spline size / tooth count"
+  ],
+  "data_gaps": [
+    "manufacturer CAD",
+    "lead colours and plug pin order",
+    "spline tooth count and dimensions",
+    "signal logic thresholds and running current",
+    "shared code: vendor_step within= with transform"
+  ],
+  "vocabulary_gaps": []
+}

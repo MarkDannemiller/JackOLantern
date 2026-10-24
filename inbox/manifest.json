@@ -1,0 +1,42 @@
+[
+  {
+    "file": "20261024-mechatronic-pumpkin-cad-export.zip",
+    "received": "2026-10-24",
+    "source": "Mark Dannemiller, download.zip placed in the old JackOLantern checkout (2026-10-24)",
+    "sha256": "1f7e582070620144f05a32a67c1462472a073ed9527f2fcf8add4fb2077a2872",
+    "bytes": 2867947,
+    "notes": "Looks incomplete. Holds 5 Raspberry Pi 4B reference images (Components/Raspberry Pi/) and four EMPTY folders: Components/SG90 MicroServo, Components/Moving Eye Components, Assemblies/Joint Practice + Servo Neck Design/{Archived Designs,Components}. No head CAD (STEP/part files) is in it."
+  },
+  {
+    "file": "20261024-head-assembly.f3z",
+    "received": "2026-10-24",
+    "source": "Mark Dannemiller, Fusion 360 exports placed in ~/Downloads (2026-10-24)",
+    "sha256": "79f6ad2a66cc2d955e7afff1a0add046e3ece0e1ecbed3cfb25fc97d898cdd14",
+    "bytes": 118126657,
+    "notes": "Fusion archive of 'Head Assembly' v79 (2023-12-01). XRefs: Neck Design 3 v34, Simplified 3D Printed Animatronic Dual Eye Mechanism v28, SW2020 DS3225MG Servo, Raspberry Pi 4 Model B, OV5647 IR-Cut Camera; neck refs NEMA17 Pancake Stepper, LazySusan, Articulating Servo, 145 mm M3 Threaded Rod, 8-32 Brass Heat Sert, M3x5x6 heat-set. User parameters: HEAD_DIAM 180 mm, JAW_WIDTH 140 mm, MOUNT_HOLE_DIAM 5 mm, MOUNT_HOLE_TOLERANCE 0.2 mm, MOUNT_HOLE_DIST 7.5 mm."
+  },
+  {
+    "file": "20261024-facade.f3z",
+    "received": "2026-10-24",
+    "source": "Mark Dannemiller, Fusion 360 exports placed in ~/Downloads (2026-10-24)",
+    "sha256": "c9c40579d2f51461516e867144988d886243cd91da8e447e170bf0db20bbb2fe",
+    "bytes": 94626662,
+    "notes": "Fusion archive of 'Facade' v61 (2023-11-13) over Head Assembly v74. Facade bodies: FACE, LEFT, RIGHT, HEAD BACK, CAP FACADE."
+  },
+  {
+    "file": "20261024-head-assembly.stp",
+    "received": "2026-10-24",
+    "source": "Mark Dannemiller, Fusion 360 exports placed in ~/Downloads (2026-10-24)",
+    "sha256": "b83d89c0a79b196e02c0f8e83167a7e11e4a39c84a791b01ff30405d4098c7bf",
+    "bytes": 202221687,
+    "notes": "STEP AP214 export of Head Assembly v79 (Autodesk Translation Framework v15.17)."
+  },
+  {
+    "file": "20261024-facade.stp",
+    "received": "2026-10-24",
+    "source": "Mark Dannemiller, Fusion 360 exports placed in ~/Downloads (2026-10-24)",
+    "sha256": "8484f04f1cc93de103c6f9fa8caaf40391f96d43fe43e09712e3312885e178d3",
+    "bytes": 223902128,
+    "notes": "STEP AP214 export of Facade (includes the head assembly)."
+  }
+]

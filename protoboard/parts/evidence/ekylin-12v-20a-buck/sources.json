@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "EKYLIN 24V to 12V 20A 240W step-down converter, DC 15-40V input (Amazon ASIN B01JAIC9EM)",
+    "url": "https://www.amazon.com/dp/B01JAIC9EM",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input_range\": \"15-40 V DC (covers 15-21 V M18 and 24 V tier C mains PSU)\", \"output\": \"12 V DC, 20 A, 240 W\", \"efficiency\": \"97% half load / 95% full load (per search snippet of listing)\", \"dimensions_mm\": null, \"mass_g\": null, \"waterproof\": \"TBD: not read on page\"}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "partId": "towerpro-sg90",
+  "recorded_at": "2026-10-03T12:48:51.011Z",
+  "audit": {
+    "method": "independent stage-2 audit (PB-862, 2026-10-03) by an agent that did not author the part, superseding the PB-865 second read in the authoring session: 4 of 4 cited sources re-fetched, 4 identical by sha256, the others dynamic pages (re-read in the fresh copy), rate-limited or added in this audit; facts re-checked in the source text and the rendered drawings, pins against the pinouts, categories, terms of every file and CAD dimensions against the drawings; wrong = errors found here and fixed in the same branch",
+    "independent": true,
+    "auditor": "independent stage-2 audit agent (PB-862 pbAudit worktree), no authoring context",
+    "checked": 12,
+    "confirmed": 12,
+    "wrong": 0,
+    "unsupported": 0
+  },
+  "repairs": "PB-865 legacy repair: re-derived from manufacturer sources with sha256 (sources.json), rewritten with current UHD builders and connector composites, vocabulary fixed, CAD body bound or generated with terms, ProtoPart discrepancies recorded",
+  "assumptions": [
+    "supply range",
+    "flange holes",
+    "spline"
+  ],
+  "data_gaps": [
+    "pulse width range, frame rate (not stated by TowerPro)",
+    "current draw (not stated)",
+    "wire colours / plug pinout (JR plug only)",
+    "flange hole size and position, spline size (not dimensioned; assumptions)",
+    "manufacturer CAD (none published)"
+  ],
+  "vocabulary_gaps": []
+}

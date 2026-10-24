@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "GODIYMODULES / DIY-Module 40A-60A ideal diode module, single channel (Amazon ASIN B0DDBYNDX5), one per input into a common bus",
+    "url": "https://www.amazon.com/dp/B0DDBYNDX5",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"current_rating\": \"40 A with one MOSFET, 60 A with two\", \"mosfet\": \"300 A-class MOSFET, 1.1 mOhm Rds(on) (listing)\", \"voltage_range\": \"'no voltage limitation' claimed; reverse voltage < 40 V\", \"controller_ic\": \"TBD: not stated on listing\", \"connection\": \"in series in positive line only\", \"operating_temp\": \"-40 to 125 C\"}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

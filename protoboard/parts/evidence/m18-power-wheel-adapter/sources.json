@@ -1,0 +1,14 @@
+[
+  {
+    "id": "src_0",
+    "title": "Generic 'Power Wheel Adapter for Milwaukee M18' with on/off switch, 30 A blade fuse, 12 AWG leads, 1-pack (Amazon ASIN B0BVG1HTM2, seller LIANQUAN)",
+    "url": "https://www.amazon.com/dp/B0BVG1HTM2",
+    "type": "documentation",
+    "authority": "reseller listing",
+    "fetched_at": "2026-10-24",
+    "supports": [
+      "{\"input\": \"Milwaukee M18 pack (18 V nominal)\", \"fuse_A\": 30, \"switch\": \"on/off\", \"wire_gauge_awg\": 12, \"wire_length_in\": 12.6, \"max_permissible_current_A\": \"18 or 20 (listings disagree)\", \"low_voltage_cutoff\": \"none stated\"}"
+    ],
+    "note": "From research/sourcing/20261024-bom.json (sha256 c1a4a5d0b54b02d5\u2026), confidence: from listing/secondary source."
+  }
+]

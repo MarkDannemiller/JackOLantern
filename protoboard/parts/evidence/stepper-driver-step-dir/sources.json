@@ -1,0 +1,24 @@
+[
+  {
+    "id": "src_code",
+    "title": "Head motion controller (2023 head code)",
+    "path": "protoboard/software/head/motion_controller.py",
+    "type": "documentation",
+    "authority": "project",
+    "sha256": "41490d3b6459fbcf6b99e4175d679b3e1de9cbf33bc231e1d57ff2cc4bd45127",
+    "supports": [
+      "port_yaw_en 13, port_yaw_dir 19, port_yaw_step 26"
+    ]
+  },
+  {
+    "id": "src_pid_stepper",
+    "title": "Head PID stepper class (2023 head code)",
+    "path": "protoboard/software/head/pid_stepper.py",
+    "type": "documentation",
+    "authority": "project",
+    "sha256": "e86d3ecf34127c5e33c953b87e3a9752fba25a7a32a4e5e2b7c4944d08587c0d",
+    "supports": [
+      "GPIO.output(enable_pin, GPIO.HIGH) # disable"
+    ]
+  }
+]
